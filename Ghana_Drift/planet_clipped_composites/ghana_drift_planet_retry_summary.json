@@ -1,0 +1,37 @@
+{
+  "bounds_shapefile": "D:\\Masters\\Ghana_Drift\\ghana_drift_bounds.shp",
+  "download_dir": "D:\\Masters\\Ghana_Drift\\planet_clipped_composites",
+  "dry_run": false,
+  "rows": [
+    {
+      "obs_id": "d9db6dd4-4db8-5723-96ba-57d182cda0b7",
+      "obs_date": "2018-10-28",
+      "pt_count": 14,
+      "item_ids": [],
+      "item_count": 0,
+      "planet_acquired_start": "",
+      "planet_acquired_end": "",
+      "order_id": "",
+      "order_state": "",
+      "output_dir": "D:\\Masters\\Ghana_Drift\\planet_clipped_composites\\2018-10-28_d9db6dd4-4db8-5723-96ba-57d182cda0b7",
+      "downloaded_files": [],
+      "status": "failed",
+      "error": "Order 43c9d326-483c-4c42-a72b-0d6c6d51aa6d finished in state failed: Quota check failed - Over quota"
+    },
+    {
+      "obs_id": "cd77705c-782d-5b99-935f-405bfd905cbf",
+      "obs_date": "2018-10-26",
+      "pt_count": 15,
+      "item_ids": [],
+      "item_count": 0,
+      "planet_acquired_start": "",
+      "planet_acquired_end": "",
+      "order_id": "",
+      "order_state": "",
+      "output_dir": "D:\\Masters\\Ghana_Drift\\planet_clipped_composites\\2018-10-26_cd77705c-782d-5b99-935f-405bfd905cbf",
+      "downloaded_files": [],
+      "status": "failed",
+      "error": "Order 81299560-0bc5-45d4-a337-f4d0e6808770 finished in state failed: Quota check failed - Over quota"
+    }
+  ]
+}

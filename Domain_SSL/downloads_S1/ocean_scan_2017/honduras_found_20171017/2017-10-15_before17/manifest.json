@@ -1,0 +1,41 @@
+{
+  "aoi_id": "honduras_found_20171017",
+  "date": "2017-10-15_before17",
+  "target": {
+    "label": "Honduras Ocean Scan detection",
+    "lat": 15.95362,
+    "lon": -86.77741,
+    "source_id": "33a32832-fc41-4fdd-8c91-a41844fc1709",
+    "scene_center_lat": 16.025,
+    "scene_center_lon": -86.392,
+    "aoi_half_size_deg": 0.1,
+    "aoi_shp": "/mnt/d/Masters/Domain_SSL/downloads_S1/ocean_scan_2017/_aois/honduras_found_20171017.shp"
+  },
+  "aoi_shp": "/mnt/d/Masters/Domain_SSL/downloads_S1/ocean_scan_2017/_aois/honduras_found_20171017.shp",
+  "request": {
+    "label": "2017-10-15_before17",
+    "target_time_utc": "2017-10-15T12:00:00+00:00",
+    "search_start_utc": "2017-10-09T00:00:00+00:00",
+    "search_end_utc": "2017-10-17T11:37:00+00:00",
+    "must_be_before_utc": "2017-10-17T11:37:00+00:00"
+  },
+  "slc": {
+    "granule": "S1A_IW_SLC__1SDV_20171012T235753_20171012T235820_018787_01FB66_F901",
+    "platform": "Sentinel-1A",
+    "acquisition_date": "2017-10-12T23:58:20.100899Z",
+    "url": "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SDV_20171012T235753_20171012T235820_018787_01FB66_F901.zip",
+    "zip": "/mnt/d/Masters/Domain_SSL/downloads_S1/ocean_scan_2017/_slc_cache/S1A_IW_SLC__1SDV_20171012T235753_20171012T235820_018787_01FB66_F901.zip",
+    "size_mb": 4426.470578193665,
+    "delta_hours_from_target": -60.02774975027778,
+    "subswaths": [
+      "IW2"
+    ],
+    "subswath_coverage": [
+      {
+        "subswath": "IW2",
+        "contains_point": true,
+        "aoi_cover_frac": 0.9999940475777487
+      }
+    ]
+  }
+}

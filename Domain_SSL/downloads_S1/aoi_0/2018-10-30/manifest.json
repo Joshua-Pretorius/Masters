@@ -1,0 +1,11 @@
+{
+  "aoi_id": "accra_2018_10_30",
+  "date": "2018-10-30",
+  "platform": "Sentinel-1A",
+  "slc": {
+    "granule": "S1A_IW_SLC__1SDV_20181030T181758_20181030T181828_024369_02AB27_32F5",
+    "url": null,
+    "zip": "D:\\Masters\\S1A_IW_SLC__1SDV_20181030T181758_20181030T181828_024369_02AB27_32F5.SAFE"
+  },
+  "aoi_shp": "D:\\Masters\\S1A_IW_SLC__1SDV_20181030T181758_20181030T181828_024369_02AB27_32F5.SAFE\\Aoi_Accra_2018_10_30.shp"
+}

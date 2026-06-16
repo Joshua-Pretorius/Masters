@@ -1,0 +1,44 @@
+{
+  "sar_detections": "/mnt/d/Masters/Domain_SSL/PreProccess/aoi_accra_2018_10_30/SAR Detections.shp",
+  "sar_feature_count": 45,
+  "sar_bounds_4326": [
+    -0.5311309883966712,
+    5.2456138113555895,
+    -0.3227179259260699,
+    5.47841739730456
+  ],
+  "planet_seed_count": 117,
+  "prediction_seed_mean_count": 117,
+  "prediction_particle_count": 2340,
+  "nearest_distance_summary_m": {
+    "prediction_seed_mean": {
+      "min_m": 3072.3962302091186,
+      "p25_m": 4007.1170184801736,
+      "median_m": 4867.295515116076,
+      "mean_m": 14614.257349807316,
+      "p75_m": 31632.36429328257,
+      "max_m": 34643.760169322515
+    },
+    "prediction_particle": {
+      "min_m": 2695.266533647497,
+      "p25_m": 3904.054118306638,
+      "median_m": 4817.76429020654,
+      "mean_m": 14481.252926819754,
+      "p75_m": 31521.264205976142,
+      "max_m": 34543.537047983824
+    },
+    "original_planet_seed": {
+      "min_m": 1594.1720528381527,
+      "p25_m": 2405.3441160275734,
+      "median_m": 3681.4295608540033,
+      "mean_m": 13874.347718711457,
+      "p75_m": 32020.561699693513,
+      "max_m": 34901.33079968916
+    }
+  },
+  "outputs": {
+    "sar_to_nearest_prediction_seed_mean": "/mnt/d/Masters/Domain_SSL/PreProccess/aoi_accra_2018_10_30/drift/validation_against_sar_detections/sar_to_nearest_prediction_seed_mean.geojson",
+    "sar_to_nearest_prediction_particle": "/mnt/d/Masters/Domain_SSL/PreProccess/aoi_accra_2018_10_30/drift/validation_against_sar_detections/sar_to_nearest_prediction_particle.geojson",
+    "sar_to_nearest_original_planet_seed": "/mnt/d/Masters/Domain_SSL/PreProccess/aoi_accra_2018_10_30/drift/validation_against_sar_detections/sar_to_nearest_original_planet_seed.geojson"
+  }
+}

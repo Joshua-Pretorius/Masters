@@ -1,0 +1,4 @@
+obs_id,obs_date,pt_count,item_ids,item_count,planet_acquired_start,planet_acquired_end,order_id,order_state,output_dir,downloaded_files,status,error
+d9db6dd4-4db8-5723-96ba-57d182cda0b7,2018-10-28,14,,0,,,,,D:\Masters\Ghana_Drift\planet_clipped_composites\2018-10-28_d9db6dd4-4db8-5723-96ba-57d182cda0b7,,failed,"Planet API 400 for https://api.planet.com/compute/ops/orders/v2: {""field"":null,""general"":[{""message"":""Unable to accept order: area of output composite geometry (9340.81 sq. km) exceeds the maximum allowed area of 9000 sq. km for item type PSScene""}]}
+"
+cd77705c-782d-5b99-935f-405bfd905cbf,2018-10-26,15,,0,,,,,D:\Masters\Ghana_Drift\planet_clipped_composites\2018-10-26_cd77705c-782d-5b99-935f-405bfd905cbf,,failed,Order 9c943f60-946b-42c0-bef8-0bd4716fb5ae finished in state failed

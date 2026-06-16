@@ -1,0 +1,25 @@
+{
+  "scene_id": "S1_18QYF_20200319T230134",
+  "ref_tif": "D:\\Masters\\Drift\\2020-03-19\\SAR_+7.6h\\S1_18QYF_20200319T230134_vv.tif",
+  "grd": {
+    "granule": "S1A_IW_GRDH_1SDV_20200319T230121_20200319T230146_031751_03A974_3A19",
+    "platform": "Sentinel-1A",
+    "acquisition_date": "2020-03-19T23:01:46.000000",
+    "url": "https://datapool.asf.alaska.edu/GRD_HD/SA/S1A_IW_GRDH_1SDV_20200319T230121_20200319T230146_031751_03A974_3A19.zip"
+  },
+  "slc": {
+    "granule": "S1A_IW_SLC__1SDV_20200319T230120_20200319T230148_031751_03A974_084C",
+    "platform": "Sentinel-1A",
+    "acquisition_date": "2020-03-19T23:01:48.291957Z",
+    "url": "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SDV_20200319T230120_20200319T230148_031751_03A974_084C.zip",
+    "zip": "D:\\Masters\\Drift\\2020-03-19\\SAR_+7.6h\\SLC\\S1A_IW_SLC__1SDV_20200319T230120_20200319T230148_031751_03A974_084C.zip",
+    "selected_polarisations": [
+      "VV",
+      "VH"
+    ]
+  },
+  "outputs": {
+    "vv": "D:\\Masters\\Drift\\2020-03-19\\SAR_+7.6h\\S1_18QYF_20200319T230134_slc_vv.tif",
+    "vh": "D:\\Masters\\Drift\\2020-03-19\\SAR_+7.6h\\S1_18QYF_20200319T230134_slc_vh.tif"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "planet_time_utc": "2019-04-25T07:00:00+00:00",
+  "target_time_utc": "2019-04-25T03:10:55+00:00",
+  "delta_hours_target_minus_planet": -3.8180555555555555,
+  "model": "OpenDrift PlastDrift with CMEMS surface currents, CMEMS Stokes drift, ERA5 wind, 3% windage.",
+  "seeds": "SADrift/DurbanPlanet25_04_2019_0700_Seeds.geojson",
+  "target_raster": "Data_Creation/meria_sa_plastic_s1_slc/processed_slc/MERIA_SA_001_Durban/after_20190425T031055/MERIA_SA_001_Durban_after_20190425T031055_slc_native_decomp_alpha.tif",
+  "forcing_dir": "SADrift/drift/forcing_20190425",
+  "forcing_opendrift": "SADrift/drift/opendrift_durban_planet_20190425T070000_to_s1_20190425T031055/forcing_opendrift.nc",
+  "grid_bounds_wsen": [
+    30.906896505487524,
+    -30.15231742168452,
+    31.483075186626994,
+    -29.594962725321366
+  ],
+  "landmask_source": "none",
+  "landmask_backend": {
+    "name": "none",
+    "available": true
+  },
+  "land_mask": {
+    "mask_source": "none_all_water",
+    "grid_west": 30.906897,
+    "grid_east": 31.482897,
+    "grid_south": -30.152317,
+    "grid_north": -29.595317,
+    "grid_res_deg": 0.001,
+    "grid_shape_yx": [
+      558,
+      577
+    ]
+  },
+  "ensemble_per_seed": 20,
+  "requested_time_step_minutes": 15,
+  "actual_time_step_seconds": -859.0625,
+  "steps": 16,
+  "windage": 0.03,
+  "windage_std": 0.01,
+  "terminal_velocity_ms": 0.01,
+  "mean_dx_m": -13.826529971056152,
+  "mean_dy_m": 989.7334768720436,
+  "outputs": {
+    "predicted_particle_points": "SADrift/drift/opendrift_durban_planet_20190425T070000_to_s1_20190425T031055/predicted_particle_points.geojson",
+    "predicted_seed_points_geojson": "SADrift/drift/opendrift_durban_planet_20190425T070000_to_s1_20190425T031055/predicted_seed_points.geojson",
+    "predicted_seed_points_shp": "SADrift/drift/opendrift_durban_planet_20190425T070000_to_s1_20190425T031055/predicted_seed_points.shp",
+    "search_boxes_1km": "SADrift/drift/opendrift_durban_planet_20190425T070000_to_s1_20190425T031055/search_boxes_1km.geojson"
+  }
+}

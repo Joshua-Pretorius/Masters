@@ -1,0 +1,17 @@
+{
+  "scenario": "meria_label_sar_20181031T181758",
+  "note": "MERIA/OceanScan selected patch timestamp; forward drift from Planet.",
+  "planet_time_utc": "2018-10-31T09:59:25.101477+00:00",
+  "target_time_utc": "2018-10-31T18:17:58+00:00",
+  "delta_hours_target_minus_planet": 8.30913847861111,
+  "windage": 0.03,
+  "model": "Endpoint-averaged surface current + Stokes drift + 3% ERA5 windage, applied as UTM translation per seed polygon.",
+  "outputs": {
+    "predicted_seed_polygons_geojson": "/mnt/d/Masters/Domain_SSL/PreProccess/aoi_accra_2018_10_30/drift/meria_label_sar_20181031T181758/predicted_seed_polygons.geojson",
+    "predicted_seed_polygons_shp": "/mnt/d/Masters/Domain_SSL/PreProccess/aoi_accra_2018_10_30/drift/meria_label_sar_20181031T181758/predicted_seed_polygons.shp",
+    "drift_vectors_geojson": "/mnt/d/Masters/Domain_SSL/PreProccess/aoi_accra_2018_10_30/drift/meria_label_sar_20181031T181758/drift_vectors.geojson"
+  },
+  "mean_dx_m": 7364.579503821068,
+  "mean_dy_m": 3093.279733007195,
+  "mean_speed_ms": 0.2671145830733005
+}

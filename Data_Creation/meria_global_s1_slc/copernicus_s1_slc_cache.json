@@ -1,0 +1,404 @@
+{
+  "05e7c3bc-2eac-4c4b-ba8a-6bf8aa4c0789:after:2018-10-12:2018-11-11": {
+    "end": "2018-10-12T05:44:58.969959Z",
+    "id": "b7da7039-7811-5228-91ad-3cd5eea0432a",
+    "name": "S1B_IW_SLC__1SDV_20181012T054431_20181012T054458_013115_0183B4_07F8.SAFE",
+    "start": "2018-10-12T05:44:31.020560Z"
+  },
+  "05e7c3bc-2eac-4c4b-ba8a-6bf8aa4c0789:after:2018-10-12T10:05:28Z:2018-11-11T10:05:28Z": {
+    "candidate_count": 64,
+    "coverage_ratio": "-",
+    "end": null,
+    "id": null,
+    "name": null,
+    "rejection_reason": "no candidate met 0.75 coverage threshold",
+    "start": null
+  },
+  "05e7c3bc-2eac-4c4b-ba8a-6bf8aa4c0789:before:2018-09-11:2018-10-11": {
+    "end": "2018-10-10T17:54:36.627329Z",
+    "id": "ea97e79f-73ab-5536-ac0f-ea76da3b32d9",
+    "name": "S1A_IW_SLC__1SDV_20181010T175409_20181010T175436_024077_02A1AE_5A5F.SAFE",
+    "start": "2018-10-10T17:54:09.666653Z"
+  },
+  "05e7c3bc-2eac-4c4b-ba8a-6bf8aa4c0789:before:2018-09-12T10:05:28Z:2018-10-12T10:05:28Z": {
+    "candidate_count": 61,
+    "coverage_ratio": "-",
+    "end": null,
+    "id": null,
+    "name": null,
+    "rejection_reason": "no candidate met 0.75 coverage threshold",
+    "start": null
+  },
+  "33a32832-fc41-4fdd-8c91-a41844fc1709:after:2017-10-17T15:35:59Z:2017-11-16T15:35:59Z": {
+    "candidate_count": 18,
+    "coverage_ratio": "0.799",
+    "end": "2017-10-29T11:37:39.950000Z",
+    "id": "37b41773-38fb-519e-8472-29b66c766e44",
+    "name": "S1A_IW_SLC__1SDV_20171029T113710_20171029T113739_019027_0202C9_66C0.SAFE",
+    "rejection_reason": "-",
+    "start": "2017-10-29T11:37:10.105000Z"
+  },
+  "33a32832-fc41-4fdd-8c91-a41844fc1709:after:2017-10-18:2017-11-17": {
+    "end": "2017-10-19T23:50:21.411000Z",
+    "id": "857af8b6-be94-565f-9b7b-4f9eaff15109",
+    "name": "S1A_IW_SLC__1SDV_20171019T234947_20171019T235021_018889_01FE97_92F5.SAFE",
+    "start": "2017-10-19T23:49:47.015000Z"
+  },
+  "33a32832-fc41-4fdd-8c91-a41844fc1709:before:2017-09-17:2017-10-17": {
+    "end": "2017-10-12T23:58:44.942000Z",
+    "id": "151d513c-e7da-51e5-94d2-8270d691a329",
+    "name": "S1A_IW_SLC__1SDV_20171012T235817_20171012T235844_018787_01FB66_2AB4.SAFE",
+    "start": "2017-10-12T23:58:17.998000Z"
+  },
+  "33a32832-fc41-4fdd-8c91-a41844fc1709:before:2017-09-17T15:35:59Z:2017-10-17T15:35:59Z": {
+    "candidate_count": 21,
+    "coverage_ratio": "0.799",
+    "end": "2017-10-17T11:37:39.837000Z",
+    "id": "789cde97-7d1c-5505-a90b-8b7a44f301e9",
+    "name": "S1A_IW_SLC__1SDV_20171017T113709_20171017T113739_018852_01FD74_F01C.SAFE",
+    "rejection_reason": "-",
+    "start": "2017-10-17T11:37:09.992000Z"
+  },
+  "57bbff03-21eb-54de-9d18-d8a65b256bd5:after:contains_all_points:2018-10-20T10:00:00Z:2018-11-19T10:00:00Z": [
+    {
+      "candidate_count": 5,
+      "coverage_ratio": "1.000",
+      "end": "2018-10-24T18:17:44.853794Z",
+      "id": "f8e60382-d8d9-582f-b1af-0ba75c63eb9d",
+      "name": "S1B_IW_SLC__1SDV_20181024T181717_20181024T181744_013298_01895D_793F.SAFE",
+      "rejection_reason": "-",
+      "selected_point_ids": [
+        "P01",
+        "P02",
+        "P03"
+      ],
+      "start": "2018-10-24T18:17:17.921896Z"
+    }
+  ],
+  "57bbff03-21eb-54de-9d18-d8a65b256bd5:before:contains_all_points:2018-09-20T10:00:00Z:2018-10-20T10:00:00Z": [
+    {
+      "candidate_count": 5,
+      "coverage_ratio": "1.000",
+      "end": "2018-10-18T18:18:28.608248Z",
+      "id": "35c4e58a-a827-5a9b-811c-0ac95228ccdd",
+      "name": "S1A_IW_SLC__1SDV_20181018T181758_20181018T181828_024194_02A587_7BBC.SAFE",
+      "rejection_reason": "-",
+      "selected_point_ids": [
+        "P01",
+        "P02",
+        "P03"
+      ],
+      "start": "2018-10-18T18:17:58.786237Z"
+    }
+  ],
+  "91ea9edc-67b4-4211-8532-35deec4a3148:after:2018-10-31T09:59:25Z:2018-11-30T09:59:25Z": {
+    "candidate_count": 23,
+    "coverage_ratio": "-",
+    "end": null,
+    "id": null,
+    "name": null,
+    "rejection_reason": "no candidate met 0.75 coverage threshold",
+    "start": null
+  },
+  "91ea9edc-67b4-4211-8532-35deec4a3148:after:2018-11-01:2018-12-01": {
+    "end": "2018-11-05T18:17:19.739420Z",
+    "id": "8eb8a026-6549-5cdb-90fb-662819331f48",
+    "name": "S1B_IW_SLC__1SDV_20181105T181652_20181105T181719_013473_018EDC_E316.SAFE",
+    "start": "2018-11-05T18:16:52.807521Z"
+  },
+  "91ea9edc-67b4-4211-8532-35deec4a3148:after:contains_all_points:2018-10-31T09:59:25Z:2018-11-30T09:59:25Z": [
+    {
+      "candidate_count": 8,
+      "coverage_ratio": "1.000",
+      "end": "2018-11-05T18:17:44.570540Z",
+      "id": "3835aa20-b05e-51eb-95d7-0c1b6b49293a",
+      "name": "S1B_IW_SLC__1SDV_20181105T181717_20181105T181744_013473_018EDC_5E15.SAFE",
+      "rejection_reason": "-",
+      "selected_point_ids": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08",
+        "P09",
+        "P10",
+        "P11",
+        "P12"
+      ],
+      "start": "2018-11-05T18:17:17.630419Z"
+    }
+  ],
+  "91ea9edc-67b4-4211-8532-35deec4a3148:before:2018-10-01:2018-10-31": {
+    "end": "2018-10-30T18:18:28.495277Z",
+    "id": "fff26185-f380-5201-8ba5-742db3ca0747",
+    "name": "S1A_IW_SLC__1SDV_20181030T181758_20181030T181828_024369_02AB27_32F5.SAFE",
+    "start": "2018-10-30T18:17:58.679433Z"
+  },
+  "91ea9edc-67b4-4211-8532-35deec4a3148:before:2018-10-01T09:59:25Z:2018-10-31T09:59:25Z": {
+    "candidate_count": 22,
+    "coverage_ratio": "-",
+    "end": null,
+    "id": null,
+    "name": null,
+    "rejection_reason": "no candidate met 0.75 coverage threshold",
+    "start": null
+  },
+  "91ea9edc-67b4-4211-8532-35deec4a3148:before:contains_all_points:2018-10-01T09:59:25Z:2018-10-31T09:59:25Z": [
+    {
+      "candidate_count": 7,
+      "coverage_ratio": "1.000",
+      "end": "2018-10-30T18:18:28.495277Z",
+      "id": "fff26185-f380-5201-8ba5-742db3ca0747",
+      "name": "S1A_IW_SLC__1SDV_20181030T181758_20181030T181828_024369_02AB27_32F5.SAFE",
+      "rejection_reason": "-",
+      "selected_point_ids": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08",
+        "P09",
+        "P10",
+        "P11",
+        "P12"
+      ],
+      "start": "2018-10-30T18:17:58.679433Z"
+    }
+  ],
+  "9e17ce98-9eeb-40f6-989e-894dc2be72ea:after:2017-10-12T14:12:56Z:2017-11-11T14:12:56Z": {
+    "candidate_count": 22,
+    "coverage_ratio": "0.798",
+    "end": "2017-10-17T11:37:39.837000Z",
+    "id": "789cde97-7d1c-5505-a90b-8b7a44f301e9",
+    "name": "S1A_IW_SLC__1SDV_20171017T113709_20171017T113739_018852_01FD74_F01C.SAFE",
+    "rejection_reason": "-",
+    "start": "2017-10-17T11:37:09.992000Z"
+  },
+  "9e17ce98-9eeb-40f6-989e-894dc2be72ea:after:2017-10-13:2017-11-12": {
+    "end": "2017-10-17T11:37:39.837000Z",
+    "id": "789cde97-7d1c-5505-a90b-8b7a44f301e9",
+    "name": "S1A_IW_SLC__1SDV_20171017T113709_20171017T113739_018852_01FD74_F01C.SAFE",
+    "start": "2017-10-17T11:37:09.992000Z"
+  },
+  "9e17ce98-9eeb-40f6-989e-894dc2be72ea:before:2017-09-12:2017-10-12": {
+    "end": "2017-10-10T11:46:19.830000Z",
+    "id": "a4a5a7fc-68a9-56b7-adab-d37eb7f491d4",
+    "name": "S1A_IW_SLC__1SDV_20171010T114552_20171010T114619_018750_01FA56_3F09.SAFE",
+    "start": "2017-10-10T11:45:52.890000Z"
+  },
+  "9e17ce98-9eeb-40f6-989e-894dc2be72ea:before:2017-09-12T14:12:56Z:2017-10-12T14:12:56Z": {
+    "candidate_count": 23,
+    "coverage_ratio": "0.798",
+    "end": "2017-10-05T11:37:39.643000Z",
+    "id": "09a3ca0f-f707-555d-bc9e-917869a6904c",
+    "name": "S1A_IW_SLC__1SDV_20171005T113709_20171005T113739_018677_01F81E_9D47.SAFE",
+    "rejection_reason": "-",
+    "start": "2017-10-05T11:37:09.778000Z"
+  },
+  "cabcd011-9d82-4124-9f9c-120bdc406cf3:after:2018-10-12T10:05:28Z:2018-11-11T10:05:28Z": {
+    "candidate_count": 19,
+    "coverage_ratio": "1.000",
+    "end": "2018-10-12T17:38:23.305450Z",
+    "id": "0d8d8405-9230-5b16-8049-687725db0a67",
+    "name": "S1A_IW_SLC__1SDV_20181012T173756_20181012T173823_024106_02A2A6_DA1D.SAFE",
+    "rejection_reason": "-",
+    "start": "2018-10-12T17:37:56.352996Z"
+  },
+  "cabcd011-9d82-4124-9f9c-120bdc406cf3:after:2018-10-13:2018-11-12": {
+    "end": "2018-10-17T05:53:08.904019Z",
+    "id": "b0e92c53-1e16-5b3b-9aa9-30248021d32a",
+    "name": "S1B_IW_SLC__1SDV_20181017T055240_20181017T055308_013188_0185F2_91D3.SAFE",
+    "start": "2018-10-17T05:52:40.960787Z"
+  },
+  "cabcd011-9d82-4124-9f9c-120bdc406cf3:before:2018-09-12:2018-10-12": {
+    "end": "2018-10-11T17:46:01.452540Z",
+    "id": "4fdd5411-5765-5601-b13c-71120006863b",
+    "name": "S1B_IW_SLC__1SDV_20181011T174534_20181011T174601_013108_01837C_2E63.SAFE",
+    "start": "2018-10-11T17:45:34.481586Z"
+  },
+  "cabcd011-9d82-4124-9f9c-120bdc406cf3:before:2018-09-12T10:05:28Z:2018-10-12T10:05:28Z": {
+    "candidate_count": 17,
+    "coverage_ratio": "1.000",
+    "end": "2018-10-12T05:44:58.969959Z",
+    "id": "b7da7039-7811-5228-91ad-3cd5eea0432a",
+    "name": "S1B_IW_SLC__1SDV_20181012T054431_20181012T054458_013115_0183B4_07F8.SAFE",
+    "rejection_reason": "-",
+    "start": "2018-10-12T05:44:31.020560Z"
+  },
+  "cd77705c-782d-5b99-935f-405bfd905cbf:after:contains_all_points:2018-10-26T10:00:00Z:2018-11-25T10:00:00Z": [
+    {
+      "candidate_count": 10,
+      "coverage_ratio": "1.000",
+      "end": "2018-10-31T18:09:35.828374Z",
+      "id": "a565f735-c4e7-5c88-b89a-c376f8207a1a",
+      "name": "S1B_IW_SLC__1SDV_20181031T180908_20181031T180935_013400_018CA3_F37E.SAFE",
+      "rejection_reason": "-",
+      "selected_point_ids": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08",
+        "P09",
+        "P10",
+        "P11",
+        "P12",
+        "P13",
+        "P14",
+        "P15"
+      ],
+      "start": "2018-10-31T18:09:08.886198Z"
+    }
+  ],
+  "cd77705c-782d-5b99-935f-405bfd905cbf:before:contains_all_points:2018-09-26T10:00:00Z:2018-10-26T10:00:00Z": [
+    {
+      "candidate_count": 10,
+      "coverage_ratio": "1.000",
+      "end": "2018-10-25T18:10:20.370758Z",
+      "id": "1e0f3577-beea-57a8-9621-32681b3c88ab",
+      "name": "S1A_IW_SLC__1SDV_20181025T180953_20181025T181020_024296_02A8C4_97A2.SAFE",
+      "rejection_reason": "-",
+      "selected_point_ids": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08",
+        "P09",
+        "P10",
+        "P11",
+        "P12",
+        "P13",
+        "P14",
+        "P15"
+      ],
+      "start": "2018-10-25T18:09:53.430637Z"
+    }
+  ],
+  "d918b4e9-16ac-5c30-830f-6945943e1d9e:after:contains_all_points:2018-10-27T10:00:00Z:2018-11-26T10:00:00Z": [
+    {
+      "candidate_count": 5,
+      "coverage_ratio": "1.000",
+      "end": "2018-10-30T18:18:28.495277Z",
+      "id": "fff26185-f380-5201-8ba5-742db3ca0747",
+      "name": "S1A_IW_SLC__1SDV_20181030T181758_20181030T181828_024369_02AB27_32F5.SAFE",
+      "rejection_reason": "-",
+      "selected_point_ids": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06"
+      ],
+      "start": "2018-10-30T18:17:58.679433Z"
+    }
+  ],
+  "d918b4e9-16ac-5c30-830f-6945943e1d9e:before:contains_all_points:2018-09-27T10:00:00Z:2018-10-27T10:00:00Z": [
+    {
+      "candidate_count": 5,
+      "coverage_ratio": "1.000",
+      "end": "2018-10-24T18:17:44.853794Z",
+      "id": "f8e60382-d8d9-582f-b1af-0ba75c63eb9d",
+      "name": "S1B_IW_SLC__1SDV_20181024T181717_20181024T181744_013298_01895D_793F.SAFE",
+      "rejection_reason": "-",
+      "selected_point_ids": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06"
+      ],
+      "start": "2018-10-24T18:17:17.921896Z"
+    }
+  ],
+  "d9db6dd4-4db8-5723-96ba-57d182cda0b7:after:contains_all_points:2018-10-28T10:00:00Z:2018-11-27T10:00:00Z": [
+    {
+      "candidate_count": 17,
+      "coverage_ratio": "0.500",
+      "end": "2018-10-30T18:18:28.495277Z",
+      "id": "fff26185-f380-5201-8ba5-742db3ca0747",
+      "name": "S1A_IW_SLC__1SDV_20181030T181758_20181030T181828_024369_02AB27_32F5.SAFE",
+      "rejection_reason": "-",
+      "selected_point_ids": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07"
+      ],
+      "start": "2018-10-30T18:17:58.679433Z"
+    },
+    {
+      "candidate_count": 17,
+      "coverage_ratio": "0.500",
+      "end": "2018-10-31T18:09:35.828374Z",
+      "id": "a565f735-c4e7-5c88-b89a-c376f8207a1a",
+      "name": "S1B_IW_SLC__1SDV_20181031T180908_20181031T180935_013400_018CA3_F37E.SAFE",
+      "rejection_reason": "-",
+      "selected_point_ids": [
+        "P08",
+        "P09",
+        "P10",
+        "P11",
+        "P12",
+        "P13",
+        "P14"
+      ],
+      "start": "2018-10-31T18:09:08.886198Z"
+    }
+  ],
+  "d9db6dd4-4db8-5723-96ba-57d182cda0b7:before:contains_all_points:2018-09-28T10:00:00Z:2018-10-28T10:00:00Z": [
+    {
+      "candidate_count": 18,
+      "coverage_ratio": "0.500",
+      "end": "2018-10-25T18:10:20.370758Z",
+      "id": "1e0f3577-beea-57a8-9621-32681b3c88ab",
+      "name": "S1A_IW_SLC__1SDV_20181025T180953_20181025T181020_024296_02A8C4_97A2.SAFE",
+      "rejection_reason": "-",
+      "selected_point_ids": [
+        "P08",
+        "P09",
+        "P10",
+        "P11",
+        "P12",
+        "P13",
+        "P14"
+      ],
+      "start": "2018-10-25T18:09:53.430637Z"
+    },
+    {
+      "candidate_count": 18,
+      "coverage_ratio": "0.500",
+      "end": "2018-10-24T18:17:44.853794Z",
+      "id": "f8e60382-d8d9-582f-b1af-0ba75c63eb9d",
+      "name": "S1B_IW_SLC__1SDV_20181024T181717_20181024T181744_013298_01895D_793F.SAFE",
+      "rejection_reason": "-",
+      "selected_point_ids": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07"
+      ],
+      "start": "2018-10-24T18:17:17.921896Z"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "planet_time_utc": "2018-10-31T10:00:00+00:00",
+  "target_time_utc": "2018-10-30T18:17:58+00:00",
+  "delta_hours_target_minus_planet": -15.700555555555555,
+  "predicted_polygon_count": 77,
+  "mean_dx_m": -602.4331150835051,
+  "mean_dy_m": 2532.582985958307,
+  "mean_distance_m": 28956.01813942509,
+  "median_distance_m": 37870.18675722944,
+  "bearing_deg_from_north": 346.61955298443144,
+  "compass_direction": "NNW",
+  "snapped_particle_count": 3
+}

@@ -1,0 +1,851 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.39348392825,
+              15.117752790753
+            ],
+            [
+              -90.426170264498,
+              17.033059243095
+            ],
+            [
+              -87.807051560828,
+              17.060361485619
+            ],
+            [
+              -87.799335015143,
+              15.141833568245
+            ],
+            [
+              -90.39348392825,
+              15.117752790753
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "event_id": "16PCC_2016-09-04_SAR_+7.9h_2016-09-05T00:06:26Z",
+        "tile": "16PCC",
+        "source_date": "2016-09-04",
+        "sar_dir": "SAR_+7.9h",
+        "acquired_utc": "2016-09-05T00:06:26Z",
+        "pols": "VV",
+        "raster_file_count": 1,
+        "centroid_lon": -89.106189,
+        "centroid_lat": 16.089787,
+        "spatial_overlap_point_count": 449,
+        "spatial_overlap_source_file_count": 218,
+        "overlap_24h_point_count": 0,
+        "overlap_24h_source_file_count": 0,
+        "min_abs_delta_hours": 4220.445,
+        "max_abs_delta_hours": 19455.847
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.092840218584,
+              15.560725359455
+            ],
+            [
+              -87.463380126778,
+              15.581969248257
+            ],
+            [
+              -87.459331139201,
+              13.641178707051
+            ],
+            [
+              -90.065865788259,
+              13.622686636656
+            ],
+            [
+              -90.092840218584,
+              15.560725359455
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "event_id": "16PCC_2017-08-30_SAR_+8.0h_2017-08-31T00:06:07Z",
+        "tile": "16PCC",
+        "source_date": "2017-08-30",
+        "sar_dir": "SAR_+8.0h",
+        "acquired_utc": "2017-08-31T00:06:07Z",
+        "pols": "VH,VV",
+        "raster_file_count": 2,
+        "centroid_lon": -88.770076,
+        "centroid_lat": 14.603059,
+        "spatial_overlap_point_count": 0,
+        "spatial_overlap_source_file_count": 0,
+        "overlap_24h_point_count": 0,
+        "overlap_24h_source_file_count": 0,
+        "min_abs_delta_hours": null,
+        "max_abs_delta_hours": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.431474782926,
+              17.061491829178
+            ],
+            [
+              -87.770991211929,
+              17.08906424053
+            ],
+            [
+              -87.763576760827,
+              15.162479049018
+            ],
+            [
+              -90.398548855973,
+              15.138168613809
+            ],
+            [
+              -90.431474782926,
+              17.061491829178
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "event_id": "16PCC_2017-08-30_SAR_+8.0h_2017-08-31T00:06:32Z",
+        "tile": "16PCC",
+        "source_date": "2017-08-30",
+        "sar_dir": "SAR_+8.0h",
+        "acquired_utc": "2017-08-31T00:06:32Z",
+        "pols": "VH,VV",
+        "raster_file_count": 2,
+        "centroid_lon": -89.090819,
+        "centroid_lat": 16.114352,
+        "spatial_overlap_point_count": 460,
+        "spatial_overlap_source_file_count": 223,
+        "overlap_24h_point_count": 0,
+        "overlap_24h_source_file_count": 0,
+        "min_abs_delta_hours": 104.429,
+        "max_abs_delta_hours": 10815.846
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -88.212029696424,
+              16.315052489995
+            ],
+            [
+              -85.537249884495,
+              16.313464654347
+            ],
+            [
+              -85.550758855479,
+              14.363874546764
+            ],
+            [
+              -88.200834706056,
+              14.365264188192
+            ],
+            [
+              -88.212029696424,
+              16.315052489995
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "event_id": "16PCC_2018-02-21_SAR_+7.7h_2018-02-21T23:58:03Z",
+        "tile": "16PCC",
+        "source_date": "2018-02-21",
+        "sar_dir": "SAR_+7.7h",
+        "acquired_utc": "2018-02-21T23:58:03Z",
+        "pols": "VH,VV",
+        "raster_file_count": 2,
+        "centroid_lon": -86.875238,
+        "centroid_lat": 15.340922,
+        "spatial_overlap_point_count": 612,
+        "spatial_overlap_source_file_count": 291,
+        "overlap_24h_point_count": 0,
+        "overlap_24h_source_file_count": 0,
+        "min_abs_delta_hours": 3104.345,
+        "max_abs_delta_hours": 12272.425
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.093022423967,
+              15.560451916383
+            ],
+            [
+              -87.463379518895,
+              15.581698034397
+            ],
+            [
+              -87.459330614777,
+              13.640907447986
+            ],
+            [
+              -90.066046931292,
+              13.622413480883
+            ],
+            [
+              -90.093022423967,
+              15.560451916383
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "event_id": "16PCC_2018-02-26_SAR_+7.9h_2018-02-27T00:06:04Z",
+        "tile": "16PCC",
+        "source_date": "2018-02-26",
+        "sar_dir": "SAR_+7.9h",
+        "acquired_utc": "2018-02-27T00:06:04Z",
+        "pols": "VH,VV",
+        "raster_file_count": 2,
+        "centroid_lon": -88.770166,
+        "centroid_lat": 14.602786,
+        "spatial_overlap_point_count": 0,
+        "spatial_overlap_source_file_count": 0,
+        "overlap_24h_point_count": 0,
+        "overlap_24h_source_file_count": 0,
+        "min_abs_delta_hours": null,
+        "max_abs_delta_hours": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.431938871264,
+              17.061213195561
+            ],
+            [
+              -87.771084079578,
+              17.088792723675
+            ],
+            [
+              -87.763668866447,
+              15.162207525111
+            ],
+            [
+              -90.399009093361,
+              15.1378908613
+            ],
+            [
+              -90.431938871264,
+              17.061213195561
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "event_id": "16PCC_2018-02-26_SAR_+7.9h_2018-02-27T00:06:29Z",
+        "tile": "16PCC",
+        "source_date": "2018-02-26",
+        "sar_dir": "SAR_+7.9h",
+        "acquired_utc": "2018-02-27T00:06:29Z",
+        "pols": "VH,VV",
+        "raster_file_count": 2,
+        "centroid_lon": -89.091096,
+        "centroid_lat": 16.114077,
+        "spatial_overlap_point_count": 460,
+        "spatial_overlap_source_file_count": 223,
+        "overlap_24h_point_count": 0,
+        "overlap_24h_source_file_count": 0,
+        "min_abs_delta_hours": 3415.887,
+        "max_abs_delta_hours": 8739.556
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -89.802086827993,
+              17.314264636236
+            ],
+            [
+              -87.156701291503,
+              17.333808600743
+            ],
+            [
+              -87.155149635354,
+              15.379255357449
+            ],
+            [
+              -89.774383994353,
+              15.362027347119
+            ],
+            [
+              -89.802086827993,
+              17.314264636236
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "event_id": "16PCC_2018-08-30_SAR_-4.4h_2018-08-30T11:45:46Z",
+        "tile": "16PCC",
+        "source_date": "2018-08-30",
+        "sar_dir": "SAR_-4.4h",
+        "acquired_utc": "2018-08-30T11:45:46Z",
+        "pols": "VH,VV",
+        "raster_file_count": 2,
+        "centroid_lon": -88.471853,
+        "centroid_lat": 16.348959,
+        "spatial_overlap_point_count": 662,
+        "spatial_overlap_source_file_count": 297,
+        "overlap_24h_point_count": 0,
+        "overlap_24h_source_file_count": 0,
+        "min_abs_delta_hours": 484.368,
+        "max_abs_delta_hours": 16820.22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.0928388687,
+              15.560635084139
+            ],
+            [
+              -87.463100111924,
+              15.581879432665
+            ],
+            [
+              -87.459053596924,
+              13.641088800085
+            ],
+            [
+              -90.065864623649,
+              13.622596344111
+            ],
+            [
+              -90.0928388687,
+              15.560635084139
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "event_id": "16PCC_2020-12-12_SAR_+7.8h_2020-12-13T00:06:26Z",
+        "tile": "16PCC",
+        "source_date": "2020-12-12",
+        "sar_dir": "SAR_+7.8h",
+        "acquired_utc": "2020-12-13T00:06:26Z",
+        "pols": "VH,VV",
+        "raster_file_count": 2,
+        "centroid_lon": -88.769936,
+        "centroid_lat": 14.602969,
+        "spatial_overlap_point_count": 0,
+        "spatial_overlap_source_file_count": 0,
+        "overlap_24h_point_count": 0,
+        "overlap_24h_source_file_count": 0,
+        "min_abs_delta_hours": null,
+        "max_abs_delta_hours": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.431660748534,
+              17.061398422218
+            ],
+            [
+              -87.770708892189,
+              17.088974926158
+            ],
+            [
+              -87.763296874693,
+              15.162299188423
+            ],
+            [
+              -90.398731798279,
+              15.1379853119
+            ],
+            [
+              -90.431660748534,
+              17.061398422218
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "event_id": "16PCC_2020-12-12_SAR_+7.8h_2020-12-13T00:06:51Z",
+        "tile": "16PCC",
+        "source_date": "2020-12-12",
+        "sar_dir": "SAR_+7.8h",
+        "acquired_utc": "2020-12-13T00:06:51Z",
+        "pols": "VH,VV",
+        "raster_file_count": 2,
+        "centroid_lon": -89.09077,
+        "centroid_lat": 16.114216,
+        "spatial_overlap_point_count": 460,
+        "spatial_overlap_source_file_count": 223,
+        "overlap_24h_point_count": 0,
+        "overlap_24h_source_file_count": 0,
+        "min_abs_delta_hours": 17984.16,
+        "max_abs_delta_hours": 33219.562
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -87.707292247628,
+              17.634779291643
+            ],
+            [
+              -85.027721944269,
+              17.626186790249
+            ],
+            [
+              -85.049703985241,
+              15.45137325838
+            ],
+            [
+              -87.699403777591,
+              15.458850573118
+            ],
+            [
+              -87.707292247628,
+              17.634779291643
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "event_id": "16PDC_2018-10-24_SAR_-4.6h_2018-10-24T11:37:31Z",
+        "tile": "16PDC",
+        "source_date": "2018-10-24",
+        "sar_dir": "SAR_-4.6h",
+        "acquired_utc": "2018-10-24T11:37:31Z",
+        "pols": "VH,VV",
+        "raster_file_count": 2,
+        "centroid_lon": -86.371129,
+        "centroid_lat": 16.54483,
+        "spatial_overlap_point_count": 994,
+        "spatial_overlap_source_file_count": 422,
+        "overlap_24h_point_count": 1,
+        "overlap_24h_source_file_count": 1,
+        "min_abs_delta_hours": 4.408,
+        "max_abs_delta_hours": 18140.083
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -88.014874469713,
+              15.884564485534
+            ],
+            [
+              -85.4019281954,
+              15.881041616236
+            ],
+            [
+              -85.416188323847,
+              13.940990383408
+            ],
+            [
+              -88.005815640022,
+              13.944064876455
+            ],
+            [
+              -88.014874469713,
+              15.884564485534
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "event_id": "16PDC_2018-10-24_SAR_-4.6h_2018-10-24T11:37:58Z",
+        "tile": "16PDC",
+        "source_date": "2018-10-24",
+        "sar_dir": "SAR_-4.6h",
+        "acquired_utc": "2018-10-24T11:37:58Z",
+        "pols": "VH,VV",
+        "raster_file_count": 2,
+        "centroid_lon": -86.709747,
+        "centroid_lat": 14.914115,
+        "spatial_overlap_point_count": 5,
+        "spatial_overlap_source_file_count": 2,
+        "overlap_24h_point_count": 0,
+        "overlap_24h_source_file_count": 0,
+        "min_abs_delta_hours": 14487.033,
+        "max_abs_delta_hours": 14487.033
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -74.486544330099,
+              19.585186558607
+            ],
+            [
+              -71.761721991699,
+              19.556845430636
+            ],
+            [
+              -71.798649409817,
+              17.591834009459
+            ],
+            [
+              -74.492411441862,
+              17.617136174662
+            ],
+            [
+              -74.486544330099,
+              19.585186558607
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "event_id": "18QYF_2020-03-19_SAR_+7.6h_2020-03-19T23:01:34Z",
+        "tile": "18QYF",
+        "source_date": "2020-03-19",
+        "sar_dir": "SAR_+7.6h",
+        "acquired_utc": "2020-03-19T23:01:34Z",
+        "pols": "VH,VV",
+        "raster_file_count": 2,
+        "centroid_lon": -73.135125,
+        "centroid_lat": 18.589634,
+        "spatial_overlap_point_count": 0,
+        "spatial_overlap_source_file_count": 0,
+        "overlap_24h_point_count": 0,
+        "overlap_24h_source_file_count": 0,
+        "min_abs_delta_hours": null,
+        "max_abs_delta_hours": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -74.485112985532,
+              19.585543950534
+            ],
+            [
+              -71.7605726126,
+              19.557185825531
+            ],
+            [
+              -71.797513848743,
+              17.592176691395
+            ],
+            [
+              -74.49099657315,
+              17.617494079653
+            ],
+            [
+              -74.485112985532,
+              19.585543950534
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "event_id": "18QYF_2020-09-15_SAR_+7.6h_2020-09-15T23:01:43Z",
+        "tile": "18QYF",
+        "source_date": "2020-09-15",
+        "sar_dir": "SAR_+7.6h",
+        "acquired_utc": "2020-09-15T23:01:43Z",
+        "pols": "VH,VV",
+        "raster_file_count": 2,
+        "centroid_lon": -73.133842,
+        "centroid_lat": 18.589984,
+        "spatial_overlap_point_count": 0,
+        "spatial_overlap_source_file_count": 0,
+        "overlap_24h_point_count": 0,
+        "overlap_24h_source_file_count": 0,
+        "min_abs_delta_hours": null,
+        "max_abs_delta_hours": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -74.921301333958,
+              19.656570182637
+            ],
+            [
+              -72.26769095029,
+              19.635827407754
+            ],
+            [
+              -72.298687502251,
+              17.690428150695
+            ],
+            [
+              -74.922195458127,
+              17.708976347746
+            ],
+            [
+              -74.921301333958,
+              19.656570182637
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "event_id": "18QYF_2021-01-23_SAR_-4.6h_2021-01-23T10:47:43Z",
+        "tile": "18QYF",
+        "source_date": "2021-01-23",
+        "sar_dir": "SAR_-4.6h",
+        "acquired_utc": "2021-01-23T10:47:43Z",
+        "pols": "VH,VV",
+        "raster_file_count": 2,
+        "centroid_lon": -73.602676,
+        "centroid_lat": 18.674804,
+        "spatial_overlap_point_count": 0,
+        "spatial_overlap_source_file_count": 0,
+        "overlap_24h_point_count": 0,
+        "overlap_24h_source_file_count": 0,
+        "min_abs_delta_hours": null,
+        "max_abs_delta_hours": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -4.252134722891,
+              57.703949626309
+            ],
+            [
+              0.510805906747,
+              57.66142291632
+            ],
+            [
+              0.335422989375,
+              55.73143978698
+            ],
+            [
+              -4.189457336119,
+              55.770969274025
+            ],
+            [
+              -4.252134722891,
+              57.703949626309
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "event_id": "30VWH_2018-04-20_SAR_+6.5h_2018-04-20T17:51:02Z",
+        "tile": "30VWH",
+        "source_date": "2018-04-20",
+        "sar_dir": "SAR_+6.5h",
+        "acquired_utc": "2018-04-20T17:51:02Z",
+        "pols": "VH,VV",
+        "raster_file_count": 2,
+        "centroid_lon": -1.898779,
+        "centroid_lat": 56.725199,
+        "spatial_overlap_point_count": 0,
+        "spatial_overlap_source_file_count": 0,
+        "overlap_24h_point_count": 0,
+        "overlap_24h_source_file_count": 0,
+        "min_abs_delta_hours": null,
+        "max_abs_delta_hours": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              107.076472203371,
+              -5.581563938627
+            ],
+            [
+              109.653921569961,
+              -5.593136213699
+            ],
+            [
+              109.648508824114,
+              -7.594843183395
+            ],
+            [
+              107.060738965587,
+              -7.579088712501
+            ],
+            [
+              107.076472203371,
+              -5.581563938627
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "event_id": "48MYU_2019-12-01_SAR_-4.6h_2019-11-30T22:25:49Z",
+        "tile": "48MYU",
+        "source_date": "2019-12-01",
+        "sar_dir": "SAR_-4.6h",
+        "acquired_utc": "2019-11-30T22:25:49Z",
+        "pols": "VH,VV",
+        "raster_file_count": 2,
+        "centroid_lon": 108.360351,
+        "centroid_lat": -6.587828,
+        "spatial_overlap_point_count": 0,
+        "spatial_overlap_source_file_count": 0,
+        "overlap_24h_point_count": 0,
+        "overlap_24h_source_file_count": 0,
+        "min_abs_delta_hours": null,
+        "max_abs_delta_hours": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              107.077325342415,
+              16.948021396315
+            ],
+            [
+              109.724038242527,
+              16.981768500711
+            ],
+            [
+              109.73620462816,
+              15.05853941483
+            ],
+            [
+              107.114625372206,
+              15.028800289288
+            ],
+            [
+              107.077325342415,
+              16.948021396315
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "event_id": "48PZC_2019-11-24_SAR_+7.8h_2019-11-24T10:56:47Z",
+        "tile": "48PZC",
+        "source_date": "2019-11-24",
+        "sar_dir": "SAR_+7.8h",
+        "acquired_utc": "2019-11-24T10:56:47Z",
+        "pols": "VH,VV",
+        "raster_file_count": 2,
+        "centroid_lon": 108.413452,
+        "centroid_lat": 16.005818,
+        "spatial_overlap_point_count": 0,
+        "spatial_overlap_source_file_count": 0,
+        "overlap_24h_point_count": 0,
+        "overlap_24h_source_file_count": 0,
+        "min_abs_delta_hours": null,
+        "max_abs_delta_hours": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119.670905153328,
+              15.471426016663
+            ],
+            [
+              122.285463859285,
+              15.495324863864
+            ],
+            [
+              122.291739774871,
+              13.530646830077
+            ],
+            [
+              119.700083350837,
+              13.509897454424
+            ],
+            [
+              119.670905153328,
+              15.471426016663
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "event_id": "51PTS_2016-07-17_SAR_-4.5h_2016-07-16T21:46:43Z",
+        "tile": "51PTS",
+        "source_date": "2016-07-17",
+        "sar_dir": "SAR_-4.5h",
+        "acquired_utc": "2016-07-16T21:46:43Z",
+        "pols": "VH,VV",
+        "raster_file_count": 2,
+        "centroid_lon": 120.987361,
+        "centroid_lat": 14.503268,
+        "spatial_overlap_point_count": 0,
+        "spatial_overlap_source_file_count": 0,
+        "overlap_24h_point_count": 0,
+        "overlap_24h_source_file_count": 0,
+        "min_abs_delta_hours": null,
+        "max_abs_delta_hours": null
+      }
+    }
+  ]
+}

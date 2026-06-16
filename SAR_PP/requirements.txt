@@ -1,0 +1,8 @@
+jupyterlab
+numpy
+pandas
+matplotlib
+geopandas
+rasterio
+scikit-learn
+esa-snappy

@@ -1,0 +1,411 @@
+<PAMDataset>
+  <Subdataset name="VHM0">
+    <PAMDataset>
+      <Metadata>
+        <MDI key="latitude#axis">Y</MDI>
+        <MDI key="latitude#long_name">latitude coordinate</MDI>
+        <MDI key="latitude#standard_name">latitude</MDI>
+        <MDI key="latitude#units">degrees_north</MDI>
+        <MDI key="longitude#axis">X</MDI>
+        <MDI key="longitude#long_name">longitude coordinate</MDI>
+        <MDI key="longitude#standard_name">longitude</MDI>
+        <MDI key="longitude#units">degrees_east</MDI>
+        <MDI key="NC_GLOBAL#area">GLO</MDI>
+        <MDI key="NC_GLOBAL#CDI">Climate Data Interface version 1.9.8 (https://mpimet.mpg.de/cdi)</MDI>
+        <MDI key="NC_GLOBAL#CDO">Climate Data Operators version 1.9.8 (https://mpimet.mpg.de/cdo)</MDI>
+        <MDI key="NC_GLOBAL#contact">servicedesk.cmems@mercator-ocean.eu</MDI>
+        <MDI key="NC_GLOBAL#Conventions">CF-1.6</MDI>
+        <MDI key="NC_GLOBAL#copernicusmarine_version">2.4.0</MDI>
+        <MDI key="NC_GLOBAL#credit">E.U. Copernicus Marine Service Information (CMEMS)</MDI>
+        <MDI key="NC_GLOBAL#dataset">global-reanalysis-wav-001-032</MDI>
+        <MDI key="NC_GLOBAL#date_created">20231017-13:03:00</MDI>
+        <MDI key="NC_GLOBAL#geospatial_lat_max">89.8</MDI>
+        <MDI key="NC_GLOBAL#geospatial_lat_min">-89.8</MDI>
+        <MDI key="NC_GLOBAL#geospatial_lat_step">0.2</MDI>
+        <MDI key="NC_GLOBAL#geospatial_lat_units">degree</MDI>
+        <MDI key="NC_GLOBAL#geospatial_lon_max">179.8</MDI>
+        <MDI key="NC_GLOBAL#geospatial_lon_min">-180</MDI>
+        <MDI key="NC_GLOBAL#geospatial_lon_step">0.2</MDI>
+        <MDI key="NC_GLOBAL#geospatial_lon_units">degree</MDI>
+        <MDI key="NC_GLOBAL#institution">METEO-FRANCE</MDI>
+        <MDI key="NC_GLOBAL#licence">http://marine.copernicus.eu/services-portfolio/service-commitments-and-licence/</MDI>
+        <MDI key="NC_GLOBAL#producer">CMEMS - Global Monitoring and Forecasting Centre</MDI>
+        <MDI key="NC_GLOBAL#product">GLOBAL_REANALYSIS_WAV_001_032</MDI>
+        <MDI key="NC_GLOBAL#product_range">D</MDI>
+        <MDI key="NC_GLOBAL#product_ref_date">20230430-00:00:00</MDI>
+        <MDI key="NC_GLOBAL#product_type">forecast</MDI>
+        <MDI key="NC_GLOBAL#product_user_manual">http://marine.copernicus.eu/documents/PUM/CMEMS-GLO-PUM-001-032.pdf</MDI>
+        <MDI key="NC_GLOBAL#quality_information_document">http://marine.copernicus.eu/documents/QUID/CMEMS-GLO-QUID-001-032.pdf</MDI>
+        <MDI key="NC_GLOBAL#references">http://marine.copernicus.eu</MDI>
+        <MDI key="NC_GLOBAL#time_coverage_end">20230430-21:00:00</MDI>
+        <MDI key="NC_GLOBAL#time_coverage_start">20230430-00:00:00</MDI>
+        <MDI key="NC_GLOBAL#title">Mean fields from global wave model MFWAM of Meteo-France with ECMWF forcing</MDI>
+        <MDI key="NC_GLOBAL#version">1.2</MDI>
+        <MDI key="NETCDF_DIM_EXTRA">{time}</MDI>
+        <MDI key="NETCDF_DIM_time_DEF">{9,4}</MDI>
+        <MDI key="NETCDF_DIM_time_VALUES">{607584,607587,607590,607593,607596,607599,607602,607605,607608}</MDI>
+        <MDI key="time#axis">T</MDI>
+        <MDI key="time#calendar">gregorian</MDI>
+        <MDI key="time#long_name">Time</MDI>
+        <MDI key="time#standard_name">time</MDI>
+        <MDI key="time#units">hours since 1950-01-01</MDI>
+        <MDI key="time#unit_long">Hours Since 1950-01-01</MDI>
+        <MDI key="VHM0#add_offset">0</MDI>
+        <MDI key="VHM0#cell_methods">time:point area:mean</MDI>
+        <MDI key="VHM0#long_name">Spectral significant wave height (Hm0)</MDI>
+        <MDI key="VHM0#scale_factor">0.01</MDI>
+        <MDI key="VHM0#standard_name">sea_surface_wave_significant_height</MDI>
+        <MDI key="VHM0#type_of_analysis">spectral analysis</MDI>
+        <MDI key="VHM0#units">m</MDI>
+        <MDI key="VHM0#WMO_code">100</MDI>
+        <MDI key="VHM0#_FillValue">-32767</MDI>
+      </Metadata>
+      <PAMRasterBand band="1">
+        <Histograms>
+          <HistItem>
+            <HistMin>195.25</HistMin>
+            <HistMax>288.75</HistMax>
+            <BucketCount>16</BucketCount>
+            <IncludeOutOfRange>0</IncludeOutOfRange>
+            <Approximate>0</Approximate>
+            <HistCounts>1|1|0|1|1|0|0|1|0|1|2|1|1|1|2|1</HistCounts>
+          </HistItem>
+        </Histograms>
+        <Metadata>
+          <MDI key="STATISTICS_MINIMUM">198</MDI>
+          <MDI key="STATISTICS_MAXIMUM">286</MDI>
+          <MDI key="STATISTICS_MEAN">249.07142857143</MDI>
+          <MDI key="STATISTICS_STDDEV">28.17918250288</MDI>
+        </Metadata>
+      </PAMRasterBand>
+      <PAMRasterBand band="2">
+        <Histograms>
+          <HistItem>
+            <HistMin>183.5</HistMin>
+            <HistMax>268.5</HistMax>
+            <BucketCount>16</BucketCount>
+            <IncludeOutOfRange>0</IncludeOutOfRange>
+            <Approximate>0</Approximate>
+            <HistCounts>1|1|0|2|0|0|0|1|1|0|1|2|1|1|2|1</HistCounts>
+          </HistItem>
+        </Histograms>
+        <Metadata>
+          <MDI key="STATISTICS_MINIMUM">186</MDI>
+          <MDI key="STATISTICS_MAXIMUM">266</MDI>
+          <MDI key="STATISTICS_MEAN">232.64285714286</MDI>
+          <MDI key="STATISTICS_STDDEV">25.647631867449</MDI>
+        </Metadata>
+      </PAMRasterBand>
+      <PAMRasterBand band="3">
+        <Histograms>
+          <HistItem>
+            <HistMin>173.6875</HistMin>
+            <HistMax>252.3125</HistMax>
+            <BucketCount>16</BucketCount>
+            <IncludeOutOfRange>0</IncludeOutOfRange>
+            <Approximate>0</Approximate>
+            <HistCounts>1|1|0|2|0|0|0|1|1|0|1|2|2|0|2|1</HistCounts>
+          </HistItem>
+        </Histograms>
+        <Metadata>
+          <MDI key="STATISTICS_MINIMUM">176</MDI>
+          <MDI key="STATISTICS_MAXIMUM">250</MDI>
+          <MDI key="STATISTICS_MEAN">219</MDI>
+          <MDI key="STATISTICS_STDDEV">23.817760480064</MDI>
+        </Metadata>
+      </PAMRasterBand>
+    </PAMDataset>
+  </Subdataset>
+  <Subdataset name="VSDX">
+    <PAMDataset>
+      <Metadata>
+        <MDI key="latitude#axis">Y</MDI>
+        <MDI key="latitude#long_name">latitude coordinate</MDI>
+        <MDI key="latitude#standard_name">latitude</MDI>
+        <MDI key="latitude#units">degrees_north</MDI>
+        <MDI key="longitude#axis">X</MDI>
+        <MDI key="longitude#long_name">longitude coordinate</MDI>
+        <MDI key="longitude#standard_name">longitude</MDI>
+        <MDI key="longitude#units">degrees_east</MDI>
+        <MDI key="NC_GLOBAL#area">GLO</MDI>
+        <MDI key="NC_GLOBAL#CDI">Climate Data Interface version 1.9.8 (https://mpimet.mpg.de/cdi)</MDI>
+        <MDI key="NC_GLOBAL#CDO">Climate Data Operators version 1.9.8 (https://mpimet.mpg.de/cdo)</MDI>
+        <MDI key="NC_GLOBAL#contact">servicedesk.cmems@mercator-ocean.eu</MDI>
+        <MDI key="NC_GLOBAL#Conventions">CF-1.6</MDI>
+        <MDI key="NC_GLOBAL#copernicusmarine_version">2.4.0</MDI>
+        <MDI key="NC_GLOBAL#credit">E.U. Copernicus Marine Service Information (CMEMS)</MDI>
+        <MDI key="NC_GLOBAL#dataset">global-reanalysis-wav-001-032</MDI>
+        <MDI key="NC_GLOBAL#date_created">20231017-13:03:00</MDI>
+        <MDI key="NC_GLOBAL#geospatial_lat_max">89.8</MDI>
+        <MDI key="NC_GLOBAL#geospatial_lat_min">-89.8</MDI>
+        <MDI key="NC_GLOBAL#geospatial_lat_step">0.2</MDI>
+        <MDI key="NC_GLOBAL#geospatial_lat_units">degree</MDI>
+        <MDI key="NC_GLOBAL#geospatial_lon_max">179.8</MDI>
+        <MDI key="NC_GLOBAL#geospatial_lon_min">-180</MDI>
+        <MDI key="NC_GLOBAL#geospatial_lon_step">0.2</MDI>
+        <MDI key="NC_GLOBAL#geospatial_lon_units">degree</MDI>
+        <MDI key="NC_GLOBAL#institution">METEO-FRANCE</MDI>
+        <MDI key="NC_GLOBAL#licence">http://marine.copernicus.eu/services-portfolio/service-commitments-and-licence/</MDI>
+        <MDI key="NC_GLOBAL#producer">CMEMS - Global Monitoring and Forecasting Centre</MDI>
+        <MDI key="NC_GLOBAL#product">GLOBAL_REANALYSIS_WAV_001_032</MDI>
+        <MDI key="NC_GLOBAL#product_range">D</MDI>
+        <MDI key="NC_GLOBAL#product_ref_date">20230430-00:00:00</MDI>
+        <MDI key="NC_GLOBAL#product_type">forecast</MDI>
+        <MDI key="NC_GLOBAL#product_user_manual">http://marine.copernicus.eu/documents/PUM/CMEMS-GLO-PUM-001-032.pdf</MDI>
+        <MDI key="NC_GLOBAL#quality_information_document">http://marine.copernicus.eu/documents/QUID/CMEMS-GLO-QUID-001-032.pdf</MDI>
+        <MDI key="NC_GLOBAL#references">http://marine.copernicus.eu</MDI>
+        <MDI key="NC_GLOBAL#time_coverage_end">20230430-21:00:00</MDI>
+        <MDI key="NC_GLOBAL#time_coverage_start">20230430-00:00:00</MDI>
+        <MDI key="NC_GLOBAL#title">Mean fields from global wave model MFWAM of Meteo-France with ECMWF forcing</MDI>
+        <MDI key="NC_GLOBAL#version">1.2</MDI>
+        <MDI key="NETCDF_DIM_EXTRA">{time}</MDI>
+        <MDI key="NETCDF_DIM_time_DEF">{9,4}</MDI>
+        <MDI key="NETCDF_DIM_time_VALUES">{607584,607587,607590,607593,607596,607599,607602,607605,607608}</MDI>
+        <MDI key="time#axis">T</MDI>
+        <MDI key="time#calendar">gregorian</MDI>
+        <MDI key="time#long_name">Time</MDI>
+        <MDI key="time#standard_name">time</MDI>
+        <MDI key="time#units">hours since 1950-01-01</MDI>
+        <MDI key="time#unit_long">Hours Since 1950-01-01</MDI>
+        <MDI key="VSDX#add_offset">0</MDI>
+        <MDI key="VSDX#cell_methods">time:point area:mean</MDI>
+        <MDI key="VSDX#long_name">Stokes drift U</MDI>
+        <MDI key="VSDX#scale_factor">0.01</MDI>
+        <MDI key="VSDX#standard_name">sea_surface_wave_stokes_drift_x_velocity</MDI>
+        <MDI key="VSDX#type_of_analysis">spectral analysis</MDI>
+        <MDI key="VSDX#units">m s-1</MDI>
+        <MDI key="VSDX#WMO_code">215</MDI>
+        <MDI key="VSDX#_FillValue">-32767</MDI>
+      </Metadata>
+      <PAMRasterBand band="1">
+        <Histograms>
+          <HistItem>
+            <HistMin>-9.09375</HistMin>
+            <HistMax>-5.90625</HistMax>
+            <BucketCount>16</BucketCount>
+            <IncludeOutOfRange>0</IncludeOutOfRange>
+            <Approximate>0</Approximate>
+            <HistCounts>1|0|0|0|0|4|0|0|0|0|6|0|0|0|0|3</HistCounts>
+          </HistItem>
+        </Histograms>
+        <Metadata>
+          <MDI key="STATISTICS_MINIMUM">-9</MDI>
+          <MDI key="STATISTICS_MAXIMUM">-6</MDI>
+          <MDI key="STATISTICS_MEAN">-7.2142857142857</MDI>
+          <MDI key="STATISTICS_STDDEV">0.86011389848516</MDI>
+        </Metadata>
+      </PAMRasterBand>
+      <PAMRasterBand band="2">
+        <Histograms>
+          <HistItem>
+            <HistMin>-7.062500000000001</HistMin>
+            <HistMax>-4.9375</HistMax>
+            <BucketCount>16</BucketCount>
+            <IncludeOutOfRange>0</IncludeOutOfRange>
+            <Approximate>0</Approximate>
+            <HistCounts>4|0|0|0|0|0|0|0|6|0|0|0|0|0|0|4</HistCounts>
+          </HistItem>
+        </Histograms>
+        <Metadata>
+          <MDI key="STATISTICS_MINIMUM">-7</MDI>
+          <MDI key="STATISTICS_MAXIMUM">-5</MDI>
+          <MDI key="STATISTICS_MEAN">-6</MDI>
+          <MDI key="STATISTICS_STDDEV">0.75592894601845</MDI>
+        </Metadata>
+      </PAMRasterBand>
+      <PAMRasterBand band="3">
+        <Histograms>
+          <HistItem>
+            <HistMin>-6.0625</HistMin>
+            <HistMax>-3.9375</HistMax>
+            <BucketCount>16</BucketCount>
+            <IncludeOutOfRange>0</IncludeOutOfRange>
+            <Approximate>0</Approximate>
+            <HistCounts>2|0|0|0|0|0|0|0|3|0|0|0|0|0|0|9</HistCounts>
+          </HistItem>
+        </Histograms>
+        <Metadata>
+          <MDI key="STATISTICS_MINIMUM">-6</MDI>
+          <MDI key="STATISTICS_MAXIMUM">-4</MDI>
+          <MDI key="STATISTICS_MEAN">-4.5</MDI>
+          <MDI key="STATISTICS_STDDEV">0.7319250547114</MDI>
+        </Metadata>
+      </PAMRasterBand>
+    </PAMDataset>
+  </Subdataset>
+  <Subdataset name="VSDY">
+    <PAMDataset>
+      <Metadata>
+        <MDI key="latitude#axis">Y</MDI>
+        <MDI key="latitude#long_name">latitude coordinate</MDI>
+        <MDI key="latitude#standard_name">latitude</MDI>
+        <MDI key="latitude#units">degrees_north</MDI>
+        <MDI key="longitude#axis">X</MDI>
+        <MDI key="longitude#long_name">longitude coordinate</MDI>
+        <MDI key="longitude#standard_name">longitude</MDI>
+        <MDI key="longitude#units">degrees_east</MDI>
+        <MDI key="NC_GLOBAL#area">GLO</MDI>
+        <MDI key="NC_GLOBAL#CDI">Climate Data Interface version 1.9.8 (https://mpimet.mpg.de/cdi)</MDI>
+        <MDI key="NC_GLOBAL#CDO">Climate Data Operators version 1.9.8 (https://mpimet.mpg.de/cdo)</MDI>
+        <MDI key="NC_GLOBAL#contact">servicedesk.cmems@mercator-ocean.eu</MDI>
+        <MDI key="NC_GLOBAL#Conventions">CF-1.6</MDI>
+        <MDI key="NC_GLOBAL#copernicusmarine_version">2.4.0</MDI>
+        <MDI key="NC_GLOBAL#credit">E.U. Copernicus Marine Service Information (CMEMS)</MDI>
+        <MDI key="NC_GLOBAL#dataset">global-reanalysis-wav-001-032</MDI>
+        <MDI key="NC_GLOBAL#date_created">20231017-13:03:00</MDI>
+        <MDI key="NC_GLOBAL#geospatial_lat_max">89.8</MDI>
+        <MDI key="NC_GLOBAL#geospatial_lat_min">-89.8</MDI>
+        <MDI key="NC_GLOBAL#geospatial_lat_step">0.2</MDI>
+        <MDI key="NC_GLOBAL#geospatial_lat_units">degree</MDI>
+        <MDI key="NC_GLOBAL#geospatial_lon_max">179.8</MDI>
+        <MDI key="NC_GLOBAL#geospatial_lon_min">-180</MDI>
+        <MDI key="NC_GLOBAL#geospatial_lon_step">0.2</MDI>
+        <MDI key="NC_GLOBAL#geospatial_lon_units">degree</MDI>
+        <MDI key="NC_GLOBAL#institution">METEO-FRANCE</MDI>
+        <MDI key="NC_GLOBAL#licence">http://marine.copernicus.eu/services-portfolio/service-commitments-and-licence/</MDI>
+        <MDI key="NC_GLOBAL#producer">CMEMS - Global Monitoring and Forecasting Centre</MDI>
+        <MDI key="NC_GLOBAL#product">GLOBAL_REANALYSIS_WAV_001_032</MDI>
+        <MDI key="NC_GLOBAL#product_range">D</MDI>
+        <MDI key="NC_GLOBAL#product_ref_date">20230430-00:00:00</MDI>
+        <MDI key="NC_GLOBAL#product_type">forecast</MDI>
+        <MDI key="NC_GLOBAL#product_user_manual">http://marine.copernicus.eu/documents/PUM/CMEMS-GLO-PUM-001-032.pdf</MDI>
+        <MDI key="NC_GLOBAL#quality_information_document">http://marine.copernicus.eu/documents/QUID/CMEMS-GLO-QUID-001-032.pdf</MDI>
+        <MDI key="NC_GLOBAL#references">http://marine.copernicus.eu</MDI>
+        <MDI key="NC_GLOBAL#time_coverage_end">20230430-21:00:00</MDI>
+        <MDI key="NC_GLOBAL#time_coverage_start">20230430-00:00:00</MDI>
+        <MDI key="NC_GLOBAL#title">Mean fields from global wave model MFWAM of Meteo-France with ECMWF forcing</MDI>
+        <MDI key="NC_GLOBAL#version">1.2</MDI>
+        <MDI key="NETCDF_DIM_EXTRA">{time}</MDI>
+        <MDI key="NETCDF_DIM_time_DEF">{9,4}</MDI>
+        <MDI key="NETCDF_DIM_time_VALUES">{607584,607587,607590,607593,607596,607599,607602,607605,607608}</MDI>
+        <MDI key="time#axis">T</MDI>
+        <MDI key="time#calendar">gregorian</MDI>
+        <MDI key="time#long_name">Time</MDI>
+        <MDI key="time#standard_name">time</MDI>
+        <MDI key="time#units">hours since 1950-01-01</MDI>
+        <MDI key="time#unit_long">Hours Since 1950-01-01</MDI>
+        <MDI key="VSDY#add_offset">0</MDI>
+        <MDI key="VSDY#cell_methods">time:point area:mean</MDI>
+        <MDI key="VSDY#long_name">Stokes drift V</MDI>
+        <MDI key="VSDY#scale_factor">0.01</MDI>
+        <MDI key="VSDY#standard_name">sea_surface_wave_stokes_drift_y_velocity</MDI>
+        <MDI key="VSDY#type_of_analysis">spectral analysis</MDI>
+        <MDI key="VSDY#units">m s-1</MDI>
+        <MDI key="VSDY#WMO_code">216</MDI>
+        <MDI key="VSDY#_FillValue">-32767</MDI>
+      </Metadata>
+      <PAMRasterBand band="1">
+        <Histograms>
+          <HistItem>
+            <HistMin>-11.25</HistMin>
+            <HistMax>-2.75</HistMax>
+            <BucketCount>16</BucketCount>
+            <IncludeOutOfRange>0</IncludeOutOfRange>
+            <Approximate>0</Approximate>
+            <HistCounts>1|0|2|0|2|0|2|0|1|2|0|0|0|2|0|2</HistCounts>
+          </HistItem>
+        </Histograms>
+        <Metadata>
+          <MDI key="STATISTICS_MINIMUM">-11</MDI>
+          <MDI key="STATISTICS_MAXIMUM">-3</MDI>
+          <MDI key="STATISTICS_MEAN">-7</MDI>
+          <MDI key="STATISTICS_STDDEV">2.6186146828319</MDI>
+        </Metadata>
+      </PAMRasterBand>
+      <PAMRasterBand band="2">
+        <Histograms>
+          <HistItem>
+            <HistMin>-6.15625</HistMin>
+            <HistMax>-0.84375</HistMax>
+            <BucketCount>16</BucketCount>
+            <IncludeOutOfRange>0</IncludeOutOfRange>
+            <Approximate>0</Approximate>
+            <HistCounts>3|0|0|2|0|0|2|0|0|3|0|0|2|0|0|2</HistCounts>
+          </HistItem>
+        </Histograms>
+        <Metadata>
+          <MDI key="STATISTICS_MINIMUM">-6</MDI>
+          <MDI key="STATISTICS_MAXIMUM">-1</MDI>
+          <MDI key="STATISTICS_MEAN">-3.6428571428571</MDI>
+          <MDI key="STATISTICS_STDDEV">1.7157731642092</MDI>
+        </Metadata>
+      </PAMRasterBand>
+      <PAMRasterBand band="3">
+        <Histograms>
+          <HistItem>
+            <HistMin>-3.125</HistMin>
+            <HistMax>1.125</HistMax>
+            <BucketCount>16</BucketCount>
+            <IncludeOutOfRange>0</IncludeOutOfRange>
+            <Approximate>0</Approximate>
+            <HistCounts>2|0|0|0|2|0|0|0|4|0|0|4|0|0|0|2</HistCounts>
+          </HistItem>
+        </Histograms>
+        <Metadata>
+          <MDI key="STATISTICS_MINIMUM">-3</MDI>
+          <MDI key="STATISTICS_MAXIMUM">1</MDI>
+          <MDI key="STATISTICS_MEAN">-0.85714285714286</MDI>
+          <MDI key="STATISTICS_STDDEV">1.2453996981545</MDI>
+        </Metadata>
+      </PAMRasterBand>
+      <PAMRasterBand band="4">
+        <Metadata>
+          <MDI key="STATISTICS_MINIMUM">-2</MDI>
+          <MDI key="STATISTICS_MAXIMUM">1</MDI>
+          <MDI key="STATISTICS_MEAN">-0.21428571428571</MDI>
+          <MDI key="STATISTICS_STDDEV">0.77261813045657</MDI>
+        </Metadata>
+      </PAMRasterBand>
+      <PAMRasterBand band="5">
+        <Metadata>
+          <MDI key="STATISTICS_MINIMUM">-1</MDI>
+          <MDI key="STATISTICS_MAXIMUM">1</MDI>
+          <MDI key="STATISTICS_MEAN">-0.21428571428571</MDI>
+          <MDI key="STATISTICS_STDDEV">0.6738557951469</MDI>
+        </Metadata>
+      </PAMRasterBand>
+      <PAMRasterBand band="6">
+        <Metadata>
+          <MDI key="STATISTICS_MINIMUM">2</MDI>
+          <MDI key="STATISTICS_MAXIMUM">3</MDI>
+          <MDI key="STATISTICS_MEAN">2.5</MDI>
+          <MDI key="STATISTICS_STDDEV">0.5</MDI>
+        </Metadata>
+      </PAMRasterBand>
+      <PAMRasterBand band="7">
+        <Metadata>
+          <MDI key="STATISTICS_MINIMUM">2</MDI>
+          <MDI key="STATISTICS_MAXIMUM">3</MDI>
+          <MDI key="STATISTICS_MEAN">2.7142857142857</MDI>
+          <MDI key="STATISTICS_STDDEV">0.45175395145263</MDI>
+        </Metadata>
+      </PAMRasterBand>
+      <PAMRasterBand band="8">
+        <Metadata>
+          <MDI key="STATISTICS_MINIMUM">1</MDI>
+          <MDI key="STATISTICS_MAXIMUM">3</MDI>
+          <MDI key="STATISTICS_MEAN">1.9285714285714</MDI>
+          <MDI key="STATISTICS_STDDEV">0.59333027592272</MDI>
+        </Metadata>
+      </PAMRasterBand>
+      <PAMRasterBand band="9">
+        <Histograms>
+          <HistItem>
+            <HistMin>0.96875</HistMin>
+            <HistMax>2.03125</HistMax>
+            <BucketCount>16</BucketCount>
+            <IncludeOutOfRange>0</IncludeOutOfRange>
+            <Approximate>0</Approximate>
+            <HistCounts>10|0|0|0|0|0|0|0|0|0|0|0|0|0|0|4</HistCounts>
+          </HistItem>
+        </Histograms>
+        <Metadata>
+          <MDI key="STATISTICS_MINIMUM">1</MDI>
+          <MDI key="STATISTICS_MAXIMUM">2</MDI>
+          <MDI key="STATISTICS_MEAN">1.2857142857143</MDI>
+          <MDI key="STATISTICS_STDDEV">0.45175395145263</MDI>
+        </Metadata>
+      </PAMRasterBand>
+    </PAMDataset>
+  </Subdataset>
+</PAMDataset>

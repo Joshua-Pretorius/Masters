@@ -1,0 +1,61 @@
+{
+    "id": "20181028_095610_0e0f",
+    "type": "Feature",
+    "geometry": {
+        "coordinates": [
+            [
+                [
+                    -0.3236174557204133,
+                    5.5754683566580345
+                ],
+                [
+                    -0.33817854520170587,
+                    5.502831051404678
+                ],
+                [
+                    -0.11492098653686417,
+                    5.458780541313301
+                ],
+                [
+                    -0.10088373230367928,
+                    5.531549224176957
+                ],
+                [
+                    -0.3236174557204133,
+                    5.5754683566580345
+                ]
+            ]
+        ],
+        "type": "Polygon"
+    },
+    "properties": {
+        "acquired": "2018-10-28T09:56:10.452886Z",
+        "anomalous_pixels": 0.02,
+        "clear_confidence_percent": 83,
+        "clear_percent": 96,
+        "cloud_cover": 0.04,
+        "cloud_percent": 4,
+        "ground_control": true,
+        "gsd": 3.8,
+        "heavy_haze_percent": 0,
+        "instrument": "PS2",
+        "item_type": "PSScene",
+        "light_haze_percent": 0,
+        "pixel_resolution": 3,
+        "provider": "planetscope",
+        "published": "2021-02-28T02:30:42Z",
+        "publishing_stage": "finalized",
+        "quality_category": "standard",
+        "satellite_azimuth": 174.6,
+        "satellite_id": "0e0f",
+        "shadow_percent": 0,
+        "snow_ice_percent": 0,
+        "strip_id": "1799035",
+        "sun_azimuth": 124.9,
+        "sun_elevation": 57.2,
+        "updated": "2022-10-13T14:58:02Z",
+        "view_angle": 0,
+        "visible_confidence_percent": 75,
+        "visible_percent": 96
+    }
+}

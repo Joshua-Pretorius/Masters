@@ -1,0 +1,46 @@
+[
+  {
+    "target": "honduras_found_20171017",
+    "request": "2017-10-17_closest",
+    "granule": "S1A_IW_SLC__1SDV_20171017T113709_20171017T113739_018852_01FD74_F01C",
+    "acquisition_date": "2017-10-17T11:37:39.837117Z",
+    "delta_hours": 0.011065865833333332,
+    "subswaths": [
+      "IW2"
+    ],
+    "manifest": "/mnt/d/Masters/Domain_SSL/downloads_S1/ocean_scan_2017/honduras_found_20171017/2017-10-17_closest/manifest.json"
+  },
+  {
+    "target": "honduras_found_20171017",
+    "request": "2017-10-15_before17",
+    "granule": "S1A_IW_SLC__1SDV_20171012T235753_20171012T235820_018787_01FB66_F901",
+    "acquisition_date": "2017-10-12T23:58:20.100899Z",
+    "delta_hours": -60.02774975027778,
+    "subswaths": [
+      "IW2"
+    ],
+    "manifest": "/mnt/d/Masters/Domain_SSL/downloads_S1/ocean_scan_2017/honduras_found_20171017/2017-10-15_before17/manifest.json"
+  },
+  {
+    "target": "belize_20171017",
+    "request": "2017-10-17_closest",
+    "granule": "S1A_IW_SLC__1SDV_20171018T000619_20171018T000646_018860_01FDB3_4C3D",
+    "acquisition_date": "2017-10-18T00:06:46.645157Z",
+    "delta_hours": 12.496290321388889,
+    "subswaths": [
+      "IW3"
+    ],
+    "manifest": "/mnt/d/Masters/Domain_SSL/downloads_S1/ocean_scan_2017/belize_20171017/2017-10-17_closest/manifest.json"
+  },
+  {
+    "target": "belize_20171017",
+    "request": "2017-10-15_before17",
+    "granule": "S1A_IW_SLC__1SDV_20171010T114528_20171010T114555_018750_01FA56_DC8A",
+    "acquisition_date": "2017-10-10T11:45:55.007691Z",
+    "delta_hours": -120.23472008583333,
+    "subswaths": [
+      "IW2"
+    ],
+    "manifest": "/mnt/d/Masters/Domain_SSL/downloads_S1/ocean_scan_2017/belize_20171017/2017-10-15_before17/manifest.json"
+  }
+]

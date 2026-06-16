@@ -1,0 +1,106 @@
+{
+  "patch_root": "/mnt/d/Masters/MARIDA/MARIDA/patches",
+  "splits_dir": "/mnt/d/Masters/MARIDA/MARIDA/splits",
+  "epochs": 2,
+  "batch_size": 8,
+  "train_samples": 96,
+  "val_samples": 48,
+  "test_eval_samples": 32,
+  "test_figure_count": 4,
+  "pos_weight": 106.22732385724511,
+  "mean": [
+    0.050874728709459305,
+    0.0474906824529171,
+    0.04085425287485123,
+    0.03206464648246765,
+    0.0303318053483963,
+    0.035936664789915085,
+    0.04057017341256142,
+    0.03601603955030441,
+    0.041242580860853195,
+    0.02425890974700451,
+    0.015952007845044136
+  ],
+  "std": [
+    0.059184394776821136,
+    0.05993710085749626,
+    0.0589355006814003,
+    0.06334536522626877,
+    0.06152020022273064,
+    0.07615087181329727,
+    0.0881340503692627,
+    0.08145695924758911,
+    0.0948653593659401,
+    0.057333748787641525,
+    0.03777804598212242
+  ],
+  "history": [
+    {
+      "epoch": 1,
+      "train": {
+        "loss": 2.366197278102239,
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "val": {
+        "loss": NaN,
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "epoch": 2,
+      "train": {
+        "loss": 2.3138366043567657,
+        "iou": 0.03958525372713455,
+        "precision": 0.05267278692859578,
+        "recall": 0.06100012242892422
+      },
+      "val": {
+        "loss": NaN,
+        "iou": 0.053418095003647185,
+        "precision": 0.17784211721538903,
+        "recall": 0.1274260698869176
+      }
+    }
+  ],
+  "test_metrics": {
+    "loss": 7.306579113006592,
+    "iou": 0.17951736618938915,
+    "precision": 0.2866636237518302,
+    "recall": 0.2943785405459048
+  },
+  "checkpoint_path": "/mnt/d/Masters/sar_ml_pipeline/outputs/quick_marida_baseline/tiny_unet_baseline.pt",
+  "figure_results": [
+    {
+      "patch_name": "14-9-18_16PCC_18",
+      "iou": 0.6504226905170302,
+      "precision": 0.6613822530912262,
+      "recall": 0.9751561351947098,
+      "figure_path": "/mnt/d/Masters/sar_ml_pipeline/outputs/quick_marida_baseline/figures/14-9-18_16PCC_18.png"
+    },
+    {
+      "patch_name": "14-9-18_16PCC_9",
+      "iou": 0.5072603482557089,
+      "precision": 0.5131033642125792,
+      "recall": 0.9780436802973977,
+      "figure_path": "/mnt/d/Masters/sar_ml_pipeline/outputs/quick_marida_baseline/figures/14-9-18_16PCC_9.png"
+    },
+    {
+      "patch_name": "16-2-18_16PEC_19",
+      "iou": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "figure_path": "/mnt/d/Masters/sar_ml_pipeline/outputs/quick_marida_baseline/figures/16-2-18_16PEC_19.png"
+    },
+    {
+      "patch_name": "14-9-18_16PCC_17",
+      "iou": 0.3815266036797613,
+      "precision": 0.3848468888721691,
+      "recall": 0.9778868213102218,
+      "figure_path": "/mnt/d/Masters/sar_ml_pipeline/outputs/quick_marida_baseline/figures/14-9-18_16PCC_17.png"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.67267899999999,
+          15.9532715
+        ]
+      },
+      "properties": {
+        "feature_id": "20181024_160201_0f3b_16807-29825-16::feature_1",
+        "source_geojson": "20181024_160201_0f3b_16807-29825-16.geojson",
+        "feature_index": 1,
+        "source_acquired_utc": "2018-10-24T16:02:01Z",
+        "earth_science_event": "Marine Debris",
+        "tag_status": "yes",
+        "label": "shapefile85842_20181024_160201_0f3b",
+        "name": "marine_debris",
+        "labels": 1,
+        "lon": -87.672679,
+        "lat": 15.953271,
+        "spatial_overlap_any": true,
+        "spatial_overlap_event_count": 3,
+        "overlap_24h_any": true,
+        "overlap_24h_event_count": 1,
+        "closest_marida_event_id": "16PDC_2018-10-24_SAR_-4.6h_2018-10-24T11:37:31Z",
+        "closest_marida_tile": "16PDC",
+        "closest_marida_sar_dir": "SAR_-4.6h",
+        "closest_marida_acquired_utc": "2018-10-24T11:37:31Z",
+        "closest_marida_delta_hours": 4.408,
+        "closest_marida_pols": "VH,VV",
+        "matching_marida_event_ids": "16PDC_2018-10-24_SAR_-4.6h_2018-10-24T11:37:31Z;16PCC_2018-08-30_SAR_-4.4h_2018-08-30T11:45:46Z;16PCC_2018-02-21_SAR_+7.7h_2018-02-21T23:58:03Z",
+        "matching_marida_24h_event_ids": "16PDC_2018-10-24_SAR_-4.6h_2018-10-24T11:37:31Z"
+      }
+    }
+  ]
+}

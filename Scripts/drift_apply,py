@@ -1,0 +1,125 @@
+# drift_apply.py
+# ────────────────────────────────────────────────────────────────────
+# displacement = (uo + vsdx + α*u10,  vo + vsdy + α*v10) * Δt
+# Default α = 0.02 (Stokes included). If you remove Stokes, use α ≈ 0.03.
+#
+# Usage examples:
+#   python drift_apply.py one --s2_shp "D:\...\S2_1-12-19_48MYU.shp" ^
+#       --sar_dir "D:\...\downloads\16PCC\2016-09-04\SAR_+7.9h" --alpha 0.02 ^
+#       --class_field report --class_value 1
+#
+#   python drift_apply.py batch --list_csv scenes.csv --alpha 0.02
+#     # scenes.csv columns: s2_shp,sar_dir,dt_hours(optional)
+
+import argparse, re, math
+from pathlib import Path
+import numpy as np, geopandas as gpd, rasterio
+from shapely.ops import transform as shp_transform
+from shapely.geometry import Point, box
+from pyproj import Transformer
+
+def utm_epsg(lon, lat): return int((32600 if lat>=0 else 32700) + round((lon+180)/6))
+
+def read_scalar(tif: Path, lon, lat, default=0.0):
+    if not tif or not tif.exists(): return default
+    with rasterio.open(tif) as src:
+        val = next(src.sample([(lon,lat)]))[0]
+        return default if (val is None or np.isnan(val)) else float(val)
+
+def parse_dt(sar_dir: Path):
+    m = re.search(r"SAR_([+\-]\d+(\.\d+)?)h", sar_dir.name)
+    return float(m.group(1)) if m else None
+
+def predict_point(geom, dt_hours, bio_dir: Path, alpha: float):
+    lon0, lat0 = geom.centroid.x, geom.centroid.y
+    uo   = read_scalar(bio_dir/"uo.tif",   lon0, lat0, 0.0)
+    vo   = read_scalar(bio_dir/"vo.tif",   lon0, lat0, 0.0)
+    vsdx = read_scalar(bio_dir/"vsdx.tif", lon0, lat0, 0.0)
+    vsdy = read_scalar(bio_dir/"vsdy.tif", lon0, lat0, 0.0)
+    u10  = read_scalar(bio_dir/"u10.tif",  lon0, lat0, 0.0)
+    v10  = read_scalar(bio_dir/"v10.tif",  lon0, lat0, 0.0)
+
+    u = uo + vsdx + alpha*u10   # m/s
+    v = vo + vsdy + alpha*v10
+
+    epsg = utm_epsg(lon0, lat0)
+    fwd  = Transformer.from_crs(4326, epsg, always_xy=True)
+    inv  = Transformer.from_crs(epsg, 4326, always_xy=True)
+    x0,y0 = fwd.transform(lon0, lat0)
+    dx, dy = u*(dt_hours*3600.0), v*(dt_hours*3600.0)
+    lon1, lat1 = inv.transform(x0+dx, y0+dy)
+    return Point(lon1, lat1)
+
+def box3km(pt: Point):
+    lon, lat = pt.x, pt.y
+    epsg = utm_epsg(lon, lat)
+    fwd  = Transformer.from_crs(4326, epsg, always_xy=True)
+    inv  = Transformer.from_crs(epsg, 4326, always_xy=True)
+    def _fwd(x,y,z=None): return fwd.transform(x,y)
+    def _inv(x,y,z=None): return inv.transform(x,y)
+    p_m = shp_transform(_fwd, pt); x,y = p_m.x, p_m.y
+    b_m = box(x-1500, y-1500, x+1500, y+1500)
+    return shp_transform(_inv, b_m)
+
+def run_one(s2_shp: Path, sar_dir: Path, alpha: float,
+            class_field="report", class_value=1, dt_hours=None):
+    sar_dir = Path(sar_dir)
+    if dt_hours is None:
+        dt_hours = parse_dt(sar_dir)
+    assert dt_hours is not None, "Δt not provided and not parsable from SAR folder name."
+
+    bio_dir = sar_dir/"bio"
+    gdf = gpd.read_file(s2_shp).to_crs(4326)
+    if class_field in gdf.columns and class_value is not None:
+        gdf = gdf[gdf[class_field]==class_value].copy()
+    if gdf.empty:
+        print("• No polygons after filter; nothing to predict.")
+        return
+
+    pts, boxes = [], []
+    for geom in gdf.geometry:
+        pt = predict_point(geom, dt_hours, bio_dir, alpha)
+        pts.append(pt)
+        boxes.append(box3km(pt))
+
+    gpd.GeoDataFrame(gdf.drop(columns="geometry", errors="ignore"),
+                     geometry=pts, crs=4326
+        ).to_file(sar_dir/"pred_points.gpkg", layer="points", driver="GPKG")
+    gpd.GeoDataFrame(gdf.drop(columns="geometry", errors="ignore"),
+                     geometry=boxes, crs=4326
+        ).to_file(sar_dir/"search_3km.gpkg", layer="boxes", driver="GPKG")
+    print(f"✓ {len(pts)} predictions → {sar_dir}")
+
+def main():
+    ap = argparse.ArgumentParser()
+    sub = ap.add_subparsers(dest="cmd", required=True)
+
+    p1 = sub.add_parser("one")
+    p1.add_argument("--s2_shp", required=True, type=Path)
+    p1.add_argument("--sar_dir", required=True, type=Path)
+    p1.add_argument("--alpha", type=float, default=0.02)
+    p1.add_argument("--class_field", default="report")
+    p1.add_argument("--class_value", type=int, default=1)
+    p1.add_argument("--dt_hours", type=float, default=None)
+
+    p2 = sub.add_parser("batch")
+    p2.add_argument("--list_csv", required=True, type=Path)
+    p2.add_argument("--alpha", type=float, default=0.02)
+    p2.add_argument("--class_field", default="report")
+    p2.add_argument("--class_value", type=int, default=1)
+
+    args = ap.parse_args()
+    if args.cmd == "one":
+        run_one(args.s2_shp, args.sar_dir, args.alpha,
+                class_field=args.class_field, class_value=args.class_value,
+                dt_hours=args.dt_hours)
+    else:
+        import pandas as pd
+        df = pd.read_csv(args.list_csv)
+        for _, r in df.iterrows():
+            run_one(Path(r.s2_shp), Path(r.sar_dir), args.alpha,
+                    class_field=args.class_field, class_value=args.class_value,
+                    dt_hours=float(r.dt_hours) if "dt_hours" in r and not pd.isna(r.dt_hours) else None)
+
+if __name__ == "__main__":
+    main()

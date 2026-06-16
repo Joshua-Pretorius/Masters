@@ -1,0 +1,43 @@
+{
+  "scenario": "actual",
+  "note": "Actual Sentinel-1 SAFE acquisition start time; backward-time OpenDrift run.",
+  "planet_time_utc": "2018-10-31T09:59:25.101477+00:00",
+  "target_time_utc": "2018-10-30T18:17:58+00:00",
+  "delta_hours_target_minus_planet": -15.690861521388888,
+  "model": "OpenDrift PlastDrift with CMEMS surface currents, CMEMS Stokes drift, ERA5 wind, 3% windage.",
+  "land_mask": {
+    "mask_source": "/mnt/d/Masters/Domain_SSL/PreProccess/aoi_accra_2018_10_30/2018-10-30/final/slc_IW2_sigma0_tc_weak_boxcar3x3.tif",
+    "mask_band": 1,
+    "sigma0_land_threshold": 0.01,
+    "dilation_pixels": 1,
+    "grid_west": -0.5,
+    "grid_east": -0.18,
+    "grid_south": 5.34,
+    "grid_north": 5.58,
+    "grid_res_deg": 0.001,
+    "grid_shape_yx": [
+      241,
+      321
+    ],
+    "grid_cells_in_sar_raster": 77361,
+    "land_cells": 29787,
+    "land_fraction": 0.3850389731259937
+  },
+  "coastline_action": "previous",
+  "ensemble_per_seed": 20,
+  "requested_time_step_minutes": 15,
+  "actual_time_step_seconds": -896.620658,
+  "steps": 63,
+  "windage": 0.03,
+  "windage_std": 0.01,
+  "terminal_velocity_ms": 0.01,
+  "mean_dx_m": -1885.2387398588082,
+  "mean_dy_m": 1006.5085262404198,
+  "outputs": {
+    "forcing_opendrift": "/mnt/d/Masters/Domain_SSL/PreProccess/aoi_accra_2018_10_30/drift/opendrift_actual_sar_20181030T181758_landmasked/forcing_opendrift.nc",
+    "predicted_particle_points": "/mnt/d/Masters/Domain_SSL/PreProccess/aoi_accra_2018_10_30/drift/opendrift_actual_sar_20181030T181758_landmasked/predicted_particle_points.geojson",
+    "predicted_seed_polygons_geojson": "/mnt/d/Masters/Domain_SSL/PreProccess/aoi_accra_2018_10_30/drift/opendrift_actual_sar_20181030T181758_landmasked/predicted_seed_polygons.geojson",
+    "predicted_seed_polygons_shp": "/mnt/d/Masters/Domain_SSL/PreProccess/aoi_accra_2018_10_30/drift/opendrift_actual_sar_20181030T181758_landmasked/predicted_seed_polygons.shp",
+    "search_boxes_1km": "/mnt/d/Masters/Domain_SSL/PreProccess/aoi_accra_2018_10_30/drift/opendrift_actual_sar_20181030T181758_landmasked/search_boxes_1km.geojson"
+  }
+}

@@ -1,0 +1,1973 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "6ec629af-9109-48b3-99f4-9ca1efcc30ab",
+      "properties": {
+        "patch_index": 1,
+        "source_observation_index": 2,
+        "obs_id": "6ec629af-9109-48b3-99f4-9ca1efcc30ab",
+        "source_id": "S1B_20211003T1641",
+        "timestamp": "2021-10-03T16:41:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "449a475a-64e0-4c90-8aeb-4e6ca82b80f4",
+      "properties": {
+        "patch_index": 2,
+        "source_observation_index": 3,
+        "obs_id": "449a475a-64e0-4c90-8aeb-4e6ca82b80f4",
+        "source_id": "S1B_20210908T0454",
+        "timestamp": "2021-09-08T04:54:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3f6da35f-cc98-4cc4-92bd-3408b9b6b92c",
+      "properties": {
+        "patch_index": 3,
+        "source_observation_index": 4,
+        "obs_id": "3f6da35f-cc98-4cc4-92bd-3408b9b6b92c",
+        "source_id": "S1B_20210730T1632",
+        "timestamp": "2021-07-30T16:32:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "498c8221-d14c-44a8-bdf1-8acbfcf9216a",
+      "properties": {
+        "patch_index": 4,
+        "source_observation_index": 5,
+        "obs_id": "498c8221-d14c-44a8-bdf1-8acbfcf9216a",
+        "source_id": "S1B_20210723T1641",
+        "timestamp": "2021-07-23T16:41:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3fe3a9a3-0f18-4430-8e34-0cd262ea6389",
+      "properties": {
+        "patch_index": 5,
+        "source_observation_index": 6,
+        "obs_id": "3fe3a9a3-0f18-4430-8e34-0cd262ea6389",
+        "source_id": "S1B_20210628T0454",
+        "timestamp": "2021-06-28T04:54:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "23a2adda-7b5e-4c11-a392-f1757520cd2d",
+      "properties": {
+        "patch_index": 6,
+        "source_observation_index": 7,
+        "obs_id": "23a2adda-7b5e-4c11-a392-f1757520cd2d",
+        "source_id": "S1B_20210605T1641",
+        "timestamp": "2021-06-05T16:41:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "b1fffddd-b2c2-4e5c-8698-644305b09e38",
+      "properties": {
+        "patch_index": 7,
+        "source_observation_index": 8,
+        "obs_id": "b1fffddd-b2c2-4e5c-8698-644305b09e38",
+        "source_id": "S1B_20210524T1641",
+        "timestamp": "2021-05-24T16:41:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "2dee6f8f-db40-4f97-b257-c4aa9517515b",
+      "properties": {
+        "patch_index": 8,
+        "source_observation_index": 9,
+        "obs_id": "2dee6f8f-db40-4f97-b257-c4aa9517515b",
+        "source_id": "S1B_20210519T1632",
+        "timestamp": "2021-05-19T16:32:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "adf9a7c0-542a-40a6-a2ec-4cf93f4215d2",
+      "properties": {
+        "patch_index": 9,
+        "source_observation_index": 10,
+        "obs_id": "adf9a7c0-542a-40a6-a2ec-4cf93f4215d2",
+        "source_id": "S1B_20210511T0454",
+        "timestamp": "2021-05-11T04:54:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "c8263fd7-91b0-4222-be30-11736117f07c",
+      "properties": {
+        "patch_index": 10,
+        "source_observation_index": 11,
+        "obs_id": "c8263fd7-91b0-4222-be30-11736117f07c",
+        "source_id": "S1B_20210506T0446",
+        "timestamp": "2021-05-06T04:46:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "286d2418-88c0-464e-802b-d4eb34fd5143",
+      "properties": {
+        "patch_index": 11,
+        "source_observation_index": 12,
+        "obs_id": "286d2418-88c0-464e-802b-d4eb34fd5143",
+        "source_id": "S1B_20210424T0446",
+        "timestamp": "2021-04-24T04:46:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "c302e883-209b-49ac-b17f-b509c06795a9",
+      "properties": {
+        "patch_index": 12,
+        "source_observation_index": 13,
+        "obs_id": "c302e883-209b-49ac-b17f-b509c06795a9",
+        "source_id": "S1A_20211003T0447",
+        "timestamp": "2021-10-03T04:47:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "76ec6bf4-6b5f-437a-9d4f-aebec8b2ce73",
+      "properties": {
+        "patch_index": 13,
+        "source_observation_index": 14,
+        "obs_id": "76ec6bf4-6b5f-437a-9d4f-aebec8b2ce73",
+        "source_id": "S1A_20210926T0455",
+        "timestamp": "2021-09-26T04:55:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "f53d1aa7-19f3-47e2-8b67-5326a447b879",
+      "properties": {
+        "patch_index": 14,
+        "source_observation_index": 15,
+        "obs_id": "f53d1aa7-19f3-47e2-8b67-5326a447b879",
+        "source_id": "S1A_20210728T0455",
+        "timestamp": "2021-07-28T04:55:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "6fbcd469-5998-4ef4-b544-6497d27540f9",
+      "properties": {
+        "patch_index": 15,
+        "source_observation_index": 16,
+        "obs_id": "6fbcd469-5998-4ef4-b544-6497d27540f9",
+        "source_id": "S1A_20210723T0446",
+        "timestamp": "2021-07-23T04:46:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "141ddc5d-7ab9-4a52-8479-fb363dbf2705",
+      "properties": {
+        "patch_index": 16,
+        "source_observation_index": 17,
+        "obs_id": "141ddc5d-7ab9-4a52-8479-fb363dbf2705",
+        "source_id": "S1A_20210623T1641",
+        "timestamp": "2021-06-23T16:41:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "2dd31802-297e-445f-bb86-85630d090d18",
+      "properties": {
+        "patch_index": 17,
+        "source_observation_index": 18,
+        "obs_id": "2dd31802-297e-445f-bb86-85630d090d18",
+        "source_id": "S1A_20210605T0446",
+        "timestamp": "2021-06-05T04:46:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "8e2bbf02-61ec-452c-9fc6-4ce9f4c9491a",
+      "properties": {
+        "patch_index": 18,
+        "source_observation_index": 19,
+        "obs_id": "8e2bbf02-61ec-452c-9fc6-4ce9f4c9491a",
+        "source_id": "S1A_20210529T0455",
+        "timestamp": "2021-05-29T04:55:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "f521a4f4-dd63-499b-a8e5-cd0db7e57ba4",
+      "properties": {
+        "patch_index": 19,
+        "source_observation_index": 20,
+        "obs_id": "f521a4f4-dd63-499b-a8e5-cd0db7e57ba4",
+        "source_id": "S1A_20210524T0446",
+        "timestamp": "2021-05-24T04:46:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "7179555b-d477-4799-a8d8-4be28c2ff685",
+      "properties": {
+        "patch_index": 20,
+        "source_observation_index": 21,
+        "obs_id": "7179555b-d477-4799-a8d8-4be28c2ff685",
+        "source_id": "S1A_20210506T1641",
+        "timestamp": "2021-05-06T16:41:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "05e9c78d-fa17-4609-aa3d-5c9870b5722b",
+      "properties": {
+        "patch_index": 21,
+        "source_observation_index": 22,
+        "obs_id": "05e9c78d-fa17-4609-aa3d-5c9870b5722b",
+        "source_id": "S1A_20210424T1641",
+        "timestamp": "2021-04-24T16:41:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "47547a65-11f0-4540-93fb-227bad49ae81",
+      "properties": {
+        "patch_index": 22,
+        "source_observation_index": 23,
+        "obs_id": "47547a65-11f0-4540-93fb-227bad49ae81",
+        "source_id": "S1B_20210406T1641",
+        "timestamp": "2021-04-06T16:41:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "8fe3676d-b164-410b-a7d0-a77bc42d63c9",
+      "properties": {
+        "patch_index": 23,
+        "source_observation_index": 24,
+        "obs_id": "8fe3676d-b164-410b-a7d0-a77bc42d63c9",
+        "source_id": "S1B_20210401T1632",
+        "timestamp": "2021-04-01T16:32:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "c8e7893a-792a-49ae-920e-d3b64bf802a4",
+      "properties": {
+        "patch_index": 24,
+        "source_observation_index": 25,
+        "obs_id": "c8e7893a-792a-49ae-920e-d3b64bf802a4",
+        "source_id": "S1B_20210325T1641",
+        "timestamp": "2021-03-25T16:41:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "155c2d7d-110e-4041-a86b-8ad8d33aba1c",
+      "properties": {
+        "patch_index": 25,
+        "source_observation_index": 26,
+        "obs_id": "155c2d7d-110e-4041-a86b-8ad8d33aba1c",
+        "source_id": "S1B_20210307T0446",
+        "timestamp": "2021-03-07T04:46:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "da4bfb13-c625-4655-a1ad-101af28758e0",
+      "properties": {
+        "patch_index": 26,
+        "source_observation_index": 27,
+        "obs_id": "da4bfb13-c625-4655-a1ad-101af28758e0",
+        "source_id": "S1B_20210223T0446",
+        "timestamp": "2021-02-23T04:46:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "986cb23b-f7b6-49a1-8c5e-f27c4c6657aa",
+      "properties": {
+        "patch_index": 27,
+        "source_observation_index": 28,
+        "obs_id": "986cb23b-f7b6-49a1-8c5e-f27c4c6657aa",
+        "source_id": "S1B_20210124T1641",
+        "timestamp": "2021-01-24T16:41:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "d39f4713-cafa-43a8-9e58-83627e5fa0f8",
+      "properties": {
+        "patch_index": 28,
+        "source_observation_index": 29,
+        "obs_id": "d39f4713-cafa-43a8-9e58-83627e5fa0f8",
+        "source_id": "S1B_20210119T1632",
+        "timestamp": "2021-01-19T16:32:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "54583c6f-d50f-4fe8-9c17-6c84ffee527b",
+      "properties": {
+        "patch_index": 29,
+        "source_observation_index": 30,
+        "obs_id": "54583c6f-d50f-4fe8-9c17-6c84ffee527b",
+        "source_id": "S1A_20210406T0446",
+        "timestamp": "2021-04-06T04:46:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "a7d17cd3-59d4-45bf-a066-94a4084ca96f",
+      "properties": {
+        "patch_index": 30,
+        "source_observation_index": 31,
+        "obs_id": "a7d17cd3-59d4-45bf-a066-94a4084ca96f",
+        "source_id": "S1A_20210325T0446",
+        "timestamp": "2021-03-25T04:46:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "e584367d-62d7-496b-acd1-75b6df6a00d9",
+      "properties": {
+        "patch_index": 31,
+        "source_observation_index": 32,
+        "obs_id": "e584367d-62d7-496b-acd1-75b6df6a00d9",
+        "source_id": "S1A_20210307T1641",
+        "timestamp": "2021-03-07T16:41:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "a9f8f202-d131-4cde-a088-794725748715",
+      "properties": {
+        "patch_index": 32,
+        "source_observation_index": 33,
+        "obs_id": "a9f8f202-d131-4cde-a088-794725748715",
+        "source_id": "S1A_20210223T1641",
+        "timestamp": "2021-02-23T16:41:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "6e869537-def1-4fae-963a-018a6b2c741f",
+      "properties": {
+        "patch_index": 33,
+        "source_observation_index": 34,
+        "obs_id": "6e869537-def1-4fae-963a-018a6b2c741f",
+        "source_id": "S1A_20210124T0446",
+        "timestamp": "2021-01-24T04:46:00.000Z",
+        "class": "PATCH",
+        "validation_type": "IN_SITU",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 118299.162783974,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with google earth images (maxar) and onsite pictures from the press in other dates. And S2 on the same date.",
+        "centroid_lon": 19.2873945,
+        "centroid_lat": 43.75915
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.284825,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.757864
+            ],
+            [
+              19.289964,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.760436
+            ],
+            [
+              19.284825,
+              43.757864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "9e17ce98-9eeb-40f6-989e-894dc2be72ea",
+      "properties": {
+        "patch_index": 34,
+        "source_observation_index": 35,
+        "obs_id": "9e17ce98-9eeb-40f6-989e-894dc2be72ea",
+        "source_id": "missing",
+        "timestamp": "2017-10-12T23:57:00.000Z",
+        "class": "PATCH",
+        "validation_type": null,
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 13234762.0703166,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch was located from the paper \u201cRemotely Sensing the Source and Transport of Marine Plastic Debris in Bay Islands of Honduras (Caribbean Sea) . Aikaterini Kikaki et al 2020\u201d",
+        "centroid_lon": -86.6916665,
+        "centroid_lat": 16.0166665
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -86.7,
+              15.983333
+            ],
+            [
+              -86.683333,
+              15.983333
+            ],
+            [
+              -86.683333,
+              16.05
+            ],
+            [
+              -86.7,
+              16.05
+            ],
+            [
+              -86.7,
+              15.983333
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33a32832-fc41-4fdd-8c91-a41844fc1709",
+      "properties": {
+        "patch_index": 35,
+        "source_observation_index": 36,
+        "obs_id": "33a32832-fc41-4fdd-8c91-a41844fc1709",
+        "source_id": "missing",
+        "timestamp": "2017-10-17T11:37:00.000Z",
+        "class": "PATCH",
+        "validation_type": null,
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 9925607.63083199,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch was located from the paper \u201cRemotely Sensing the Source and Transport of Marine Plastic Debris in Bay Islands of Honduras (Caribbean Sea) . Aikaterini Kikaki et al 2020\u201d",
+        "centroid_lon": -86.3916665,
+        "centroid_lat": 16.025
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -86.4,
+              16.0
+            ],
+            [
+              -86.383333,
+              16.0
+            ],
+            [
+              -86.383333,
+              16.05
+            ],
+            [
+              -86.4,
+              16.05
+            ],
+            [
+              -86.4,
+              16.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "86a3fb61-9db1-4df5-82ae-a848e0455a2e",
+      "properties": {
+        "patch_index": 36,
+        "source_observation_index": 37,
+        "obs_id": "86a3fb61-9db1-4df5-82ae-a848e0455a2e",
+        "source_id": "missing",
+        "timestamp": "2020-07-04T23:57:00.000Z",
+        "class": "PATCH",
+        "validation_type": null,
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 2899761.35965299,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "Visually found on S1 image on a date where floating debris where known to exist on the bay due to extreme floods. No confirmation from optical or others",
+        "centroid_lon": 130.5583335,
+        "centroid_lat": 32.6083335
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              130.55,
+              32.6
+            ],
+            [
+              130.566667,
+              32.6
+            ],
+            [
+              130.566667,
+              32.616667
+            ],
+            [
+              130.55,
+              32.616667
+            ],
+            [
+              130.55,
+              32.6
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "91ea9edc-67b4-4211-8532-35deec4a3148",
+      "properties": {
+        "patch_index": 37,
+        "source_observation_index": 38,
+        "obs_id": "91ea9edc-67b4-4211-8532-35deec4a3148",
+        "source_id": "missing",
+        "timestamp": "2018-10-31T18:17:58.000Z",
+        "class": "PATCH",
+        "validation_type": null,
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 1246225.82255732,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "Large patch reported in the area on the date without exact location. Located visually later with S1 image.",
+        "centroid_lon": -0.219745,
+        "centroid_lat": 5.495525
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -0.22628,
+              5.49166
+            ],
+            [
+              -0.21321,
+              5.49166
+            ],
+            [
+              -0.21321,
+              5.49939
+            ],
+            [
+              -0.22628,
+              5.49939
+            ],
+            [
+              -0.22628,
+              5.49166
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "05e7c3bc-2eac-4c4b-ba8a-6bf8aa4c0789",
+      "properties": {
+        "patch_index": 38,
+        "source_observation_index": 39,
+        "obs_id": "05e7c3bc-2eac-4c4b-ba8a-6bf8aa4c0789",
+        "source_id": "05",
+        "timestamp": "2018-10-12T12:00:00.000Z",
+        "class": "PATCH",
+        "validation_type": "CONCLUSIVE_HIRES_SATELLITE_IMAGE",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 57694879.7090763,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with S1 images and with a High Resolution image from Pleiades mission on the same date.",
+        "centroid_lon": 3.46885327,
+        "centroid_lat": 39.60709561
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.4046126087374335,
+              39.583784356213854
+            ],
+            [
+              3.5327762266342604,
+              39.5832674191317
+            ],
+            [
+              3.5331375811102395,
+              39.630401110063666
+            ],
+            [
+              3.4048870431824088,
+              39.63091890806143
+            ],
+            [
+              3.4046126087374335,
+              39.583784356213854
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3f181238-1180-4e8f-bd9e-90daa87aa6ca",
+      "properties": {
+        "patch_index": 39,
+        "source_observation_index": 40,
+        "obs_id": "3f181238-1180-4e8f-bd9e-90daa87aa6ca",
+        "source_id": "04",
+        "timestamp": "2018-10-11T12:00:00.000Z",
+        "class": "PATCH",
+        "validation_type": "CONCLUSIVE_HIRES_SATELLITE_IMAGE",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 57848731.1751472,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with S1 images and with a High Resolution image from Pleiades mission.",
+        "centroid_lon": 3.46898345,
+        "centroid_lat": 39.60711958
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.4047423567176045,
+              39.58374553917426
+            ],
+            [
+              3.532905900600688,
+              39.58322845945417
+            ],
+            [
+              3.5332683075067615,
+              39.63048783903226
+            ],
+            [
+              3.405017611708197,
+              39.63100578220366
+            ],
+            [
+              3.4047423567176045,
+              39.58374553917426
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "7599355c-419f-4f5b-913b-22b769ee25d2",
+      "properties": {
+        "patch_index": 40,
+        "source_observation_index": 41,
+        "obs_id": "7599355c-419f-4f5b-913b-22b769ee25d2",
+        "source_id": "03",
+        "timestamp": "2018-10-11T12:00:00.000Z",
+        "class": "PATCH",
+        "validation_type": "CONCLUSIVE_HIRES_SATELLITE_IMAGE",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 57848732.5234729,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with S1 images and with a High Resolution image from Pleiades mission.",
+        "centroid_lon": 3.46886202,
+        "centroid_lat": 39.60710807
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.4046209823610982,
+              39.58373396389194
+            ],
+            [
+              3.5327845072721638,
+              39.583217018171204
+            ],
+            [
+              3.533146831478981,
+              39.63047639877668
+            ],
+            [
+              3.404896154696399,
+              39.63099420772507
+            ],
+            [
+              3.4046209823610982,
+              39.58373396389194
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cabcd011-9d82-4124-9f9c-120bdc406cf3",
+      "properties": {
+        "patch_index": 41,
+        "source_observation_index": 42,
+        "obs_id": "cabcd011-9d82-4124-9f9c-120bdc406cf3",
+        "source_id": "02",
+        "timestamp": "2018-10-12T12:00:00.000Z",
+        "class": "PATCH",
+        "validation_type": "CONCLUSIVE_HIRES_SATELLITE_IMAGE",
+        "source_type": "SATELLITE,LEO,OPTICAL,SAR,SENTINEL1,SENTINEL2",
+        "estimated_patch_area_m2": 67944025.6634273,
+        "estimated_area_above_surface_m2": null,
+        "estimated_filament_length_m": null,
+        "depth_m": null,
+        "comments": "The patch is recurrent and has been confirmed with S1 images and with a High Resolution image from Pleiades mission on the same date.",
+        "centroid_lon": 3.46834774,
+        "centroid_lat": 39.60278692
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.4045729050919595,
+              39.575073069202034
+            ],
+            [
+              3.5317459876053223,
+              39.57456074218084
+            ],
+            [
+              3.5321739274227295,
+              39.630492772740126
+            ],
+            [
+              3.4048985061325245,
+              39.63100611245799
+            ],
+            [
+              3.4045729050919595,
+              39.575073069202034
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

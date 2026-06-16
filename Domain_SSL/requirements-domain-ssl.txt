@@ -1,0 +1,12 @@
+# Recommended target: Python 3.11 x64 on Windows
+numpy
+pandas
+requests
+rasterio
+shapely
+geopandas
+tqdm
+xarray
+rioxarray
+cdsapi
+copernicusmarine

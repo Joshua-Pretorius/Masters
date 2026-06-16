@@ -1,0 +1,17 @@
+{
+  "scenario": "actual_safe_sar_20181030T181758",
+  "note": "Actual Sentinel-1 SAFE filename start time; backward drift from Planet.",
+  "planet_time_utc": "2018-10-31T09:59:25.101477+00:00",
+  "target_time_utc": "2018-10-30T18:17:58+00:00",
+  "delta_hours_target_minus_planet": -15.690861521388888,
+  "windage": 0.03,
+  "model": "Endpoint-averaged surface current + Stokes drift + 3% ERA5 windage, applied as UTM translation per seed polygon.",
+  "outputs": {
+    "predicted_seed_polygons_geojson": "/mnt/d/Masters/Domain_SSL/PreProccess/aoi_accra_2018_10_30/drift/actual_safe_sar_20181030T181758/predicted_seed_polygons.geojson",
+    "predicted_seed_polygons_shp": "/mnt/d/Masters/Domain_SSL/PreProccess/aoi_accra_2018_10_30/drift/actual_safe_sar_20181030T181758/predicted_seed_polygons.shp",
+    "drift_vectors_geojson": "/mnt/d/Masters/Domain_SSL/PreProccess/aoi_accra_2018_10_30/drift/actual_safe_sar_20181030T181758/drift_vectors.geojson"
+  },
+  "mean_dx_m": -7670.308044889427,
+  "mean_dy_m": -773.6519569390807,
+  "mean_speed_ms": 0.1365182044969518
+}

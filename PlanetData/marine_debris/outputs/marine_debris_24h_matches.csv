@@ -1,0 +1,2 @@
+feature_id,source_geojson,feature_index,source_acquired_utc,lon,lat,marida_event_id,marida_tile,marida_source_date,marida_sar_dir,marida_acquired_utc,marida_pols,abs_delta_hours
+20181024_160201_0f3b_16807-29825-16::feature_1,20181024_160201_0f3b_16807-29825-16.geojson,1,2018-10-24T16:02:01Z,-87.672679,15.953271,16PDC_2018-10-24_SAR_-4.6h_2018-10-24T11:37:31Z,16PDC,2018-10-24,SAR_-4.6h,2018-10-24T11:37:31Z,"VH,VV",4.408

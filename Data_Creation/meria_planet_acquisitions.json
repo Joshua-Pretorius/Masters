@@ -1,0 +1,169 @@
+{
+  "sa": {
+    "MERIA_SA_001": {
+      "planet_acquired_start": "2019-04-24T07:38:41.975069Z",
+      "planet_acquired_end": "2019-04-24T08:03:38.088073Z",
+      "planet_scene_count": 10,
+      "planet_item_ids": [
+        "20190424_073841_1105",
+        "20190424_073843_1105",
+        "20190424_073844_1105",
+        "20190424_073845_1105",
+        "20190424_080333_0f4b",
+        "20190424_080334_0f4b",
+        "20190424_080335_0f4b",
+        "20190424_080336_0f4b",
+        "20190424_080337_0f4b",
+        "20190424_080338_0f4b"
+      ],
+      "source": "Planet Data API same-day intersecting PSScene acquisitions resolved on 2026-05-26"
+    },
+    "MERIA_SA_002": {
+      "planet_acquired_start": "2019-04-25T07:36:26.793420Z",
+      "planet_acquired_end": "2019-04-25T08:02:15.817140Z",
+      "planet_scene_count": 7,
+      "planet_item_ids": [
+        "20190425_073626_1027",
+        "20190425_073627_1027",
+        "20190425_073628_1027",
+        "20190425_080212_0f44",
+        "20190425_080213_0f44",
+        "20190425_080214_0f44",
+        "20190425_080215_0f44"
+      ],
+      "source": "Planet Data API same-day intersecting PSScene acquisitions resolved on 2026-05-26"
+    },
+    "MERIA_SA_003": {
+      "planet_acquired_start": "2022-04-14T07:06:39.589198Z",
+      "planet_acquired_end": "2022-04-14T07:35:56.954208Z",
+      "planet_scene_count": 10,
+      "planet_item_ids": [
+        "20220414_070639_58_2457",
+        "20220414_070641_88_2457",
+        "20220414_070644_18_2457",
+        "20220414_073317_1003",
+        "20220414_073552_1025",
+        "20220414_073553_1025",
+        "20220414_073553_1_1025",
+        "20220414_073554_1025",
+        "20220414_073555_1025",
+        "20220414_073556_1025"
+      ],
+      "source": "Planet Data API same-day intersecting PSScene acquisitions resolved on 2026-05-26"
+    },
+    "MERIA_SA_004": {
+      "planet_acquired_start": "2022-04-24T07:24:24.268762Z",
+      "planet_acquired_end": "2022-04-24T07:59:14.955279Z",
+      "planet_scene_count": 12,
+      "planet_item_ids": [
+        "20220424_072424_26_2251",
+        "20220424_072426_55_2251",
+        "20220424_072428_83_2251",
+        "20220424_073608_1005",
+        "20220424_073609_1005",
+        "20220424_073610_1005",
+        "20220424_073611_1005",
+        "20220424_073612_1005",
+        "20220424_073613_1005",
+        "20220424_075910_37_2402",
+        "20220424_075912_66_2402",
+        "20220424_075914_95_2402"
+      ],
+      "source": "Planet Data API same-day intersecting PSScene acquisitions resolved on 2026-05-26"
+    },
+    "MERIA_SA_005": {
+      "planet_acquired_start": "2024-06-13T07:29:05.781848Z",
+      "planet_acquired_end": "2024-06-13T07:29:05.781848Z",
+      "planet_scene_count": 1,
+      "planet_item_ids": [
+        "20240613_072905_78_24bb"
+      ],
+      "source": "Planet Data API same-day intersecting PSScene acquisitions resolved on 2026-05-26"
+    },
+    "MERIA_SA_006": {
+      "planet_acquired_start": "2024-06-06T08:19:38.421130Z",
+      "planet_acquired_end": "2024-06-06T08:24:54.451861Z",
+      "planet_scene_count": 10,
+      "planet_item_ids": [
+        "20240606_081938_42_24f2",
+        "20240606_081940_67_24f2",
+        "20240606_082203_36_24ed",
+        "20240606_082205_62_24ed",
+        "20240606_082351_91_24f5",
+        "20240606_082354_18_24f5",
+        "20240606_082356_45_24f5",
+        "20240606_082450_72_2498",
+        "20240606_082452_58_2498",
+        "20240606_082454_45_2498"
+      ],
+      "source": "Planet Data API same-day intersecting PSScene acquisitions resolved on 2026-05-26"
+    },
+    "MERIA_SA_007": {
+      "planet_acquired_start": "2024-06-04T08:21:19.041965Z",
+      "planet_acquired_end": "2024-06-04T08:21:19.041965Z",
+      "planet_scene_count": 1,
+      "planet_item_ids": [
+        "20240604_082119_04_24f9"
+      ],
+      "source": "Planet Data API same-day intersecting PSScene acquisitions resolved on 2026-05-26"
+    },
+    "MERIA_SA_008": {
+      "planet_acquired_start": "2024-06-09T08:32:17.343002Z",
+      "planet_acquired_end": "2024-06-09T08:34:34.133514Z",
+      "planet_scene_count": 3,
+      "planet_item_ids": [
+        "20240609_083217_34_2490",
+        "20240609_083219_20_2490",
+        "20240609_083434_13_2470"
+      ],
+      "source": "Planet Data API same-day intersecting PSScene acquisitions resolved on 2026-05-26"
+    }
+  },
+  "global": {
+    "91ea9edc-67b4-4211-8532-35deec4a3148": {
+      "planet_acquired_start": "2018-10-31T09:59:25.101477Z",
+      "planet_acquired_end": "2018-10-31T09:59:25.101477Z",
+      "planet_scene_count": 1,
+      "planet_item_ids": [
+        "20181031_095925_103b"
+      ],
+      "source": "MERIA/MERIA_Planet/planet_batch_download_summary.csv"
+    },
+    "cabcd011-9d82-4124-9f9c-120bdc406cf3": {
+      "planet_acquired_start": "2018-10-12T10:05:28.131988Z",
+      "planet_acquired_end": "2018-10-12T10:05:28.131988Z",
+      "planet_scene_count": 1,
+      "planet_item_ids": [
+        "20181012_100528_100a"
+      ],
+      "source": "MERIA/MERIA_Planet/planet_batch_download_summary.csv"
+    },
+    "05e7c3bc-2eac-4c4b-ba8a-6bf8aa4c0789": {
+      "planet_acquired_start": "2018-10-12T10:05:28.131988Z",
+      "planet_acquired_end": "2018-10-12T10:05:28.131988Z",
+      "planet_scene_count": 1,
+      "planet_item_ids": [
+        "20181012_100528_100a"
+      ],
+      "source": "MERIA/MERIA_Planet/planet_batch_download_summary.csv"
+    },
+    "9e17ce98-9eeb-40f6-989e-894dc2be72ea": {
+      "planet_acquired_start": "2017-10-12T14:12:56.711658Z",
+      "planet_acquired_end": "2017-10-12T14:12:56.711658Z",
+      "planet_scene_count": 1,
+      "planet_item_ids": [
+        "20171012_141256_0c27"
+      ],
+      "source": "Planet Data API nearest intersecting PSScene acquisition resolved on 2026-05-26"
+    },
+    "33a32832-fc41-4fdd-8c91-a41844fc1709": {
+      "planet_acquired_start": "2017-10-17T15:35:59.324651Z",
+      "planet_acquired_end": "2017-10-17T15:35:59.324651Z",
+      "planet_scene_count": 1,
+      "planet_item_ids": [
+        "20171017_153559_1042"
+      ],
+      "source": "MERIA/MERIA_Planet/planet_batch_download_summary.csv"
+    }
+  }
+}

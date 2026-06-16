@@ -1,0 +1,118 @@
+{
+  "observation_id": "MERIA_SA_008",
+  "area": "Gqeberha",
+  "role": "after",
+  "observation_date": "2024-06-09",
+  "acquisition_start": "2024-06-13 17:09:46 UTC",
+  "delta_hours_from_observation_date": "+104.59 to +104.62",
+  "scene_id": "MERIA_SA_008_Gqeberha_after_20240613T170946",
+  "slc": {
+    "granule": "S1A_IW_SLC__1SDV_20240613T170946_20240613T171014_054307_069B35_6884",
+    "url": "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SDV_20240613T170946_20240613T171014_054307_069B35_6884.zip",
+    "zip": "D:\\Masters\\Data_Creation\\meria_sa_plastic_s1_slc\\processed_slc\\MERIA_SA_008_Gqeberha\\after_20240613T170946\\SLC\\S1A_IW_SLC__1SDV_20240613T170946_20240613T171014_054307_069B35_6884.zip",
+    "selected_polarisations": [
+      "VV",
+      "VH"
+    ]
+  },
+  "reference_grid": null,
+  "outputs": {
+    "vv": "D:\\Masters\\Data_Creation\\meria_sa_plastic_s1_slc\\processed_slc\\MERIA_SA_008_Gqeberha\\after_20240613T170946\\MERIA_SA_008_Gqeberha_after_20240613T170946_slc_native_vv.tif",
+    "vh": "D:\\Masters\\Data_Creation\\meria_sa_plastic_s1_slc\\processed_slc\\MERIA_SA_008_Gqeberha\\after_20240613T170946\\MERIA_SA_008_Gqeberha_after_20240613T170946_slc_native_vh.tif",
+    "vv_refined_lee": "D:\\Masters\\Data_Creation\\meria_sa_plastic_s1_slc\\processed_slc\\MERIA_SA_008_Gqeberha\\after_20240613T170946\\MERIA_SA_008_Gqeberha_after_20240613T170946_slc_native_vv_refined_lee.tif",
+    "vv_glcm_mean": "D:\\Masters\\Data_Creation\\meria_sa_plastic_s1_slc\\processed_slc\\MERIA_SA_008_Gqeberha\\after_20240613T170946\\MERIA_SA_008_Gqeberha_after_20240613T170946_slc_native_vv_glcm_mean.tif",
+    "vv_glcm_std": "D:\\Masters\\Data_Creation\\meria_sa_plastic_s1_slc\\processed_slc\\MERIA_SA_008_Gqeberha\\after_20240613T170946\\MERIA_SA_008_Gqeberha_after_20240613T170946_slc_native_vv_glcm_std.tif",
+    "vv_glcm_entropy": "D:\\Masters\\Data_Creation\\meria_sa_plastic_s1_slc\\processed_slc\\MERIA_SA_008_Gqeberha\\after_20240613T170946\\MERIA_SA_008_Gqeberha_after_20240613T170946_slc_native_vv_glcm_entropy.tif",
+    "decomp_entropy": "D:\\Masters\\Data_Creation\\meria_sa_plastic_s1_slc\\processed_slc\\MERIA_SA_008_Gqeberha\\after_20240613T170946\\MERIA_SA_008_Gqeberha_after_20240613T170946_slc_native_decomp_entropy.tif",
+    "decomp_anisotropy": "D:\\Masters\\Data_Creation\\meria_sa_plastic_s1_slc\\processed_slc\\MERIA_SA_008_Gqeberha\\after_20240613T170946\\MERIA_SA_008_Gqeberha_after_20240613T170946_slc_native_decomp_anisotropy.tif",
+    "decomp_alpha": "D:\\Masters\\Data_Creation\\meria_sa_plastic_s1_slc\\processed_slc\\MERIA_SA_008_Gqeberha\\after_20240613T170946\\MERIA_SA_008_Gqeberha_after_20240613T170946_slc_native_decomp_alpha.tif",
+    "vv_refined_lee_db": "D:\\Masters\\Data_Creation\\meria_sa_plastic_s1_slc\\processed_slc\\MERIA_SA_008_Gqeberha\\after_20240613T170946\\MERIA_SA_008_Gqeberha_after_20240613T170946_slc_utm_vv_refined_lee_db.tif"
+  },
+  "subswath_outputs": {},
+  "processing": {
+    "resolution_policy": "snap-native",
+    "output_mode": "scene",
+    "aoi_bounds_wgs84": [
+      25.033333333333335,
+      -34.213611111111106,
+      25.593055555555555,
+      -33.833333333333336
+    ],
+    "aoi_wkt": "POLYGON ((25.033333333333335 -34.213611111111106, 25.593055555555555 -34.213611111111106, 25.593055555555555 -33.833333333333336, 25.033333333333335 -33.833333333333336, 25.033333333333335 -34.213611111111106))",
+    "pad_deg": 0.15,
+    "subswaths": [
+      "IW1",
+      "IW2",
+      "IW3"
+    ],
+    "glcm": {
+      "source_bands": "Sigma0_VV,Sigma0_VH",
+      "window_size": "5x5",
+      "angle": "ALL",
+      "quantizer": "Probabilistic Quantizer",
+      "quantization_levels": 32,
+      "displacement": 1,
+      "snap_nodata": -9999.0
+    },
+    "speckle_filter": {
+      "filter": "Refined Lee",
+      "filter_size": [
+        3,
+        3
+      ]
+    },
+    "decomposition": {
+      "type": "H-Alpha Dual Pol Decomposition",
+      "window_size": 5,
+      "outputs": [
+        "Entropy",
+        "Anisotropy",
+        "Alpha"
+      ]
+    },
+    "processed_subswaths": [
+      "IW3"
+    ],
+    "graphs": {
+      "split": "D:\\Masters\\sar_ml_pipeline\\graphs\\01_split.xml",
+      "orbit": "D:\\Masters\\sar_ml_pipeline\\graphs\\02_orbit_apply.xml",
+      "calibration": "D:\\Masters\\sar_ml_pipeline\\graphs\\03_calibration.xml",
+      "deburst": "D:\\Masters\\sar_ml_pipeline\\graphs\\04_deburst.xml",
+      "subset": "D:\\Masters\\sar_ml_pipeline\\graphs\\05_subset.xml",
+      "c2": "D:\\Masters\\sar_ml_pipeline\\graphs\\06_polarimetric_matrix.xml",
+      "speckle": "D:\\Masters\\sar_ml_pipeline\\graphs\\07_speckle_filter.xml",
+      "terrain": "D:\\Masters\\sar_ml_pipeline\\graphs\\08_terrain_correction.xml",
+      "decomp": "D:\\Masters\\sar_ml_pipeline\\graphs\\09_polarimetric_decomposition.xml",
+      "texture": "D:\\Masters\\sar_ml_pipeline\\graphs\\10_feature_extraction.xml"
+    },
+    "final_grid": {
+      "crs": "EPSG:4326",
+      "resolution": [
+        0.00012637580265368998,
+        0.00012637580265368998
+      ],
+      "shape_yx": [
+        3010,
+        4430
+      ],
+      "bounds": [
+        25.033280199287276,
+        -34.213637060981306,
+        25.593125005043124,
+        -33.8332458949937
+      ],
+      "transform": [
+        0.00012637580265368998,
+        0.0,
+        25.033280199287276,
+        0.0,
+        -0.00012637580265368998,
+        -33.8332458949937,
+        0.0,
+        0.0,
+        1.0
+      ]
+    }
+  },
+  "status": "processed"
+}
