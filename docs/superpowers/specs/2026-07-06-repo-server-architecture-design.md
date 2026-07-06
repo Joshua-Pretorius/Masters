@@ -735,36 +735,147 @@ The clean handoff into the server is:
 
 That is the stable server-facing API for the repo.
 
-## Architecture Diagram
+## Lifecycle Architecture Diagram
+
+```mermaid
+flowchart TB
+    subgraph RW["Research Workstation Layer"]
+        A["Observation curation
+        Data_Creation observation definitions"]
+        B["Scene resolution
+        build_meria_*_s1_slc_matches.py"]
+        C["SLC acquisition and SNAP preprocessing
+        process_*_slc_targets.py"]
+        D["Drift and forcing enrichment
+        fetch_drift_forcing.py
+        run_planet_to_sar_opendrift.py"]
+        E["Digitisation and feature preparation
+        build_meria_digitising_shapefiles.py"]
+    end
+
+    subgraph EXT["External Services"]
+        X1["Planet timing lookups
+        local JSON or source metadata"]
+        X2["Copernicus Data Space
+        Sentinel-1 catalog search"]
+        X3["Earthdata / ASF
+        Sentinel-1 SLC download"]
+        X4["Copernicus Marine / CDS
+        currents, waves, wind"]
+    end
+
+    subgraph DS["Durable Dataset Storage"]
+        S1["Processed scenes
+        scene GeoTIFFs + *_slc_manifest.json"]
+        S2["Feature geometry store
+        shapefiles_root/<scene_id>/"]
+        S3["Biophysical raster store
+        biophysical_root/<scene_id>/<band>.tif"]
+        S4["Patch products
+        sar_patch_inventory.csv
+        sar_patch_library.csv"]
+        S5["Final stack products
+        stack_catalog.csv
+        stack_dataset_manifest.json"]
+    end
+
+    subgraph SRV["Server Container Layer"]
+        P1["slc_process
+        optional vendored SLC processor"]
+        P2["patch_extract
+        patch rasters + masks + inventory"]
+        P3["patch_stack
+        SAR + biophysical channel stack"]
+        P4["Stage markers
+        manifests_root/<run_id>/stages/*.json"]
+    end
+
+    A --> B
+    B --> C
+    B --> E
+    C --> S1
+    D --> S3
+    E --> S2
+
+    X1 --> B
+    X2 --> B
+    X3 --> C
+    X4 --> D
+
+    S1 --> P1
+    S1 --> P2
+    S2 --> P2
+    S3 --> P3
+    P1 --> S1
+    P2 --> S4
+    S4 --> P3
+    P3 --> S5
+    P1 --> P4
+    P2 --> P4
+    P3 --> P4
+```
+
+## Runtime Topology and Mount Diagram
 
 ```mermaid
 flowchart LR
-    A["Observation Curation
-    Data_Creation match builders"] --> B["Scene Resolution
-    Planet timing + Sentinel-1 selection"]
-    B --> C["SLC Ingestion
-    ASF/Earthdata ZIP + SAFE"]
-    C --> D["SNAP Processing
-    split/orbit/calibration/subset/terrain/decomp/texture"]
-    D --> E["Processed Scene Store
-    scene GeoTIFFs + *_slc_manifest.json"]
-    E --> F["Feature Geometry Store
-    /data/shapefiles/<scene_id>/"]
-    E --> G["Biophysical Store
-    /data/biophysical/<scene_id>/<band>.tif"]
-    H["Drift + Forcing Workflows
-    CMEMS + ERA5 + OpenDrift"] --> G
-    F --> I["Server patch_extract
-    image chips + masks + inventories"]
-    E --> I
-    G --> J["Server patch_stack
-    SAR + biophysical channel stack"]
-    I --> J
-    J --> K["Training-Ready Outputs
-    stack_catalog.csv + stack_dataset_manifest.json + *_stack.tif"]
+    subgraph HOST["Host Machine"]
+        H1["${DATA_ROOT}
+        raw
+        processed
+        shapefiles
+        biophysical
+        patches
+        stacks
+        logs
+        manifests"]
+        H2["${JOB_DIR}
+        job.yaml or job.json
+        setup notes"]
+        H3["${SNAP_HOST_DIR}
+        host SNAP install
+        gpt binary"]
+        H4["Host credentials
+        EDL_USER / EDL_PASS
+        Copernicus Marine creds
+        .cdsapirc"]
+    end
+
+    subgraph CTR["Docker container: sar-server-pipeline"]
+        C1["/data
+        mounted dataset root"]
+        C2["/job
+        mounted job root"]
+        C3["/opt/snap
+        mounted read-only SNAP root"]
+        C4["python -m pipeline
+        run_all --manifest ${JOB_MANIFEST:-/job/job.yaml}"]
+
+        subgraph STG["Pipeline stages"]
+            S1["slc_process"]
+            S2["patch_extract"]
+            S3["patch_stack"]
+        end
+    end
+
+    H1 --> C1
+    H2 --> C2
+    H3 --> C3
+    H4 --> C4
+    C2 --> C4
+    C3 --> S1
+    C1 --> S1
+    C1 --> S2
+    C1 --> S3
+    C4 --> S1
+    C4 --> S2
+    C4 --> S3
+    S1 --> C1
+    S2 --> C1
+    S3 --> C1
 ```
 
-## Sequence Diagram
+## End-to-End Sequence Diagram
 
 ```mermaid
 sequenceDiagram
