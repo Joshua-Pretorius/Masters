@@ -1,0 +1,46 @@
+dataset,obs_id,area,role,local_best_union_15km,recommended_union_15km,product_name,scene_coverage_15km,downloaded,fully_processed,status,source,in_local_best_combo,in_recommended_combo,recommended_action
+meria_global,33a32832-fc41-4fdd-8c91-a41844fc1709,Bay Islands of Honduras,after,0.206,1.000,S1A_IW_SLC__1SDV_20171019T234947_20171019T235021_018889_01FE97_92F5.SAFE,0.206,True,False,downloaded,local,yes,yes,process
+meria_global,33a32832-fc41-4fdd-8c91-a41844fc1709,Bay Islands of Honduras,after,0.206,1.000,S1A_IW_SLC__1SDV_20171029T113710_20171029T113739_019027_0202C9_66C0.SAFE,0.800,False,False,not_local,catalogue,no,yes,download
+meria_global,33a32832-fc41-4fdd-8c91-a41844fc1709,Bay Islands of Honduras,after,0.206,1.000,S1A_IW_SLC__1SDV_20171105T235753_20171105T235819_019137_020620_1EFB.SAFE,0.565,False,False,not_local,catalogue,no,yes,download
+meria_global,33a32832-fc41-4fdd-8c91-a41844fc1709,Bay Islands of Honduras,before,0.359,1.000,S1A_IW_SLC__1SDV_20171012T235817_20171012T235844_018787_01FB66_2AB4.SAFE,0.359,True,False,downloaded,local,yes,yes,process
+meria_global,33a32832-fc41-4fdd-8c91-a41844fc1709,Bay Islands of Honduras,before,0.359,1.000,S1A_IW_SLC__1SDV_20170923T113709_20170923T113739_018502_01F2C7_494E.SAFE,0.800,False,False,not_local,catalogue,no,yes,download
+meria_global,33a32832-fc41-4fdd-8c91-a41844fc1709,Bay Islands of Honduras,before,0.359,1.000,S1A_IW_SLC__1SDV_20171012T235753_20171012T235820_018787_01FB66_F901.SAFE,0.566,False,False,not_local,catalogue,no,yes,download
+meria_global,9e17ce98-9eeb-40f6-989e-894dc2be72ea,Bay Islands of Honduras,after,0.739,1.000,S1A_IW_SLC__1SDV_20171017T113709_20171017T113739_018852_01FD74_F01C.SAFE,0.739,True,False,downloaded,local,yes,yes,process
+meria_global,9e17ce98-9eeb-40f6-989e-894dc2be72ea,Bay Islands of Honduras,after,0.739,1.000,S1A_IW_SLC__1SDV_20171012T235753_20171012T235820_018787_01FB66_F901.SAFE,0.578,False,False,not_local,catalogue,no,yes,download
+meria_global,9e17ce98-9eeb-40f6-989e-894dc2be72ea,Bay Islands of Honduras,after,0.739,1.000,S1A_IW_SLC__1SDV_20171024T235818_20171024T235845_018962_0200BE_18C4.SAFE,0.429,False,False,not_local,catalogue,no,yes,download
+meria_global,9e17ce98-9eeb-40f6-989e-894dc2be72ea,Bay Islands of Honduras,before,0.000,1.000,S1A_IW_SLC__1SDV_20170923T113709_20170923T113739_018502_01F2C7_494E.SAFE,0.739,False,False,not_local,catalogue,no,yes,download
+meria_global,9e17ce98-9eeb-40f6-989e-894dc2be72ea,Bay Islands of Honduras,before,0.000,1.000,S1A_IW_SLC__1SDV_20170918T235752_20170918T235819_018437_01F0B0_AB0D.SAFE,0.579,False,False,not_local,catalogue,no,yes,download
+meria_global,9e17ce98-9eeb-40f6-989e-894dc2be72ea,Bay Islands of Honduras,before,0.000,1.000,S1A_IW_SLC__1SDV_20170918T235817_20170918T235844_018437_01F0B0_CD58.SAFE,0.428,False,False,not_local,catalogue,no,yes,download
+meria_global,57bbff03-21eb-54de-9d18-d8a65b256bd5,Ghana,before,0.000,1.000,S1A_IW_SLC__1SDV_20180924T181758_20180924T181828_023844_029A1A_1F8A.SAFE,1.000,False,False,not_local,catalogue,no,yes,download
+meria_global,cd77705c-782d-5b99-935f-405bfd905cbf,Ghana,after,0.946,1.000,S1B_IW_SLC__1SDV_20181031T180908_20181031T180935_013400_018CA3_F37E.SAFE,0.946,True,False,downloaded,local,yes,yes,process
+meria_global,cd77705c-782d-5b99-935f-405bfd905cbf,Ghana,after,0.946,1.000,S1A_IW_SLC__1SDV_20181123T181758_20181123T181827_024719_02B7F2_D1A1.SAFE,0.294,False,False,not_local,catalogue,no,yes,download
+meria_global,cd77705c-782d-5b99-935f-405bfd905cbf,Ghana,before,0.945,1.000,S1A_IW_SLC__1SDV_20181025T180953_20181025T181020_024296_02A8C4_97A2.SAFE,0.945,True,True,processed,local,yes,yes,done
+meria_global,cd77705c-782d-5b99-935f-405bfd905cbf,Ghana,before,0.945,1.000,S1B_IW_SLC__1SDV_20180930T181717_20180930T181744_012948_017EA1_46D2.SAFE,0.292,False,False,not_local,catalogue,no,yes,download
+meria_global,d918b4e9-16ac-5c30-830f-6945943e1d9e,Ghana,after,0.000,1.000,S1A_IW_SLC__1SDV_20181030T181758_20181030T181828_024369_02AB27_32F5.SAFE,1.000,False,False,not_local,catalogue,no,yes,download
+meria_global,d918b4e9-16ac-5c30-830f-6945943e1d9e,Ghana,before,0.000,1.000,S1B_IW_SLC__1SDV_20180930T181717_20180930T181744_012948_017EA1_46D2.SAFE,1.000,False,False,not_local,catalogue,no,yes,download
+meria_global,d9db6dd4-4db8-5723-96ba-57d182cda0b7_A,Ghana,after,0.000,1.000,S1A_IW_SLC__1SDV_20181030T181758_20181030T181828_024369_02AB27_32F5.SAFE,1.000,False,False,not_local,catalogue,no,yes,download
+meria_global,d9db6dd4-4db8-5723-96ba-57d182cda0b7_A,Ghana,before,0.000,1.000,S1B_IW_SLC__1SDV_20180930T181717_20180930T181744_012948_017EA1_46D2.SAFE,1.000,False,False,not_local,catalogue,no,yes,download
+meria_global,d9db6dd4-4db8-5723-96ba-57d182cda0b7_B,Ghana,after,0.000,1.000,S1B_IW_SLC__1SDV_20181031T180908_20181031T180935_013400_018CA3_F37E.SAFE,1.000,False,False,not_local,catalogue,no,yes,download
+meria_global,d9db6dd4-4db8-5723-96ba-57d182cda0b7_B,Ghana,before,0.000,1.000,S1A_IW_SLC__1SDV_20181001T180953_20181001T181020_023946_029D64_7D95.SAFE,1.000,False,False,not_local,catalogue,no,yes,download
+meria_global,05e7c3bc-2eac-4c4b-ba8a-6bf8aa4c0789,Palma de Mallorca,after,0.015,1.000,S1A_IW_SLC__1SDV_20181012T173730_20181012T173758_024106_02A2A6_6D20.SAFE,0.015,True,False,prepared,local,yes,yes,process
+meria_global,05e7c3bc-2eac-4c4b-ba8a-6bf8aa4c0789,Palma de Mallorca,after,0.015,1.000,S1B_IW_SLC__1SDV_20181017T055240_20181017T055308_013188_0185F2_91D3.SAFE,0.600,False,False,not_local,catalogue,no,yes,download
+meria_global,05e7c3bc-2eac-4c4b-ba8a-6bf8aa4c0789,Palma de Mallorca,after,0.015,1.000,S1A_IW_SLC__1SDV_20181029T174559_20181029T174626_024354_02AAB5_2F0D.SAFE,0.536,False,False,not_local,catalogue,no,yes,download
+meria_global,05e7c3bc-2eac-4c4b-ba8a-6bf8aa4c0789,Palma de Mallorca,after,0.015,1.000,S1A_IW_SLC__1SDV_20181012T173756_20181012T173823_024106_02A2A6_DA1D.SAFE,0.518,False,False,not_local,catalogue,no,yes,download
+meria_global,05e7c3bc-2eac-4c4b-ba8a-6bf8aa4c0789,Palma de Mallorca,before,0.200,1.000,S1B_IW_SLC__1SDV_20181012T054456_20181012T054523_013115_0183B4_D121.SAFE,0.200,True,True,processed,local,yes,yes,done
+meria_global,05e7c3bc-2eac-4c4b-ba8a-6bf8aa4c0789,Palma de Mallorca,before,0.200,1.000,S1B_IW_SLC__1SDV_20180912T173724_20180912T173751_012685_017688_884F.SAFE,0.600,False,False,not_local,catalogue,no,yes,download
+meria_global,05e7c3bc-2eac-4c4b-ba8a-6bf8aa4c0789,Palma de Mallorca,before,0.200,1.000,S1B_IW_SLC__1SDV_20180917T174533_20180917T174600_012758_0178D0_CF0E.SAFE,0.600,False,False,not_local,catalogue,no,yes,download
+meria_global,cabcd011-9d82-4124-9f9c-120bdc406cf3,Palma de Mallorca,after,0.994,1.000,S1A_IW_SLC__1SDV_20181012T173756_20181012T173823_024106_02A2A6_DA1D.SAFE,0.994,True,True,processed,local,yes,yes,done
+meria_global,cabcd011-9d82-4124-9f9c-120bdc406cf3,Palma de Mallorca,after,0.994,1.000,S1B_IW_SLC__1SDV_20181017T055240_20181017T055308_013188_0185F2_91D3.SAFE,1.000,False,False,not_local,catalogue,no,yes,download
+meria_global,cabcd011-9d82-4124-9f9c-120bdc406cf3,Palma de Mallorca,before,0.876,1.000,S1B_IW_SLC__1SDV_20181012T054431_20181012T054458_013115_0183B4_07F8.SAFE,0.876,True,True,processed,local,yes,yes,done
+meria_global,cabcd011-9d82-4124-9f9c-120bdc406cf3,Palma de Mallorca,before,0.876,1.000,S1A_IW_SLC__1SDV_20180917T055331_20180917T055358_023734_02967C_F3BA.SAFE,1.000,False,False,not_local,catalogue,no,yes,download
+meria_sa,MERIA_SA_002,Durban,before,0.343,1.000,S1B_IW_SLC__1SDV_20190425T031119_20190425T031140_015957_01DFC7_186C.SAFE,0.343,True,True,processed,local,yes,yes,done
+meria_sa,MERIA_SA_002,Durban,before,0.343,1.000,S1A_IW_SLC__1SDV_20190328T163723_20190328T163750_026540_02F96A_5BDE.SAFE,1.000,False,False,not_local,catalogue,no,yes,download
+meria_sa,MERIA_SA_003,Durban,after,0.973,1.000,S1A_IW_SLC__1SDV_20220417T163741_20220417T163808_042815_051C3F_771A.SAFE,0.973,True,True,processed,local,yes,yes,done
+meria_sa,MERIA_SA_003,Durban,after,0.973,1.000,S1A_IW_SLC__1SDV_20220427T031152_20220427T031220_042953_0520BC_7F9D.SAFE,0.994,False,False,not_local,catalogue,no,yes,download
+meria_sa,MERIA_SA_003,Durban,before,0.428,1.000,S1A_IW_SLC__1SDV_20220412T162935_20220412T163003_042742_0519BF_2F8A.SAFE,0.428,True,True,processed,local,yes,yes,done
+meria_sa,MERIA_SA_003,Durban,before,0.428,1.000,S1A_IW_SLC__1SDV_20220405T163741_20220405T163808_042640_05165E_2627.SAFE,0.973,False,False,not_local,catalogue,no,yes,download
+meria_sa,MERIA_SA_003,Durban,before,0.428,1.000,S1A_IW_SLC__1SDV_20220324T163805_20220324T163832_042465_051072_D577.SAFE,0.252,False,False,not_local,catalogue,no,yes,download
+meria_sa,MERIA_SA_004,Durban,after,0.754,1.000,S1A_IW_SLC__1SDV_20220427T031152_20220427T031220_042953_0520BC_7F9D.SAFE,0.754,True,True,processed,local,yes,yes,done
+meria_sa,MERIA_SA_004,Durban,after,0.754,1.000,S1A_IW_SLC__1SDV_20220429T163742_20220429T163809_042990_0521FA_485E.SAFE,1.000,False,False,not_local,catalogue,no,yes,download
+meria_sa,MERIA_SA_008,Gqeberha,after,0.322,1.000,S1A_IW_SLC__1SDV_20240613T170946_20240613T171014_054307_069B35_6884.SAFE,0.322,True,True,processed,local,yes,yes,done
+meria_sa,MERIA_SA_008,Gqeberha,after,0.322,1.000,S1A_IW_SLC__1SDV_20240620T170142_20240620T170210_054409_069EC5_00FD.SAFE,1.000,False,False,not_local,catalogue,no,yes,download

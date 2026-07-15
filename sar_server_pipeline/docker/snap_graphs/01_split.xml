@@ -1,0 +1,30 @@
+<graph id="SplitOnly">
+  <version>1.0</version>
+  <node id="Read">
+    <operator>Read</operator>
+    <parameters>
+      <file>${input}</file>
+    </parameters>
+  </node>
+
+  <node id="TOPSAR-Split">
+    <operator>TOPSAR-Split</operator>
+    <sources>
+      <sourceProduct refid="Read"/>
+    </sources>
+    <parameters>
+      <subswath>${swath}</subswath>
+      <selectedPolarisations>VV,VH</selectedPolarisations>
+    </parameters>
+  </node>
+
+  <node id="Write">
+    <operator>Write</operator>
+    <sources>
+      <sourceProduct refid="TOPSAR-Split"/>
+    </sources>
+    <parameters>
+      <file>${output}</file>
+    </parameters>
+  </node>
+</graph>

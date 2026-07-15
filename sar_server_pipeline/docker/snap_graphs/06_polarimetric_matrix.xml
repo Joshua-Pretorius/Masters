@@ -1,0 +1,37 @@
+<graph id="DeburstAndPolMatrix">
+  <version>1.0</version>
+  <node id="Read">
+    <operator>Read</operator>
+    <parameters>
+      <file>${input}</file> <!-- orbit_applied_path -->
+    </parameters>
+  </node>
+
+  <node id="TOPSAR-Deburst">
+    <operator>TOPSAR-Deburst</operator>
+    <sources>
+      <sourceProduct refid="Read"/>
+    </sources>
+    <parameters/>
+  </node>
+
+  <node id="Polarimetric-Matrices">
+    <operator>Polarimetric-Matrices</operator>
+    <sources>
+      <sourceProduct refid="TOPSAR-Deburst"/>
+    </sources>
+    <parameters>
+      <matrix>C2</matrix>
+    </parameters>
+  </node>
+
+  <node id="Write">
+    <operator>Write</operator>
+    <sources>
+      <sourceProduct refid="Polarimetric-Matrices"/>
+    </sources>
+    <parameters>
+      <file>${output}</file>
+    </parameters>
+  </node>
+</graph>

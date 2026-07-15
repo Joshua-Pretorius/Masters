@@ -1,0 +1,44 @@
+﻿schema_version: 1
+run_id: meria-sa-004-before-local
+dataset_mode: sa
+targets:
+  - MERIA_SA_004:before
+inputs:
+  match_csv: /data/raw/MERIA_SA_004_matches.csv
+  points_csv: /data/raw/MERIA_SA_004_points.csv
+  raw_slc_root: /data/raw/slc
+  shapefiles_root: /data/shapefiles
+outputs:
+  processed_root: /data/processed
+  patches_root: /data/patches
+  stacks_root: /data/stacks
+  logs_root: /data/logs
+  manifests_root: /data/manifests
+stages:
+  slc_process:
+    enabled: true
+    overwrite: true
+    gpt: /opt/snap/bin/gpt
+  patch_extract:
+    enabled: true
+    overwrite: true
+  patch_stack:
+    enabled: false
+    overwrite: false
+processing:
+  subset_mode: aoi
+  subswaths: [IW1, IW2, IW3]
+  workers: 1
+  cache_gb: 8
+  patch_size: 256
+  sar_band_order:
+    - vv_db
+    - vh_db
+    - vv_vh_ratio_db
+    - vv_minus_vh_db
+    - vv_glcm_mean
+    - vv_glcm_std
+    - vv_glcm_entropy
+    - decomp_entropy
+    - decomp_anisotropy
+    - decomp_alpha

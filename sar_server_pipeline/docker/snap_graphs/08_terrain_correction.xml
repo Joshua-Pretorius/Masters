@@ -1,0 +1,34 @@
+<graph id="TerrainCorrection">
+  <version>1.0</version>
+  <node id="Read">
+    <operator>Read</operator>
+    <parameters>
+      <file>${input}</file>
+    </parameters>
+  </node>
+
+  <node id="Terrain-Correction">
+    <operator>Terrain-Correction</operator>
+    <sources>
+      <sourceProduct refid="Read"/>
+    </sources>
+    <parameters>
+      <demName>SRTM 1Sec HGT</demName>
+      
+      <saveDEM>false</saveDEM>
+      <saveLatLon>false</saveLatLon>
+      <outputComplex>false</outputComplex>
+      <nodataValueAtSea>false</nodataValueAtSea> 
+    </parameters>
+  </node>
+
+  <node id="Write">
+    <operator>Write</operator>
+    <sources>
+      <sourceProduct refid="Terrain-Correction"/>
+    </sources>
+    <parameters>
+      <file>${output}</file>
+    </parameters>
+  </node>
+</graph>

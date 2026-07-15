@@ -1,0 +1,7 @@
+﻿Sandbox root: D:\Masters\outputs\sar_server_pipeline_local
+Target: MERIA_SA_004:before
+Scene ID: MERIA_SA_004_Durban_before_20220420T032018
+Manifest: D:\Masters\outputs\sar_server_pipeline_local\job\meria_sa_004_before.yaml
+
+This sandbox is ready for slc_process + patch_extract.
+patch_stack is intentionally disabled because no MERIA_SA_004 biophysical rasters are available locally.

@@ -4,11 +4,11 @@ These notes describe the scientific logic behind the MERIA South Africa Sentinel
 
 Implementation file:
 
-`Data_Creation/process_meria_sa_slc_targets.py`
+`Data_Creation/process_sa_slc_targets.py`
 
 Operational runbook:
 
-`pipeline documentation/data creation/slc_ingestion_processing_runbook.md`
+`Progress_Tracker/docs/reference/sa_slc_processing_runbook.md`
 
 ## Scientific Objective
 
@@ -371,7 +371,7 @@ Time offset from observation date: +40.61 hours
 Run command from WSL:
 
 ```bash
-python3 Data_Creation/process_meria_sa_slc_targets.py \
+python3 Data_Creation/process_sa_slc_targets.py \
   --target MERIA_SA_002:after \
   --work-root Data_Creation/meria_sa_plastic_s1_slc/_slc_work \
   --gpt "/mnt/c/Program Files/esa-snap/bin/gpt.exe" \
@@ -386,7 +386,7 @@ python3 Data_Creation/process_meria_sa_slc_targets.py \
 Run command from PowerShell:
 
 ```powershell
-.\.venvs\domain_ssl\Scripts\python.exe .\Data_Creation\process_meria_sa_slc_targets.py `
+.\.venvs\domain_ssl\Scripts\python.exe .\Data_Creation\process_sa_slc_targets.py `
   --target MERIA_SA_002:after `
   --work-root "D:\Masters\Data_Creation\meria_sa_plastic_s1_slc\_slc_work" `
   --gpt "C:\Program Files\esa-snap\bin\gpt.exe" `

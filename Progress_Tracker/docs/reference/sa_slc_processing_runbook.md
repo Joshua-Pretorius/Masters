@@ -1,18 +1,18 @@
-# MERIA SA SLC Data Ingestion And Processing Runbook
+# South Africa SLC Data Ingestion And Processing Runbook
 
 This runbook explains how to run the enhanced Sentinel-1 SLC data ingestion and processing pipeline implemented in:
 
-`Data_Creation/process_meria_sa_slc_targets.py`
+`Data_Creation/process_sa_slc_targets.py`
 
-Use this document when you want to prepare a target, download the ASF SLC zip, run the SNAP processing chain, or rerun the next MERIA date.
+Use this document when you want to prepare a target, download the ASF SLC zip, run the SNAP processing chain, or rerun the next target date.
 
 ## What The Command Does
 
 The script performs both ingestion and processing:
 
-1. Reads the requested MERIA target from `MERIA_SA_plastic_nearest_S1_SLC_before_after.csv`.
-2. Reads the MERIA point geometry from `MERIA_SA_plastic_points.csv`.
-3. Builds a padded WGS84 AOI around the MERIA points.
+1. Reads the requested target match from `MERIA_SA_plastic_nearest_S1_SLC_before_after.csv`.
+2. Reads the point geometry from `MERIA_SA_plastic_points.csv`.
+3. Builds a padded WGS84 AOI around the target points.
 4. Finds or downloads the Sentinel-1 SLC zip from ASF.
 5. Unzips the SAFE product.
 6. Runs the SNAP graph chain for `IW1`, `IW2`, and `IW3`.
@@ -110,7 +110,7 @@ If you omit `--target`, the script attempts all three default targets. For contr
 This is the standard command for one enhanced native-resolution target:
 
 ```bash
-python3 Data_Creation/process_meria_sa_slc_targets.py \
+python3 Data_Creation/process_sa_slc_targets.py \
   --target MERIA_SA_001:after \
   --work-root Data_Creation/meria_sa_plastic_s1_slc/_slc_work \
   --gpt "/mnt/c/Program Files/esa-snap/bin/gpt.exe" \
@@ -129,7 +129,7 @@ Use `--force` when rebuilding a target, especially if an older VV/VH-only UTM ma
 Run from `D:\Masters`:
 
 ```powershell
-.\.venvs\domain_ssl\Scripts\python.exe .\Data_Creation\process_meria_sa_slc_targets.py `
+.\.venvs\domain_ssl\Scripts\python.exe .\Data_Creation\process_sa_slc_targets.py `
   --target MERIA_SA_001:after `
   --work-root "D:\Masters\Data_Creation\meria_sa_plastic_s1_slc\_slc_work" `
   --gpt "C:\Program Files\esa-snap\bin\gpt.exe" `
@@ -162,7 +162,7 @@ Granule: S1B_IW_SLC__1SDV_20190427T163647_20190427T163717_015994_01E106_0A21
 Run it from WSL:
 
 ```bash
-python3 Data_Creation/process_meria_sa_slc_targets.py \
+python3 Data_Creation/process_sa_slc_targets.py \
   --target MERIA_SA_002:after \
   --work-root Data_Creation/meria_sa_plastic_s1_slc/_slc_work \
   --gpt "/mnt/c/Program Files/esa-snap/bin/gpt.exe" \
@@ -177,7 +177,7 @@ python3 Data_Creation/process_meria_sa_slc_targets.py \
 Run it from PowerShell:
 
 ```powershell
-.\.venvs\domain_ssl\Scripts\python.exe .\Data_Creation\process_meria_sa_slc_targets.py `
+.\.venvs\domain_ssl\Scripts\python.exe .\Data_Creation\process_sa_slc_targets.py `
   --target MERIA_SA_002:after `
   --work-root "D:\Masters\Data_Creation\meria_sa_plastic_s1_slc\_slc_work" `
   --gpt "C:\Program Files\esa-snap\bin\gpt.exe" `
@@ -196,7 +196,7 @@ Run it from PowerShell:
 Use this to confirm target lookup, AOI bounds, and manifest creation without Earthdata credentials, download, unzip, or SNAP processing:
 
 ```bash
-python3 Data_Creation/process_meria_sa_slc_targets.py \
+python3 Data_Creation/process_sa_slc_targets.py \
   --target MERIA_SA_002:after \
   --prepare-only \
   --verbose
@@ -214,7 +214,7 @@ Expected result:
 Use this to ingest the ASF zip without running SNAP:
 
 ```bash
-python3 Data_Creation/process_meria_sa_slc_targets.py \
+python3 Data_Creation/process_sa_slc_targets.py \
   --target MERIA_SA_002:after \
   --download-only \
   --keep-zip \
@@ -233,7 +233,7 @@ Expected result:
 Use this only when you are ready for a long run:
 
 ```bash
-python3 Data_Creation/process_meria_sa_slc_targets.py \
+python3 Data_Creation/process_sa_slc_targets.py \
   --work-root Data_Creation/meria_sa_plastic_s1_slc/_slc_work \
   --gpt "/mnt/c/Program Files/esa-snap/bin/gpt.exe" \
   --workers 1 \
@@ -250,7 +250,7 @@ With no `--force`, already complete enhanced native targets are skipped. Older V
 Use this only if you specifically need the legacy-style 10 m UTM grid:
 
 ```bash
-python3 Data_Creation/process_meria_sa_slc_targets.py \
+python3 Data_Creation/process_sa_slc_targets.py \
   --target MERIA_SA_002:after \
   --resolution-policy utm-grid \
   --resolution-m 10 \
@@ -313,7 +313,7 @@ Data_Creation/meria_sa_plastic_s1_slc/processed_slc/
 Compile check:
 
 ```bash
-python3 -m py_compile Data_Creation/process_meria_sa_slc_targets.py
+python3 -m py_compile Data_Creation/process_sa_slc_targets.py
 ```
 
 Check the manifest status after a run:
@@ -361,4 +361,10 @@ Old products named like this do not count as complete enhanced products:
 
 Those were legacy VV/VH-only UTM products.
 
+## Operational Notes
 
+SNAP may print DEM download warnings during terrain correction. If the graph still completes and the final GeoTIFFs validate, those warnings are not necessarily fatal.
+
+If processing fails, the script preserves the target work directory under `_slc_work` for inspection. If processing succeeds, the per-target work directory is removed.
+
+Use `--keep-zip --keep-safe` while developing or debugging so the raw zip and unzipped SAFE are retained. For production cleanup, omit one or both flags once you are confident that re-download is acceptable.

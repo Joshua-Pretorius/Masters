@@ -15,8 +15,8 @@ from rasterio.transform import from_origin
 
 
 RASTERIO_ROOT = Path(rio.__file__).resolve().parent
-os.environ.setdefault("PROJ_LIB", str(RASTERIO_ROOT / "proj_data"))
-os.environ.setdefault("GDAL_DATA", str(RASTERIO_ROOT / "gdal_data"))
+os.environ["PROJ_LIB"] = str(RASTERIO_ROOT / "proj_data")
+os.environ["GDAL_DATA"] = str(RASTERIO_ROOT / "gdal_data")
 
 
 PROCESS_DRIFT_SLC_STUB = types.ModuleType("process_drift_slc")
@@ -38,8 +38,8 @@ SNAP_UTILS_STUB.uses_windows_paths = lambda *args, **kwargs: False
 sys.modules.setdefault("snap_utils", SNAP_UTILS_STUB)
 
 
-SCRIPT_PATH = Path(__file__).resolve().parents[1] / "process_meria_sa_slc_targets.py"
-SPEC = importlib.util.spec_from_file_location("process_meria_sa_slc_targets", SCRIPT_PATH)
+SCRIPT_PATH = Path(__file__).resolve().parents[1] / "process_sa_slc_targets.py"
+SPEC = importlib.util.spec_from_file_location("process_sa_slc_targets", SCRIPT_PATH)
 assert SPEC and SPEC.loader
 MODULE = importlib.util.module_from_spec(SPEC)
 sys.modules[SPEC.name] = MODULE
@@ -79,7 +79,81 @@ def write_multiband_raster(path: Path, count: int) -> None:
             dst.write(np.full((2, 2), float(band), dtype="float32"), band)
 
 
+def load_module(script_path: Path, module_name: str):
+    spec = importlib.util.spec_from_file_location(module_name, script_path)
+    assert spec and spec.loader
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[module_name] = module
+    spec.loader.exec_module(module)
+    return module
+
+
+class CompatibilityEntrypointTests(unittest.TestCase):
+    def test_neutral_sa_entrypoint_exists_and_exposes_main(self) -> None:
+        script_path = Path(__file__).resolve().parents[1] / "process_sa_slc_targets.py"
+        module_name = "process_sa_slc_targets_entrypoint_test"
+
+        try:
+            module = load_module(script_path, module_name)
+            self.assertTrue(callable(module.main))
+            self.assertTrue(callable(module.resolve_graphs_dir))
+        finally:
+            sys.modules.pop(module_name, None)
+
+    def test_legacy_sa_entrypoint_delegates_to_neutral_main(self) -> None:
+        neutral = types.ModuleType("process_sa_slc_targets")
+        calls: list[str] = []
+        neutral.main = lambda: calls.append("called")
+
+        script_path = Path(__file__).resolve().parents[1] / "process_meria_sa_slc_targets.py"
+        module_name = "legacy_meria_sa_entrypoint_test"
+        original = sys.modules.get("process_sa_slc_targets")
+        sys.modules["process_sa_slc_targets"] = neutral
+
+        try:
+            module = load_module(script_path, module_name)
+            module.main()
+        finally:
+            sys.modules.pop(module_name, None)
+            if original is None:
+                sys.modules.pop("process_sa_slc_targets", None)
+            else:
+                sys.modules["process_sa_slc_targets"] = original
+
+        self.assertEqual(calls, ["called"])
+
+
 class SceneMosaicSupportMaskTests(unittest.TestCase):
+    def test_resolve_graphs_dir_prefers_sar_pp_graphs(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            repo_root = Path(tmp_dir)
+            (repo_root / "SAR_PP" / "graphs").mkdir(parents=True)
+            (repo_root / "sar_ml_pipeline" / "graphs").mkdir(parents=True)
+
+            resolved = MODULE.resolve_graphs_dir(repo_root)
+
+        self.assertEqual(resolved, repo_root / "SAR_PP" / "graphs")
+
+    def test_resolve_graphs_dir_falls_back_to_legacy_locations(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            repo_root = Path(tmp_dir)
+            (repo_root / "sar_ml_pipeline_legacy" / "graphs").mkdir(parents=True)
+
+            resolved = MODULE.resolve_graphs_dir(repo_root)
+
+        self.assertEqual(resolved, repo_root / "sar_ml_pipeline_legacy" / "graphs")
+
+    def test_parse_args_defaults_to_resolved_graphs_dir(self) -> None:
+        graphs_dir = Path("D:/Masters/SAR_PP/graphs")
+
+        with (
+            mock.patch.object(MODULE, "resolve_graphs_dir", return_value=graphs_dir),
+            mock.patch.object(sys, "argv", ["process_sa_slc_targets.py"]),
+        ):
+            args = MODULE.parse_args()
+
+        self.assertEqual(Path(args.graphs_dir), graphs_dir)
+
     def test_load_matches_reads_role_specific_download_group_key(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             match_csv = Path(tmp_dir) / "matches.csv"
@@ -168,13 +242,13 @@ class SceneMosaicSupportMaskTests(unittest.TestCase):
         self.assertEqual(download_mock.call_count, 1)
 
     def test_default_pad_deg_is_tight_standardized_value(self) -> None:
-        with mock.patch.object(sys, "argv", ["process_meria_sa_slc_targets.py"]):
+        with mock.patch.object(sys, "argv", ["process_sa_slc_targets.py"]):
             args = MODULE.parse_args()
         self.assertEqual(args.pad_deg, 0.25)
         self.assertEqual(args.subset_mode, "aoi")
 
     def test_subset_mode_accepts_full_swath(self) -> None:
-        with mock.patch.object(sys, "argv", ["process_meria_sa_slc_targets.py", "--subset-mode", "full-swath"]):
+        with mock.patch.object(sys, "argv", ["process_sa_slc_targets.py", "--subset-mode", "full-swath"]):
             args = MODULE.parse_args()
         self.assertEqual(args.subset_mode, "full-swath")
 

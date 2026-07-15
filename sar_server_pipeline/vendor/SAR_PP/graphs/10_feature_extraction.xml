@@ -1,0 +1,51 @@
+<graph id="SAR_Feature_Extraction">
+  <version>1.0</version>
+
+  <!-- Read terrain-corrected input -->
+  <node id="Read">
+    <operator>Read</operator>
+    <parameters>
+      <file>${input}</file>
+    </parameters>
+  </node>
+
+  <node id="GLCM_Features">
+  <operator>GLCM</operator>
+  <sources>
+    <sourceProduct refid="Read"/>
+  </sources>
+  <parameters>
+    <sourceBands>Sigma0_VV,Sigma0_VH</sourceBands>
+    <windowSizeStr>5x5</windowSizeStr>
+    <angleStr>ALL</angleStr>
+    <quantizerStr>Probabilistic Quantizer</quantizerStr>
+    <quantizationLevelsStr>32</quantizationLevelsStr>
+    <displacement>1</displacement>
+    <noDataValue>-9999.0</noDataValue>
+
+    <outputContrast>true</outputContrast>
+    <outputDissimilarity>true</outputDissimilarity>
+    <outputHomogeneity>true</outputHomogeneity>
+    <outputASM>true</outputASM>
+    <outputEnergy>true</outputEnergy>
+    <outputMAX>true</outputMAX>
+    <outputEntropy>true</outputEntropy>
+    <outputMean>true</outputMean>
+    <outputVariance>true</outputVariance>
+    <outputCorrelation>true</outputCorrelation>
+  </parameters>
+</node>
+
+
+  <!-- Write result -->
+  <node id="Write">
+    <operator>Write</operator>
+    <sources>
+      <sourceProduct refid="GLCM_Features"/>
+    </sources>
+    <parameters>
+      <file>${output}</file>
+      <formatName>BEAM-DIMAP</formatName>
+    </parameters>
+  </node>
+</graph>

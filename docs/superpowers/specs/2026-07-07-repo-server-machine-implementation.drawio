@@ -1,0 +1,388 @@
+<mxfile host="app.diagrams.net" modified="2026-07-07T12:00:00.000Z" agent="Codex" version="26.0.11" editor="draw.io" type="device" compressed="false">
+  <diagram id="repo-server-machine-implementation" name="Machine Implementation">
+    <mxGraphModel dx="1800" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2600" pageHeight="1800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="10" value="Workstation preparation layer" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=28;rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="680" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="Repo root&lt;br&gt;D:/Masters" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=11;spacing=6;" vertex="1" parent="10">
+          <mxGeometry x="20" y="40" width="260" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="Observation and scene matching&lt;br&gt;D:/Masters/Data_Creation/build_meria_sa_s1_slc_matches.py&lt;br&gt;D:/Masters/Data_Creation/build_meria_global_s1_slc_matches.py&lt;br&gt;writes match CSVs and point CSVs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=11;align=left;spacing=6;" vertex="1" parent="10">
+          <mxGeometry x="20" y="100" width="300" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="Digitisation and feature prep&lt;br&gt;D:/Masters/Data_Creation/build_meria_digitising_shapefiles.py&lt;br&gt;D:/Masters/Data_Creation/build_meria_digitisation_tracker.py&lt;br&gt;or copy processed digitised_patches into shapefiles_root/[scene_id]/" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=11;align=left;spacing=6;" vertex="1" parent="10">
+          <mxGeometry x="340" y="100" width="320" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="Biophysical and drift preparation&lt;br&gt;D:/Masters/Domain_SSL/Scripts/Preprocessing/fetch_drift_forcing.py&lt;br&gt;D:/Masters/Domain_SSL/Scripts/Preprocessing/run_planet_to_sar_opendrift.py&lt;br&gt;writes per-scene rasters for later patch_stack use" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=11;align=left;spacing=6;" vertex="1" parent="10">
+          <mxGeometry x="20" y="220" width="300" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="Local sandbox and manifest setup example&lt;br&gt;D:/Masters/sar_server_pipeline/local/setup_meria_sa_004_before.ps1&lt;br&gt;creates data/job roots, filtered CSVs, copied shapefiles, and a manifest file" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=11;align=left;spacing=6;" vertex="1" parent="10">
+          <mxGeometry x="340" y="220" width="320" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="Operator command surface&lt;br&gt;docker compose build&lt;br&gt;docker compose run --rm pipeline&lt;br&gt;docker compose run --rm pipeline patch_extract --manifest /job/job.yaml" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=11;align=left;spacing=6;" vertex="1" parent="10">
+          <mxGeometry x="20" y="340" width="640" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="20" value="External systems and credentials" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=28;rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="760" y="40" width="520" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="21" value="Copernicus Data Space catalog&lt;br&gt;used by match-building scripts to resolve Sentinel-1 candidates" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d79b00;fontSize=11;align=left;spacing=6;" vertex="1" parent="20">
+          <mxGeometry x="20" y="40" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="22" value="Earthdata / ASF&lt;br&gt;used by SLC processing when download is required" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d79b00;fontSize=11;align=left;spacing=6;" vertex="1" parent="20">
+          <mxGeometry x="260" y="40" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="23" value="Copernicus Marine / CDS / ERA5&lt;br&gt;used by workstation-side forcing and drift preparation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d79b00;fontSize=11;align=left;spacing=6;" vertex="1" parent="20">
+          <mxGeometry x="20" y="140" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="24" value="Credentials&lt;br&gt;EDL_USER / EDL_PASS&lt;br&gt;netrc or _netrc&lt;br&gt;Copernicus Marine credentials&lt;br&gt;.cdsapirc" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d79b00;fontSize=11;align=left;spacing=6;" vertex="1" parent="20">
+          <mxGeometry x="260" y="130" width="240" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="25" value="Host SNAP install&lt;br&gt;example host GPT path: C:/Program Files/esa-snap/bin/gpt.exe" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d79b00;fontSize=11;align=left;spacing=6;" vertex="1" parent="20">
+          <mxGeometry x="20" y="250" width="480" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="30" value="Host filesystem contract" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=28;rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="500" width="820" height="1120" as="geometry" />
+        </mxCell>
+        <mxCell id="31" value="D:/Masters/outputs/sar_server_pipeline_local&lt;br&gt;example local sandbox root" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=11;align=left;spacing=6;" vertex="1" parent="30">
+          <mxGeometry x="20" y="40" width="280" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="32" value="DATA_ROOT&lt;br&gt;mounted into container as /data" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=11;spacing=6;" vertex="1" parent="30">
+          <mxGeometry x="320" y="40" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="33" value="DATA_ROOT/raw&lt;br&gt;match CSVs&lt;br&gt;points CSVs&lt;br&gt;raw/slc/" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=11;align=left;spacing=6;" vertex="1" parent="30">
+          <mxGeometry x="20" y="130" width="240" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="34" value="DATA_ROOT/processed&lt;br&gt;scene GeoTIFFs&lt;br&gt;*_slc_manifest.json" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=11;align=left;spacing=6;" vertex="1" parent="30">
+          <mxGeometry x="280" y="130" width="240" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="35" value="DATA_ROOT/shapefiles/[scene_id]/...&lt;br&gt;.geojson .json .shp bundles" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=11;align=left;spacing=6;" vertex="1" parent="30">
+          <mxGeometry x="540" y="130" width="240" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="36" value="DATA_ROOT/biophysical/[scene_id]/[band].tif&lt;br&gt;default stack bands: uo vo swh" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=11;align=left;spacing=6;" vertex="1" parent="30">
+          <mxGeometry x="20" y="240" width="240" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="37" value="DATA_ROOT/patches&lt;br&gt;sar_patch_inventory.csv&lt;br&gt;sar_patch_library.csv&lt;br&gt;*_image.tif *_mask.tif" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=11;align=left;spacing=6;" vertex="1" parent="30">
+          <mxGeometry x="280" y="240" width="240" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="38" value="DATA_ROOT/stacks&lt;br&gt;stack_catalog.csv&lt;br&gt;stack_dataset_manifest.json&lt;br&gt;*_stack.tif *_channels.json" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=11;align=left;spacing=6;" vertex="1" parent="30">
+          <mxGeometry x="540" y="240" width="240" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="39" value="DATA_ROOT/manifests/[run_id]/stages/[stage].json&lt;br&gt;stage markers for success, failure, and skip behavior" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=11;align=left;spacing=6;" vertex="1" parent="30">
+          <mxGeometry x="20" y="360" width="760" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="40" value="JOB_DIR&lt;br&gt;mounted into container as /job" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=11;spacing=6;" vertex="1" parent="30">
+          <mxGeometry x="20" y="470" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="41" value="JOB_DIR/job.yaml or job.json&lt;br&gt;schema_version&lt;br&gt;run_id&lt;br&gt;dataset_mode: sa | global&lt;br&gt;targets[]&lt;br&gt;inputs.match_csv&lt;br&gt;inputs.points_csv&lt;br&gt;inputs.raw_slc_root&lt;br&gt;inputs.shapefiles_root&lt;br&gt;inputs.biophysical_root&lt;br&gt;outputs.processed_root&lt;br&gt;outputs.patches_root&lt;br&gt;outputs.stacks_root&lt;br&gt;outputs.logs_root&lt;br&gt;outputs.manifests_root&lt;br&gt;stages.slc_process.enabled overwrite gpt graphs_dir processor_script&lt;br&gt;stages.patch_extract.enabled overwrite&lt;br&gt;stages.patch_stack.enabled overwrite&lt;br&gt;processing.subset_mode subswaths workers cache_gb patch_size sar_band_order biophysical_bands" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=11;align=left;spacing=6;" vertex="1" parent="30">
+          <mxGeometry x="20" y="530" width="760" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="42" value="SNAP_HOST_DIR&lt;br&gt;mounted into container as /opt/snap&lt;br&gt;SNAP binaries are host-provided, not baked into the image" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=11;align=left;spacing=6;" vertex="1" parent="30">
+          <mxGeometry x="20" y="870" width="760" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="50" value="Docker Compose and image build" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=28;rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="900" y="500" width="620" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="51" value="D:/Masters/sar_server_pipeline/compose.yml&lt;br&gt;service: pipeline&lt;br&gt;image: sar-server-pipeline&lt;br&gt;command: run_all --manifest ${JOB_MANIFEST:-/job/job.yaml}" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9673a6;fontSize=11;align=left;spacing=6;" vertex="1" parent="50">
+          <mxGeometry x="20" y="40" width="270" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="52" value="Bind mounts declared in compose&lt;br&gt;DATA_ROOT -&gt; /data&lt;br&gt;JOB_DIR -&gt; /job&lt;br&gt;SNAP_HOST_DIR -&gt; /opt/snap (read_only)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9673a6;fontSize=11;align=left;spacing=6;" vertex="1" parent="50">
+          <mxGeometry x="310" y="40" width="290" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="53" value="Container env declared in compose&lt;br&gt;EDL_USER&lt;br&gt;EDL_PASS&lt;br&gt;SNAP_GPT default /opt/snap/bin/gpt" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9673a6;fontSize=11;align=left;spacing=6;" vertex="1" parent="50">
+          <mxGeometry x="20" y="160" width="270" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="54" value="D:/Masters/sar_server_pipeline/docker/Dockerfile&lt;br&gt;FROM python:3.11-slim&lt;br&gt;apt install gdal-bin libgdal-dev libproj-dev build-essential default-jre-headless&lt;br&gt;COPY pipeline -&gt; /app/pipeline&lt;br&gt;COPY stages -&gt; /app/stages&lt;br&gt;COPY docker/snap_graphs -&gt; /app/docker/snap_graphs&lt;br&gt;COPY vendor -&gt; /app/vendor&lt;br&gt;ENTRYPOINT python -m pipeline" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9673a6;fontSize=11;align=left;spacing=6;" vertex="1" parent="50">
+          <mxGeometry x="310" y="150" width="290" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="55" value="Python packages installed from D:/Masters/sar_server_pipeline/requirements.txt&lt;br&gt;numpy rasterio shapely affine pandas PyYAML requests fiona" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9673a6;fontSize=11;align=left;spacing=6;" vertex="1" parent="50">
+          <mxGeometry x="20" y="270" width="580" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="60" value="Image contents available at runtime inside the container" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=28;rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="1550" y="500" width="920" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="61" value="/app/pipeline/cli.py&lt;br&gt;builds subcommands: slc_process patch_extract patch_stack run_all&lt;br&gt;loads manifest then dispatches run_workflow" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;fontSize=11;align=left;spacing=6;" vertex="1" parent="60">
+          <mxGeometry x="20" y="40" width="280" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="62" value="/app/pipeline/manifest.py&lt;br&gt;resolves YAML or JSON&lt;br&gt;builds Inputs Outputs StageConfig ProcessingConfig Manifest" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;fontSize=11;align=left;spacing=6;" vertex="1" parent="60">
+          <mxGeometry x="320" y="40" width="280" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="63" value="/app/pipeline/runner.py&lt;br&gt;STAGE_ORDER = slc_process patch_extract patch_stack&lt;br&gt;reads and writes stage markers under manifests_root/run_id/stages/" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;fontSize=11;align=left;spacing=6;" vertex="1" parent="60">
+          <mxGeometry x="620" y="40" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="64" value="/app/stages/slc_process.py&lt;br&gt;default processor path resolves to /app/vendor/Data_Creation/process_sa_slc_targets.py or process_global_slc_targets.py" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;fontSize=11;align=left;spacing=6;" vertex="1" parent="60">
+          <mxGeometry x="20" y="140" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="65" value="/app/stages/patch_extract.py&lt;br&gt;discovers scene manifests under processed_root&lt;br&gt;reads shapefiles_root&lt;br&gt;writes patch rasters and CSV inventories" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;fontSize=11;align=left;spacing=6;" vertex="1" parent="60">
+          <mxGeometry x="320" y="140" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="66" value="/app/stages/patch_stack.py&lt;br&gt;reads sar_patch_inventory.csv&lt;br&gt;reprojects biophysical rasters from biophysical_root/[scene_id]/[band].tif&lt;br&gt;writes stack rasters and channel manifests" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;fontSize=11;align=left;spacing=6;" vertex="1" parent="60">
+          <mxGeometry x="620" y="140" width="280" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="67" value="/app/vendor/Data_Creation/process_sa_slc_targets.py&lt;br&gt;/app/vendor/Data_Creation/process_global_slc_targets.py&lt;br&gt;baked into the image as vendored processor scripts" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;fontSize=11;align=left;spacing=6;" vertex="1" parent="60">
+          <mxGeometry x="20" y="250" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="68" value="/app/docker/snap_graphs/*.xml&lt;br&gt;graph files copied into the image&lt;br&gt;used unless overridden by manifest stages.slc_process.graphs_dir" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;fontSize=11;align=left;spacing=6;" vertex="1" parent="60">
+          <mxGeometry x="320" y="250" width="280" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="69" value="Important split&lt;br&gt;processing scripts are inside the image&lt;br&gt;SNAP GPT is mounted from host /opt/snap" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;fontSize=11;align=left;spacing=6;" vertex="1" parent="60">
+          <mxGeometry x="620" y="260" width="280" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="70" value="Single container execution path" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=28;rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="900" y="880" width="620" height="740" as="geometry" />
+        </mxCell>
+        <mxCell id="71" value="docker compose run --rm pipeline&lt;br&gt;starts one container from image sar-server-pipeline" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;fontSize=11;align=left;spacing=6;" vertex="1" parent="70">
+          <mxGeometry x="20" y="40" width="280" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="72" value="python -m pipeline run_all --manifest /job/job.yaml&lt;br&gt;or explicit command slc_process patch_extract patch_stack" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;fontSize=11;align=left;spacing=6;" vertex="1" parent="70">
+          <mxGeometry x="320" y="40" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="73" value="Manifest load&lt;br&gt;/app/pipeline/manifest.py reads /job manifest and resolves all configured paths" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;fontSize=11;align=left;spacing=6;" vertex="1" parent="70">
+          <mxGeometry x="20" y="140" width="280" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="74" value="Workflow dispatch&lt;br&gt;/app/pipeline/runner.py iterates enabled stages in STAGE_ORDER" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;fontSize=11;align=left;spacing=6;" vertex="1" parent="70">
+          <mxGeometry x="320" y="150" width="280" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="75" value="Stage: slc_process&lt;br&gt;reads /data/raw and target list&lt;br&gt;loads vendored processor module&lt;br&gt;passes --target --out-root --work-root --graphs-dir --subset-mode --subswaths --workers --cache-gb --gpt&lt;br&gt;uses /opt/snap/bin/gpt when processing&lt;br&gt;writes /data/processed and stage marker" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;fontSize=11;align=left;spacing=6;" vertex="1" parent="70">
+          <mxGeometry x="20" y="250" width="580" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="76" value="Stage: patch_extract&lt;br&gt;reads /data/processed scene manifests&lt;br&gt;reads /data/shapefiles/[scene_id]/...&lt;br&gt;builds raster bundle from scene manifest outputs&lt;br&gt;writes /data/patches/[dataset_mode]/[scene_id]/[class]/...&lt;br&gt;writes sar_patch_inventory.csv and sar_patch_library.csv&lt;br&gt;writes stage marker" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;fontSize=11;align=left;spacing=6;" vertex="1" parent="70">
+          <mxGeometry x="20" y="410" width="580" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="77" value="Stage: patch_stack&lt;br&gt;reads /data/patches/sar_patch_inventory.csv&lt;br&gt;reads /data/biophysical/[scene_id]/[band].tif&lt;br&gt;writes /data/stacks/[dataset_mode]/[scene_id]/[class]/...&lt;br&gt;writes stack_catalog.csv stack_dataset_manifest.json and *_channels.json&lt;br&gt;writes stage marker" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;fontSize=11;align=left;spacing=6;" vertex="1" parent="70">
+          <mxGeometry x="20" y="560" width="580" height="130" as="geometry" />
+        </mxCell>
+
+        <mxCell id="80" value="Host-visible outputs and operator inspection points" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=28;rounded=1;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#5b9bd5;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="1550" y="1090" width="620" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="81" value="Processed scene products&lt;br&gt;scene tifs and *_slc_manifest.json" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#5b9bd5;fontSize=11;align=left;spacing=6;" vertex="1" parent="80">
+          <mxGeometry x="20" y="40" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="82" value="Patch dataset&lt;br&gt;patch images masks inventory library" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#5b9bd5;fontSize=11;align=left;spacing=6;" vertex="1" parent="80">
+          <mxGeometry x="220" y="40" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="83" value="Stack dataset&lt;br&gt;stack rasters channel manifests stack catalog" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#5b9bd5;fontSize=11;align=left;spacing=6;" vertex="1" parent="80">
+          <mxGeometry x="420" y="40" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="84" value="Audit trail&lt;br&gt;per-stage marker JSON files keyed by run_id" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#5b9bd5;fontSize=11;align=left;spacing=6;" vertex="1" parent="80">
+          <mxGeometry x="20" y="150" width="580" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="100" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#4a86e8;" edge="1" parent="1" source="11" target="12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="101" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#4a86e8;" edge="1" parent="1" source="11" target="13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="102" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#4a86e8;" edge="1" parent="1" source="11" target="14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="103" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#4a86e8;" edge="1" parent="1" source="11" target="15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="104" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#4a86e8;" edge="1" parent="1" source="11" target="16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="110" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d79b00;" edge="1" parent="1" source="21" target="12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="111" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d79b00;" edge="1" parent="1" source="22" target="75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="112" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d79b00;" edge="1" parent="1" source="23" target="14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="113" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d79b00;" edge="1" parent="1" source="24" target="12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="114" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d79b00;" edge="1" parent="1" source="24" target="14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="115" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d79b00;" edge="1" parent="1" source="24" target="53">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="116" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d79b00;" edge="1" parent="1" source="24" target="72">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="117" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d79b00;" edge="1" parent="1" source="25" target="42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="120" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#82b366;" edge="1" parent="1" source="12" target="33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="121" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#82b366;" edge="1" parent="1" source="13" target="35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="122" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#82b366;" edge="1" parent="1" source="14" target="36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="123" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#82b366;" edge="1" parent="1" source="15" target="31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="124" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#82b366;" edge="1" parent="1" source="15" target="32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="125" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#82b366;" edge="1" parent="1" source="15" target="40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="126" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#82b366;" edge="1" parent="1" source="16" target="51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="130" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#9673a6;" edge="1" parent="1" source="51" target="52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="131" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#9673a6;" edge="1" parent="1" source="51" target="53">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="132" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#9673a6;" edge="1" parent="1" source="54" target="55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="133" value="bind mount" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#9673a6;fontSize=10;" edge="1" parent="1" source="32" target="52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="134" value="bind mount" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#9673a6;fontSize=10;" edge="1" parent="1" source="40" target="52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="135" value="read-only bind mount" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#9673a6;fontSize=10;" edge="1" parent="1" source="42" target="52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="140" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#b85450;" edge="1" parent="1" source="54" target="61">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="141" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#b85450;" edge="1" parent="1" source="54" target="64">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="142" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#b85450;" edge="1" parent="1" source="54" target="67">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="143" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#b85450;" edge="1" parent="1" source="54" target="68">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="150" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d6b656;" edge="1" parent="1" source="51" target="71">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="151" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d6b656;" edge="1" parent="1" source="52" target="71">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="152" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d6b656;" edge="1" parent="1" source="53" target="72">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="153" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d6b656;" edge="1" parent="1" source="54" target="71">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="154" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d6b656;" edge="1" parent="1" source="61" target="72">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="155" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d6b656;" edge="1" parent="1" source="62" target="73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="156" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d6b656;" edge="1" parent="1" source="63" target="74">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="157" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d6b656;" edge="1" parent="1" source="64" target="75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="158" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d6b656;" edge="1" parent="1" source="65" target="76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="159" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d6b656;" edge="1" parent="1" source="66" target="77">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="160" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d6b656;" edge="1" parent="1" source="67" target="75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="161" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d6b656;" edge="1" parent="1" source="68" target="75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="162" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d6b656;" edge="1" parent="1" source="69" target="75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="163" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d6b656;" edge="1" parent="1" source="71" target="72">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="164" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d6b656;" edge="1" parent="1" source="72" target="73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="165" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d6b656;" edge="1" parent="1" source="73" target="74">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="166" value="if enabled" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d6b656;fontSize=10;" edge="1" parent="1" source="74" target="75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="167" value="if enabled" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d6b656;fontSize=10;" edge="1" parent="1" source="74" target="76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="168" value="if enabled" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#d6b656;fontSize=10;" edge="1" parent="1" source="74" target="77">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="170" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#82b366;" edge="1" parent="1" source="33" target="75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="171" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#82b366;" edge="1" parent="1" source="34" target="76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="172" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#82b366;" edge="1" parent="1" source="35" target="76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="173" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#82b366;" edge="1" parent="1" source="36" target="77">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="174" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#82b366;" edge="1" parent="1" source="37" target="77">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="175" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#82b366;" edge="1" parent="1" source="41" target="73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="176" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#82b366;" edge="1" parent="1" source="42" target="75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="180" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#5b9bd5;" edge="1" parent="1" source="75" target="34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="181" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#5b9bd5;" edge="1" parent="1" source="75" target="39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="182" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#5b9bd5;" edge="1" parent="1" source="76" target="37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="183" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#5b9bd5;" edge="1" parent="1" source="76" target="39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="184" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#5b9bd5;" edge="1" parent="1" source="77" target="38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="185" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#5b9bd5;" edge="1" parent="1" source="77" target="39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="186" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#5b9bd5;" edge="1" parent="1" source="34" target="81">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="187" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#5b9bd5;" edge="1" parent="1" source="37" target="82">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="188" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#5b9bd5;" edge="1" parent="1" source="38" target="83">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="189" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#5b9bd5;" edge="1" parent="1" source="39" target="84">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

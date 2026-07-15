@@ -1,0 +1,206 @@
+González-Fernández et al. (2022): Floating marine macro litter on the Black Sea, compilation of results from
+visual surveys on the Black Sea.
+Curmi and Axiak (2021): The article reported a seasonal study on floating litter in Malta’s coastal waters
+using small vessels. The TG ML protocol was used for litter categories and size ranges. Observation height was
+1.5 m and strip width was 6 m at the bow. It maintained a constant speed along each line transect, varying
+between 10 m s
+–1 and 50 m s
+–1
+for different transects.
+Pogojeva et al. (2021): Visual ship-based surveys, employing the JRC Floating Litter Monitoring App, have
+been used to study the distribution of FMML in relation to oceanographic characteristics in the Russian Arctic
+seas. The surveys provided the first data in an Arctic area that is difficult to access.
+Garcia-Garin et al. (2020): This study compared results from visual and drone surveys to validate the drone
+methodology for FMML monitoring along the Catalan coast (Spain). A sailing catamaran was used for visual
+observations at a constant speed of 5 knots and a 10-m fixed strip. Two different commercial drones were used
+for drone surveys, equipped with a 12-megapixel camera. Flight height was set between 45 and 65 m to
+guarantee a ground sampling distance of 2 cm per pixel.
+González-Fernández et al. (2020): Anthropogenic litter input through rivers to the Black Sea was estimated
+through visual counting from vantage points (e.g. bridges) by trained observers to register the number and
+identity of floating macro-litter items (> 2.5 cm) passing by in the river water surface layer. The observations
+were performed using the JRC Floating Litter Monitoring App from 2016 to 2020 as part of the Improving
+Environmental Monitoring in the Black Sea (EMBLAS) project.
+Pogojeva et al. (2020a): Visual observations were performed from a research vessel in 2019 using the JRC
+Floating Litter Monitoring App, covering the potential accumulation areas of FMML in the Barents Sea.
+Pogojeva et al. (2020b): Visual observations from ships of opportunity were performed during 2016–2019
+using the JRC Floating Litter Monitoring App as part of the EMBLAS project. This was the first multinational
+integrated assessment of FMML pollution of the Black Sea and it used a harmonised MSFD approach for the
+first time.
+Suaria et al. (2020): Ship-based visual survey of floating macro litter in the Southern Ocean around the
+Antarctic continent. Teams of one to three observers equipped with binoculars recorded floating debris while
+the ship was steaming at 10–14 knots. Observations were made from the bow of the ship (elevation 8–9 m
+above the waterline) when weather permitted, or from the ship’s bridge or flying bridge (20–22 m). Litter
+densities were estimated for items within 50 m of the ship’s track, except south of 60 ° S, where no items were
+observed within 50 m of the ship. Density estimates assumed all items within 50 m of the ship were detected,
+whereas extrapolated densities used simple size-specific detection functions to estimate the proportion of items
+not detected at 10-m distance bands from the ship.
+Campanale et al. (2019): A visual survey of floating natural and anthropogenic macro litter (> 2.5 cm) was
+performed in the central Mediterranean Sea during a campaign on board the ship Amerigo Vespucci.
+Observations were performed with the naked eye from the bow of the vessel (9 m above sea level) at a speed
+of 7.28 knots; every item was assigned to one of six size classes (2.5–5 cm, 5–10 cm, 10–20 cm, 20–30 cm,
+30–50 cm, > 50 cm) and to either anthropogenic or natural marine litter. The survey effort was split into 30-
+min transects; only data taken in good visibility conditions (wind speed < 21 knots, wave height < 2 m) were
+retained and analysed.
+Palatinus et al. (2019): Floating macro litter (> 2.5 cm) was surveyed in Croatian waters from a 15-m sailing
+boat sailing at 2–3 knots. Observations were made simultaneously with floating microlitter samplings (manta
+trawls) to evaluate the correlation between macro and microlitter. The cumulative height of the vessel and the
+observer was about 2.2 m and the density of litter items was estimated using a 7-metre strip transect method.
+Rothäusler et al. (2019): Seasonal observations were done from a ferry between Finland and Sweden
+between spring 2012 and spring 2013. Observations were performed from one side of the ship, the port side
+close to the bow, and from the lowest outdoor deck, situated 11 m above the sea surface. Two or three
+dedicated observers recorded all floating marine debris items passing the ship during the cruises. Floating
+marine debris densities (items per square kilometre) were calculated as the number of items recorded along
+the 5 km transects within the transect width of 50 m. All observations were made under conditions of good
+visibility and calm sea state, in a range of speed between 8 knots in the archipelagos and 20 knots in the more
+open sea regions.
+14
+Arcangeli et al. (2018): A 3-year survey was performed from ferries along five fixed transborder transects in
+the Mediterranean basin. Observations were done from the bridge (17–25 m) close to the bow, at < 3 on the
+Beaufort scale, at a speed of 19–25 knots. Only items larger than 20 cm were recorded, within a fixed strip of
+25–100 m.
+Campana et al. (2018): Visual FMML monitoring was performed from ferries across the western
+Mediterranean Sea from 2013 to 2016 by dedicated observers at < 3 on the Beaufort scale, using the fixedwidth strip method. Items were classified by material, and information on source, industry, size classes and
+colour was included.
+Constantino et al. (2018): FMML surveys were conducted on board the R/V Ramform Hyperion during a 3D
+seismic programme. Surveys were carried out daily, across transects, in summer 2017, covering morning and
+afternoon periods, by the same observer. Each monitoring episode lasted on average 15 min. Items were
+counted and classified according to the categories defined by the MSFD. Macro litter density (D, items per square
+kilometre) was estimated as D = N/(W × L), where N is the number of items of plastic litter observed, W is the
+maximum distance perpendicular to the transect (0.05 km) and L is the total length of the transect (km).
+Ourmieres et al. (2018): FMML and stranded debris were sampled in 2006–2008 along the French Riviera
+with specific protocols to describe the litter’s spatial distribution in semi-quantitative terms. FMML data were
+collected for the MSFD initial assessment, including 801 counts performed along 67 transects. Items larger
+than 5 cm were counted using the strip transect method (50 m strips at both sides), with at < 3 on the Beaufort
+scale, speed 6 knots.
+Zeri et al. (2018): Abundances of macro- and microplastics were determined in the Adriatic Sea following the
+TG ML protocol. Studied areas included populated gulfs, river outlets and offshore waters in five Adriatic
+countries. The use of medium-sized ships (observation height < 3.2 m) and a 10-m strip made it possible to
+detect small plastics (2.5–5 cm). Observations were always conducted from one side of the ship, by two
+observers without binoculars, who rotated to avoid fatigue, and under low wind speed conditions (< 4 knots).
+Campanale et al. (2017): Visual FMML observations were collected during a dual-use campaign on board the
+Italian Navy ship Amerigo Vespucci circumnavigating Italy during May–June 2016. The distribution, abundance
+and composition of floating marine debris were assessed using a 10-m fixed-width strip transect method.
+Carlson et al. (2017): Observations of FMML in the Adriatic Sea were used to define initial conditions (number
+of particles, location and time) in a Lagrangian particle-tracking model. Time, date, position, abundance and
+typology of floating macro litter were recorded during three visual ship surveys performed in the Adriatic Sea
+in May 2013 and March, November and December 2015. Items larger than 2.5 cm were recorded along short
+transects of ∼ 30 min (mean length 7.7 ± 2.6 km) during daytime navigation and under good visibility conditions
+(i.e. wind speed < 20 knots). FMML abundances were expressed as items per square kilometre.
+Currie et al. (2017): Line transect surveys were conducted across lines perpendicular to the depth contours in
+the region of Maui, on board a 26-foot research vessel sailing at a speed of 15 knots, at ≤ 3 on the Beaufort
+scale and Douglas sea state ≤ 3. Two observers, one on the port and one on the starboard side, scanned the
+water from the bow to 90º on either side. All sightings were logged by a data recorder. Litter sighted was
+collected if possible, and global positioning system (GPS) location and type of material were recorded. If the
+item was not collected, it was photographed and recorded. Items were classified into plastic, metal, glass,
+rubber, clothing/fabric and processed lumber. Plastics were further classified into subcategories. To determine
+sources, items were divided into three categories: general, land and ocean. To help quantify the risk to cetaceans,
+debris was divided into two categories: entanglement risk (net, rope and/or line) and ingestion risk, defined as
+the remaining debris void of any trailing/entangling gear.
+Di-Méglio and Campana (2017): Visual FMML surveys were conducted from sailing vessels along the French
+coast between 2006 and 2015, simultaneously with surveys of cetaceans. Sampling was carried out in standard
+conditions at a speed of 6 (± 0.5) knots and ≤ 2 on the Beaufort scale with three observers standing at the bow
+of the boat, 3 m above sea level, continuously scanning the 180° ahead, and reporting litter sightings to a fourth
+person, who recorded the time, type, size and number of objects seen. Information on sea state, light conditions
+and wind force was noted, and a GPS continuously recorded the position. Only anthropogenic marine litter was
+recorded, classified into plastics (bags, bottles, cans, other), extruded polystyrene and other items.
+Fossi et al. (2017): This article investigated the possible overlap between floating microplastic, mesoplastic
+and macro litter accumulation areas and the fin whale feeding grounds in in a pelagic Specially Protected Area
+of Mediterranean Importance (SPAMI): the Pelagos Sanctuary. Models of ocean circulation and fin whale
+15
+potential habitat were merged to compare marine litter accumulation with the presence of whales. In addition,
+field data on microplastics, mesoplastics and macro litter abundance and cetacean presence were
+simultaneously collected. Visual FMML surveys were conducted from a medium-sized vessel (R/V Astrea) at a
+speed of 3–5 knots, at ≤ 3 on the Beaufort scale and Douglas sea state ≤ 3.
+Bergmann et al. (2016): Ship- and helicopter-based observer surveys of FMML were done in the Barents Sea
+and Fram Strait (Arctic). Ship surveys were based on 30-min transect counts of items larger than 20 cm from
+the bridge 18 m above sea level at a speed of 4.7–12.7 knots. Observations from helicopters were done at a
+mean altitude of 53–249 m and a mean speed of 109–182 km h
+–1
+.
+Sá et al. (2016): Visual FMML surveys were performed with vessels travelling at 10 knots along predefined
+linear transects in 2011 in offshore continental Portuguese waters. Observer height was 6 m above sea level.
+Four size classes were used (< 2.5 cm, ≤ 10 cm, ≤ 100 cm, > 100 cm), and detection functions were obtained
+for each class, assuming that items on the line are always detected, that they are detected at their initial
+location, and that distances and angles are measured accurately with personalised measuring sticks.
+Miranda-Urbina et al. (2015): Seabirds and floating litter were surveyed during 16 days in the central South
+Pacific Ocean, aboard a Chilean navy patrol vessel. Data were collected in daylight from the vessel bridge, 12 m
+above the sea surface, with a vessel speed of 20 km h
+–1
+. All FMML sightings were georeferenced using a
+handheld GPS; type, number and distance of each item were recorded. Sizes of items and perpendicular distance
+to the vessel were estimated in accordance with Thiel et al. (2013). To estimate the total density of marine
+litter, the strip transect method was used, whereby density was calculated as D = N / ((W / 1 000) * L).
+Suaria et al. (2015): A ship-based visual survey of FMML was performed in the north-west Black Sea. With a
+vessel speed of 7 knots, the observer surveyed from the bow (~ 4 m above sea level) and recorded the size,
+type, position and perpendicular distance of all debris larger than 2 cm.
+Eriksen et al. (2014): Twenty-four expeditions (2007–2013) were performed conducting surface net tows
+(N = 680) and visual survey transects of items larger than 20 cm. Items were classified into nine categories:
+four were fishing-related (buoy, line, net and other) and five were other plastics (bucket, bottle, foam, bag/film
+or mix).
+Ryan (2014): Research cruises were performed in the South Atlantic ‘garbage patch’ in 2013, with observers
+positioned 12–15 m above sea level and 50 m from the ship’s bow, along transects of 50 km, covering 2.5 km2
+each. Distance from the ship was assigned to one of seven categories: 0–10 m, 11–20 m, 21–30 m, 31–40 m,
+41–50 m, 51–100 m and > 100 m. Items were assigned to one of the size classes < 5 cm, 5–15 cm, 15–30 cm
+and 30–60 cm, > 60 cm. Categories included packaging, fishery-related plastic, other plastic user items (e.g.
+buckets, shoes, gloves) and other plastic pieces (e.g. fragments). Non-plastic categories included glass
+jars/bottles, light bulbs, tins/aerosols, cardboard/paper and wood.
+Suaria and Aliani (2014): Visual FMML surveys were performed from the R/V Urania in 2013 in the
+Mediterranean Sea, at a speed of 10 knots, 5 m above sea level, at < 5 on the Beaufort scale. FMML was
+classified into the size classes < 10 cm, 10–50 cm, 50–100 cm and > 100 cm, and into anthropogenic marine
+litter (extruded polystyrene, plastic, others) and natural marine debris. Simplified distance sampling was used:
+perpendicular distance of objects estimated knowing that the distance from an item when abeam equals the
+distance travelled by the ship between two consecutive bearings of the same object at 45° and 90° to the bow.
+Items were assigned to eight distance categories (0–10 m, 10–20 m, 20–30 m, 30–40 m, 40–50 m, 50–60 m,
+60–100 m, > 100 m) and the software DISTANCE was used for analyses.
+Goldstein et al. (2013): During 2009–2010, concurrent plankton net tows and visual observations by an
+observer at 10 m height were performed in the north-east Pacific Ocean. Standardised line distance methods
+were used: litter distance was determined using a handheld range finder and assigned to predetermined
+distance bins based on perpendicular distance from the ship (0–10 m, 10–50 m, 50–100 m, 100–200 m, 200–
+300 m, 300–600 m and > 600 m). Size classes were used: small (2–10 cm), medium (10–30 cm) and large
+(> 30 cm). Visually detected macroplastic broadly correlated with net-tow-caught microplastic, but they did not
+necessarily correlate on smaller (10 km) scales.
+Luperini et al. (2013): Visual FMML surveys were performed along the Livorno–Bastia ferry route in the
+Pelagos Sanctuary in the Tuscan Archipelago by a dedicated observer located on a ship deck, monitoring a 100-
+m-wide strip, in which all items larger than 30 cm were detected (sea state < 2). Samplings were categorised
+according to the OSPAR guidelines.
+16
+Ryan (2013): A size- and distance-based technique was used to assess the distribution, abundance and
+composition of floating marine debris in the Indian Ocean. Floating marine debris was counted during a research
+cruise aboard the R/V Marion Dufresne in June 2012.
+Thiel et al. (2013): Seasonal sampling was conducted during 2002–2005 to determine the composition of
+FMML in the coastal system of Coquimbo (Chile). A ship transect method was used, with a maximum distance
+perpendicular to the transect of 10 m to each side of the vessel. Density was calculated as D = N / (2 ×
+(W / 1 000) × L).
+Thiel et al. (2011): FMML ship-based visual surveys were performed in the German Bight in 2006–2008.
+Observers were positioned ~ 11 m above sea level and ~ 20 m behind the bow. Vessel speed ranged from 5 to
+12 knots. The strip (ranging 20–70 m) transect method was used, and density was calculated as D = N/(2 ×
+(W /1 000) × L).
+Titmus and Hyrenbach (2011): Visual surveys were performed along a 4 400 km cruise track using line and
+strip transect methods to monitor FMML and marine birds in the north-east Pacific Ocean. Observers were 10 m
+above sea level, and recorded the perpendicular distance between items and the ship’s track in seven distance
+bins using a hand-held range finder: 0–10 m, 10–50 m, 50–100 m, 100–200 m, 200–300 m, 300–600 m and
+> 600 m. Items’ colour, description and size (classes: small (2–10 cm), medium (10–30 cm) and large (> 30 cm))
+were recorded.
+Topcu et al. (2010): FMML sightings were recorded from a cruise in the Aegean Sea during August 2008 by
+an observer with a handheld GPS tracker and binoculars. The strip transect method, with a fixed strip width of
+60 m, was used to determine FMML abundance.
+Hinojosa and Thiel (2009): FMML ship surveys were performed in fjords, gulfs and channels of southern Chile
+during 2002–2005 from the bridge of ships travelling at 10 knots, 4 m above sea level. A fixed strip of 20 m
+was used, according to the strip transect method, and densities were calculated as D = N / ((W / 1 000) × L),
+where N = number of items observed, W = strip width and L = transect length. Seven FMML categories were
+distinguished: styrofoam, plastic fragments, plastic bags, lines, food sacks, wooden tables and others. The same
+vessel and method were also used by Hinojosa et al. (2011), who extended the survey to central and southern
+fjords of Chile.
+Pyle et al. (2008): FMML visual surveys were performed during at-sea observation programmes in west coast
+national marine sanctuaries (USA) using vessels of various sizes, at a speed of 7 knots. Strip widths measured
+50–100 m; litter was classified in 11 categories, derived by simplifying the codes used for beach surveys. Size
+categories used were small (< 2.5 cm), medium (≥ 2.5 and ≤ 10 cm), large (> 10 and ≤ 1 m) and extra large
+(> 1 m).
+Aliani et al. (2003): Visual sightings of FMML were performed in the Ligurian Sea, north-west Mediterranean,
+during the summers of 1997 and 2000, from large research vessels sailing along transects (50-m strip) and at
+fixed stations (200-m radius). Densities found in 1997 and 2000 ranged from 15 to 25 and from 1.5 to 3
+objects km–2
+, respectively.
+Thiel et al. (2003): Visual FMML surveys were performed in the coastal waters of the south-east Pacific (Chile),
+on fishing boats and research vessels, with observation height of 1 m, speed of 4–10 knots and the strip
+transect method using a strip width of 10 m on either side of the vessels.
