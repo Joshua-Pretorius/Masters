@@ -42,6 +42,9 @@ def run_slc_process(manifest: Manifest) -> SlcProcessResult:
 
     module.MATCH_CSV = manifest.inputs.match_csv
     module.POINTS_CSV = manifest.inputs.points_csv
+    # Keep shared SLC downloads on the mounted server data volume so multiple
+    # targets and later container runs can reuse the same granule.
+    module.DATA_DIR = manifest.inputs.raw_slc_root
     module.OUT_ROOT = manifest.outputs.processed_root
     module.WORK_ROOT = manifest.outputs.processed_root / "_slc_work"
     if manifest.dataset_mode == "global":

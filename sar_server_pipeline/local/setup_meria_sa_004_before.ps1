@@ -85,7 +85,7 @@ stages:
   slc_process:
     enabled: true
     overwrite: true
-    gpt: /opt/snap/bin/gpt
+    gpt: /usr/local/snap/bin/gpt
   patch_extract:
     enabled: true
     overwrite: true

@@ -265,25 +265,33 @@ def cached_payload_is_usable(payload: dict[str, Any] | None) -> bool:
     return required.issubset(payload)
 
 
-def select_candidate(products: list[dict[str, Any]], direction: str, points: list[tuple[float, float]]) -> dict[str, Any]:
+def select_candidate(
+    products: list[dict[str, Any]],
+    direction: str,
+    points: list[tuple[float, float]],
+    *,
+    buffer_km: float = AOI_BUFFER_KM,
+    coverage_threshold: float = COVERAGE_THRESHOLD,
+) -> dict[str, Any]:
     ordered = candidate_products(products)
     if direction == "before":
         ordered = list(reversed(ordered))
     coverage_by_name: dict[str, float] = {}
     for product in ordered:
-        coverage = aoi.coverage_ratio_for_scene(points, product.get("GeoFootprint"), buffer_km=AOI_BUFFER_KM)
+        coverage = aoi.coverage_ratio_for_scene(points, product.get("GeoFootprint"), buffer_km=buffer_km)
         coverage_by_name[product["Name"]] = coverage
-        if coverage >= COVERAGE_THRESHOLD:
+        if coverage >= coverage_threshold:
             return {
                 "name": product["Name"],
                 "start": product["ContentDate"]["Start"],
+                "footprint": product.get("GeoFootprint"),
                 "end": product["ContentDate"].get("End"),
                 "id": product.get("Id"),
                 "coverage_ratio": f"{coverage:.3f}",
                 "candidate_count": len(ordered),
                 "rejection_reason": "-",
             }
-    rejection_reason = "-" if not ordered else f"no candidate met {COVERAGE_THRESHOLD:.2f} coverage threshold"
+    rejection_reason = "-" if not ordered else f"no candidate met {coverage_threshold:.2f} coverage threshold"
     return {
         "name": None,
         "start": None,

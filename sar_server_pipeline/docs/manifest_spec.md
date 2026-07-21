@@ -27,7 +27,7 @@ stages:
     enabled: true
     overwrite: false
     # Optional when SNAP_GPT is provided by the container environment.
-    gpt: /opt/snap/bin/gpt
+    gpt: /usr/local/snap/bin/gpt
   patch_extract:
     enabled: true
     overwrite: false

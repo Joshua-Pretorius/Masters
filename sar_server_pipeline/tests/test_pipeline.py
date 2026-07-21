@@ -273,6 +273,10 @@ class RunnerAndCliTests(unittest.TestCase):
         self.assertTrue(sa_script.exists())
         self.assertTrue(global_script.exists())
 
+    def test_slc_stage_routes_shared_download_cache_to_manifest_raw_root(self) -> None:
+        source = (REPO_ROOT / "stages" / "slc_process.py").read_text(encoding="utf-8")
+        self.assertIn("module.DATA_DIR = manifest.inputs.raw_slc_root", source)
+
     def test_run_workflow_stops_on_failure_and_preserves_completed_stage_markers(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             manifest = load_manifest(build_manifest(Path(tmp_dir)))
@@ -326,6 +330,22 @@ class RunnerAndCliTests(unittest.TestCase):
             self.assertTrue(run_workflow_mock.called)
             kwargs = run_workflow_mock.call_args.kwargs
             self.assertEqual(kwargs["stage_names"], ("patch_extract",))
+
+
+class DockerPackagingTests(unittest.TestCase):
+    def test_pipeline_image_imports_snap_without_host_mount(self) -> None:
+        dockerfile = (REPO_ROOT / "docker" / "Dockerfile").read_text(encoding="utf-8")
+        compose = (REPO_ROOT / "compose.yml").read_text(encoding="utf-8")
+
+        self.assertIn("FROM ${SNAP_IMAGE} AS snap-runtime", dockerfile)
+        self.assertIn("FROM python:3.11-slim-bullseye", dockerfile)
+        self.assertIn("COPY --from=snap-runtime /usr/local/snap /usr/local/snap", dockerfile)
+        self.assertIn('SNAP_GPT=/usr/local/snap/bin/gpt', dockerfile)
+        self.assertIn('"${SNAP_GPT}" -h', dockerfile)
+        self.assertIn('UnsatisfiedLinkError', dockerfile)
+        self.assertNotIn("SNAP_HOST_DIR", compose)
+        self.assertNotIn("/opt/snap", compose)
+        self.assertIn("/usr/local/snap/bin/gpt", compose)
 
 
 if __name__ == "__main__":

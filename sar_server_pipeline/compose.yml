@@ -7,7 +7,7 @@ services:
     environment:
       EDL_USER: ${EDL_USER:-}
       EDL_PASS: ${EDL_PASS:-}
-      SNAP_GPT: ${SNAP_GPT:-/opt/snap/bin/gpt}
+      SNAP_GPT: ${SNAP_GPT:-/usr/local/snap/bin/gpt}
     volumes:
       - type: bind
         source: ${DATA_ROOT}
@@ -15,10 +15,6 @@ services:
       - type: bind
         source: ${JOB_DIR}
         target: /job
-      - type: bind
-        source: ${SNAP_HOST_DIR}
-        target: /opt/snap
-        read_only: true
     command:
       - run_all
       - --manifest

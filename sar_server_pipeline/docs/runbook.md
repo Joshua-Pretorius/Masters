@@ -21,10 +21,11 @@ docker build -t sar-server-pipeline -f docker/Dockerfile .
 ## Compose setup
 
 1. Copy `.env.example` to `.env`.
-2. Set `DATA_ROOT`, `JOB_DIR`, and `SNAP_HOST_DIR` for the server.
-3. Confirm the mounted SNAP GPT binary will be available at `/opt/snap/bin/gpt`.
+2. Set `DATA_ROOT` and `JOB_DIR` for the server.
+3. Pull the SNAP base image used by the pipeline build.
 
 ```bash
+docker pull mundialis/esa-snap:latest
 docker compose build
 ```
 
@@ -78,12 +79,12 @@ JOB_MANIFEST=/job/other-job.yaml docker compose run --rm pipeline
 `slc_process` defaults to the vendored neutral Sentinel-1 SLC processor bundled under `vendor/`.
 If you need to override that entrypoint, set `stages.slc_process.processor_script` in the manifest.
 
-## SNAP on the host
+## SNAP runtime
 
-The image does not install SNAP itself. Compose mounts the host SNAP installation from `SNAP_HOST_DIR`
-to `/opt/snap` in the container and exports `SNAP_GPT=/opt/snap/bin/gpt`.
+The pipeline image imports SNAP from `mundialis/esa-snap:latest` during its multi-stage build. No host SNAP
+installation or SNAP bind mount is required. The image exports `SNAP_GPT=/usr/local/snap/bin/gpt` and runs
+`gpt -h` while building so an unusable SNAP runtime fails the build immediately. The Python runtime is pinned
+to Debian Bullseye so SNAP uses Java 11 rather than an incompatible newer default JRE.
 
-If the server SNAP install exposes `gpt` at a different location, either:
-
-- change `SNAP_GPT` in `.env`, or
-- set `stages.slc_process.gpt` in the manifest to the in-container path.
+To use another compatible SNAP image, pass it as the `SNAP_IMAGE` build argument. If that image installs GPT
+at another path, update `SNAP_GPT` in the Dockerfile and the optional manifest override together.
