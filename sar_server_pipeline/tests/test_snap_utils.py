@@ -4,6 +4,7 @@ import importlib.util
 import subprocess
 import tempfile
 import unittest
+import xml.etree.ElementTree as ET
 from pathlib import Path
 from unittest import mock
 
@@ -43,17 +44,36 @@ class SnapUtilsTests(unittest.TestCase):
 
             self.assertEqual(
                 run.call_args.args[0],
-                ["gpt", str(graph), "-c", "32G", "-q", "1", "-x", "-Dexample=value"],
+                [
+                    "gpt",
+                    str(graph),
+                    "-c",
+                    "32G",
+                    "-q",
+                    "1",
+                    "-x",
+                    "-Dsnap.jai.defaultTileSize=256",
+                    "-x",
+                    "-Dexample=value",
+                ],
             )
 
     def test_big_tiff_export_uses_bounded_tiles_and_cache_flushing(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             root = Path(tmp_dir)
-            with mock.patch.object(snap_utils, "run_graph") as run_graph:
+            out_tif = root / "texture.tif"
+
+            def complete_export(_gpt, graph_path, **_kwargs) -> None:
+                graph = ET.parse(graph_path)
+                output = graph.findtext(".//node[@id='Write']/parameters/file")
+                assert output is not None
+                Path(output).write_bytes(b"completed BigTIFF")
+
+            with mock.patch.object(snap_utils, "run_graph", side_effect=complete_export) as run_graph:
                 snap_utils.export_to_geotiff(
                     "gpt",
                     root / "texture.dim",
-                    root / "texture.tif",
+                    out_tif,
                     cache_gb=32,
                     workers=1,
                     windows_paths=False,
@@ -65,11 +85,36 @@ class SnapUtilsTests(unittest.TestCase):
             self.assertEqual(
                 kwargs["extra_args"],
                 [
-                    "-x",
                     "-Dsnap.dataio.bigtiff.tiling.width=512",
                     "-Dsnap.dataio.bigtiff.tiling.height=512",
                 ],
             )
+            self.assertEqual(out_tif.read_bytes(), b"completed BigTIFF")
+            self.assertFalse((root / "texture.partial.tif").exists())
+
+    def test_failed_big_tiff_export_removes_partial_output(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            out_tif = root / "texture.tif"
+
+            def fail_export(_gpt, graph_path, **_kwargs) -> None:
+                graph = ET.parse(graph_path)
+                output = graph.findtext(".//node[@id='Write']/parameters/file")
+                assert output is not None
+                Path(output).write_bytes(b"incomplete")
+                raise RuntimeError("gpt failed")
+
+            with mock.patch.object(snap_utils, "run_graph", side_effect=fail_export):
+                with self.assertRaisesRegex(RuntimeError, "gpt failed"):
+                    snap_utils.export_to_geotiff(
+                        "gpt",
+                        root / "texture.dim",
+                        out_tif,
+                        windows_paths=False,
+                    )
+
+            self.assertFalse(out_tif.exists())
+            self.assertFalse((root / "texture.partial.tif").exists())
 
 
 if __name__ == "__main__":

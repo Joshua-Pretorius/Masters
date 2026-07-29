@@ -164,6 +164,9 @@ def run_graph(
     extra_args: list[str] | None = None,
 ) -> None:
     cmd = [gpt_bin, snap_path(graph_xml, uses_windows_paths(gpt_bin)), "-c", f"{cache_gb}G", "-q", str(workers)]
+    # Keep full-scene operators such as C2 generation from requesting very
+    # large JAI rasters, and release cached tiles as output rows complete.
+    cmd.extend(["-x", "-Dsnap.jai.defaultTileSize=256"])
     if extra_args:
         cmd.extend(extra_args)
     logging.info("SNAP: %s", " ".join(cmd))
@@ -188,9 +191,15 @@ def export_to_geotiff(
     workers: int = 1,
     windows_paths: bool | None = None,
 ):
-    """Read a SNAP product (.dim) and write GeoTIFF-BigTIFF via a tiny graph."""
+    """Atomically export a SNAP product to a tiled GeoTIFF-BigTIFF."""
     if windows_paths is None:
         windows_paths = uses_windows_paths(gpt_bin)
+    partial_tif = out_tif.with_name(f"{out_tif.stem}.partial{out_tif.suffix}")
+    partial_sidecar = Path(f"{partial_tif}.aux.xml")
+    for stale_path in (partial_tif, partial_sidecar):
+        if stale_path.exists():
+            stale_path.unlink()
+
     root = ET.Element("graph", {"id": "ExportToGTiff"})
     ET.SubElement(root, "version").text = "1.0"
 
@@ -205,21 +214,30 @@ def export_to_geotiff(
     s = ET.SubElement(n_write, "sources")
     ET.SubElement(s, "sourceProduct", {"refid": "Read"})
     p2 = ET.SubElement(n_write, "parameters", {"class": "com.bc.ceres.binding.dom.XppDomElement"})
-    ET.SubElement(p2, "file").text = snap_path(out_tif, windows_paths)
+    ET.SubElement(p2, "file").text = snap_path(partial_tif, windows_paths)
     ET.SubElement(p2, "formatName").text = "GeoTIFF-BigTIFF"
 
     tmp = _write_tmp(ET.ElementTree(root), base_dir=out_tif.parent)
     # Full-swath texture products can be very large. Explicit BigTIFF tiles keep
-    # the writer from trying to allocate an oversized float DataBuffer, while
-    # -x lets GPT release cached tiles after each completed output row.
-    run_graph(
-        gpt_bin,
-        tmp,
-        cache_gb=cache_gb,
-        workers=workers,
-        extra_args=[
-            "-x",
-            "-Dsnap.dataio.bigtiff.tiling.width=512",
-            "-Dsnap.dataio.bigtiff.tiling.height=512",
-        ],
-    )
+    # the writer from trying to allocate an oversized float DataBuffer.
+    try:
+        run_graph(
+            gpt_bin,
+            tmp,
+            cache_gb=cache_gb,
+            workers=workers,
+            extra_args=[
+                "-Dsnap.dataio.bigtiff.tiling.width=512",
+                "-Dsnap.dataio.bigtiff.tiling.height=512",
+            ],
+        )
+        if not partial_tif.exists():
+            raise RuntimeError(f"SNAP reported success but did not create {partial_tif}")
+        partial_tif.replace(out_tif)
+        if partial_sidecar.exists():
+            partial_sidecar.replace(Path(f"{out_tif}.aux.xml"))
+    except Exception:
+        for failed_path in (partial_tif, partial_sidecar):
+            if failed_path.exists():
+                failed_path.unlink()
+        raise
