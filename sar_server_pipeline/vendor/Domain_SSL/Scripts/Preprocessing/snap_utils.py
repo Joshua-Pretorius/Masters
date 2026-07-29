@@ -156,8 +156,16 @@ def graph_has_operator(src_graph: Path, operator_name: str) -> bool:
     return False
 
 # -------------------- runner --------------------
-def run_graph(gpt_bin: str, graph_xml: Path, cache_gb: int = 8, workers: int = 1) -> None:
+def run_graph(
+    gpt_bin: str,
+    graph_xml: Path,
+    cache_gb: int = 8,
+    workers: int = 1,
+    extra_args: list[str] | None = None,
+) -> None:
     cmd = [gpt_bin, snap_path(graph_xml, uses_windows_paths(gpt_bin)), "-c", f"{cache_gb}G", "-q", str(workers)]
+    if extra_args:
+        cmd.extend(extra_args)
     logging.info("SNAP: %s", " ".join(cmd))
     proc = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
     sys.stdout.write(proc.stdout)
@@ -201,4 +209,17 @@ def export_to_geotiff(
     ET.SubElement(p2, "formatName").text = "GeoTIFF-BigTIFF"
 
     tmp = _write_tmp(ET.ElementTree(root), base_dir=out_tif.parent)
-    run_graph(gpt_bin, tmp, cache_gb=cache_gb, workers=workers)
+    # Full-swath texture products can be very large. Explicit BigTIFF tiles keep
+    # the writer from trying to allocate an oversized float DataBuffer, while
+    # -x lets GPT release cached tiles after each completed output row.
+    run_graph(
+        gpt_bin,
+        tmp,
+        cache_gb=cache_gb,
+        workers=workers,
+        extra_args=[
+            "-x",
+            "-Dsnap.dataio.bigtiff.tiling.width=512",
+            "-Dsnap.dataio.bigtiff.tiling.height=512",
+        ],
+    )

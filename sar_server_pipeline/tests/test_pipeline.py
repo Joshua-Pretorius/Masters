@@ -333,13 +333,15 @@ class RunnerAndCliTests(unittest.TestCase):
 
 
 class DockerPackagingTests(unittest.TestCase):
-    def test_pipeline_image_imports_snap_without_host_mount(self) -> None:
+    def test_pipeline_uses_native_snap_runtime_without_host_mount(self) -> None:
         dockerfile = (REPO_ROOT / "docker" / "Dockerfile").read_text(encoding="utf-8")
         compose = (REPO_ROOT / "compose.yml").read_text(encoding="utf-8")
 
-        self.assertIn("FROM ${SNAP_IMAGE} AS snap-runtime", dockerfile)
-        self.assertIn("FROM python:3.11-slim-bullseye", dockerfile)
-        self.assertIn("COPY --from=snap-runtime /usr/local/snap /usr/local/snap", dockerfile)
+        self.assertIn("ARG SNAP_IMAGE=mundialis/esa-snap:latest", dockerfile)
+        self.assertIn("FROM ${SNAP_IMAGE}", dockerfile)
+        self.assertIn("apk add --no-cache", dockerfile)
+        self.assertNotIn("FROM python:3.11-slim-bullseye", dockerfile)
+        self.assertNotIn("COPY --from=snap-runtime", dockerfile)
         self.assertIn('SNAP_GPT=/usr/local/snap/bin/gpt', dockerfile)
         self.assertIn('"${SNAP_GPT}" -h', dockerfile)
         self.assertIn('UnsatisfiedLinkError', dockerfile)
