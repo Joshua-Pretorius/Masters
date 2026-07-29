@@ -6,6 +6,9 @@ ARG SNAP_IMAGE=mundialis/esa-snap:latest
 # the runtime that completed the calibration smoke test successfully.
 FROM ${SNAP_IMAGE}
 
+ARG SNAP_INITIAL_HEAP=4G
+ARG SNAP_MAX_HEAP=64G
+
 ENV PYTHONUNBUFFERED=1 \
     SNAP_HOME=/usr/local/snap \
     SNAP_GPT=/usr/local/snap/bin/gpt \
@@ -27,6 +30,16 @@ RUN apk add --no-cache \
         proj-dev \
         py3-pip \
         python3-dev
+
+# The upstream image limits GPT to a 10G Java heap.  Full-scene, multiband SLC
+# products use a 32G SNAP tile cache, so GPT needs additional heap for operator
+# state and writer buffers beyond that cache.
+RUN set -eu; \
+    vmoptions="${SNAP_HOME}/bin/gpt.vmoptions"; \
+    sed -i -E '/^[[:space:]]*-Xm[sx]/d' "${vmoptions}"; \
+    printf '%s\n' "-Xms${SNAP_INITIAL_HEAP}" "-Xmx${SNAP_MAX_HEAP}" >> "${vmoptions}"; \
+    grep -Fx -- "-Xms${SNAP_INITIAL_HEAP}" "${vmoptions}"; \
+    grep -Fx -- "-Xmx${SNAP_MAX_HEAP}" "${vmoptions}"
 
 # Fail the image build if GPT exits unsuccessfully or reports a loader failure.
 RUN set -eu; \
