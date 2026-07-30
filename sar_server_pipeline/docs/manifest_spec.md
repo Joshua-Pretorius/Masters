@@ -35,6 +35,10 @@ stages:
     enabled: true
     overwrite: false
 processing:
+  # snap-native preserves SNAP's terrain-corrected scene grid.
+  resolution_policy: snap-native
+  # scene writes one full-scene mosaic per requested feature.
+  output_mode: scene
   subset_mode: aoi
   subswaths: [IW1, IW2, IW3]
   workers: 1
@@ -74,3 +78,9 @@ SLC stage options:
 - `stages.slc_process.gpt`: optional explicit path to the SNAP `gpt` binary inside the container.
 - `stages.slc_process.graphs_dir`: optional override for the SNAP graph directory.
 - `stages.slc_process.processor_script`: optional override for the vendored SLC entrypoint.
+
+SLC processing options:
+
+- `processing.resolution_policy`: `snap-native` (default) or `utm-grid`.
+- `processing.output_mode`: `scene` (default), `subswaths`, or `both`.
+- `processing.subset_mode`: `aoi` or `full-swath`.

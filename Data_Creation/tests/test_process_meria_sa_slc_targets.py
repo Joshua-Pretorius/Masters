@@ -273,7 +273,7 @@ class SceneMosaicSupportMaskTests(unittest.TestCase):
             write_multiband_raster(path, count=3)
             self.assertEqual(MODULE.raster_band_indexes(path), {"entropy": 1, "anisotropy": 2, "alpha": 3})
 
-    def test_new_filtered_db_product_keeps_utm_path_in_native_mode(self) -> None:
+    def test_filtered_db_product_uses_full_scene_native_path(self) -> None:
         target = MODULE.Target(
             obs_id="MERIA_SA_999",
             area="Test Area",
@@ -285,7 +285,7 @@ class SceneMosaicSupportMaskTests(unittest.TestCase):
         )
         paths = MODULE.product_output_paths(target, Path("D:/tmp/out"), "snap-native")
         self.assertTrue(str(paths["vv"]).endswith("_slc_native_vv.tif"))
-        self.assertTrue(str(paths["vv_refined_lee_db"]).endswith("_slc_utm_vv_refined_lee_db.tif"))
+        self.assertTrue(str(paths["vv_refined_lee_db"]).endswith("_slc_native_vv_refined_lee_db.tif"))
 
     def test_folder_key_defaults_to_obs_first(self) -> None:
         target = MODULE.Target(

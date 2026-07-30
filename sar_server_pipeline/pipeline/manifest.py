@@ -48,6 +48,8 @@ class StageConfig:
 
 @dataclass(frozen=True)
 class ProcessingConfig:
+    resolution_policy: str
+    output_mode: str
     subset_mode: str
     subswaths: tuple[str, ...]
     workers: int
@@ -140,7 +142,17 @@ def load_manifest(path: str | Path) -> Manifest:
         name: _stage_config(payload.get("stages", {}).get(name))
         for name in ("slc_process", "patch_extract", "patch_stack")
     }
+    resolution_policy = str(processing_raw.get("resolution_policy", "snap-native"))
+    if resolution_policy not in {"snap-native", "utm-grid"}:
+        raise ValueError(f"Unsupported resolution_policy: {resolution_policy}")
+
+    output_mode = str(processing_raw.get("output_mode", "scene"))
+    if output_mode not in {"scene", "subswaths", "both"}:
+        raise ValueError(f"Unsupported output_mode: {output_mode}")
+
     processing = ProcessingConfig(
+        resolution_policy=resolution_policy,
+        output_mode=output_mode,
         subset_mode=str(processing_raw.get("subset_mode", "aoi")),
         subswaths=tuple(str(item) for item in processing_raw.get("subswaths", ("IW1", "IW2", "IW3"))),
         workers=int(processing_raw.get("workers", 1)),

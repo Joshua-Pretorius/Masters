@@ -28,7 +28,7 @@ from pipeline.manifest import load_manifest
 from pipeline.runner import STAGE_ORDER, run_stage, run_workflow
 from stages.patch_extract import run_patch_extract, select_output_bundle
 from stages.patch_stack import run_patch_stack
-from stages.slc_process import _default_processor_script
+from stages.slc_process import _default_processor_script, run_slc_process
 
 
 SAR_BANDS = [
@@ -184,6 +184,8 @@ class ManifestLoadingTests(unittest.TestCase):
         self.assertEqual(manifest.schema_version, 1)
         self.assertEqual(manifest.run_id, "run-001")
         self.assertEqual(manifest.dataset_mode, "sa")
+        self.assertEqual(manifest.processing.resolution_policy, "snap-native")
+        self.assertEqual(manifest.processing.output_mode, "scene")
         self.assertEqual(manifest.processing.patch_size, 4)
         self.assertEqual(manifest.processing.biophysical_bands, ("uo", "vo", "swh"))
         self.assertTrue(manifest.outputs.processed_root.is_absolute())
@@ -276,6 +278,25 @@ class RunnerAndCliTests(unittest.TestCase):
     def test_slc_stage_routes_shared_download_cache_to_manifest_raw_root(self) -> None:
         source = (REPO_ROOT / "stages" / "slc_process.py").read_text(encoding="utf-8")
         self.assertIn("module.DATA_DIR = manifest.inputs.raw_slc_root", source)
+
+    def test_slc_stage_forwards_scene_and_resolution_options(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            manifest = load_manifest(build_manifest(Path(tmp_dir)))
+            fake_module = mock.Mock()
+            captured_argv: list[str] = []
+
+            def capture_argv() -> None:
+                captured_argv.extend(sys.argv)
+
+            fake_module.main.side_effect = capture_argv
+
+            with mock.patch("stages.slc_process._load_module", return_value=fake_module):
+                run_slc_process(manifest)
+
+            self.assertIn("--resolution-policy", captured_argv)
+            self.assertEqual(captured_argv[captured_argv.index("--resolution-policy") + 1], "snap-native")
+            self.assertIn("--output-mode", captured_argv)
+            self.assertEqual(captured_argv[captured_argv.index("--output-mode") + 1], "scene")
 
     def test_run_workflow_stops_on_failure_and_preserves_completed_stage_markers(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:

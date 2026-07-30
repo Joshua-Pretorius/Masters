@@ -56,6 +56,8 @@ def run_slc_process(manifest: Manifest) -> SlcProcessResult:
     argv.extend(["--out-root", str(manifest.outputs.processed_root)])
     argv.extend(["--work-root", str(module.WORK_ROOT)])
     argv.extend(["--graphs-dir", str(config.options.get("graphs_dir", DEFAULT_GRAPH_DIR) if config.options else DEFAULT_GRAPH_DIR)])
+    argv.extend(["--resolution-policy", manifest.processing.resolution_policy])
+    argv.extend(["--output-mode", manifest.processing.output_mode])
     argv.extend(["--subset-mode", manifest.processing.subset_mode])
     argv.extend(["--subswaths", ",".join(manifest.processing.subswaths)])
     argv.extend(["--workers", str(manifest.processing.workers)])

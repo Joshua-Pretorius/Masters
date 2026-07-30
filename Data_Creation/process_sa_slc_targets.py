@@ -189,10 +189,9 @@ PRODUCT_SPECS = (
         suffix="vv_refined_lee_db",
         source="filtered",
         band_tokens=("vv",),
-        description="Sentinel-1 SLC VV sigma0 with SNAP Refined Lee 3x3 speckle filtering on AOI UTM grid in dB",
+        description="Sentinel-1 SLC full-scene VV sigma0 with SNAP Refined Lee 3x3 speckle filtering in dB",
         mask_zero=True,
         postprocess="db",
-        output_grid="utm",
     ),
     ProductSpec(
         key="vv_glcm_mean",
