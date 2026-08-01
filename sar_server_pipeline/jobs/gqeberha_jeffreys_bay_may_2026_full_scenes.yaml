@@ -1,0 +1,44 @@
+schema_version: 1
+run_id: gqeberha-jeffreys-bay-may-2026-full-scenes-v1
+dataset_mode: sa
+
+# Process the two independently acquired scenes selected for MERIA_SA_009:
+# - before: 2026-05-05 full AOI coverage
+# - after:  2026-05-10 partial AOI coverage (retained by the all-scenes policy)
+targets:
+  - MERIA_SA_009:before
+  - MERIA_SA_009:after
+
+inputs:
+  match_csv: /data/raw/MERIA_SA_plastic_nearest_S1_SLC_before_after.csv
+  points_csv: /data/raw/MERIA_SA_plastic_points.csv
+  raw_slc_root: /data/raw/slc
+  shapefiles_root: /data/shapefiles
+
+outputs:
+  processed_root: /data/processed
+  patches_root: /data/patches
+  stacks_root: /data/stacks
+  logs_root: /data/logs
+  manifests_root: /data/manifests
+
+stages:
+  slc_process:
+    enabled: true
+    overwrite: false
+    gpt: /usr/local/snap/bin/gpt
+  patch_extract:
+    enabled: false
+    overwrite: false
+  patch_stack:
+    enabled: false
+    overwrite: false
+
+processing:
+  resolution_policy: snap-native
+  output_mode: scene
+  subset_mode: full-swath
+  subswaths: [IW1, IW2, IW3]
+  workers: 1
+  cache_gb: 32
+  patch_size: 256
