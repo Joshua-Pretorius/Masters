@@ -26,12 +26,28 @@ def _default_processor_script(dataset_mode: str) -> Path:
 
 
 def _load_module(script_path: Path):
+    script_path = script_path.resolve()
     spec = importlib.util.spec_from_file_location(f"server_s1_{script_path.stem}", script_path)
     if spec is None or spec.loader is None:
         raise RuntimeError(f"Unable to load SLC processor: {script_path}")
     module = importlib.util.module_from_spec(spec)
     sys.modules[spec.name] = module
-    spec.loader.exec_module(module)
+    # These vendored processors are standalone scripts rather than a Python
+    # package.  The global wrapper imports its sibling SA processor by module
+    # name, so Python must be able to search the script's directory while the
+    # wrapper is being loaded.
+    script_dir = str(script_path.parent)
+    added_script_dir = script_dir not in sys.path
+    if added_script_dir:
+        sys.path.insert(0, script_dir)
+    try:
+        spec.loader.exec_module(module)
+    except Exception:
+        sys.modules.pop(spec.name, None)
+        raise
+    finally:
+        if added_script_dir:
+            sys.path.remove(script_dir)
     return module
 
 
@@ -62,6 +78,8 @@ def run_slc_process(manifest: Manifest) -> SlcProcessResult:
     argv.extend(["--subswaths", ",".join(manifest.processing.subswaths)])
     argv.extend(["--workers", str(manifest.processing.workers)])
     argv.extend(["--cache-gb", str(manifest.processing.cache_gb)])
+    if config.options and "pad_deg" in config.options:
+        argv.extend(["--pad-deg", str(config.options["pad_deg"])])
     if config.options and config.options.get("gpt"):
         argv.extend(["--gpt", str(config.options["gpt"])])
     if config.options and config.options.get("download_only"):

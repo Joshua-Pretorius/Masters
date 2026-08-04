@@ -19,6 +19,11 @@ def default_targets() -> tuple[tuple[str, str], ...]:
     targets: list[tuple[str, str]] = []
     with MATCH_CSV.open("r", encoding="utf-8", newline="") as handle:
         reader = csv.DictReader(handle)
+        if "target_id" in (reader.fieldnames or []):
+            for row in reader:
+                obs_id, selector = row["target_id"].split(":", 1)
+                targets.append((obs_id, selector))
+            return tuple(targets)
         for row in reader:
             for role in ("before", "after"):
                 granule = (row.get(f"{role}_name") or "").strip()

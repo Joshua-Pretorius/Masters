@@ -1,0 +1,283 @@
+obs_id,source_dataset,source_group_id,role,candidate_count,selected_count,coverage_set_ratio,coverage_complete,reason
+marida_48MYU_2019-12-01,MARIDA,48MYU/2019-12-01,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_48MYU_2019-12-01,MARIDA,48MYU/2019-12-01,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_19QDA_2019-01-11,MARIDA,19QDA/2019-01-11,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_19QDA_2019-01-11,MARIDA,19QDA/2019-01-11,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_16PCC_2018-06-11,MARIDA,16PCC/2018-06-11,before,2,2,0.353001,False,no <=12h scene set reached 99.9% coverage
+marida_16PCC_2018-06-11,MARIDA,16PCC/2018-06-11,after,1,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_16PCC_2017-01-12,MARIDA,16PCC/2017-01-12,before,2,2,0.451758,False,no <=12h scene set reached 99.9% coverage
+marida_16PCC_2017-01-12,MARIDA,16PCC/2017-01-12,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_16PEC_2017-01-12,MARIDA,16PEC/2017-01-12,before,2,1,1.0,True,selected
+marida_16PEC_2017-01-12,MARIDA,16PEC/2017-01-12,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_16PEC_2019-01-12,MARIDA,16PEC/2019-01-12,before,2,2,0.999727,True,selected
+marida_16PEC_2019-01-12,MARIDA,16PEC/2019-01-12,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_16PCC_2020-12-12,MARIDA,16PCC/2020-12-12,before,1,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_16PCC_2020-12-12,MARIDA,16PCC/2020-12-12,after,2,2,0.911943,False,no <=12h scene set reached 99.9% coverage
+marida_16PCC_2018-12-13,MARIDA,16PCC/2018-12-13,before,4,2,0.849194,False,no <=12h scene set reached 99.9% coverage
+marida_16PCC_2018-12-13,MARIDA,16PCC/2018-12-13,after,2,2,1.0,True,selected
+marida_48PZC_2018-11-14,MARIDA,48PZC/2018-11-14,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_48PZC_2018-11-14,MARIDA,48PZC/2018-11-14,after,1,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_18QYF_2020-12-14,MARIDA,18QYF/2020-12-14,before,2,2,1.0,True,selected
+marida_18QYF_2020-12-14,MARIDA,18QYF/2020-12-14,after,2,2,0.368585,False,no <=12h scene set reached 99.9% coverage
+marida_18QYF_2020-03-14,MARIDA,18QYF/2020-03-14,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_18QYF_2020-03-14,MARIDA,18QYF/2020-03-14,after,3,1,0.550657,False,no <=12h scene set reached 99.9% coverage
+marida_16PCC_2018-09-14,MARIDA,16PCC/2018-09-14,before,2,2,0.593051,False,no <=12h scene set reached 99.9% coverage
+marida_16PCC_2018-09-14,MARIDA,16PCC/2018-09-14,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_18QYF_2020-10-15,MARIDA,18QYF/2020-10-15,before,2,2,0.959348,False,no <=12h scene set reached 99.9% coverage
+marida_18QYF_2020-10-15,MARIDA,18QYF/2020-10-15,after,2,2,0.299523,False,no <=12h scene set reached 99.9% coverage
+marida_16PCC_2020-11-15,MARIDA,16PCC/2020-11-15,before,1,1,0.00078,False,no <=12h scene set reached 99.9% coverage
+marida_16PCC_2020-11-15,MARIDA,16PCC/2020-11-15,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_18QYF_2020-09-15,MARIDA,18QYF/2020-09-15,before,1,1,0.884533,False,no <=12h scene set reached 99.9% coverage
+marida_18QYF_2020-09-15,MARIDA,18QYF/2020-09-15,after,1,1,1.0,True,selected
+marida_16PEC_2018-02-16,MARIDA,16PEC/2018-02-16,before,2,2,1.0,True,selected
+marida_16PEC_2018-02-16,MARIDA,16PEC/2018-02-16,after,1,1,0.098112,False,no <=12h scene set reached 99.9% coverage
+marida_51PTS_2016-07-17,MARIDA,51PTS/2016-07-17,before,1,1,1.0,True,selected
+marida_51PTS_2016-07-17,MARIDA,51PTS/2016-07-17,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_48PZC_2018-01-18,MARIDA,48PZC/2018-01-18,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_48PZC_2018-01-18,MARIDA,48PZC/2018-01-18,after,1,1,0.021401,False,no <=12h scene set reached 99.9% coverage
+marida_51PTS_2019-05-18,MARIDA,51PTS/2019-05-18,before,2,2,1.0,True,selected
+marida_51PTS_2019-05-18,MARIDA,51PTS/2019-05-18,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_16PCC_2020-09-18,MARIDA,16PCC/2020-09-18,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_16PCC_2020-09-18,MARIDA,16PCC/2020-09-18,after,4,2,0.840186,False,no <=12h scene set reached 99.9% coverage
+marida_16PDC_2020-09-18,MARIDA,16PDC/2020-09-18,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_16PDC_2020-09-18,MARIDA,16PDC/2020-09-18,after,4,2,0.417091,False,no <=12h scene set reached 99.9% coverage
+marida_18QYF_2020-03-19,MARIDA,18QYF/2020-03-19,before,1,1,0.645838,False,no <=12h scene set reached 99.9% coverage
+marida_18QYF_2020-03-19,MARIDA,18QYF/2020-03-19,after,1,1,1.0,True,selected
+marida_16PCC_2018-09-19,MARIDA,16PCC/2018-09-19,before,3,2,0.966546,False,no <=12h scene set reached 99.9% coverage
+marida_16PCC_2018-09-19,MARIDA,16PCC/2018-09-19,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_16PDC_2018-09-19,MARIDA,16PDC/2018-09-19,before,4,2,0.507364,False,no <=12h scene set reached 99.9% coverage
+marida_16PDC_2018-09-19,MARIDA,16PDC/2018-09-19,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_18QYF_2020-10-20,MARIDA,18QYF/2020-10-20,before,1,1,0.90456,False,no <=12h scene set reached 99.9% coverage
+marida_18QYF_2020-10-20,MARIDA,18QYF/2020-10-20,after,1,1,1.0,True,selected
+marida_30VWH_2018-04-20,MARIDA,30VWH/2018-04-20,before,2,1,1.0,True,selected
+marida_30VWH_2018-04-20,MARIDA,30VWH/2018-04-20,after,7,1,1.0,True,selected
+marida_16PCC_2017-02-21,MARIDA,16PCC/2017-02-21,before,4,2,0.883172,False,no <=12h scene set reached 99.9% coverage
+marida_16PCC_2017-02-21,MARIDA,16PCC/2017-02-21,after,2,2,1.0,True,selected
+marida_16PCC_2018-02-21,MARIDA,16PCC/2018-02-21,before,2,2,1.0,True,selected
+marida_16PCC_2018-02-21,MARIDA,16PCC/2018-02-21,after,2,2,0.500154,False,no <=12h scene set reached 99.9% coverage
+marida_18QYF_2020-12-22,MARIDA,18QYF/2020-12-22,before,1,1,1.0,True,selected
+marida_18QYF_2020-12-22,MARIDA,18QYF/2020-12-22,after,2,2,0.337247,False,no <=12h scene set reached 99.9% coverage
+marida_18QWF_2020-03-22,MARIDA,18QWF/2020-03-22,before,1,1,0.528954,False,no <=12h scene set reached 99.9% coverage
+marida_18QWF_2020-03-22,MARIDA,18QWF/2020-03-22,after,2,1,1.0,True,selected
+marida_18QYF_2021-01-23,MARIDA,18QYF/2021-01-23,before,1,1,1.0,True,selected
+marida_18QYF_2021-01-23,MARIDA,18QYF/2021-01-23,after,1,1,1.0,True,selected
+marida_16PCC_2020-09-23,MARIDA,16PCC/2020-09-23,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_16PCC_2020-09-23,MARIDA,16PCC/2020-09-23,after,2,2,1.0,True,selected
+marida_16PDC_2018-10-24,MARIDA,16PDC/2018-10-24,before,2,2,1.0,True,selected
+marida_16PDC_2018-10-24,MARIDA,16PDC/2018-10-24,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_48PZC_2019-11-24,MARIDA,48PZC/2019-11-24,before,1,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_48PZC_2019-11-24,MARIDA,48PZC/2019-11-24,after,1,1,1.0,True,selected
+marida_18QYF_2020-03-24,MARIDA,18QYF/2020-03-24,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_18QYF_2020-03-24,MARIDA,18QYF/2020-03-24,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_36JUN_2019-04-24,MARIDA,36JUN/2019-04-24,before,2,2,1.0,True,selected
+marida_36JUN_2019-04-24,MARIDA,36JUN/2019-04-24,after,2,2,0.656755,False,no <=12h scene set reached 99.9% coverage
+marida_16PCC_2020-08-24,MARIDA,16PCC/2020-08-24,before,2,2,0.62202,False,no <=12h scene set reached 99.9% coverage
+marida_16PCC_2020-08-24,MARIDA,16PCC/2020-08-24,after,4,2,0.783373,False,no <=12h scene set reached 99.9% coverage
+marida_48MXU_2019-05-25,MARIDA,48MXU/2019-05-25,before,1,1,0.263453,False,no <=12h scene set reached 99.9% coverage
+marida_48MXU_2019-05-25,MARIDA,48MXU/2019-05-25,after,2,2,1.0,True,selected
+marida_16PCC_2018-02-26,MARIDA,16PCC/2018-02-26,before,2,1,0.011985,False,no <=12h scene set reached 99.9% coverage
+marida_16PCC_2018-02-26,MARIDA,16PCC/2018-02-26,after,2,2,0.926561,False,no <=12h scene set reached 99.9% coverage
+marida_16PCC_2019-01-27,MARIDA,16PCC/2019-01-27,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_16PCC_2019-01-27,MARIDA,16PCC/2019-01-27,after,3,2,0.961115,False,no <=12h scene set reached 99.9% coverage
+marida_16QED_2019-01-27,MARIDA,16QED/2019-01-27,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_16QED_2019-01-27,MARIDA,16QED/2019-01-27,after,1,1,1.0,True,selected
+marida_16PCC_2020-09-28,MARIDA,16PCC/2020-09-28,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_16PCC_2020-09-28,MARIDA,16PCC/2020-09-28,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_16PDC_2020-09-28,MARIDA,16PDC/2020-09-28,before,2,2,1.0,True,selected
+marida_16PDC_2020-09-28,MARIDA,16PDC/2020-09-28,after,2,2,0.57362,False,no <=12h scene set reached 99.9% coverage
+marida_16PEC_2015-11-29,MARIDA,16PEC/2015-11-29,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_16PEC_2015-11-29,MARIDA,16PEC/2015-11-29,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_18QYF_2020-11-29,MARIDA,18QYF/2020-11-29,before,1,1,1.0,True,selected
+marida_18QYF_2020-11-29,MARIDA,18QYF/2020-11-29,after,2,2,0.668466,False,no <=12h scene set reached 99.9% coverage
+marida_18QYF_2020-12-29,MARIDA,18QYF/2020-12-29,before,2,2,0.155681,False,no <=12h scene set reached 99.9% coverage
+marida_18QYF_2020-12-29,MARIDA,18QYF/2020-12-29,after,1,1,0.790382,False,no <=12h scene set reached 99.9% coverage
+marida_51RVQ_2017-08-29,MARIDA,51RVQ/2017-08-29,before,1,1,0.831262,False,no <=12h scene set reached 99.9% coverage
+marida_51RVQ_2017-08-29,MARIDA,51RVQ/2017-08-29,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_18QYF_2021-01-03,MARIDA,18QYF/2021-01-03,before,1,1,1.0,True,selected
+marida_18QYF_2021-01-03,MARIDA,18QYF/2021-01-03,after,2,2,0.58482,False,no <=12h scene set reached 99.9% coverage
+marida_16PDC_2016-11-03,MARIDA,16PDC/2016-11-03,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_16PDC_2016-11-03,MARIDA,16PDC/2016-11-03,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_16PDC_2018-11-03,MARIDA,16PDC/2018-11-03,before,2,2,1.0,True,selected
+marida_16PDC_2018-11-03,MARIDA,16PDC/2018-11-03,after,4,2,0.870281,False,no <=12h scene set reached 99.9% coverage
+marida_16PCC_2017-08-30,MARIDA,16PCC/2017-08-30,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_16PCC_2017-08-30,MARIDA,16PCC/2017-08-30,after,2,1,1.0,True,selected
+marida_16PCC_2018-08-30,MARIDA,16PCC/2018-08-30,before,2,2,1.0,True,selected
+marida_16PCC_2018-08-30,MARIDA,16PCC/2018-08-30,after,2,2,0.342951,False,no <=12h scene set reached 99.9% coverage
+marida_18QYF_2020-12-04,MARIDA,18QYF/2020-12-04,before,2,2,0.087127,False,no <=12h scene set reached 99.9% coverage
+marida_18QYF_2020-12-04,MARIDA,18QYF/2020-12-04,after,1,1,0.898415,False,no <=12h scene set reached 99.9% coverage
+marida_50LLR_2018-03-04,MARIDA,50LLR/2018-03-04,before,3,1,1.0,True,selected
+marida_50LLR_2018-03-04,MARIDA,50LLR/2018-03-04,after,1,1,1.0,True,selected
+marida_16PCC_2016-09-04,MARIDA,16PCC/2016-09-04,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_16PCC_2016-09-04,MARIDA,16PCC/2016-09-04,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_16PCC_2019-09-04,MARIDA,16PCC/2019-09-04,before,2,2,0.85081,False,no <=12h scene set reached 99.9% coverage
+marida_16PCC_2019-09-04,MARIDA,16PCC/2019-09-04,after,2,1,0.999957,True,selected
+marida_48MYU_2017-12-06,MARIDA,48MYU/2017-12-06,before,2,2,1.0,True,selected
+marida_48MYU_2017-12-06,MARIDA,48MYU/2017-12-06,after,1,1,1.0,True,selected
+marida_48MXU_2018-12-06,MARIDA,48MXU/2018-12-06,before,1,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_48MXU_2018-12-06,MARIDA,48MXU/2018-12-06,after,2,1,0.135325,False,no <=12h scene set reached 99.9% coverage
+marida_52SDD_2018-10-07,MARIDA,52SDD/2018-10-07,before,2,1,1.0,True,selected
+marida_52SDD_2018-10-07,MARIDA,52SDD/2018-10-07,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+marida_18QYG_2020-03-07,MARIDA,18QYG/2020-03-07,before,2,2,1.0,True,selected
+marida_18QYG_2020-03-07,MARIDA,18QYG/2020-03-07,after,2,2,1.0,True,selected
+marida_16PEC_2018-03-08,MARIDA,16PEC/2018-03-08,before,2,2,1.0,True,selected
+marida_16PEC_2018-03-08,MARIDA,16PEC/2018-03-08,after,1,1,1.0,True,selected
+marida_16QED_2018-03-08,MARIDA,16QED/2018-03-08,before,2,2,0.995934,False,no <=12h scene set reached 99.9% coverage
+marida_16QED_2018-03-08,MARIDA,16QED/2018-03-08,after,1,1,1.0,True,selected
+marida_16PEC_2017-10-09,MARIDA,16PEC/2017-10-09,before,1,1,0.199548,False,no <=12h scene set reached 99.9% coverage
+marida_16PEC_2017-10-09,MARIDA,16PEC/2017-10-09,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20160928_153233_0e16,NASA_PlanetScope,20160928_153233_0e16,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20160928_153233_0e16,NASA_PlanetScope,20160928_153233_0e16,after,2,2,0.022074,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20161008_153104_0e3a,NASA_PlanetScope,20161008_153104_0e3a,before,2,1,1.0,True,selected
+nasa_planetscope_20161008_153104_0e3a,NASA_PlanetScope,20161008_153104_0e3a,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20161008_153105_0e3a,NASA_PlanetScope,20161008_153105_0e3a,before,2,1,1.0,True,selected
+nasa_planetscope_20161008_153105_0e3a,NASA_PlanetScope,20161008_153105_0e3a,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20170227_203307_0c37,NASA_PlanetScope,20170227_203307_0c37,before,1,1,1.0,True,selected
+nasa_planetscope_20170227_203307_0c37,NASA_PlanetScope,20170227_203307_0c37,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20170227_203600_1,NASA_PlanetScope,20170227_203600_1,before,2,2,1.0,True,selected
+nasa_planetscope_20170227_203600_1,NASA_PlanetScope,20170227_203600_1,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20170227_203601_0c46,NASA_PlanetScope,20170227_203601_0c46,before,2,2,1.0,True,selected
+nasa_planetscope_20170227_203601_0c46,NASA_PlanetScope,20170227_203601_0c46,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20170322_153132_0e0f,NASA_PlanetScope,20170322_153132_0e0f,before,1,1,0.037271,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20170322_153132_0e0f,NASA_PlanetScope,20170322_153132_0e0f,after,2,2,0.642684,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20170323_152750_0e20,NASA_PlanetScope,20170323_152750_0e20,before,1,1,1.0,True,selected
+nasa_planetscope_20170323_152750_0e20,NASA_PlanetScope,20170323_152750_0e20,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20170326_153233_0e26,NASA_PlanetScope,20170326_153233_0e26,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20170326_153233_0e26,NASA_PlanetScope,20170326_153233_0e26,after,1,1,1.0,True,selected
+nasa_planetscope_20170326_153234_0e26,NASA_PlanetScope,20170326_153234_0e26,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20170326_153234_0e26,NASA_PlanetScope,20170326_153234_0e26,after,1,1,1.0,True,selected
+nasa_planetscope_20170326_153239_0e26,NASA_PlanetScope,20170326_153239_0e26,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20170326_153239_0e26,NASA_PlanetScope,20170326_153239_0e26,after,2,1,1.0,True,selected
+nasa_planetscope_20170326_154021_0e2f,NASA_PlanetScope,20170326_154021_0e2f,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20170326_154021_0e2f,NASA_PlanetScope,20170326_154021_0e2f,after,2,1,0.437707,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20170826_154046_100c,NASA_PlanetScope,20170826_154046_100c,before,2,2,1.0,True,selected
+nasa_planetscope_20170826_154046_100c,NASA_PlanetScope,20170826_154046_100c,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20170826_154047_100c,NASA_PlanetScope,20170826_154047_100c,before,2,2,1.0,True,selected
+nasa_planetscope_20170826_154047_100c,NASA_PlanetScope,20170826_154047_100c,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20170927_154610_0e14,NASA_PlanetScope,20170927_154610_0e14,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20170927_154610_0e14,NASA_PlanetScope,20170927_154610_0e14,after,2,1,1.0,True,selected
+nasa_planetscope_20170927_154611_0e14,NASA_PlanetScope,20170927_154611_0e14,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20170927_154611_0e14,NASA_PlanetScope,20170927_154611_0e14,after,2,1,1.0,True,selected
+nasa_planetscope_20171007_161314_1,NASA_PlanetScope,20171007_161314_1,before,3,1,0.456913,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20171007_161314_1,NASA_PlanetScope,20171007_161314_1,after,1,1,1.0,True,selected
+nasa_planetscope_20171007_161315_0c65,NASA_PlanetScope,20171007_161315_0c65,before,3,1,0.388247,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20171007_161315_0c65,NASA_PlanetScope,20171007_161315_0c65,after,1,1,1.0,True,selected
+nasa_planetscope_20171015_153720_100c,NASA_PlanetScope,20171015_153720_100c,before,2,2,1.0,True,selected
+nasa_planetscope_20171015_153720_100c,NASA_PlanetScope,20171015_153720_100c,after,2,1,1.0,True,selected
+nasa_planetscope_20180107_153415_1032,NASA_PlanetScope,20180107_153415_1032,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20180107_153415_1032,NASA_PlanetScope,20180107_153415_1032,after,1,1,0.526551,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20180224_153958_0f1b,NASA_PlanetScope,20180224_153958_0f1b,before,2,2,0.791065,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20180224_153958_0f1b,NASA_PlanetScope,20180224_153958_0f1b,after,1,1,1.0,True,selected
+nasa_planetscope_20180224_153959_0f1b,NASA_PlanetScope,20180224_153959_0f1b,before,2,2,0.845925,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20180224_153959_0f1b,NASA_PlanetScope,20180224_153959_0f1b,after,1,1,1.0,True,selected
+nasa_planetscope_20180224_162902_0f2b,NASA_PlanetScope,20180224_162902_0f2b,before,2,2,0.321023,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20180224_162902_0f2b,NASA_PlanetScope,20180224_162902_0f2b,after,1,1,1.0,True,selected
+nasa_planetscope_20180313_154258_1008,NASA_PlanetScope,20180313_154258_1008,before,1,1,0.119582,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20180313_154258_1008,NASA_PlanetScope,20180313_154258_1008,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20180313_154259_1008,NASA_PlanetScope,20180313_154259_1008,before,1,1,0.102069,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20180313_154259_1008,NASA_PlanetScope,20180313_154259_1008,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20180313_154300_1008,NASA_PlanetScope,20180313_154300_1008,before,1,1,0.040221,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20180313_154300_1008,NASA_PlanetScope,20180313_154300_1008,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20180313_154301_1008,NASA_PlanetScope,20180313_154301_1008,before,1,0,0.0,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20180313_154301_1008,NASA_PlanetScope,20180313_154301_1008,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20180607_082852_1012,NASA_PlanetScope,20180607_082852_1012,before,4,1,1.0,True,selected
+nasa_planetscope_20180607_082852_1012,NASA_PlanetScope,20180607_082852_1012,after,1,1,1.0,True,selected
+nasa_planetscope_20180919_155029_1044,NASA_PlanetScope,20180919_155029_1044,before,1,1,1.0,True,selected
+nasa_planetscope_20180919_155029_1044,NASA_PlanetScope,20180919_155029_1044,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20180919_160750_1020,NASA_PlanetScope,20180919_160750_1020,before,3,1,0.878793,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20180919_160750_1020,NASA_PlanetScope,20180919_160750_1020,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20181022_155353_100a,NASA_PlanetScope,20181022_155353_100a,before,2,2,1.0,True,selected
+nasa_planetscope_20181022_155353_100a,NASA_PlanetScope,20181022_155353_100a,after,3,2,0.597313,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20181022_155659_101e,NASA_PlanetScope,20181022_155659_101e,before,2,2,0.387946,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20181022_155659_101e,NASA_PlanetScope,20181022_155659_101e,after,2,1,1.0,True,selected
+nasa_planetscope_20181023_155746_0f34,NASA_PlanetScope,20181023_155746_0f34,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20181023_155746_0f34,NASA_PlanetScope,20181023_155746_0f34,after,1,1,0.981881,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20181023_155747_0f34,NASA_PlanetScope,20181023_155747_0f34,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20181023_155747_0f34,NASA_PlanetScope,20181023_155747_0f34,after,2,1,1.0,True,selected
+nasa_planetscope_20181024_160201_0f3b,NASA_PlanetScope,20181024_160201_0f3b,before,2,2,0.49165,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20181024_160201_0f3b,NASA_PlanetScope,20181024_160201_0f3b,after,1,1,0.15991,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20181024_160202_0f3b,NASA_PlanetScope,20181024_160202_0f3b,before,2,2,0.283428,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20181024_160202_0f3b,NASA_PlanetScope,20181024_160202_0f3b,after,1,1,0.412514,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20181031_095925_103b,NASA_PlanetScope,20181031_095925_103b,before,1,1,1.0,True,selected
+nasa_planetscope_20181031_095925_103b,NASA_PlanetScope,20181031_095925_103b,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20181124_155713_1049,NASA_PlanetScope,20181124_155713_1049,before,1,1,1.0,True,selected
+nasa_planetscope_20181124_155713_1049,NASA_PlanetScope,20181124_155713_1049,after,1,1,1.0,True,selected
+nasa_planetscope_20181124_155714_1049,NASA_PlanetScope,20181124_155714_1049,before,2,1,1.0,True,selected
+nasa_planetscope_20181124_155714_1049,NASA_PlanetScope,20181124_155714_1049,after,1,1,1.0,True,selected
+nasa_planetscope_20181124_155715_1049,NASA_PlanetScope,20181124_155715_1049,before,2,1,1.0,True,selected
+nasa_planetscope_20181124_155715_1049,NASA_PlanetScope,20181124_155715_1049,after,1,1,1.0,True,selected
+nasa_planetscope_20181124_155716_1049,NASA_PlanetScope,20181124_155716_1049,before,2,1,1.0,True,selected
+nasa_planetscope_20181124_155716_1049,NASA_PlanetScope,20181124_155716_1049,after,1,1,1.0,True,selected
+nasa_planetscope_20181215_075902_103e,NASA_PlanetScope,20181215_075902_103e,before,6,1,1.0,True,selected
+nasa_planetscope_20181215_075902_103e,NASA_PlanetScope,20181215_075902_103e,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+nasa_planetscope_20190418_074358_0f3c,NASA_PlanetScope,20190418_074358_0f3c,before,1,1,1.0,True,selected
+nasa_planetscope_20190418_074358_0f3c,NASA_PlanetScope,20190418_074358_0f3c,after,4,1,1.0,True,selected
+ghana_drift_57bbff03-21eb-54de-9d18-d8a65b256bd5,Ghana_Drift,57bbff03-21eb-54de-9d18-d8a65b256bd5,before,1,1,1.0,True,selected
+ghana_drift_57bbff03-21eb-54de-9d18-d8a65b256bd5,Ghana_Drift,57bbff03-21eb-54de-9d18-d8a65b256bd5,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+ghana_drift_91ea9edc-67b4-4211-8532-35deec4a3148,Ghana_Drift,91ea9edc-67b4-4211-8532-35deec4a3148,before,1,1,1.0,True,selected
+ghana_drift_91ea9edc-67b4-4211-8532-35deec4a3148,Ghana_Drift,91ea9edc-67b4-4211-8532-35deec4a3148,after,2,1,0.054196,False,no <=12h scene set reached 99.9% coverage
+ghana_drift_cd77705c-782d-5b99-935f-405bfd905cbf,Ghana_Drift,cd77705c-782d-5b99-935f-405bfd905cbf,before,3,1,0.887624,False,no <=12h scene set reached 99.9% coverage
+ghana_drift_cd77705c-782d-5b99-935f-405bfd905cbf,Ghana_Drift,cd77705c-782d-5b99-935f-405bfd905cbf,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+ghana_drift_d918b4e9-16ac-5c30-830f-6945943e1d9e,Ghana_Drift,d918b4e9-16ac-5c30-830f-6945943e1d9e,before,2,2,1.0,True,selected
+ghana_drift_d918b4e9-16ac-5c30-830f-6945943e1d9e,Ghana_Drift,d918b4e9-16ac-5c30-830f-6945943e1d9e,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+ghana_drift_d9db6dd4-4db8-5723-96ba-57d182cda0b7,Ghana_Drift,d9db6dd4-4db8-5723-96ba-57d182cda0b7,before,2,2,0.39463,False,no <=12h scene set reached 99.9% coverage
+ghana_drift_d9db6dd4-4db8-5723-96ba-57d182cda0b7,Ghana_Drift,d9db6dd4-4db8-5723-96ba-57d182cda0b7,after,1,1,0.660608,False,no <=12h scene set reached 99.9% coverage
+greece_sentinel2_S2A_MSIL2A_20210701T085601_N0500_R007_T35SMD_20230222T113007,Greece_Sentinel2,S2A_MSIL2A_20210701T085601_N0500_R007_T35SMD_20230222T113007,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+greece_sentinel2_S2A_MSIL2A_20210701T085601_N0500_R007_T35SMD_20230222T113007,Greece_Sentinel2,S2A_MSIL2A_20210701T085601_N0500_R007_T35SMD_20230222T113007,after,4,1,1.0,True,selected
+greece_sentinel2_S2B_MSIL1C_20210626T085559_N0500_R007_T35SMD_20230318T094507,Greece_Sentinel2,S2B_MSIL1C_20210626T085559_N0500_R007_T35SMD_20230318T094507,before,1,1,0.916822,False,no <=12h scene set reached 99.9% coverage
+greece_sentinel2_S2B_MSIL1C_20210626T085559_N0500_R007_T35SMD_20230318T094507,Greece_Sentinel2,S2B_MSIL1C_20210626T085559_N0500_R007_T35SMD_20230318T094507,after,4,1,1.0,True,selected
+greece_sentinel2_S2B_MSIL2A_20240630T085559_N0510_R007_T35SMD_20240630T105345,Greece_Sentinel2,S2B_MSIL2A_20240630T085559_N0510_R007_T35SMD_20240630T105345,before,1,1,1.0,True,selected
+greece_sentinel2_S2B_MSIL2A_20240630T085559_N0510_R007_T35SMD_20240630T105345,Greece_Sentinel2,S2B_MSIL2A_20240630T085559_N0510_R007_T35SMD_20240630T105345,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+greece_sentinel2_S2A_MSIL2A_20240705T085601_N0510_R007_T35SMD_20240705T131959,Greece_Sentinel2,S2A_MSIL2A_20240705T085601_N0510_R007_T35SMD_20240705T131959,before,1,1,0.913861,False,no <=12h scene set reached 99.9% coverage
+greece_sentinel2_S2A_MSIL2A_20240705T085601_N0510_R007_T35SMD_20240705T131959,Greece_Sentinel2,S2A_MSIL2A_20240705T085601_N0510_R007_T35SMD_20240705T131959,after,1,1,1.0,True,selected
+jamila_floating_debris_accra_20181031,Jamila_Floating_Debris,accra_20181031,before,1,1,0.877849,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_accra_20181031,Jamila_Floating_Debris,accra_20181031,after,2,1,0.334761,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_biscay_20180419,Jamila_Floating_Debris,biscay_20180419,before,4,2,1.0,True,selected
+jamila_floating_debris_biscay_20180419,Jamila_Floating_Debris,biscay_20180419,after,2,1,0.657616,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_danang_20181005,Jamila_Floating_Debris,danang_20181005,before,1,1,0.564975,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_danang_20181005,Jamila_Floating_Debris,danang_20181005,after,1,0,0.0,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_kentpointfarm_20180710,Jamila_Floating_Debris,kentpointfarm_20180710,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_kentpointfarm_20180710,Jamila_Floating_Debris,kentpointfarm_20180710,after,1,1,1.0,True,selected
+jamila_floating_debris_kolkata_20201115,Jamila_Floating_Debris,kolkata_20201115,before,2,2,0.831077,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_kolkata_20201115,Jamila_Floating_Debris,kolkata_20201115,after,4,1,1.0,True,selected
+jamila_floating_debris_lagos_20190101,Jamila_Floating_Debris,lagos_20190101,before,1,1,1.0,True,selected
+jamila_floating_debris_lagos_20190101,Jamila_Floating_Debris,lagos_20190101,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_lagos_20200505,Jamila_Floating_Debris,lagos_20200505,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_lagos_20200505,Jamila_Floating_Debris,lagos_20200505,after,2,1,0.999299,True,selected
+jamila_floating_debris_london_20180611,Jamila_Floating_Debris,london_20180611,before,6,2,1.0,True,selected
+jamila_floating_debris_london_20180611,Jamila_Floating_Debris,london_20180611,after,2,1,0.999865,True,selected
+jamila_floating_debris_longxuyen_20181102,Jamila_Floating_Debris,longxuyen_20181102,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_longxuyen_20181102,Jamila_Floating_Debris,longxuyen_20181102,after,3,1,1.0,True,selected
+jamila_floating_debris_mandaluyong_20180314,Jamila_Floating_Debris,mandaluyong_20180314,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_mandaluyong_20180314,Jamila_Floating_Debris,mandaluyong_20180314,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_neworleans_20200202,Jamila_Floating_Debris,neworleans_20200202,before,2,2,0.470789,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_neworleans_20200202,Jamila_Floating_Debris,neworleans_20200202,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_panama_20190425,Jamila_Floating_Debris,panama_20190425,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_panama_20190425,Jamila_Floating_Debris,panama_20190425,after,4,1,1.0,True,selected
+jamila_floating_debris_portalfredSouthAfrica_20180601,Jamila_Floating_Debris,portalfredSouthAfrica_20180601,before,2,2,1.0,True,selected
+jamila_floating_debris_portalfredSouthAfrica_20180601,Jamila_Floating_Debris,portalfredSouthAfrica_20180601,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_riodejaneiro_20180504,Jamila_Floating_Debris,riodejaneiro_20180504,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_riodejaneiro_20180504,Jamila_Floating_Debris,riodejaneiro_20180504,after,1,1,0.184791,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_sandiego_20180804,Jamila_Floating_Debris,sandiego_20180804,before,2,1,1.0,True,selected
+jamila_floating_debris_sandiego_20180804,Jamila_Floating_Debris,sandiego_20180804,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_sanfrancisco_20190219,Jamila_Floating_Debris,sanfrancisco_20190219,before,1,0,0.0,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_sanfrancisco_20190219,Jamila_Floating_Debris,sanfrancisco_20190219,after,1,1,0.597978,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_shengsi_20190615,Jamila_Floating_Debris,shengsi_20190615,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_shengsi_20190615,Jamila_Floating_Debris,shengsi_20190615,after,2,2,1.0,True,selected
+jamila_floating_debris_suez_20200403,Jamila_Floating_Debris,suez_20200403,before,1,1,0.948036,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_suez_20200403,Jamila_Floating_Debris,suez_20200403,after,5,2,1.0,True,selected
+jamila_floating_debris_tangshan_20180130,Jamila_Floating_Debris,tangshan_20180130,before,4,1,1.0,True,selected
+jamila_floating_debris_tangshan_20180130,Jamila_Floating_Debris,tangshan_20180130,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_toledo_20191221,Jamila_Floating_Debris,toledo_20191221,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_toledo_20191221,Jamila_Floating_Debris,toledo_20191221,after,1,1,0.850521,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_tungchungChina_20190922,Jamila_Floating_Debris,tungchungChina_20190922,before,2,1,1.0,True,selected
+jamila_floating_debris_tungchungChina_20190922,Jamila_Floating_Debris,tungchungChina_20190922,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_tunisia_20180715,Jamila_Floating_Debris,tunisia_20180715,before,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_tunisia_20180715,Jamila_Floating_Debris,tunisia_20180715,after,6,1,1.0,True,selected
+jamila_floating_debris_turkmenistan_20181030,Jamila_Floating_Debris,turkmenistan_20181030,before,4,4,0.998821,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_turkmenistan_20181030,Jamila_Floating_Debris,turkmenistan_20181030,after,0,0,0.0,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_venice_20180630,Jamila_Floating_Debris,venice_20180630,before,5,1,0.999274,True,selected
+jamila_floating_debris_venice_20180630,Jamila_Floating_Debris,venice_20180630,after,4,1,1.0,True,selected
+jamila_floating_debris_venice_20180928,Jamila_Floating_Debris,venice_20180928,before,3,1,1.0,True,selected
+jamila_floating_debris_venice_20180928,Jamila_Floating_Debris,venice_20180928,after,5,2,1.0,True,selected
+jamila_floating_debris_vungtau_20180423,Jamila_Floating_Debris,vungtau_20180423,before,1,1,0.409528,False,no <=12h scene set reached 99.9% coverage
+jamila_floating_debris_vungtau_20180423,Jamila_Floating_Debris,vungtau_20180423,after,4,1,0.137202,False,no <=12h scene set reached 99.9% coverage

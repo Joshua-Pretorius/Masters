@@ -175,6 +175,27 @@ class SceneMosaicSupportMaskTests(unittest.TestCase):
         self.assertEqual(before.download_group_key, "before-group")
         self.assertEqual(after.download_group_key, "after-group")
 
+    def test_load_matches_accepts_deduplicated_long_form_scene_target(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            match_csv = Path(tmp_dir) / "matches.csv"
+            match_csv.write_text(
+                "\n".join(
+                    [
+                        "target_id,obs_id,area,date,role,granule_name,acquisition_start,delta_h,download_group_key",
+                        "S1_test:scene,S1_test,Global S1,2024-06-01,scene,S1A_IW_SLC__1SDV_20240601T000000_20240601T000027_054321_069999_1234.SAFE,2024-06-01T00:00:00Z,0.0,shared-granule",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+
+            with mock.patch.object(MODULE, "MATCH_CSV", match_csv):
+                rows = MODULE.load_matches({("S1_test", "scene")})
+
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0].selection_id, "S1_test:scene")
+        self.assertEqual(rows[0].role, "scene")
+        self.assertEqual(rows[0].download_group_key, "shared-granule")
+
     def test_download_only_reuses_shared_zip_for_same_download_group(self) -> None:
         target1 = MODULE.Target(
             obs_id="MERIA_SA_999",

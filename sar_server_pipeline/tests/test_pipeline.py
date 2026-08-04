@@ -28,7 +28,7 @@ from pipeline.manifest import load_manifest
 from pipeline.runner import STAGE_ORDER, run_stage, run_workflow
 from stages.patch_extract import run_patch_extract, select_output_bundle
 from stages.patch_stack import run_patch_stack
-from stages.slc_process import _default_processor_script, run_slc_process
+from stages.slc_process import _default_processor_script, _load_module, run_slc_process
 
 
 SAR_BANDS = [
@@ -274,6 +274,16 @@ class RunnerAndCliTests(unittest.TestCase):
         self.assertIn("sar_server_pipeline", str(sa_script))
         self.assertTrue(sa_script.exists())
         self.assertTrue(global_script.exists())
+
+    def test_global_slc_processor_loads_its_vendored_sa_sibling(self) -> None:
+        global_script = _default_processor_script("global")
+
+        module = _load_module(global_script)
+
+        self.assertEqual(
+            Path(module.sa.__file__).resolve(),
+            global_script.with_name("process_sa_slc_targets.py").resolve(),
+        )
 
     def test_slc_stage_routes_shared_download_cache_to_manifest_raw_root(self) -> None:
         source = (REPO_ROOT / "stages" / "slc_process.py").read_text(encoding="utf-8")

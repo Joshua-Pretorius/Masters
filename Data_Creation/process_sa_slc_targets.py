@@ -109,6 +109,7 @@ class Target:
     acquisition_start: str
     delta_h: str
     download_group_key: str = ""
+    target_id: str = ""
 
     @property
     def region_key(self) -> str:
@@ -132,6 +133,10 @@ class Target:
     @property
     def scene_id(self) -> str:
         return f"{self.region_key}_{self.role}_{self.acquisition_key}"
+
+    @property
+    def selection_id(self) -> str:
+        return self.target_id or f"{self.obs_id}:{self.role}"
 
     @property
     def url(self) -> str:
@@ -292,11 +297,12 @@ def parse_targets(values: list[str]) -> set[tuple[str, str]]:
     for value in values:
         if ":" not in value:
             raise ValueError(f"Target must be obs_id:before|after, got {value!r}")
-        obs_id, role = value.split(":", 1)
-        role = role.lower()
-        if role not in {"before", "after"}:
-            raise ValueError(f"Target role must be before or after, got {value!r}")
-        targets.add((obs_id.strip(), role))
+        obs_id, selector = value.split(":", 1)
+        selector = selector.lower()
+        role = selector.split(":", 1)[0]
+        if role not in {"before", "after", "scene"}:
+            raise ValueError(f"Target role must be before, after, or scene, got {value!r}")
+        targets.add((obs_id.strip(), selector))
     return targets
 
 
@@ -314,9 +320,29 @@ def load_matches(selected: set[tuple[str, str]]) -> list[Target]:
     rows: list[Target] = []
     with MATCH_CSV.open("r", encoding="utf-8", newline="") as handle:
         reader = csv.DictReader(handle)
+        long_form = "target_id" in (reader.fieldnames or [])
         for row in reader:
             obs_id = row["obs_id"]
             area = row["area"]
+            if long_form:
+                target_id = row["target_id"].strip()
+                selector = target_id.split(":", 1)[1].lower()
+                if (obs_id, selector) not in selected:
+                    continue
+                rows.append(
+                    Target(
+                        obs_id=obs_id,
+                        area=area,
+                        role=row["role"].strip().lower(),
+                        obs_date=row["date"],
+                        granule_safe=row["granule_name"],
+                        acquisition_start=row["acquisition_start"],
+                        delta_h=row["delta_h"],
+                        download_group_key=(row.get("download_group_key") or row["granule_name"]).removesuffix(".SAFE"),
+                        target_id=target_id,
+                    )
+                )
+                continue
             for role in ("before", "after"):
                 if (obs_id, role) not in selected:
                     continue
@@ -332,7 +358,10 @@ def load_matches(selected: set[tuple[str, str]]) -> list[Target]:
                         download_group_key=(row.get(f"{role}_download_group_key") or row[f"{role}_name"]).removesuffix(".SAFE"),
                     )
                 )
-    found = {(target.obs_id, target.role) for target in rows}
+    found = {
+        tuple(target.selection_id.split(":", 1))
+        for target in rows
+    }
     missing = sorted(selected - found)
     if missing:
         raise RuntimeError("Requested target(s) not found in match CSV: " + ", ".join(f"{a}:{b}" for a, b in missing))
