@@ -19,3 +19,33 @@ services:
       - run_all
       - --manifest
       - ${JOB_MANIFEST:-/job/job.yaml}
+
+  digitising:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.digitising
+    image: sar-digitising-workbench
+    environment:
+      DATA_ROOT: /data
+      CATALOG_ROOT: /repo/Data_Creation
+      DRIFT_TOOLS_ROOT: /repo/Domain_SSL/Scripts/Preprocessing
+      DIGITISING_REMOTE: ${DIGITISING_REMOTE:-bolelang@146.64.214.137}
+      REMOTE_DATA_ROOT: ${REMOTE_DATA_ROOT:-/mnt/storage/bolelang_mount/Joshua/sar-data}
+      DESKTOP_ROOT: ${DESKTOP_ROOT:-/home/bsibolla/Desktop/Joshua}
+      CMEMS_CREDENTIALS: /run/secrets/cmems_credentials
+      CDSAPIRC: /run/secrets/cdsapirc
+      QT_QPA_PLATFORM: offscreen
+    volumes:
+      - type: bind
+        source: ${DATA_ROOT}
+        target: /data
+      - type: bind
+        source: ${REPO_ROOT:-..}
+        target: /repo
+        read_only: true
+      - type: bind
+        source: ${DIGITISING_SECRETS_DIR:-./secrets}
+        target: /run/secrets
+        read_only: true
+    command:
+      - --help

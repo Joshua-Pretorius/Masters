@@ -240,6 +240,21 @@ class PatchExtractStageTests(unittest.TestCase):
             self.assertTrue(Path(rows[0]["image_path"]).exists())
             self.assertTrue(Path(rows[0]["mask_path"]).exists())
 
+    def test_patch_extract_deduplicates_the_same_stable_feature(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            manifest_path = build_manifest(Path(tmp_dir))
+            manifest = load_manifest(manifest_path)
+            original = manifest.inputs.shapefiles_root / "SCENE_001" / "patches.geojson"
+            payload = json.loads(original.read_text(encoding="utf-8"))
+            payload["features"][0]["properties"]["feature_uuid"] = "3d591f50-451d-46d5-a45e-e9341cd2f9dd"
+            original.write_text(json.dumps(payload), encoding="utf-8")
+            duplicate = original.with_name("duplicate.geojson")
+            duplicate.write_text(json.dumps(payload), encoding="utf-8")
+
+            result = run_patch_extract(manifest)
+
+        self.assertEqual(result.processed_features, 1)
+
 
 class PatchStackStageTests(unittest.TestCase):
     def test_patch_stack_combines_sar_and_biophysical_channels(self) -> None:
@@ -383,6 +398,17 @@ class DockerPackagingTests(unittest.TestCase):
         self.assertNotIn("SNAP_HOST_DIR", compose)
         self.assertNotIn("/opt/snap", compose)
         self.assertIn("/usr/local/snap/bin/gpt", compose)
+
+    def test_digitising_service_is_headless_and_separate_from_snap(self) -> None:
+        dockerfile = (REPO_ROOT / "docker" / "Dockerfile.digitising").read_text(encoding="utf-8")
+        compose = (REPO_ROOT / "compose.yml").read_text(encoding="utf-8")
+
+        self.assertIn("ARG QGIS_IMAGE=qgis/qgis:3.44.13-noble", dockerfile)
+        self.assertIn("QT_QPA_PLATFORM=offscreen", dockerfile)
+        self.assertIn('ENTRYPOINT ["python3", "-m", "digitising"]', dockerfile)
+        self.assertIn("digitising:", compose)
+        self.assertIn("read_only: true", compose)
+        self.assertIn("/run/secrets", compose)
 
 
 if __name__ == "__main__":

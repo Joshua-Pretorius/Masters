@@ -1,0 +1,25 @@
+ARG QGIS_IMAGE=qgis/qgis:3.44.13-noble
+FROM ${QGIS_IMAGE}
+
+ENV PYTHONUNBUFFERED=1 \
+    QT_QPA_PLATFORM=offscreen \
+    XDG_RUNTIME_DIR=/tmp/runtime-root \
+    PATH=/opt/digitising-venv/bin:${PATH}
+
+WORKDIR /app
+
+RUN apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+        python3-pip \
+        python3-venv \
+    && rm -rf /var/lib/apt/lists/* \
+    && mkdir -p /tmp/runtime-root \
+    && chmod 0700 /tmp/runtime-root \
+    && python3 -m venv --system-site-packages /opt/digitising-venv
+
+COPY digitising-requirements.txt /app/digitising-requirements.txt
+RUN python3 -m pip install --no-cache-dir -r /app/digitising-requirements.txt
+
+COPY digitising /app/digitising
+
+ENTRYPOINT ["python3", "-m", "digitising"]

@@ -1,0 +1,13 @@
+cdsapi
+copernicusmarine
+fiona<2
+geopandas
+netCDF4
+numpy<2
+opendrift==1.14.10
+pandas<3
+pyproj<4
+rasterio<2
+scipy
+shapely<3
+xarray

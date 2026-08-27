@@ -2,6 +2,9 @@
 from __future__ import annotations
 
 import argparse
+import calendar
+import os
+from datetime import date, timedelta
 from pathlib import Path
 
 
@@ -30,6 +33,21 @@ def parse_cdsapirc(path: Path) -> tuple[str | None, str | None]:
 def ymd(value: str) -> tuple[str, str, str]:
     year, month, day = value.split("-")
     return year, month, day
+
+
+def month_chunks(start_date: str, end_date: str) -> list[tuple[date, date]]:
+    start = date.fromisoformat(start_date)
+    end = date.fromisoformat(end_date)
+    if end < start:
+        raise ValueError("end date must not be before start date")
+    chunks: list[tuple[date, date]] = []
+    cursor = start
+    while cursor <= end:
+        last_day = calendar.monthrange(cursor.year, cursor.month)[1]
+        chunk_end = min(date(cursor.year, cursor.month, last_day), end)
+        chunks.append((cursor, chunk_end))
+        cursor = chunk_end + timedelta(days=1)
+    return chunks
 
 
 def fetch_cmems(args: argparse.Namespace) -> None:
@@ -84,40 +102,61 @@ def fetch_cmems(args: argparse.Namespace) -> None:
 
 def fetch_era5(args: argparse.Namespace) -> None:
     import cdsapi
+    import xarray as xr
 
     out_nc = args.out_dir / f"era5_wind_{args.start_date.replace('-', '')}_{args.end_date.replace('-', '')}.nc"
     if out_nc.exists() and not args.overwrite:
         return
 
-    start_y, start_m, start_d = ymd(args.start_date)
-    end_y, end_m, end_d = ymd(args.end_date)
-    if (start_y, start_m) != (end_y, end_m):
-        raise ValueError("ERA5 fetch currently expects start/end in the same month")
-
     url, key = parse_cdsapirc(Path(args.cdsapirc).expanduser())
     client = cdsapi.Client(url=url, key=key, quiet=False)
-    request = {
-        "product_type": "reanalysis",
-        "variable": [
-            "10m_u_component_of_wind",
-            "10m_v_component_of_wind",
-        ],
-        "year": start_y,
-        "month": start_m,
-        "day": [f"{day:02d}" for day in range(int(start_d), int(end_d) + 1)],
-        "time": [f"{hour:02d}:00" for hour in range(24)],
-        "area": [args.north, args.west, args.south, args.east],
-        "data_format": "netcdf",
-        "download_format": "unarchived",
-    }
+    part_paths: list[Path] = []
     try:
-        client.retrieve("reanalysis-era5-single-levels", request, str(out_nc))
-    except Exception:
-        fallback = dict(request)
-        fallback.pop("data_format", None)
-        fallback.pop("download_format", None)
-        fallback["format"] = "netcdf"
-        client.retrieve("reanalysis-era5-single-levels", fallback, str(out_nc))
+        for chunk_start, chunk_end in month_chunks(args.start_date, args.end_date):
+            part_path = args.out_dir / f".era5_wind_{chunk_start:%Y%m%d}_{chunk_end:%Y%m%d}.part.nc"
+            part_paths.append(part_path)
+            request = {
+                "product_type": "reanalysis",
+                "variable": [
+                    "10m_u_component_of_wind",
+                    "10m_v_component_of_wind",
+                ],
+                "year": f"{chunk_start.year:04d}",
+                "month": f"{chunk_start.month:02d}",
+                "day": [f"{day:02d}" for day in range(chunk_start.day, chunk_end.day + 1)],
+                "time": [f"{hour:02d}:00" for hour in range(24)],
+                "area": [args.north, args.west, args.south, args.east],
+                "data_format": "netcdf",
+                "download_format": "unarchived",
+            }
+            try:
+                client.retrieve("reanalysis-era5-single-levels", request, str(part_path))
+            except Exception:
+                fallback = dict(request)
+                fallback.pop("data_format", None)
+                fallback.pop("download_format", None)
+                fallback["format"] = "netcdf"
+                client.retrieve("reanalysis-era5-single-levels", fallback, str(part_path))
+
+        if len(part_paths) == 1:
+            os.replace(part_paths[0], out_nc)
+        else:
+            datasets = [xr.open_dataset(path) for path in part_paths]
+            merged_part = out_nc.with_suffix(out_nc.suffix + ".part")
+            combined = None
+            try:
+                combined = xr.combine_by_coords(datasets, combine_attrs="override")
+                combined.to_netcdf(merged_part)
+                os.replace(merged_part, out_nc)
+            finally:
+                if combined is not None:
+                    combined.close()
+                for dataset in datasets:
+                    dataset.close()
+                merged_part.unlink(missing_ok=True)
+    finally:
+        for part_path in part_paths:
+            part_path.unlink(missing_ok=True)
 
 
 def main() -> int:

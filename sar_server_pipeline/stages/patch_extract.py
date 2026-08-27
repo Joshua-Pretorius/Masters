@@ -329,6 +329,7 @@ def run_patch_extract(manifest: Manifest) -> PatchExtractResult:
     inventory_csv = manifest.outputs.patches_root / "sar_patch_inventory.csv"
     library_csv = manifest.outputs.patches_root / "sar_patch_library.csv"
     processed = 0
+    seen_feature_ids: set[tuple[str, str]] = set()
 
     for feature_file in feature_files(manifest.inputs.shapefiles_root):
         scene_id = scene_id_for_feature_file(manifest.inputs.shapefiles_root, feature_file)
@@ -337,6 +338,13 @@ def run_patch_extract(manifest: Manifest) -> PatchExtractResult:
         scene_manifest_path = scene_manifests[scene_id]
 
         for feature in iter_features(feature_file):
+            properties = dict(feature.get("properties") or {})
+            stable_feature_id = properties.get("feature_uuid") or properties.get("patch_id")
+            if stable_feature_id:
+                dedup_key = (scene_id, str(stable_feature_id))
+                if dedup_key in seen_feature_ids:
+                    continue
+                seen_feature_ids.add(dedup_key)
             geometry_mapping = feature["geometry"]
             geometry = shape(geometry_mapping)
             centroid = geometry.centroid
@@ -350,7 +358,6 @@ def run_patch_extract(manifest: Manifest) -> PatchExtractResult:
                 manifest.processing.sar_band_order,
             )
             mask = rasterize_feature_mask(geometry_mapping, patch_profile_data)
-            properties = dict(feature.get("properties") or {})
             normalized_class = "_".join(str(properties.get("Class", "plastic")).strip().lower().split())
             sample_id = f"{scene_id}_{properties.get('patch_id', processed + 1)}"
             image_path = manifest.outputs.patches_root / manifest.dataset_mode / scene_id / normalized_class / f"{sample_id}_image.tif"

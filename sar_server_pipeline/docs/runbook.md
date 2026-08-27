@@ -74,6 +74,12 @@ JOB_MANIFEST=/job/other-job.yaml docker compose run --rm pipeline
 - Final stacked patches and dataset manifest under `stacks_root`
 - Stage status markers under `manifests_root/<run_id>/stages`
 
+## Headless QGIS digitisation preparation
+
+Skua does not run a QGIS user interface. The separate `digitising` Compose service creates portable QGIS projects
+off-screen for transfer to the desktop work machine. See [digitising_workbench.md](digitising_workbench.md) for
+configuration, preparation, `rsync`, validation, and return-import commands.
+
 ## SLC stage source
 
 `slc_process` defaults to the vendored neutral Sentinel-1 SLC processor bundled under `vendor/`.
