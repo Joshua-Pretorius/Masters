@@ -2,6 +2,7 @@ cdsapi
 copernicusmarine
 fiona<2
 geopandas
+h5py<4
 netCDF4
 numpy<2
 opendrift==1.14.10

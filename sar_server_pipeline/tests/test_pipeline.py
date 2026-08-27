@@ -406,6 +406,8 @@ class DockerPackagingTests(unittest.TestCase):
         self.assertIn("ARG QGIS_IMAGE=qgis/qgis:3.44.13-noble", dockerfile)
         self.assertIn("QT_QPA_PLATFORM=offscreen", dockerfile)
         self.assertIn('ENTRYPOINT ["python3", "-m", "digitising"]', dockerfile)
+        requirements = (REPO_ROOT / "digitising-requirements.txt").read_text(encoding="utf-8")
+        self.assertIn("h5py<4", requirements)
         self.assertIn("digitising:", compose)
         self.assertIn("read_only: true", compose)
         self.assertIn("/run/secrets", compose)
