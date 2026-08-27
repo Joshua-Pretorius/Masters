@@ -37,7 +37,22 @@ DRIFT_TOOLS = resolve_drift_tools_dir()
 if str(DRIFT_TOOLS) not in sys.path:
     sys.path.insert(0, str(DRIFT_TOOLS))
 
-from run_opendrift_batch import PlastDrift, reader_netCDF_CF_generic  # noqa: E402
+
+def load_opendrift_components():
+    """Prefer the legacy workspace helper, otherwise use the installed package."""
+
+    try:
+        legacy = importlib.import_module("run_opendrift_batch")
+    except ModuleNotFoundError as exc:
+        if exc.name != "run_opendrift_batch":
+            raise
+        plastdrift = importlib.import_module("opendrift.models.plastdrift")
+        reader = importlib.import_module("opendrift.readers.reader_netCDF_CF_generic")
+        return plastdrift.PlastDrift, reader
+    return legacy.PlastDrift, legacy.reader_netCDF_CF_generic
+
+
+PlastDrift, reader_netCDF_CF_generic = load_opendrift_components()
 
 
 ENSEMBLE_N = 20

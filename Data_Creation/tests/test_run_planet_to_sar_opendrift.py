@@ -28,6 +28,25 @@ SPEC.loader.exec_module(MODULE)
 
 
 class RunPlanetToSarOpenDriftTests(unittest.TestCase):
+    def test_installed_opendrift_is_used_when_legacy_helper_is_missing(self) -> None:
+        installed_plastdrift = types.SimpleNamespace(PlastDrift=object())
+        installed_reader = types.SimpleNamespace(Reader=object())
+
+        def load(name: str):
+            if name == "run_opendrift_batch":
+                raise ModuleNotFoundError("No module named 'run_opendrift_batch'", name=name)
+            if name == "opendrift.models.plastdrift":
+                return installed_plastdrift
+            if name == "opendrift.readers.reader_netCDF_CF_generic":
+                return installed_reader
+            raise AssertionError(name)
+
+        with mock.patch.object(MODULE.importlib, "import_module", side_effect=load):
+            model, reader = MODULE.load_opendrift_components()
+
+        self.assertIs(model, installed_plastdrift.PlastDrift)
+        self.assertIs(reader, installed_reader)
+
     def test_resolve_drift_tools_dir_falls_back_to_workspace_drift_folder(self) -> None:
         local_drift = MODULE_PATH.resolve().parents[3] / "Drift"
 
