@@ -10,6 +10,11 @@ from .models import DigitisingTask
 
 LOG = logging.getLogger(__name__)
 
+# A QgsApplication cannot be repeatedly torn down and safely re-created in the
+# same Python process. Batch preparation writes many projects, so keep one
+# off-screen application alive until the short-lived container exits.
+_QGIS_APPLICATION = None
+
 RASTER_LABELS = {
     "vv_refined_lee_db": "VV refined Lee (dB)",
     "vv_refined_lee": "VV refined Lee",
@@ -48,6 +53,18 @@ def _qgis():
             "PyQGIS is required to generate .qgz projects. Run this command through the digitising Docker service."
         ) from exc
     return locals()
+
+
+def _ensure_qgis_application(QgsApplication):
+    global _QGIS_APPLICATION
+    if _QGIS_APPLICATION is not None:
+        return _QGIS_APPLICATION
+    application = QgsApplication.instance()
+    if application is None:
+        application = QgsApplication([], False)
+        application.initQgis()
+    _QGIS_APPLICATION = application
+    return application
 
 
 def _configure_annotations(layer, task: DigitisingTask, q: dict[str, object]) -> None:
@@ -192,33 +209,25 @@ def build_qgis_project(path: Path, tasks: Iterable[DigitisingTask], *, title: st
     QgsApplication = q["QgsApplication"]
     QgsProject = q["QgsProject"]
     Qgis = q["Qgis"]
-    owns_application = QgsApplication.instance() is None
-    application = None
-    if owns_application:
-        application = QgsApplication([], False)
-        application.initQgis()
-    try:
-        project = QgsProject()
-        project.setTitle(title)
-        project.setPresetHomePath(str(path.parent))
-        if hasattr(project, "setFilePathStorage"):
-            project.setFilePathStorage(Qgis.FilePathType.Relative)
-        root = project.layerTreeRoot()
-        first_annotation = None
-        first_view_layer = None
-        for task in tasks:
-            annotation, view_layer = _add_task(project, root, task, q)
-            first_annotation = first_annotation or annotation
-            first_view_layer = first_view_layer or view_layer
-        if first_annotation is not None:
-            project.setCrs(first_annotation.crs())
-            if hasattr(project, "viewSettings") and first_view_layer is not None and not first_view_layer.extent().isEmpty():
-                project.viewSettings().setDefaultViewExtent(
-                    q["QgsReferencedRectangle"](first_view_layer.extent(), first_view_layer.crs())
-                )
-        path.parent.mkdir(parents=True, exist_ok=True)
-        if not project.write(str(path)):
-            raise RuntimeError(f"QGIS could not write project {path}")
-    finally:
-        if application is not None:
-            application.exitQgis()
+    _ensure_qgis_application(QgsApplication)
+    project = QgsProject()
+    project.setTitle(title)
+    project.setPresetHomePath(str(path.parent))
+    if hasattr(project, "setFilePathStorage"):
+        project.setFilePathStorage(Qgis.FilePathType.Relative)
+    root = project.layerTreeRoot()
+    first_annotation = None
+    first_view_layer = None
+    for task in tasks:
+        annotation, view_layer = _add_task(project, root, task, q)
+        first_annotation = first_annotation or annotation
+        first_view_layer = first_view_layer or view_layer
+    if first_annotation is not None:
+        project.setCrs(first_annotation.crs())
+        if hasattr(project, "viewSettings") and first_view_layer is not None and not first_view_layer.extent().isEmpty():
+            project.viewSettings().setDefaultViewExtent(
+                q["QgsReferencedRectangle"](first_view_layer.extent(), first_view_layer.crs())
+            )
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if not project.write(str(path)):
+        raise RuntimeError(f"QGIS could not write project {path}")

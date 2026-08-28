@@ -31,12 +31,41 @@ os.environ["GDAL_DATA"] = str(RASTERIO_ROOT / "gdal_data")
 from digitising.catalog import _sa_optical_interval, build_task_catalog
 from digitising.drift import _forcing_directory, prepare_prediction
 from digitising.geopackage import ANNOTATION_SCHEMA, create_or_refresh_task_geopackage, validate_annotations
+from digitising import project as qgis_project
 from digitising.util import relative_to_root
 from digitising.workflow import Environment, import_batch, prepare_batch
 from Domain_SSL.Scripts.Preprocessing.fetch_drift_forcing import month_chunks
 
 
 SHARED_GRANULE = "S1B_IW_SLC__1SDV_20190425T031055_20190425T031122_015957_01DFC7_4905"
+
+
+class QgisApplicationLifecycleTests(unittest.TestCase):
+    def test_one_application_is_reused_for_all_projects_in_a_batch(self) -> None:
+        class FakeApplication:
+            current = None
+            initialised = 0
+
+            @classmethod
+            def instance(cls):
+                return cls.current
+
+            def __init__(self, _args, _gui_enabled):
+                type(self).current = self
+
+            def initQgis(self):
+                type(self).initialised += 1
+
+        prior = qgis_project._QGIS_APPLICATION
+        qgis_project._QGIS_APPLICATION = None
+        try:
+            first = qgis_project._ensure_qgis_application(FakeApplication)
+            second = qgis_project._ensure_qgis_application(FakeApplication)
+        finally:
+            qgis_project._QGIS_APPLICATION = prior
+
+        self.assertIs(first, second)
+        self.assertEqual(FakeApplication.initialised, 1)
 
 
 def write_csv(path: Path, rows: list[dict[str, object]]) -> None:
