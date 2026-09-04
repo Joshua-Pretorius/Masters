@@ -23,6 +23,11 @@ by `Data_Creation/build_global_s1_slc_inventory.py`.
 
 - `optical_groups.csv` and `optical_groups.geojson`: source inventory and exact
   buffered AOIs.
+- `global_s1_slc_points.csv`: QGIS/OpenDrift reference catalogue. It retains the
+  30 km AOI corners as non-seed context and adds eligible source-label points:
+  connected Marine Debris (class 1) components from MARIDA masks, representative
+  points from non-absence Jamila geometries, and supplied Ghana observation points.
+  MARIDA folders without class-1 pixels correctly receive no drift seed.
 - `global_s1_slc_selection_summary.csv`: one audit row for every before/after
   decision, including failures.
 - `global_s1_slc_associations.csv`: selected SLC-to-optical associations,

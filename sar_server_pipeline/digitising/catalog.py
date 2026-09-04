@@ -133,14 +133,19 @@ def _global_points(catalog_root: Path) -> dict[str, tuple[ReferencePoint, ...]]:
     path = catalog_root / "global_s1_slc_inventory" / "global_s1_slc_points.csv"
     grouped: dict[str, list[ReferencePoint]] = defaultdict(list)
     for row in read_csv(path):
+        reference_kind = (row.get("reference_kind") or "aoi_proxy").strip()
+        seed_eligible = str(row.get("seed_eligible") or "").strip().lower() in {"true", "1", "yes"}
+        notes = (row.get("notes") or "").strip()
+        if not notes and reference_kind == "aoi_proxy":
+            notes = "Inventory AOI point; not used as a confirmed plastic drift seed."
         grouped[row["obs_id"]].append(
             ReferencePoint(
                 point_id=row["point_id"],
                 latitude=float(row["lat"]),
                 longitude=float(row["lon"]),
-                reference_kind="aoi_proxy",
-                seed_eligible=False,
-                notes="Inventory AOI point; not used as a confirmed plastic drift seed.",
+                reference_kind=reference_kind,
+                seed_eligible=seed_eligible,
+                notes=notes,
             )
         )
     return {key: tuple(value) for key, value in grouped.items()}

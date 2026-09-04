@@ -24,12 +24,14 @@ from typing import Any, Iterable
 from urllib.parse import quote
 
 import fiona
+import numpy as np
 import rasterio
 import requests
 import yaml
 from requests.adapters import HTTPAdapter
+from rasterio.features import shapes as raster_shapes
 from urllib3.util.retry import Retry
-from rasterio.warp import transform_bounds
+from rasterio.warp import transform as transform_coordinates, transform_bounds
 from shapely.geometry import GeometryCollection, box, mapping, shape
 from shapely.ops import transform, unary_union
 
@@ -38,11 +40,24 @@ UTC = timezone.utc
 EARTH_RADIUS_M = 6_371_008.8
 REPO_ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = Path(__file__).resolve().parent / "global_s1_slc_inventory"
+MARIDA_PATCHES_ROOT = REPO_ROOT / "MARIDA" / "MARIDA" / "patches"
+GHANA_POINTS_PATH = REPO_ROOT / "Ghana_Drift" / "ghana_drift_points.shp"
+JAMILA_OBSERVATIONS_PATH = (
+    REPO_ROOT / "Jamila_Floating_Debris" / "ocean-scan-floating-debris-1e84cd1d-b132-4aa1-9e4e-675e83b42050.json"
+)
 CATALOG_URL = "https://catalogue.dataspace.copernicus.eu/odata/v1/Products"
 BUFFER_KM = 30.0
 SEARCH_HOURS = 72.0
 SET_SPAN_HOURS = 12.0
 COVERAGE_THRESHOLD = 0.999
+MARIDA_MARINE_DEBRIS_CLASS = 1
+MARIDA_CONFIDENCE = {1: "high", 2: "moderate", 3: "low"}
+
+
+def observation_id(source_dataset: str, source_group_id: str) -> str:
+    prefix = re.sub(r"[^a-z0-9]+", "_", source_dataset.lower()).strip("_")
+    suffix = re.sub(r"[^A-Za-z0-9._-]+", "_", source_group_id).strip("_")
+    return f"{prefix}_{suffix}"
 
 
 @dataclass(frozen=True)
@@ -57,9 +72,7 @@ class OpticalGroup:
 
     @property
     def obs_id(self) -> str:
-        prefix = re.sub(r"[^a-z0-9]+", "_", self.source_dataset.lower()).strip("_")
-        suffix = re.sub(r"[^A-Za-z0-9._-]+", "_", self.source_group_id).strip("_")
-        return f"{prefix}_{suffix}"
+        return observation_id(self.source_dataset, self.source_group_id)
 
 
 @dataclass(frozen=True)
@@ -145,7 +158,6 @@ def parse_marida_folder(name: str) -> tuple[str, datetime]:
 
 
 def load_marida_groups() -> list[OpticalGroup]:
-    patches_root = REPO_ROOT / "MARIDA" / "MARIDA" / "patches"
     exact_times: dict[str, datetime] = {}
     lookup = REPO_ROOT / "MARIDA" / "Planet_reacquisition_marida_all_scenes.csv"
     with lookup.open("r", encoding="utf-8-sig", newline="") as handle:
@@ -153,7 +165,7 @@ def load_marida_groups() -> list[OpticalGroup]:
             exact_times[row["key"]] = parse_utc(row["s2_acquired_utc"])
 
     groups: list[OpticalGroup] = []
-    for folder in sorted(path for path in patches_root.iterdir() if path.is_dir()):
+    for folder in sorted(path for path in MARIDA_PATCHES_ROOT.iterdir() if path.is_dir()):
         tile, nominal = parse_marida_folder(folder.name)
         key = f"{tile}/{nominal.date().isoformat()}"
         images = sorted(
@@ -186,7 +198,7 @@ def load_nasa_planet_groups() -> list[OpticalGroup]:
 
 
 def load_ghana_groups() -> list[OpticalGroup]:
-    shp_path = REPO_ROOT / "Ghana_Drift" / "ghana_drift_points.shp"
+    shp_path = GHANA_POINTS_PATH
     grouped: dict[str, list[dict[str, Any]]] = defaultdict(list)
     metadata: dict[str, dict[str, str]] = {}
     with fiona.open(shp_path) as source:
@@ -240,8 +252,7 @@ def jamila_scene_name(observation: dict[str, Any]) -> str:
 
 
 def load_jamila_groups() -> list[OpticalGroup]:
-    path = REPO_ROOT / "Jamila_Floating_Debris" / "ocean-scan-floating-debris-1e84cd1d-b132-4aa1-9e4e-675e83b42050.json"
-    payload = json.loads(path.read_text(encoding="utf-8"))
+    payload = json.loads(JAMILA_OBSERVATIONS_PATH.read_text(encoding="utf-8"))
     grouped: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for observation in payload.get("observations", []):
         grouped[jamila_scene_name(observation)].append(observation)
@@ -383,6 +394,206 @@ def bounds_ring(geometry: Any) -> list[tuple[float, float]]:
     return [(west, south), (west, north), (east, north), (east, south), (west, south)]
 
 
+def reference_point_row(
+    *,
+    obs_id: str,
+    point_id: str,
+    lat: float,
+    lon: float,
+    reference_kind: str,
+    seed_eligible: bool,
+    source_feature_id: str,
+    confidence: str = "",
+    notes: str = "",
+) -> dict[str, Any]:
+    return {
+        "obs_id": obs_id,
+        "point_id": point_id,
+        "lat": lat,
+        "lon": lon,
+        "reference_kind": reference_kind,
+        "seed_eligible": str(seed_eligible).lower(),
+        "source_feature_id": source_feature_id,
+        "confidence": confidence,
+        "notes": notes,
+    }
+
+
+def aoi_reference_rows(group: OpticalGroup, buffered: Any) -> list[dict[str, Any]]:
+    return [
+        reference_point_row(
+            obs_id=group.obs_id,
+            point_id=f"{group.obs_id}_AOI_{point_index:04d}",
+            lat=lat,
+            lon=lon,
+            reference_kind="aoi_proxy",
+            seed_eligible=False,
+            source_feature_id=f"30km_buffer_corner_{point_index}",
+            notes="Corner of the 30 km buffered optical AOI; context only, never an OpenDrift seed.",
+        )
+        for point_index, (lon, lat) in enumerate(bounds_ring(buffered), 1)
+    ]
+
+
+def _representative_seed(geometry: Any) -> Any:
+    if geometry.geom_type in {"LineString", "MultiLineString"} and geometry.length > 0:
+        return geometry.interpolate(0.5, normalized=True)
+    if geometry.geom_type == "Point":
+        return geometry
+    return geometry.representative_point()
+
+
+def marida_seed_rows(
+    allowed_obs_ids: set[str],
+    *,
+    patches_root: Path = MARIDA_PATCHES_ROOT,
+) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    seed_counts: dict[str, int] = defaultdict(int)
+    for folder in sorted(path for path in patches_root.iterdir() if path.is_dir()):
+        tile, nominal = parse_marida_folder(folder.name)
+        obs_id = observation_id("MARIDA", f"{tile}/{nominal.date().isoformat()}")
+        if obs_id not in allowed_obs_ids:
+            continue
+        for class_path in sorted(folder.glob("*_cl.tif")):
+            confidence_path = class_path.with_name(class_path.name.replace("_cl.tif", "_conf.tif"))
+            with rasterio.open(class_path) as class_source:
+                classes = class_source.read(1)
+                debris = classes == MARIDA_MARINE_DEBRIS_CLASS
+                if not debris.any():
+                    continue
+                confidence_values = None
+                if confidence_path.exists():
+                    with rasterio.open(confidence_path) as confidence_source:
+                        confidence_values = confidence_source.read(1)
+                for component_index, (geometry_mapping, value) in enumerate(
+                    raster_shapes(
+                        debris.astype(np.uint8),
+                        mask=debris,
+                        transform=class_source.transform,
+                        connectivity=8,
+                    ),
+                    1,
+                ):
+                    if int(value) != 1:
+                        continue
+                    component = shape(geometry_mapping)
+                    projected_point = _representative_seed(component)
+                    longitudes, latitudes = transform_coordinates(
+                        class_source.crs,
+                        "EPSG:4326",
+                        [projected_point.x],
+                        [projected_point.y],
+                    )
+                    confidence_code = 0
+                    if confidence_values is not None:
+                        pixel_row, pixel_col = class_source.index(projected_point.x, projected_point.y)
+                        if 0 <= pixel_row < confidence_values.shape[0] and 0 <= pixel_col < confidence_values.shape[1]:
+                            confidence_code = int(confidence_values[pixel_row, pixel_col])
+                    confidence = MARIDA_CONFIDENCE.get(confidence_code, "unknown")
+                    seed_counts[obs_id] += 1
+                    rows.append(
+                        reference_point_row(
+                            obs_id=obs_id,
+                            point_id=f"{obs_id}_MARIDA_MD_{seed_counts[obs_id]:04d}",
+                            lat=latitudes[0],
+                            lon=longitudes[0],
+                            reference_kind="marida_debris_mask",
+                            seed_eligible=True,
+                            source_feature_id=f"{class_path.name}#component-{component_index:04d}",
+                            confidence=confidence,
+                            notes=(
+                                "Representative point inside a connected MARIDA Marine Debris (class DN=1) "
+                                f"mask component; annotator confidence={confidence} (DN={confidence_code})."
+                            ),
+                        )
+                    )
+    return rows
+
+
+def jamila_seed_rows(
+    allowed_obs_ids: set[str],
+    *,
+    observations_path: Path = JAMILA_OBSERVATIONS_PATH,
+) -> list[dict[str, Any]]:
+    payload = json.loads(observations_path.read_text(encoding="utf-8"))
+    grouped: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for observation in payload.get("observations", []):
+        if observation.get("isAbsence") or not observation.get("geometry"):
+            continue
+        grouped[jamila_scene_name(observation)].append(observation)
+
+    rows: list[dict[str, Any]] = []
+    for scene_name, observations in sorted(grouped.items()):
+        obs_id = observation_id("Jamila_Floating_Debris", Path(scene_name).stem)
+        if obs_id not in allowed_obs_ids:
+            continue
+        ordered = sorted(observations, key=lambda item: str(item.get("id") or ""))
+        for index, observation in enumerate(ordered, 1):
+            geometry = shape(observation["geometry"])
+            if geometry.is_empty:
+                continue
+            point = _representative_seed(geometry)
+            source_feature_id = str(observation.get("id") or f"feature-{index:04d}")
+            rows.append(
+                reference_point_row(
+                    obs_id=obs_id,
+                    point_id=f"{obs_id}_JAMILA_{index:04d}",
+                    lat=point.y,
+                    lon=point.x,
+                    reference_kind="jamila_debris_geometry",
+                    seed_eligible=True,
+                    source_feature_id=source_feature_id,
+                    confidence="source_label",
+                    notes=(
+                        f"Midpoint/representative point of non-absence Jamila geometry {source_feature_id}; "
+                        "the recorded timestamp is nominal and contributes temporal uncertainty."
+                    ),
+                )
+            )
+    return rows
+
+
+def ghana_seed_rows(
+    allowed_obs_ids: set[str],
+    *,
+    points_path: Path = GHANA_POINTS_PATH,
+) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    with fiona.open(points_path) as source:
+        for index, feature in enumerate(source, 1):
+            properties = dict(feature["properties"])
+            source_obs_id = str(properties["obs_id"])
+            obs_id = observation_id("Ghana_Drift", source_obs_id)
+            if obs_id not in allowed_obs_ids:
+                continue
+            geometry = shape(feature["geometry"])
+            point = _representative_seed(geometry)
+            point_id = str(properties.get("pt_id") or f"P{index:04d}")
+            rows.append(
+                reference_point_row(
+                    obs_id=obs_id,
+                    point_id=f"{obs_id}_{point_id}",
+                    lat=point.y,
+                    lon=point.x,
+                    reference_kind="ghana_observed_point",
+                    seed_eligible=True,
+                    source_feature_id=point_id,
+                    confidence="source_label",
+                    notes=str(properties.get("note") or "Supplied Ghana drift observation point."),
+                )
+            )
+    return rows
+
+
+def source_seed_rows(groups: list[OpticalGroup]) -> list[dict[str, Any]]:
+    allowed = {group.obs_id for group in groups}
+    rows = marida_seed_rows(allowed)
+    rows.extend(jamila_seed_rows(allowed))
+    rows.extend(ghana_seed_rows(allowed))
+    return sorted(rows, key=lambda row: (row["obs_id"], row["point_id"]))
+
+
 def write_csv(path: Path, rows: list[dict[str, Any]], fieldnames: list[str] | None = None) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     fields = fieldnames or (list(rows[0]) if rows else [])
@@ -411,8 +622,7 @@ def write_outputs(groups: list[OpticalGroup], *, query_catalogue: bool) -> None:
         buffered_by_obs[group.obs_id] = buffered
         group_rows.append(group_row(group, buffered))
         geojson_features.append({"type": "Feature", "geometry": mapping(buffered), "properties": group_row(group, buffered)})
-        for point_index, (lon, lat) in enumerate(bounds_ring(buffered), 1):
-            point_rows.append({"obs_id": group.obs_id, "point_id": f"{group.obs_id}_P{point_index:04d}", "lat": lat, "lon": lon})
+        point_rows.extend(aoi_reference_rows(group, buffered))
         if not query_catalogue:
             continue
         cached = cache.get(group.obs_id)
@@ -464,6 +674,7 @@ def write_outputs(groups: list[OpticalGroup], *, query_catalogue: bool) -> None:
         print(f"[{index}/{len(groups)}] {group.source_dataset}: {group.source_group_id} ({len(scenes)} candidates)", flush=True)
         time.sleep(0.25 if cached is None else 0.01)
 
+    point_rows.extend(source_seed_rows(groups))
     write_csv(OUT_DIR / "optical_groups.csv", group_rows)
     write_csv(OUT_DIR / "global_s1_slc_points.csv", point_rows)
     if query_catalogue:

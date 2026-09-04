@@ -234,7 +234,7 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(tasks[0].scene.scene_id, tasks[1].scene.scene_id)
         self.assertEqual([task.observation_id for task in tasks], ["MERIA_SA_002", "MERIA_SA_001"])
 
-    def test_global_catalog_uses_only_complete_associations_and_marks_proxy_points(self) -> None:
+    def test_global_catalog_uses_only_complete_associations_and_preserves_seed_eligibility(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             environment, _ = build_fixture(Path(temporary))
             global_dir = environment.catalog_root / "global_s1_slc_inventory"
@@ -262,15 +262,34 @@ class CatalogTests(unittest.TestCase):
             write_csv(global_dir / "global_s1_slc_associations.csv", [base, incomplete])
             write_csv(
                 global_dir / "global_s1_slc_points.csv",
-                [{"obs_id": "marida_scene", "point_id": "bbox-1", "lat": -30.0, "lon": 31.0}],
+                [
+                    {
+                        "obs_id": "marida_scene",
+                        "point_id": "bbox-1",
+                        "lat": -30.0,
+                        "lon": 31.0,
+                        "reference_kind": "aoi_proxy",
+                        "seed_eligible": "false",
+                        "notes": "AOI context",
+                    },
+                    {
+                        "obs_id": "marida_scene",
+                        "point_id": "debris-1",
+                        "lat": -29.9,
+                        "lon": 31.1,
+                        "reference_kind": "marida_debris_mask",
+                        "seed_eligible": "true",
+                        "notes": "Marine Debris mask component",
+                    },
+                ],
             )
 
             tasks = build_task_catalog(environment.catalog_root, environment.processed_root, "global")
 
         self.assertEqual(len(tasks), 1)
         self.assertEqual(tasks[0].observation_id, "marida_scene")
-        self.assertEqual(tasks[0].reference_points[0].reference_kind, "aoi_proxy")
-        self.assertFalse(tasks[0].reference_points[0].seed_eligible)
+        self.assertEqual([point.reference_kind for point in tasks[0].reference_points], ["aoi_proxy", "marida_debris_mask"])
+        self.assertEqual([point.seed_eligible for point in tasks[0].reference_points], [False, True])
 
 
 class GeoPackageTests(unittest.TestCase):

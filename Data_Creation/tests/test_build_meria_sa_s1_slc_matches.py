@@ -20,7 +20,12 @@ SPEC.loader.exec_module(MODULE)
 
 class BuildMeriaSAMatchesTest(unittest.TestCase):
     def test_after_match_skips_nearer_sliver_scene_when_coverage_is_too_low(self) -> None:
-        obs = next(item for item in MODULE.OBSERVATIONS if item.obs_id == "MERIA_SA_002")
+        obs = MODULE.Observation(
+            "TEST_SA_COVERAGE",
+            "Durban",
+            "2019-04-25",
+            ("29° 50′ 25″ S 31° 03′ 02″ E",),
+        )
         lookup = {
             obs.obs_id: {
                 "planet_acquired_start": "2019-04-25T07:36:26Z",

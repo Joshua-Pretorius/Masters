@@ -104,5 +104,7 @@ A task represents one optical-reference/SAR association, not one raster folder. 
 SA001-after and SA002-before therefore have separate task directories, forms, annotations, statuses, and exports,
 while both projects refer to the same processed SAR files.
 
-Global tasks are created only from complete coverage associations. Global inventory points are marked as AOI
-proxies and are not used as drift seeds unless a future catalog explicitly identifies them as confirmed observations.
+Global tasks are created only from complete coverage associations. Their 30 km AOI boundary points remain
+non-seed context. Source-label points are eligible for drift only when their provenance supports it: MARIDA class-1
+mask components, non-absence Jamila debris geometries, and supplied Ghana observation points. A source group with
+no positive debris label correctly has no drift seed.

@@ -127,10 +127,28 @@ def _configure_annotations(layer, task: DigitisingTask, q: dict[str, object]) ->
 
 def _configure_reference_labels(layer, q: dict[str, object]) -> None:
     QgsPalLayerSettings = q["QgsPalLayerSettings"]
+    QgsCategorizedSymbolRenderer = q["QgsCategorizedSymbolRenderer"]
+    QgsRendererCategory = q["QgsRendererCategory"]
+    QgsSymbol = q["QgsSymbol"]
     QgsTextFormat = q["QgsTextFormat"]
     QgsVectorLayerSimpleLabeling = q["QgsVectorLayerSimpleLabeling"]
+    QColor = q["QColor"]
+
+    categories = []
+    for value, colour_name, label, opacity in (
+        (1, "#e31a1c", "Label-derived OpenDrift seed", 255),
+        (0, "#808080", "AOI context (not a drift seed)", 90),
+    ):
+        symbol = QgsSymbol.defaultSymbol(layer.geometryType())
+        colour = QColor(colour_name)
+        colour.setAlpha(opacity)
+        symbol.setColor(colour)
+        categories.append(QgsRendererCategory(value, symbol, label))
+    layer.setRenderer(QgsCategorizedSymbolRenderer("seed_ok", categories))
+
     settings = QgsPalLayerSettings()
-    settings.fieldName = "delta_lbl"
+    settings.fieldName = 'CASE WHEN "seed_ok" = 1 THEN "point_id" || \'\\n\' || "delta_lbl" END'
+    settings.isExpression = True
     settings.enabled = True
     text_format = QgsTextFormat()
     text_format.setSize(9)

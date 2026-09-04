@@ -1,0 +1,12 @@
+observation_date,temporary_point_id,lat,lon,source,seed_eligible,status,notes
+2019-04-26,DURBAN_20190426_P01,-29.84067,31.05047,PlanetScope,false,reference_only,"User-recorded point; no catalogue task or OpenDrift run yet."
+2019-04-26,DURBAN_20190426_P02,-29.83917,31.05113,PlanetScope,false,reference_only,"User-recorded point; no catalogue task or OpenDrift run yet."
+2019-04-26,DURBAN_20190426_P03,-29.83373,31.05524,PlanetScope,false,reference_only,"User-recorded point; no catalogue task or OpenDrift run yet."
+2019-04-26,DURBAN_20190426_P04,-29.80466,31.13750,PlanetScope,false,reference_only,"User-recorded point; no catalogue task or OpenDrift run yet."
+2019-04-26,DURBAN_20190426_P05,-29.95478,31.07376,PlanetScope,false,reference_only,"User-recorded point; no catalogue task or OpenDrift run yet."
+2019-04-26,DURBAN_20190426_P06,-29.95284,31.06109,PlanetScope,false,reference_only,"User-recorded point; no catalogue task or OpenDrift run yet."
+2019-04-26,DURBAN_20190426_P07,-29.95173,31.05841,PlanetScope,false,reference_only,"User-recorded point; no catalogue task or OpenDrift run yet."
+2019-04-26,DURBAN_20190426_P08,-29.95542,31.07536,PlanetScope,false,reference_only,"User-recorded point; no catalogue task or OpenDrift run yet."
+2019-04-27,DURBAN_20190427_P01,-29.70833,31.14364,PlanetScope,false,reference_only,"User-recorded point; no catalogue task or OpenDrift run yet."
+2019-04-27,DURBAN_20190427_P02,-29.70635,31.14636,PlanetScope,false,reference_only,"User-recorded point; no catalogue task or OpenDrift run yet."
+2019-04-27,DURBAN_20190427_P03,-29.69555,31.15329,PlanetScope,false,reference_only,"User-recorded point; no catalogue task or OpenDrift run yet."
