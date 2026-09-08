@@ -269,13 +269,19 @@ def _interval_delta_label(sar_time: str, optical_start: str, optical_end: str) -
     return f"SAR {magnitudes[0]:.2f}–{magnitudes[1]:.2f} h {relation} optical"
 
 
-def build_global_tasks(catalog_root: Path, scenes: Iterable[ProcessedScene]) -> list[DigitisingTask]:
+def build_global_tasks(
+    catalog_root: Path,
+    scenes: Iterable[ProcessedScene],
+    *,
+    include_partial: bool = False,
+) -> list[DigitisingTask]:
     rows = read_csv(catalog_root / "global_s1_slc_inventory" / "global_s1_slc_associations.csv")
     points = _global_points(catalog_root)
     scene_by_granule = _scene_lookup(scenes)
     tasks: list[DigitisingTask] = []
     for row in rows:
-        if str(row.get("coverage_complete", "")).strip().lower() not in {"true", "1", "yes"}:
+        coverage_complete = str(row.get("coverage_complete", "")).strip().lower() in {"true", "1", "yes"}
+        if not coverage_complete and not include_partial:
             continue
         granule = strip_safe(row.get("granule_name", ""))
         scene = scene_by_granule.get(granule)
@@ -304,20 +310,27 @@ def build_global_tasks(catalog_root: Path, scenes: Iterable[ProcessedScene]) -> 
                 reference_points=points.get(row["obs_id"], ()),
                 notes=(
                     f"Coverage set ratio {row.get('coverage_set_ratio', '')}; "
-                    f"scene coverage ratio {row.get('scene_coverage_ratio', '')}."
+                    f"scene coverage ratio {row.get('scene_coverage_ratio', '')}; "
+                    f"coverage complete {coverage_complete}."
                 ),
             )
         )
     return tasks
 
 
-def build_task_catalog(catalog_root: Path, processed_root: Path, dataset: str = "all") -> list[DigitisingTask]:
+def build_task_catalog(
+    catalog_root: Path,
+    processed_root: Path,
+    dataset: str = "all",
+    *,
+    include_partial: bool = False,
+) -> list[DigitisingTask]:
     scenes = discover_processed_scenes(processed_root)
     tasks: list[DigitisingTask] = []
     if dataset in {"all", "sa"}:
         tasks.extend(build_sa_tasks(catalog_root, scenes))
     if dataset in {"all", "global"}:
-        tasks.extend(build_global_tasks(catalog_root, scenes))
+        tasks.extend(build_global_tasks(catalog_root, scenes, include_partial=include_partial))
     unique: dict[str, DigitisingTask] = {}
     for task in tasks:
         if task.task_id in unique and unique[task.task_id].scene.scene_id != task.scene.scene_id:

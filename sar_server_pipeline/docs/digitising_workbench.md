@@ -58,6 +58,10 @@ before the limit is applied, so `--limit 10` selects ten pending tasks. Use `--t
 an explicit selection. Use `--prediction-mode cached-only` to prohibit forcing downloads, or `skip` when preparing
 projects without predictions.
 
+Global associations with incomplete buffered-AOI coverage remain excluded by default. To deliberately prepare a
+processed partial association, pass `--include-partial` together with explicit `--task TASK_ID` arguments. The
+batch manifest records this choice so the same tasks remain available during return validation and import.
+
 The command prints exact pull and return commands. The pull command uses the generated
 `digitising_batches/<batch>/transfer_files.txt` on the remote server with `rsync --relative`. It transfers only the
 selected processed GeoTIFFs, GeoPackages, manifests, and projects; it does not stage another raster copy on Skua.
@@ -104,7 +108,9 @@ A task represents one optical-reference/SAR association, not one raster folder. 
 SA001-after and SA002-before therefore have separate task directories, forms, annotations, statuses, and exports,
 while both projects refer to the same processed SAR files.
 
-Global tasks are created only from complete coverage associations. Their 30 km AOI boundary points remain
-non-seed context. Source-label points are eligible for drift only when their provenance supports it: MARIDA class-1
-mask components, non-absence Jamila debris geometries, and supplied Ghana observation points. A source group with
-no positive debris label correctly has no drift seed.
+Global tasks are created from complete coverage associations by default. Explicitly requested processed partial
+associations can be included with `--include-partial`; their original coverage ratios and incomplete status remain
+recorded in task metadata. Their 30 km AOI boundary points remain non-seed context. Source-label points are eligible
+for drift only when their provenance supports it: MARIDA class-1 mask components, non-absence Jamila debris
+geometries, and supplied Ghana observation points. A source group with no positive debris label correctly has no
+drift seed.

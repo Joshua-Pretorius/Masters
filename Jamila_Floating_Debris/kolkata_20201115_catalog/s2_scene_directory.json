@@ -1,0 +1,74 @@
+[
+  {
+    "source_scene_name": "kolkata_20201115.shp",
+    "source_scene_stem": "kolkata_20201115",
+    "source_scene_timestamp": "2020-11-15T12:00:00.000Z",
+    "source_scene_date": "2020-11-15",
+    "observation_count": 15,
+    "observation_ids": [
+      "65fb32d9-7f19-4f81-afe1-dcd032ccd0b3",
+      "f0dad2e5-f90b-4a17-ab10-dbf58ce1ad5e",
+      "08f89377-310d-4ef0-9e66-20f6c7506d19",
+      "7f676f61-137a-4ac2-8b87-e1919bf13226",
+      "87356c49-11ad-46d7-8464-1edbd9f70ff8",
+      "879e51f2-39dc-4923-9995-2182e62b88be",
+      "9ed7252f-26cb-410b-8e8e-aadf56a8b956",
+      "4a243049-66e1-4442-9a96-907e7fc1fbaf",
+      "83560ceb-f6f7-478f-a888-92e26e1269cc",
+      "111a67dd-360a-4296-a9c9-eb1302006443",
+      "dfa45ede-48fa-4abf-b3b4-61771eabb851",
+      "f88ac0d2-ab03-4f24-90ff-4d9fa137d01b",
+      "5397b74b-fb52-4d50-8b04-64650b065848",
+      "92c1b7d9-38ff-4c2b-b039-6bfe0fc0303b",
+      "ab5ef27a-963c-4bc7-926d-982648000168"
+    ],
+    "bbox_wgs84": {
+      "min_lon": 88.16474635929109,
+      "min_lat": 20.72372523563949,
+      "max_lon": 88.51676468189203,
+      "max_lat": 20.764309135944384
+    },
+    "s2_scenes": [
+      {
+        "s2_item_id": "S2A_MSIL2A_20201115T044051_R033_T45QXC_20201117T104017",
+        "s2_collection": "sentinel-2-l2a",
+        "s2_datetime": "2020-11-15T04:40:51.024000Z",
+        "s2_mgrs_tile": "45QXC",
+        "s2_platform": "Sentinel-2A",
+        "s2_cloud_cover": 1.5e-05,
+        "s1_before": {
+          "item_id": "S1A_IW_GRDH_1SDV_20201112T235709_20201112T235737_035222_041CD7",
+          "collection": "sentinel-1-grd",
+          "datetime": "2020-11-12T23:57:23.372519Z",
+          "delta_hours": -52.724
+        },
+        "s1_after": {
+          "item_id": "S1A_IW_GRDH_1SDV_20201115T121143_20201115T121212_035259_041E24",
+          "collection": "sentinel-1-grd",
+          "datetime": "2020-11-15T12:11:58.087388Z",
+          "delta_hours": 7.519
+        }
+      },
+      {
+        "s2_item_id": "S2A_MSIL2A_20201115T044051_R033_T45QXD_20201117T104022",
+        "s2_collection": "sentinel-2-l2a",
+        "s2_datetime": "2020-11-15T04:40:51.024000Z",
+        "s2_mgrs_tile": "45QXD",
+        "s2_platform": "Sentinel-2A",
+        "s2_cloud_cover": 0.000192,
+        "s1_before": {
+          "item_id": "S1A_IW_GRDH_1SDV_20201112T235709_20201112T235737_035222_041CD7",
+          "collection": "sentinel-1-grd",
+          "datetime": "2020-11-12T23:57:23.372519Z",
+          "delta_hours": -52.724
+        },
+        "s1_after": {
+          "item_id": "S1A_IW_GRDH_1SDV_20201115T121212_20201115T121237_035259_041E24",
+          "collection": "sentinel-1-grd",
+          "datetime": "2020-11-15T12:12:25.094727Z",
+          "delta_hours": 7.526
+        }
+      }
+    ]
+  }
+]

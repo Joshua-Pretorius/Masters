@@ -291,6 +291,57 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual([point.reference_kind for point in tasks[0].reference_points], ["aoi_proxy", "marida_debris_mask"])
         self.assertEqual([point.seed_eligible for point in tasks[0].reference_points], [False, True])
 
+    def test_global_catalog_can_explicitly_include_processed_partial_associations(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            environment, _ = build_fixture(Path(temporary))
+            global_dir = environment.catalog_root / "global_s1_slc_inventory"
+            row = {
+                "target_id": "partial_scene:after:01",
+                "obs_id": "partial_scene",
+                "source_dataset": "Ghana_Drift",
+                "source_group_id": "ghana-observation",
+                "area": "Ghana",
+                "date": "2019-04-25",
+                "reference_time": "2019-04-25T01:00:00Z",
+                "timestamp_source": "planet_metadata",
+                "role": "after",
+                "selection_rank": "1",
+                "granule_name": SHARED_GRANULE + ".SAFE",
+                "acquisition_start": "2019-04-25T03:10:55Z",
+                "delta_h": "2.18",
+                "scene_coverage_ratio": "0.66",
+                "coverage_set_ratio": "0.66",
+                "coverage_complete": "False",
+                "download_group_key": SHARED_GRANULE,
+                "aoi_buffer_km": "30",
+            }
+            write_csv(global_dir / "global_s1_slc_associations.csv", [row])
+            write_csv(
+                global_dir / "global_s1_slc_points.csv",
+                [{
+                    "obs_id": "partial_scene",
+                    "point_id": "ghana-1",
+                    "lat": -30.0,
+                    "lon": 31.0,
+                    "reference_kind": "ghana_observation",
+                    "seed_eligible": "true",
+                    "notes": "Observed debris",
+                }],
+            )
+
+            default_tasks = build_task_catalog(environment.catalog_root, environment.processed_root, "global")
+            partial_tasks = build_task_catalog(
+                environment.catalog_root,
+                environment.processed_root,
+                "global",
+                include_partial=True,
+            )
+
+        self.assertEqual(default_tasks, [])
+        self.assertEqual(len(partial_tasks), 1)
+        self.assertEqual(partial_tasks[0].observation_id, "partial_scene")
+        self.assertIn("coverage complete False", partial_tasks[0].notes)
+
 
 class GeoPackageTests(unittest.TestCase):
     def test_database_triggers_populate_ids_and_task_metadata(self) -> None:

@@ -140,6 +140,8 @@ def _write_batch_files(
     tasks: Sequence[DigitisingTask],
     completed: Sequence[str],
     prediction_results: dict[str, PredictionResult],
+    *,
+    include_partial: bool = False,
 ) -> tuple[str, str]:
     batch_dir = environment.data_root / "digitising_batches" / batch_name
     transfer_paths: set[Path] = {
@@ -161,6 +163,7 @@ def _write_batch_files(
         "batch_name": batch_name,
         "task_ids": [task.task_id for task in tasks],
         "datasets": sorted({task.dataset for task in tasks}),
+        "include_partial": include_partial,
         "skipped_complete": list(completed),
         "ordering": "absolute optical-to-SAR delta hours, then dataset and task id",
         "prediction_status": {
@@ -199,11 +202,17 @@ def prepare_batch(
     task_ids: Sequence[str] = (),
     prediction_mode: str = "auto",
     dry_run: bool = False,
+    include_partial: bool = False,
     project_builder: Callable[..., None] = build_qgis_project,
 ) -> PrepareResult:
     if limit < 1:
         raise ValueError("--limit must be at least 1")
-    catalog = build_task_catalog(environment.catalog_root, environment.processed_root, dataset)
+    catalog = build_task_catalog(
+        environment.catalog_root,
+        environment.processed_root,
+        dataset,
+        include_partial=include_partial,
+    )
     requested = set(task_ids)
     if requested:
         known = {task.task_id for task in catalog}
@@ -258,7 +267,14 @@ def prepare_batch(
         write_json(task.task_dir / "task_manifest.json", task_manifest(task, prediction))
         project_builder(task.task_dir / "task.qgz", (task,), title=task.task_id)
     project_builder(batch_dir / "batch.qgz", selected, title=f"MERIA digitisation — {batch_name}")
-    pull, push = _write_batch_files(environment, batch_name, selected, complete, prediction_results)
+    pull, push = _write_batch_files(
+        environment,
+        batch_name,
+        selected,
+        complete,
+        prediction_results,
+        include_partial=include_partial,
+    )
     return PrepareResult(
         batch_name,
         tuple(task.task_id for task in selected),
@@ -286,7 +302,12 @@ def import_batch(environment: Environment, batch_name: str) -> dict[str, object]
     dataset_filter = next(iter(datasets)) if len(datasets) == 1 else "all"
     catalog = {
         task.task_id: task
-        for task in build_task_catalog(environment.catalog_root, environment.processed_root, dataset_filter)
+        for task in build_task_catalog(
+            environment.catalog_root,
+            environment.processed_root,
+            dataset_filter,
+            include_partial=bool(batch.get("include_partial", False)),
+        )
     }
     incoming_root = environment.data_root / "digitising_returns" / batch_name
     report: dict[str, object] = {"batch_name": batch_name, "imported": [], "invalid": {}, "conflicts": {}}

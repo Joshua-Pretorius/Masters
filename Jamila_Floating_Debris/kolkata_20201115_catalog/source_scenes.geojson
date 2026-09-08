@@ -1,0 +1,46 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              88.51676468189203,
+              20.72372523563949
+            ],
+            [
+              88.51676468189203,
+              20.764309135944384
+            ],
+            [
+              88.16474635929109,
+              20.764309135944384
+            ],
+            [
+              88.16474635929109,
+              20.72372523563949
+            ],
+            [
+              88.51676468189203,
+              20.72372523563949
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "source_scene_name": "kolkata_20201115.shp",
+        "source_scene_stem": "kolkata_20201115",
+        "source_scene_timestamp": "2020-11-15T12:00:00.000Z",
+        "source_scene_date": "2020-11-15",
+        "observation_count": 15,
+        "min_lon": 88.16474635929109,
+        "min_lat": 20.72372523563949,
+        "max_lon": 88.51676468189203,
+        "max_lat": 20.764309135944384
+      }
+    }
+  ]
+}

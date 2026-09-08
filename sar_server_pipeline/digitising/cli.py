@@ -58,6 +58,11 @@ def build_parser() -> argparse.ArgumentParser:
     prepare.add_argument("--batch-name", required=True)
     prepare.add_argument("--task", action="append", default=[], dest="task_ids")
     prepare.add_argument("--prediction-mode", choices=("auto", "cached-only", "skip"), default="auto")
+    prepare.add_argument(
+        "--include-partial",
+        action="store_true",
+        help="Include processed global associations whose buffered AOI coverage is incomplete.",
+    )
     prepare.add_argument("--dry-run", action="store_true")
 
     import_parser = subparsers.add_parser("import", help="Validate and import a returned desktop-QGIS batch.")
@@ -67,6 +72,7 @@ def build_parser() -> argparse.ArgumentParser:
     validate = subparsers.add_parser("validate-export", help="Validate populated tasks and refresh canonical exports.")
     _common(validate)
     validate.add_argument("--dataset", choices=("all", "sa", "global"), default="all")
+    validate.add_argument("--include-partial", action="store_true")
     selection = validate.add_mutually_exclusive_group(required=True)
     selection.add_argument("--all", action="store_true")
     selection.add_argument("--task", action="append", default=[], dest="task_ids")
@@ -86,6 +92,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             task_ids=args.task_ids,
             prediction_mode=args.prediction_mode,
             dry_run=args.dry_run,
+            include_partial=args.include_partial,
         )
         print(json.dumps({
             "batch_name": result.batch_name,
@@ -101,7 +108,12 @@ def main(argv: Sequence[str] | None = None) -> int:
         print(json.dumps(report, indent=2))
         return 1 if report["invalid"] or report["conflicts"] else 0
 
-    tasks = build_task_catalog(environment.catalog_root, environment.processed_root, args.dataset)
+    tasks = build_task_catalog(
+        environment.catalog_root,
+        environment.processed_root,
+        args.dataset,
+        include_partial=args.include_partial,
+    )
     selected = set(args.task_ids)
     results: dict[str, object] = {}
     for task in tasks:
