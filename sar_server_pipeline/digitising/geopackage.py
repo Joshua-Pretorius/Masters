@@ -25,7 +25,8 @@ CLASSES = (
     "other",
     "uncertain",
 )
-CONFIDENCE_LEVELS = ("high", "medium", "low")
+CONFIDENCE_LEVELS = ("high", "medium", "low", "not_assessed")
+TRAINING_STATUSES = ("candidate", "accepted_proxy", "excluded")
 
 ANNOTATION_SCHEMA = {
     "geometry": "MultiPolygon",
@@ -33,7 +34,12 @@ ANNOTATION_SCHEMA = {
         "feature_uuid": "str:36",
         "patch_id": "str:96",
         "Class": "str:32",
+        # Retained for compatibility with earlier batches. New QGIS forms hide
+        # this field and use the two explicit confidence dimensions below.
         "confidence": "str:16",
+        "feature_confidence": "str:16",
+        "correspondence_confidence": "str:16",
+        "training_status": "str:24",
         "task_id": "str:128",
         "obs_id": "str:96",
         "dataset": "str:16",
@@ -184,6 +190,10 @@ def _install_annotation_triggers(path: Path, task: DigitisingTask) -> None:
         "substr(lower(hex(randomblob(2))),2) || '-' || substr('89ab',abs(random()) % 4 + 1,1) || "
         "substr(lower(hex(randomblob(2))),2) || '-' || lower(hex(randomblob(6))))",
         f"patch_id = COALESCE(NULLIF(NEW.patch_id, ''), {_sql(task.task_id + '-P')} || printf('%04d', NEW.fid))",
+        "feature_confidence = COALESCE(NULLIF(NEW.feature_confidence, ''), "
+        "NULLIF(NEW.confidence, ''), 'not_assessed')",
+        "correspondence_confidence = COALESCE(NULLIF(NEW.correspondence_confidence, ''), 'not_assessed')",
+        "training_status = COALESCE(NULLIF(NEW.training_status, ''), 'candidate')",
     ]
     assignments.extend(
         f'"{name}" = COALESCE(NULLIF(NEW."{name}", \'\'), {_sql(value)})'
@@ -209,6 +219,55 @@ def _install_annotation_triggers(path: Path, task: DigitisingTask) -> None:
         connection.close()
 
 
+def _ensure_annotation_uncertainty_columns(path: Path) -> None:
+    """Upgrade an existing annotations table without replacing its features."""
+
+    connection = sqlite3.connect(path)
+    try:
+        columns = {str(row[1]) for row in connection.execute("PRAGMA table_info(annotations)")}
+        additions = {
+            "feature_confidence": "TEXT",
+            "correspondence_confidence": "TEXT",
+            "training_status": "TEXT",
+        }
+        for name, sql_type in additions.items():
+            if name not in columns:
+                connection.execute(f'ALTER TABLE annotations ADD COLUMN "{name}" {sql_type}')
+        # GDAL creates two generic RTree triggers for changes to the feature
+        # id. They are declared for every UPDATE and call spatial functions
+        # unavailable to Python's plain sqlite connection. The migration does
+        # not touch fid or geometry, so suspend just these triggers and restore
+        # their original SQL immediately after the attribute updates.
+        spatial_triggers = list(
+            connection.execute(
+                "SELECT name, sql FROM sqlite_master WHERE type = 'trigger' "
+                "AND tbl_name = 'annotations' "
+                "AND name IN ('rtree_annotations_geom_update3', 'rtree_annotations_geom_update4')"
+            )
+        )
+        for name, _sql_text in spatial_triggers:
+            connection.execute(f'DROP TRIGGER "{name}"')
+        connection.execute(
+            "UPDATE annotations SET feature_confidence = "
+            "CASE WHEN lower(COALESCE(confidence, '')) IN ('high', 'medium', 'low') "
+            "THEN lower(confidence) ELSE 'not_assessed' END "
+            "WHERE feature_confidence IS NULL OR feature_confidence = ''"
+        )
+        connection.execute(
+            "UPDATE annotations SET correspondence_confidence = 'not_assessed' "
+            "WHERE correspondence_confidence IS NULL OR correspondence_confidence = ''"
+        )
+        connection.execute(
+            "UPDATE annotations SET training_status = 'candidate' "
+            "WHERE training_status IS NULL OR training_status = ''"
+        )
+        for _name, sql_text in spatial_triggers:
+            connection.execute(str(sql_text))
+        connection.commit()
+    finally:
+        connection.close()
+
+
 def create_or_refresh_task_geopackage(
     path: Path,
     task: DigitisingTask,
@@ -221,6 +280,7 @@ def create_or_refresh_task_geopackage(
     layers = fiona.listlayers(path) if path.exists() else []
     if "annotations" not in layers:
         _write_layer(path, "annotations", ANNOTATION_SCHEMA, (), crs=annotation_crs, replace=False)
+    _ensure_annotation_uncertainty_columns(path)
     _install_annotation_triggers(path, task)
 
     reference_features = (
@@ -345,11 +405,25 @@ def validate_annotations(path: Path, task: DigitisingTask) -> ValidationResult:
                 if str(properties.get(field) or "") != str(value):
                     errors.append(f"{prefix}: {field} does not match {value}")
             class_name = str(properties.get("Class") or "")
-            confidence = str(properties.get("confidence") or "")
+            feature_confidence = str(properties.get("feature_confidence") or "")
+            correspondence_confidence = str(properties.get("correspondence_confidence") or "")
+            training_status = str(properties.get("training_status") or "")
             if class_name not in CLASSES:
                 errors.append(f"{prefix}: invalid Class {class_name!r}")
-            if confidence not in CONFIDENCE_LEVELS:
-                errors.append(f"{prefix}: invalid confidence {confidence!r}")
+            if feature_confidence not in CONFIDENCE_LEVELS:
+                errors.append(f"{prefix}: invalid feature_confidence {feature_confidence!r}")
+            if correspondence_confidence not in CONFIDENCE_LEVELS:
+                errors.append(f"{prefix}: invalid correspondence_confidence {correspondence_confidence!r}")
+            if training_status not in TRAINING_STATUSES:
+                errors.append(f"{prefix}: invalid training_status {training_status!r}")
+            elif training_status == "candidate":
+                errors.append(f"{prefix}: candidate has not been accepted or excluded")
+            elif training_status == "accepted_proxy" and (
+                feature_confidence == "not_assessed" or correspondence_confidence == "not_assessed"
+            ):
+                errors.append(
+                    f"{prefix}: accepted_proxy requires assessed feature and correspondence confidence"
+                )
             uuid = str(properties.get("feature_uuid") or "")
             patch_id = str(properties.get("patch_id") or "")
             if not uuid or uuid in seen_uuid:
@@ -374,6 +448,9 @@ def export_annotations(path: Path, output: Path) -> int:
         with fiona.open(temporary, "w", driver="GeoJSON", schema=schema, crs_wkt=crs_wkt) as sink:
             count = 0
             for feature in source:
+                properties = dict(feature.get("properties") or {})
+                if properties.get("training_status") != "accepted_proxy":
+                    continue
                 sink.write(feature)
                 count += 1
     temporary.replace(output)

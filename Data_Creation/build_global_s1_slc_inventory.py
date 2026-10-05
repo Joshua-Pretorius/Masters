@@ -32,7 +32,7 @@ from requests.adapters import HTTPAdapter
 from rasterio.features import shapes as raster_shapes
 from urllib3.util.retry import Retry
 from rasterio.warp import transform as transform_coordinates, transform_bounds
-from shapely.geometry import GeometryCollection, box, mapping, shape
+from shapely.geometry import GeometryCollection, MultiPoint, box, mapping, shape
 from shapely.ops import transform, unary_union
 
 
@@ -45,6 +45,8 @@ GHANA_POINTS_PATH = REPO_ROOT / "Ghana_Drift" / "ghana_drift_points.shp"
 JAMILA_OBSERVATIONS_PATH = (
     REPO_ROOT / "Jamila_Floating_Debris" / "ocean-scan-floating-debris-1e84cd1d-b132-4aa1-9e4e-675e83b42050.json"
 )
+MANUAL_S2_16PCC_POINTS_PATH = OUT_DIR / "manual_s2_16pcc_20181024_candidate_points.csv"
+MANUAL_S2_16PCC_GROUP_ID = "16PCC/2018-10-24"
 CATALOG_URL = "https://catalogue.dataspace.copernicus.eu/odata/v1/Products"
 BUFFER_KM = 30.0
 SEARCH_HOURS = 72.0
@@ -270,8 +272,24 @@ def load_jamila_groups() -> list[OpticalGroup]:
     return groups
 
 
+def load_manual_s2_groups() -> list[OpticalGroup]:
+    with MANUAL_S2_16PCC_POINTS_PATH.open("r", encoding="utf-8-sig", newline="") as handle:
+        points = [
+            (float(row["lon"]), float(row["lat"]))
+            for row in csv.DictReader(handle)
+        ]
+    if not points:
+        raise ValueError(f"No candidate points in {MANUAL_S2_16PCC_POINTS_PATH}")
+    return [OpticalGroup(
+        "Manual_Sentinel2", MANUAL_S2_16PCC_GROUP_ID,
+        parse_utc("2018-10-24T16:13:31Z"), "product_name_exact",
+        MultiPoint(points), len(points), "16PCC candidate debris points",
+    )]
+
+
 def load_all_groups() -> list[OpticalGroup]:
-    return load_marida_groups() + load_nasa_planet_groups() + load_ghana_groups() + load_greece_groups() + load_jamila_groups()
+    return (load_marida_groups() + load_nasa_planet_groups() + load_ghana_groups()
+            + load_greece_groups() + load_jamila_groups() + load_manual_s2_groups())
 
 
 def bbox_wkt(geometry: Any) -> str:
@@ -586,11 +604,37 @@ def ghana_seed_rows(
     return rows
 
 
+def manual_s2_seed_rows(
+    allowed_obs_ids: set[str],
+    *,
+    points_path: Path = MANUAL_S2_16PCC_POINTS_PATH,
+) -> list[dict[str, Any]]:
+    obs_id = observation_id("Manual_Sentinel2", MANUAL_S2_16PCC_GROUP_ID)
+    if obs_id not in allowed_obs_ids:
+        return []
+    with points_path.open("r", encoding="utf-8-sig", newline="") as handle:
+        return [
+            reference_point_row(
+                obs_id=obs_id,
+                point_id=f"{obs_id}_{row['point_id']}",
+                lat=float(row["lat"]), lon=float(row["lon"]),
+                reference_kind="manual_s2_candidate_debris",
+                seed_eligible=True,
+                source_feature_id=row["point_id"],
+                confidence="candidate_unverified",
+                notes=("User-selected candidate floating debris in Sentinel-2 16PCC imagery "
+                       "acquired 2018-10-24T16:13:31Z; not confirmed plastic."),
+            )
+            for row in csv.DictReader(handle)
+        ]
+
+
 def source_seed_rows(groups: list[OpticalGroup]) -> list[dict[str, Any]]:
     allowed = {group.obs_id for group in groups}
     rows = marida_seed_rows(allowed)
     rows.extend(jamila_seed_rows(allowed))
     rows.extend(ghana_seed_rows(allowed))
+    rows.extend(manual_s2_seed_rows(allowed))
     return sorted(rows, key=lambda row: (row["obs_id"], row["point_id"]))
 
 

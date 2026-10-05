@@ -53,10 +53,23 @@ docker compose run --rm digitising prepare \
   --batch-name batch_001
 ```
 
-Selection is ordered by absolute optical-to-SAR time difference. A valid, populated task is exported and skipped
-before the limit is applied, so `--limit 10` selects ten pending tasks. Use `--task TASK_ID` one or more times for
-an explicit selection. Use `--prediction-mode cached-only` to prohibit forcing downloads, or `skip` when preparing
-projects without predictions.
+Preparation now groups by physical Sentinel-1 acquisition. `--limit 10` selects ten pending SAR scenes, not ten
+optical relationships. Within each scene, the project shows every linked optical observation in its own dated
+before/after subgroup. The same original optical points therefore appear on both of their SAR comparisons. If a
+SAR acquisition is after one observation and before another, both subgroups appear beneath that single SAR scene.
+`--task TASK_ID` selects the entire scene containing that task, including its other optical associations. Use
+`--prediction-mode cached-only` to prohibit forcing downloads, or `skip` when preparing without predictions.
+
+The scene has one editable `scene_annotations.gpkg` and one SAR raster stack. Each association retains a separate
+`task.gpkg` for original reference points, per-SAR-time drift predictions, metadata and image links. Those task
+GeoPackages are reference material in the scene project; their legacy annotation layers are not loaded for editing.
+Preparation preserves existing legacy GeoPackages and their polygons. To create an old observation-centred batch
+explicitly, pass `--grouping observation`.
+
+The scene project includes every relationship and reference point in the checked-in catalog. Points added only to
+an older desktop GeoPackage are not automatically present in a newly prepared server batch; reconcile those
+additions into the catalog before regenerating that scene. A partial association included with `--include-partial`
+also needs a valid-pixel coverage review before its points are used as SAR evidence.
 
 Global associations with incomplete buffered-AOI coverage remain excluded by default. To deliberately prepare a
 processed partial association, pass `--include-partial` together with explicit `--task TASK_ID` arguments. The
@@ -72,12 +85,24 @@ On the work machine, open:
 /home/bsibolla/Desktop/Joshua/<batch>/digitising_batches/<batch>/batch.qgz
 ```
 
-Edit only layers named `Annotations (EDIT THIS)`. Class and confidence are controlled dropdowns. GeoPackage
-triggers populate a stable UUID, readable task-prefixed patch ID, and task metadata when each polygon is inserted.
+Edit only layers named `Scene annotations (EDIT THIS)`. Class, feature confidence, correspondence confidence and
+training status are controlled dropdowns. GeoPackage triggers populate a stable UUID, readable scene-prefixed
+patch ID and SAR identity when each polygon is inserted. For an accepted proxy, enter the supporting optical
+observation ID or comma-separated IDs in `evidence_obs_ids`; use the IDs shown in the dated optical subgroups and
+`scene_manifest.json`. The field records the actual evidence used for that polygon rather than assigning every
+polygon to whichever optical observation happened to be closest in time.
+
+Every new polygon starts as `candidate`. Feature confidence records how clearly the SAR feature itself can be
+distinguished and delineated. Correspondence confidence records how strongly the temporal, spatial, optical and
+drift evidence links that SAR feature to the source observation. Set `training_status=accepted_proxy` only after
+both confidence dimensions have been assessed and the polygon is suitable as a weak/proxy training label. Use
+`excluded` after review when the feature must remain in the audit record but must not enter training. Candidate
+features keep a task pending, excluded features complete review without being exported, and only accepted proxies
+are written to the canonical training GeoJSON.
 
 ## Return and import
 
-Run the return command printed by `prepare`. It uses `return_files.txt`, so only the task GeoPackages are copied to:
+Run the return command printed by `prepare`. It uses `return_files.txt`, so only the edited scene GeoPackages are copied to:
 
 ```text
 sar-data/digitising_returns/<batch>/
@@ -89,24 +114,25 @@ Validate and import on Skua:
 docker compose run --rm digitising import --batch batch_001
 ```
 
-An imported task must contain at least one valid polygon, permitted `Class` and `confidence` values, unique IDs,
-matching task metadata, and geometry intersecting its SAR raster. Invalid returns remain quarantined and are listed
+An imported scene must contain at least one valid polygon, permitted class, split-confidence and training-status
+values, unique IDs, matching SAR identity, accepted-proxy optical provenance, and geometry intersecting its SAR
+raster. Invalid returns remain quarantined and are listed
 in `digitising_batches/<batch>/import_report.json`. The prior server GeoPackage is backed up under
 `digitising_batches/<batch>/import_backups/` before replacement.
 
 Valid annotation-only GeoJSON is written to:
 
 ```text
-shapefiles/<physical-scene-id>/<task-id>_annotations.geojson
+shapefiles/<physical-scene-id>/scene_annotations.geojson
 ```
 
-Reference and prediction layers remain inside the task GeoPackage and cannot be ingested by patch extraction.
+Reference and prediction layers remain inside the task GeoPackages and cannot be ingested by patch extraction.
 
 ## Task identity
 
-A task represents one optical-reference/SAR association, not one raster folder. Shared acquisitions such as
-SA001-after and SA002-before therefore have separate task directories, forms, annotations, statuses, and exports,
-while both projects refer to the same processed SAR files.
+A task represents one optical-reference/SAR association. Shared acquisitions such as SA001-after and SA002-before
+keep separate dated reference and prediction layers, but their scene has one editable annotation layer and one
+canonical export. Existing observation-centred batches remain importable through their original manifests.
 
 Global tasks are created from complete coverage associations by default. Explicitly requested processed partial
 associations can be included with `--include-partial`; their original coverage ratios and incomplete status remain

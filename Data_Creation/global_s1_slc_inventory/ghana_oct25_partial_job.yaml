@@ -1,0 +1,40 @@
+schema_version: 1
+run_id: ghana-oct25-partial-s1-slc-v1
+dataset_mode: global
+targets:
+- ghana_drift_cd77705c-782d-5b99-935f-405bfd905cbf:before:01
+- ghana_drift_d9db6dd4-4db8-5723-96ba-57d182cda0b7:before:02
+inputs:
+  match_csv: /data/raw/global_s1_slc_associations.csv
+  points_csv: /data/raw/global_s1_slc_points.csv
+  raw_slc_root: /data/raw/slc
+  shapefiles_root: /data/shapefiles
+outputs:
+  processed_root: /data/processed
+  patches_root: /data/patches
+  stacks_root: /data/stacks
+  logs_root: /data/logs
+  manifests_root: /data/manifests
+stages:
+  slc_process:
+    enabled: true
+    overwrite: false
+    gpt: /usr/local/snap/bin/gpt
+    pad_deg: 0
+  patch_extract:
+    enabled: false
+    overwrite: false
+  patch_stack:
+    enabled: false
+    overwrite: false
+processing:
+  resolution_policy: snap-native
+  output_mode: scene
+  subset_mode: full-swath
+  subswaths:
+  - IW1
+  - IW2
+  - IW3
+  workers: 1
+  cache_gb: 32
+  patch_size: 256

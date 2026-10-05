@@ -8,6 +8,8 @@ from pathlib import Path
 from typing import Sequence
 
 from .catalog import build_task_catalog
+from .geopackage import export_annotations
+from .scene import group_by_scene, validate_scene_annotations
 from .workflow import Environment, import_batch, prepare_batch, reconcile_task
 
 
@@ -56,6 +58,8 @@ def build_parser() -> argparse.ArgumentParser:
     prepare.add_argument("--dataset", choices=("all", "sa", "global"), default="all")
     prepare.add_argument("--limit", type=int, required=True)
     prepare.add_argument("--batch-name", required=True)
+    prepare.add_argument("--grouping", choices=("scene", "observation"), default="scene",
+                         help="Scene is the new one-annotation-layer-per-SAR workflow; observation reads legacy batches.")
     prepare.add_argument("--task", action="append", default=[], dest="task_ids")
     prepare.add_argument("--prediction-mode", choices=("auto", "cached-only", "skip"), default="auto")
     prepare.add_argument(
@@ -73,6 +77,7 @@ def build_parser() -> argparse.ArgumentParser:
     _common(validate)
     validate.add_argument("--dataset", choices=("all", "sa", "global"), default="all")
     validate.add_argument("--include-partial", action="store_true")
+    validate.add_argument("--grouping", choices=("scene", "observation"), default="scene")
     selection = validate.add_mutually_exclusive_group(required=True)
     selection.add_argument("--all", action="store_true")
     selection.add_argument("--task", action="append", default=[], dest="task_ids")
@@ -93,6 +98,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             prediction_mode=args.prediction_mode,
             dry_run=args.dry_run,
             include_partial=args.include_partial,
+            grouping=args.grouping,
         )
         print(json.dumps({
             "batch_name": result.batch_name,
@@ -116,6 +122,21 @@ def main(argv: Sequence[str] | None = None) -> int:
     )
     selected = set(args.task_ids)
     results: dict[str, object] = {}
+    if args.grouping == "scene":
+        for group in group_by_scene(tasks):
+            if selected and not any(task.task_id in selected for task in group.tasks):
+                continue
+            validation = validate_scene_annotations(group.path, group)
+            if validation.valid:
+                export_annotations(
+                    group.path, environment.data_root / "shapefiles" / group.scene.scene_id / "scene_annotations.geojson"
+                )
+            results[group.scene.scene_id] = {
+                "valid": validation.valid, "feature_count": validation.feature_count,
+                "errors": validation.errors,
+            }
+        print(json.dumps(results, indent=2))
+        return 1 if any(not result["valid"] for result in results.values()) else 0
     for task in tasks:
         if selected and task.task_id not in selected:
             continue

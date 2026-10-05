@@ -1,0 +1,65 @@
+[
+  {
+    "product": "S2A_MSIL1C_20181024T161331_N0500_R140_T16PCC_20230728T071849.SAFE",
+    "fdi": "D:\\Masters\\MARIDA\\downloads\\16PDC\\2018-10-24\\copernicus_products\\fdi\\S2A_20181024T161331_T16PCC_L1C_FDI.tif",
+    "status": "created",
+    "level": "L1C",
+    "crs": "EPSG:32616",
+    "width": 10980,
+    "height": 10980,
+    "bounds": [
+      300000.0,
+      1690200.0,
+      409800.0,
+      1800000.0
+    ],
+    "sample_p02_p50_p98": [
+      -0.015169371776282786,
+      0.13028941303491592,
+      0.7262088370323181
+    ],
+    "valid_sample_pixels": 1263830
+  },
+  {
+    "product": "S2A_MSIL1C_20181024T161331_N0500_R140_T16PDC_20230728T071849.SAFE",
+    "fdi": "D:\\Masters\\MARIDA\\downloads\\16PDC\\2018-10-24\\copernicus_products\\fdi\\S2A_20181024T161331_T16PDC_L1C_FDI.tif",
+    "status": "created",
+    "level": "L1C",
+    "crs": "EPSG:32616",
+    "width": 10980,
+    "height": 10980,
+    "bounds": [
+      399960.0,
+      1690200.0,
+      509760.0,
+      1800000.0
+    ],
+    "sample_p02_p50_p98": [
+      0.008529034238308668,
+      0.08500225469470024,
+      0.5155451273918152
+    ],
+    "valid_sample_pixels": 1440000
+  },
+  {
+    "product": "S2A_MSIL2A_20181024T161331_N0500_R140_T16PEC_20230729T044439.SAFE",
+    "fdi": "D:\\Masters\\MARIDA\\downloads\\16PDC\\2018-10-24\\copernicus_products\\fdi\\S2A_20181024T161331_T16PEC_L2A_FDI.tif",
+    "status": "created",
+    "level": "L2A",
+    "crs": "EPSG:32616",
+    "width": 10980,
+    "height": 10980,
+    "bounds": [
+      499980.0,
+      1690200.0,
+      609780.0,
+      1800000.0
+    ],
+    "sample_p02_p50_p98": [
+      -0.003533917455933988,
+      0.06233690679073334,
+      0.5210433483123772
+    ],
+    "valid_sample_pixels": 1421916
+  }
+]

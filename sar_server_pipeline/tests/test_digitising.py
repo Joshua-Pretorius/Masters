@@ -30,10 +30,17 @@ os.environ["GDAL_DATA"] = str(RASTERIO_ROOT / "gdal_data")
 
 from digitising.catalog import _sa_optical_interval, build_task_catalog
 from digitising.drift import _forcing_directory, prepare_prediction
-from digitising.geopackage import ANNOTATION_SCHEMA, create_or_refresh_task_geopackage, validate_annotations
+from digitising.geopackage import (
+    ANNOTATION_SCHEMA,
+    create_or_refresh_task_geopackage,
+    export_annotations,
+    validate_annotations,
+)
 from digitising import project as qgis_project
+from digitising.scene import SCENE_ANNOTATION_SCHEMA, group_by_scene, validate_scene_annotations
 from digitising.util import relative_to_root
 from digitising.workflow import Environment, import_batch, prepare_batch
+from stages.patch_extract import feature_files
 from Domain_SSL.Scripts.Preprocessing.fetch_drift_forcing import month_chunks
 
 
@@ -206,7 +213,14 @@ def build_fixture(root: Path) -> tuple[Environment, Path]:
 
 def add_valid_annotation(gpkg: Path, task) -> None:
     properties = {field: None for field in ANNOTATION_SCHEMA["properties"]}
-    properties.update({"Class": "plastic", "confidence": "high", "notes": "visible patch"})
+    properties.update({
+        "Class": "plastic",
+        "confidence": "high",
+        "feature_confidence": "high",
+        "correspondence_confidence": "high",
+        "training_status": "accepted_proxy",
+        "notes": "visible patch",
+    })
     geometry = mapping(MultiPolygon([box(30.9, -30.1, 31.1, -29.9)]))
     with fiona.open(gpkg, "a", layer="annotations") as sink:
         sink.write({"type": "Feature", "geometry": geometry, "properties": properties})
@@ -215,6 +229,23 @@ def add_valid_annotation(gpkg: Path, task) -> None:
 def fake_project(path: Path, tasks, *, title: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(title + "\n" + "\n".join(task.task_id for task in tasks), encoding="utf-8")
+
+
+def fake_scene_project(path: Path, groups, *, title: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(title + "\n" + "\n".join(group.scene.scene_id for group in groups), encoding="utf-8")
+
+
+def add_valid_scene_annotation(gpkg: Path, group) -> None:
+    properties = {field: None for field in SCENE_ANNOTATION_SCHEMA["properties"]}
+    properties.update({
+        "Class": "plastic", "feature_confidence": "high",
+        "correspondence_confidence": "medium", "training_status": "accepted_proxy",
+        "evidence_obs_ids": ",".join(sorted(group.observation_ids)),
+    })
+    geometry = mapping(MultiPolygon([box(30.9, -30.1, 31.1, -29.9)]))
+    with fiona.open(gpkg, "a", layer="annotations") as sink:
+        sink.write({"type": "Feature", "geometry": geometry, "properties": properties})
 
 
 class CatalogTests(unittest.TestCase):
@@ -361,6 +392,46 @@ class GeoPackageTests(unittest.TestCase):
         self.assertEqual(properties["patch_id"], f"{task.task_id}-P0001")
         self.assertEqual(properties["task_id"], task.task_id)
         self.assertEqual(properties["scene_id"], task.scene.scene_id)
+        self.assertEqual(properties["feature_confidence"], "high")
+        self.assertEqual(properties["correspondence_confidence"], "high")
+        self.assertEqual(properties["training_status"], "accepted_proxy")
+
+    def test_candidate_is_pending_and_excluded_feature_is_not_exported(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            environment, _ = build_fixture(Path(temporary))
+            candidate_task, excluded_task = build_task_catalog(
+                environment.catalog_root, environment.processed_root, "sa"
+            )
+            candidate_gpkg = candidate_task.task_dir / "task.gpkg"
+            create_or_refresh_task_geopackage(candidate_gpkg, candidate_task)
+
+            candidate = {field: None for field in ANNOTATION_SCHEMA["properties"]}
+            candidate.update({"Class": "plastic", "notes": "review needed"})
+            geometry = mapping(MultiPolygon([box(30.9, -30.1, 31.1, -29.9)]))
+            with fiona.open(candidate_gpkg, "a", layer="annotations") as sink:
+                sink.write({"type": "Feature", "geometry": geometry, "properties": candidate})
+
+            pending = validate_annotations(candidate_gpkg, candidate_task)
+
+            excluded_gpkg = excluded_task.task_dir / "task.gpkg"
+            create_or_refresh_task_geopackage(excluded_gpkg, excluded_task)
+            excluded = {field: None for field in ANNOTATION_SCHEMA["properties"]}
+            excluded.update({
+                "Class": "slick",
+                "feature_confidence": "low",
+                "correspondence_confidence": "low",
+                "training_status": "excluded",
+                "notes": "reviewed confuser",
+            })
+            with fiona.open(excluded_gpkg, "a", layer="annotations") as sink:
+                sink.write({"type": "Feature", "geometry": geometry, "properties": excluded})
+            reviewed = validate_annotations(excluded_gpkg, excluded_task)
+            exported = export_annotations(excluded_gpkg, environment.data_root / "excluded.geojson")
+
+        self.assertFalse(pending.valid)
+        self.assertTrue(any("candidate" in error for error in pending.errors))
+        self.assertTrue(reviewed.valid, reviewed.errors)
+        self.assertEqual(exported, 0)
 
 
 class PredictionTests(unittest.TestCase):
@@ -436,6 +507,43 @@ class PredictionTests(unittest.TestCase):
 
 
 class PreparationTests(unittest.TestCase):
+    def test_scene_export_supersedes_legacy_task_exports_for_patch_extraction(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            scene = root / "physical-scene"
+            scene.mkdir()
+            (scene / "old_task_annotations.geojson").write_text("{}", encoding="utf-8")
+            (scene / "scene_annotations.geojson").write_text("{}", encoding="utf-8")
+            selected = list(feature_files(root))
+
+        self.assertEqual([path.name for path in selected], ["scene_annotations.geojson"])
+
+    def test_scene_batch_keeps_both_optical_relationships_with_one_editable_layer(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            environment, raster_path = build_fixture(Path(temporary))
+            tasks = build_task_catalog(environment.catalog_root, environment.processed_root, "sa")
+            prepared = prepare_batch(
+                environment, dataset="sa", limit=1, batch_name="scene_batch",
+                task_ids=(tasks[0].task_id,), prediction_mode="skip",
+                scene_project_builder=fake_scene_project,
+            )
+            batch_dir = environment.data_root / "digitising_batches" / "scene_batch"
+            manifest = json.loads((batch_dir / "batch_manifest.json").read_text(encoding="utf-8"))
+            scene_manifest = json.loads(
+                (tasks[0].scene.scene_dir / "digitising" / "scene_manifest.json").read_text(encoding="utf-8")
+            )
+            transfer = (batch_dir / "transfer_files.txt").read_text(encoding="utf-8").splitlines()
+            returned = (batch_dir / "return_files.txt").read_text(encoding="utf-8").splitlines()
+
+        self.assertEqual(prepared.selected, (tasks[0].scene.scene_id,))
+        self.assertEqual(manifest["grouping"], "physical_sar_scene")
+        self.assertEqual(set(manifest["scene_groups"][0]["task_ids"]), {task.task_id for task in tasks})
+        self.assertEqual({item["role"] for item in scene_manifest["optical_associations"]}, {"before", "after"})
+        self.assertEqual(len(returned), 1)
+        self.assertTrue(returned[0].endswith("scene_annotations.gpkg"))
+        self.assertEqual(transfer.count(relative_to_root(raster_path, environment.data_root)), 1)
+        self.assertEqual(sum(path.endswith("scene_annotations.gpkg") for path in transfer), 1)
+
     def test_limit_is_applied_after_populated_task_is_skipped(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             environment, _ = build_fixture(Path(temporary))
@@ -451,6 +559,7 @@ class PreparationTests(unittest.TestCase):
                 prediction_mode="skip",
                 dry_run=True,
                 project_builder=fake_project,
+                grouping="observation",
             )
 
         self.assertEqual(result.skipped_complete, (tasks[0].task_id,))
@@ -466,6 +575,7 @@ class PreparationTests(unittest.TestCase):
                 batch_name="batch_001",
                 prediction_mode="skip",
                 project_builder=fake_project,
+                grouping="observation",
             )
             batch_dir = environment.data_root / "digitising_batches" / "batch_001"
             transfer = (batch_dir / "transfer_files.txt").read_text(encoding="utf-8").splitlines()
@@ -482,6 +592,34 @@ class PreparationTests(unittest.TestCase):
 
 
 class ImportTests(unittest.TestCase):
+    def test_scene_return_validates_optical_provenance_and_exports_once(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            environment, _ = build_fixture(Path(temporary))
+            prepare_batch(
+                environment, dataset="sa", limit=1, batch_name="scene_return",
+                prediction_mode="skip", scene_project_builder=fake_scene_project,
+            )
+            group = group_by_scene(build_task_catalog(
+                environment.catalog_root, environment.processed_root, "sa"
+            ))[0]
+            incoming = (environment.data_root / "digitising_returns" / "scene_return"
+                        / relative_to_root(group.path, environment.data_root))
+            incoming.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(group.path, incoming)
+            add_valid_scene_annotation(incoming, group)
+            self.assertTrue(validate_scene_annotations(incoming, group).valid)
+            report = import_batch(environment, "scene_return")
+            exported = environment.data_root / "shapefiles" / group.scene.scene_id / "scene_annotations.geojson"
+            with fiona.open(exported) as source:
+                features = list(source)
+
+        self.assertEqual(report["invalid"], {})
+        self.assertEqual(len(report["imported"]), 1)
+        self.assertEqual(report["imported"][0]["feature_count"], 1)
+        self.assertEqual(len(features), 1)
+        self.assertEqual(set(features[0]["properties"]["evidence_obs_ids"].split(",")),
+                         group.observation_ids)
+
     def test_valid_return_is_imported_and_only_annotations_are_exported(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             environment, _ = build_fixture(Path(temporary))
@@ -492,6 +630,7 @@ class ImportTests(unittest.TestCase):
                 batch_name="batch_001",
                 prediction_mode="skip",
                 project_builder=fake_project,
+                grouping="observation",
             )
             task = {task.task_id: task for task in build_task_catalog(environment.catalog_root, environment.processed_root)}[
                 prepared.selected[0]
@@ -527,6 +666,7 @@ class ImportTests(unittest.TestCase):
                 batch_name="batch_empty",
                 prediction_mode="skip",
                 project_builder=fake_project,
+                grouping="observation",
             )
             task = {task.task_id: task for task in build_task_catalog(environment.catalog_root, environment.processed_root)}[
                 prepared.selected[0]

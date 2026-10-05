@@ -36,6 +36,8 @@ by `Data_Creation/build_global_s1_slc_inventory.py`.
 - `global_s1_slc_processing_points.csv`: compact AOI bounds consumed by the
   server processor.
 - `global_s1_slc_job.yaml`: server job containing every unique processable SLC.
+- `ghana_oct25_partial_job.yaml`: explicit two-scene server job for the processed-on-demand
+  25 October 2018 Ghana partial-coverage acquisitions.
 - `copernicus_s1_slc_cache.json`: cached catalogue responses for reproducible
   reruns without repeated requests.
 

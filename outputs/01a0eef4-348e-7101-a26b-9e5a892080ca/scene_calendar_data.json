@@ -1,0 +1,3816 @@
+{
+  "source_files": [
+    "Data_Creation/global_s1_slc_inventory/global_s1_slc_processing_targets.csv",
+    "Data_Creation/global_s1_slc_inventory/global_s1_slc_associations.csv",
+    "Data_Creation/meria_sa_plastic_s1_slc/MERIA_SA_plastic_nearest_S1_SLC_before_after.csv",
+    "D:/Joshua/*/processed/**/task_manifest.json (nine current local batches)"
+  ],
+  "counts": {
+    "unique_physical": 129,
+    "local_tasks": 19,
+    "local_physical": 17,
+    "remaining": 112
+  },
+  "scenes": [
+    {
+      "granule": "S1A_IW_SLC__1SDV_20190421T163724_20190421T163751_026890_030629_56F9",
+      "global_target": true,
+      "sa_target": true,
+      "sources": [
+        "MARIDA",
+        "MERIA_SA"
+      ],
+      "areas": [
+        "36JUN",
+        "Durban"
+      ],
+      "observations": [
+        "MERIA_SA_001",
+        "marida_36JUN_2019-04-24"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 62.982,
+      "local_tasks": [
+        "MERIA_SA_001_before_20190421T163724"
+      ],
+      "local_batches": [
+        "sa_durban_2019_apr"
+      ],
+      "alias": "L01",
+      "scheduled_date": "2026-09-30",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "Already local"
+    },
+    {
+      "granule": "S1B_IW_SLC__1SDV_20190425T031055_20190425T031122_015957_01DFC7_4905",
+      "global_target": false,
+      "sa_target": true,
+      "sources": [
+        "MERIA_SA"
+      ],
+      "areas": [
+        "Durban"
+      ],
+      "observations": [
+        "MERIA_SA_001",
+        "MERIA_SA_002"
+      ],
+      "roles": [
+        "after",
+        "before"
+      ],
+      "time_gap_h": null,
+      "local_tasks": [
+        "MERIA_SA_001_after_20190425T031055",
+        "MERIA_SA_002_before_20190425T031055"
+      ],
+      "local_batches": [
+        "sa_durban_2019_apr"
+      ],
+      "alias": "L02",
+      "scheduled_date": "2026-09-30",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "Already local"
+    },
+    {
+      "granule": "S1B_IW_SLC__1SDV_20190427T163647_20190427T163717_015994_01E106_0A21",
+      "global_target": false,
+      "sa_target": true,
+      "sources": [
+        "MERIA_SA"
+      ],
+      "areas": [
+        "Durban"
+      ],
+      "observations": [
+        "MERIA_SA_002"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": null,
+      "local_tasks": [
+        "MERIA_SA_002_after_20190427T163647"
+      ],
+      "local_batches": [
+        "sa_durban_2019_apr"
+      ],
+      "alias": "L03",
+      "scheduled_date": "2026-09-30",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "Already local"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20181018T181758_20181018T181828_024194_02A587_7BBC",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Ghana_Drift"
+      ],
+      "areas": [
+        "Ghana"
+      ],
+      "observations": [
+        "ghana_drift_57bbff03-21eb-54de-9d18-d8a65b256bd5"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 39.666,
+      "local_tasks": [
+        "ghana_drift_57bbff03_21eb_54de_9d18_d8a65b256bd5_before_R01_20181018T181758"
+      ],
+      "local_batches": [
+        "ghana_all_001"
+      ],
+      "alias": "L04",
+      "scheduled_date": "2026-09-30",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "Already local"
+    },
+    {
+      "granule": "S1B_IW_SLC__1SDV_20181024T181653_20181024T181720_013298_01895D_122A",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Ghana_Drift"
+      ],
+      "areas": [
+        "Ghana"
+      ],
+      "observations": [
+        "ghana_drift_d918b4e9-16ac-5c30-830f-6945943e1d9e"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 63.719,
+      "local_tasks": [
+        "ghana_drift_d918b4e9_16ac_5c30_830f_6945943e1d9e_before_R01_20181024T181653"
+      ],
+      "local_batches": [
+        "ghana_all_001"
+      ],
+      "alias": "L05",
+      "scheduled_date": "2026-09-30",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "Already local"
+    },
+    {
+      "granule": "S1B_IW_SLC__1SDV_20181024T181717_20181024T181744_013298_01895D_793F",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Ghana_Drift"
+      ],
+      "areas": [
+        "Ghana"
+      ],
+      "observations": [
+        "ghana_drift_d918b4e9-16ac-5c30-830f-6945943e1d9e"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 63.712,
+      "local_tasks": [
+        "ghana_drift_d918b4e9_16ac_5c30_830f_6945943e1d9e_before_R02_20181024T181717"
+      ],
+      "local_batches": [
+        "ghana_all_001"
+      ],
+      "alias": "L06",
+      "scheduled_date": "2026-09-30",
+      "scheduled_block": "19:00\u201321:00",
+      "prep_date": "Already local"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20181030T181758_20181030T181828_024369_02AB27_32F5",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Ghana_Drift",
+        "Jamila_Floating_Debris",
+        "NASA_PlanetScope"
+      ],
+      "areas": [
+        "Ghana",
+        "NASA Marine Debris",
+        "accra_20181031"
+      ],
+      "observations": [
+        "ghana_drift_91ea9edc-67b4-4211-8532-35deec4a3148",
+        "ghana_drift_d9db6dd4-4db8-5723-96ba-57d182cda0b7",
+        "jamila_floating_debris_accra_20181031",
+        "nasa_planetscope_20181031_095925_103b"
+      ],
+      "roles": [
+        "after",
+        "before"
+      ],
+      "time_gap_h": 15.681,
+      "local_tasks": [
+        "ghana_drift_91ea9edc_67b4_4211_8532_35deec4a3148_before_R01_20181030T181758",
+        "ghana_drift_d9db6dd4_4db8_5723_96ba_57d182cda0b7_after_R01_20181030T181758"
+      ],
+      "local_batches": [
+        "ghana_all_001"
+      ],
+      "alias": "L07",
+      "scheduled_date": "2026-10-01",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "Already local"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20180830T114533_20180830T114600_023475_028E42_1ED7",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "16PCC"
+      ],
+      "observations": [
+        "marida_16PCC_2018-08-30"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 4.379,
+      "local_tasks": [
+        "marida_16PCC_2018_08_30_before_R01_20180830T114533"
+      ],
+      "local_batches": [
+        "golden_marida_16pcc_2018"
+      ],
+      "alias": "L08",
+      "scheduled_date": "2026-10-01",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "Already local"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20180830T114558_20180830T114625_023475_028E42_5A19",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "16PCC"
+      ],
+      "observations": [
+        "marida_16PCC_2018-08-30"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 4.372,
+      "local_tasks": [
+        "marida_16PCC_2018_08_30_before_R02_20180830T114558"
+      ],
+      "local_batches": [
+        "golden_marida_16pcc_2018"
+      ],
+      "alias": "L09",
+      "scheduled_date": "2026-10-01",
+      "scheduled_block": "19:00\u201321:00",
+      "prep_date": "Already local"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20181024T113716_20181024T113746_024277_02A836_7D74",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA",
+        "NASA_PlanetScope"
+      ],
+      "areas": [
+        "16PDC",
+        "NASA Marine Debris"
+      ],
+      "observations": [
+        "marida_16PDC_2018-10-24",
+        "nasa_planetscope_20181022_155353_100a",
+        "nasa_planetscope_20181024_160201_0f3b",
+        "nasa_planetscope_20181024_160202_0f3b"
+      ],
+      "roles": [
+        "after",
+        "before"
+      ],
+      "time_gap_h": 4.412,
+      "local_tasks": [
+        "marida_16PDC_2018_10_24_before_R01_20181024T113716"
+      ],
+      "local_batches": [
+        "golden_marida_16pdc_2018"
+      ],
+      "alias": "L10",
+      "scheduled_date": "2026-10-01",
+      "scheduled_block": "19:00\u201321:00",
+      "prep_date": "Already local"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20181024T113744_20181024T113812_024277_02A836_EC6E",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA",
+        "NASA_PlanetScope"
+      ],
+      "areas": [
+        "16PDC",
+        "NASA Marine Debris"
+      ],
+      "observations": [
+        "marida_16PDC_2018-10-24",
+        "nasa_planetscope_20181022_155353_100a",
+        "nasa_planetscope_20181024_160201_0f3b",
+        "nasa_planetscope_20181024_160202_0f3b"
+      ],
+      "roles": [
+        "after",
+        "before"
+      ],
+      "time_gap_h": 4.405,
+      "local_tasks": [
+        "marida_16PDC_2018_10_24_before_R02_20181024T113744"
+      ],
+      "local_batches": [
+        "golden_marida_16pdc_2018"
+      ],
+      "alias": "L11",
+      "scheduled_date": "2026-10-02",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "Already local"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20210123T104729_20210123T104755_036264_0440FD_9D34",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "18QYF"
+      ],
+      "observations": [
+        "marida_18QYF_2021-01-23"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 4.653,
+      "local_tasks": [
+        "marida_18QYF_2021_01_23_before_R01_20210123T104729"
+      ],
+      "local_batches": [
+        "golden_marida_18qyf_2021"
+      ],
+      "alias": "L12",
+      "scheduled_date": "2026-10-02",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "Already local"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20160716T214630_20160716T214657_012179_012E3A_DCAE",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "51PTS"
+      ],
+      "observations": [
+        "marida_51PTS_2016-07-17"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 4.495,
+      "local_tasks": [
+        "marida_51PTS_2016_07_17_before_R01_20160716T214630"
+      ],
+      "local_batches": [
+        "golden_marida_51pts_2016"
+      ],
+      "alias": "L13",
+      "scheduled_date": "2026-10-02",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "Already local"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20201115T121211_20201115T121239_035259_041E24_CF73",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Jamila_Floating_Debris"
+      ],
+      "areas": [
+        "kolkata_20201115"
+      ],
+      "observations": [
+        "jamila_floating_debris_kolkata_20201115"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 0.203,
+      "local_tasks": [
+        "jamila_floating_debris_kolkata_20201115_after_R01_20201115T121211"
+      ],
+      "local_batches": [
+        "golden_kolkata_2020"
+      ],
+      "alias": "L14",
+      "scheduled_date": "2026-10-02",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "Already local"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20190922T103325_20190922T103355_029133_034EA1_B6F2",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Jamila_Floating_Debris"
+      ],
+      "areas": [
+        "tungchungChina_20190922"
+      ],
+      "observations": [
+        "jamila_floating_debris_tungchungChina_20190922"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 0.443,
+      "local_tasks": [
+        "jamila_floating_debris_tungchungChina_20190922_before_R01_20190922T103325"
+      ],
+      "local_batches": [
+        "golden_tungchung_2019"
+      ],
+      "alias": "L15",
+      "scheduled_date": "2026-10-02",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "Already local"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20180611T060624_20180611T060651_022305_026A07_2143",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Jamila_Floating_Debris"
+      ],
+      "areas": [
+        "london_20180611"
+      ],
+      "observations": [
+        "jamila_floating_debris_london_20180611"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 4.893,
+      "local_tasks": [
+        "jamila_floating_debris_london_20180611_before_R01_20180611T060624"
+      ],
+      "local_batches": [
+        "golden_london_2018"
+      ],
+      "alias": "L16",
+      "scheduled_date": "2026-10-02",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "Already local"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20180611T060649_20180611T060716_022305_026A07_EF2B",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Jamila_Floating_Debris"
+      ],
+      "areas": [
+        "london_20180611"
+      ],
+      "observations": [
+        "jamila_floating_debris_london_20180611"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 4.886,
+      "local_tasks": [
+        "jamila_floating_debris_london_20180611_before_R02_20180611T060649"
+      ],
+      "local_batches": [
+        "golden_london_2018"
+      ],
+      "alias": "L17",
+      "scheduled_date": "2026-10-02",
+      "scheduled_block": "19:00\u201321:00",
+      "prep_date": "Already local"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20220405T163741_20220405T163808_042640_05165E_2627",
+      "global_target": false,
+      "sa_target": true,
+      "sources": [
+        "MERIA_SA"
+      ],
+      "areas": [
+        "Durban"
+      ],
+      "observations": [
+        "MERIA_SA_003"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": null,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R001",
+      "scheduled_date": "2026-10-05",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-02"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20220417T163741_20220417T163808_042815_051C3F_771A",
+      "global_target": false,
+      "sa_target": true,
+      "sources": [
+        "MERIA_SA"
+      ],
+      "areas": [
+        "Durban"
+      ],
+      "observations": [
+        "MERIA_SA_003"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": null,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R002",
+      "scheduled_date": "2026-10-05",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-02"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20220420T032018_20220420T032045_042851_051D64_C340",
+      "global_target": false,
+      "sa_target": true,
+      "sources": [
+        "MERIA_SA"
+      ],
+      "areas": [
+        "Durban"
+      ],
+      "observations": [
+        "MERIA_SA_004"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": null,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R003",
+      "scheduled_date": "2026-10-05",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-02"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20220427T031152_20220427T031220_042953_0520BC_7F9D",
+      "global_target": false,
+      "sa_target": true,
+      "sources": [
+        "MERIA_SA"
+      ],
+      "areas": [
+        "Durban"
+      ],
+      "observations": [
+        "MERIA_SA_004"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": null,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R004",
+      "scheduled_date": "2026-10-05",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-02"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20240603T165337_20240603T165405_054161_06962B_B3D0",
+      "global_target": false,
+      "sa_target": true,
+      "sources": [
+        "MERIA_SA"
+      ],
+      "areas": [
+        "East London"
+      ],
+      "observations": [
+        "MERIA_SA_006",
+        "MERIA_SA_007"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": null,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R005",
+      "scheduled_date": "2026-10-05",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-02"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20240610T164532_20240610T164600_054263_0699BA_EE9B",
+      "global_target": false,
+      "sa_target": true,
+      "sources": [
+        "MERIA_SA"
+      ],
+      "areas": [
+        "East London"
+      ],
+      "observations": [
+        "MERIA_SA_005"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": null,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R006",
+      "scheduled_date": "2026-10-05",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "2026-10-02"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20240615T165336_20240615T165404_054336_069C38_DBE9",
+      "global_target": false,
+      "sa_target": true,
+      "sources": [
+        "MERIA_SA"
+      ],
+      "areas": [
+        "East London"
+      ],
+      "observations": [
+        "MERIA_SA_005",
+        "MERIA_SA_006",
+        "MERIA_SA_007"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": null,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R007",
+      "scheduled_date": "2026-10-05",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "2026-10-02"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20240608T170143_20240608T170211_054234_0698B7_78BE",
+      "global_target": false,
+      "sa_target": true,
+      "sources": [
+        "MERIA_SA"
+      ],
+      "areas": [
+        "Gqeberha"
+      ],
+      "observations": [
+        "MERIA_SA_008"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": null,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R008",
+      "scheduled_date": "2026-10-05",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "2026-10-02"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20240620T170142_20240620T170210_054409_069EC5_00FD",
+      "global_target": false,
+      "sa_target": true,
+      "sources": [
+        "MERIA_SA"
+      ],
+      "areas": [
+        "Gqeberha"
+      ],
+      "observations": [
+        "MERIA_SA_008"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": null,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R009",
+      "scheduled_date": "2026-10-05",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "2026-10-02"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20260505T170121_20260505T170149_064384_081B8F_D1CF",
+      "global_target": false,
+      "sa_target": true,
+      "sources": [
+        "MERIA_SA"
+      ],
+      "areas": [
+        "Gqeberha"
+      ],
+      "observations": [
+        "MERIA_SA_009"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": null,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R010",
+      "scheduled_date": "2026-10-05",
+      "scheduled_block": "19:00\u201321:00",
+      "prep_date": "2026-10-02"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20260510T170927_20260510T170955_064457_081E34_5419",
+      "global_target": false,
+      "sa_target": true,
+      "sources": [
+        "MERIA_SA"
+      ],
+      "areas": [
+        "Gqeberha"
+      ],
+      "observations": [
+        "MERIA_SA_009"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": null,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R011",
+      "scheduled_date": "2026-10-05",
+      "scheduled_block": "19:00\u201321:00",
+      "prep_date": "2026-10-02"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20170831T000618_20170831T000645_018160_01E82D_DFF8",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "16PCC"
+      ],
+      "observations": [
+        "marida_16PCC_2017-08-30"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 7.955,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R012",
+      "scheduled_date": "2026-10-06",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-05"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20200924T114547_20200924T114614_034500_0403CA_C05B",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "16PCC"
+      ],
+      "observations": [
+        "marida_16PCC_2020-09-23"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 19.593,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R013",
+      "scheduled_date": "2026-10-06",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-05"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20200924T114611_20200924T114638_034500_0403CA_2C6A",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "16PCC"
+      ],
+      "observations": [
+        "marida_16PCC_2020-09-23"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 19.6,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R014",
+      "scheduled_date": "2026-10-06",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-05"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20190906T114540_20190906T114606_028900_0346B6_424B",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "16PCC"
+      ],
+      "observations": [
+        "marida_16PCC_2019-09-04"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 43.62,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R015",
+      "scheduled_date": "2026-10-06",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-05"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20180219T114549_20180219T114616_020675_0236A3_1819",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "16PCC"
+      ],
+      "observations": [
+        "marida_16PCC_2018-02-21"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 52.464,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R016",
+      "scheduled_date": "2026-10-06",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-05"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20180219T114524_20180219T114551_020675_0236A3_8FAB",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "16PCC"
+      ],
+      "observations": [
+        "marida_16PCC_2018-02-21"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 52.471,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R017",
+      "scheduled_date": "2026-10-06",
+      "scheduled_block": "19:00\u201321:00",
+      "prep_date": "2026-10-05"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20170109T235749_20170109T235816_014762_01808F_7B6A",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "16PCC",
+        "16PEC"
+      ],
+      "observations": [
+        "marida_16PCC_2017-01-12",
+        "marida_16PEC_2017-01-12"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 64.309,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R018",
+      "scheduled_date": "2026-10-06",
+      "scheduled_block": "19:00\u201321:00",
+      "prep_date": "2026-10-05"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20181216T114533_20181216T114600_025050_02C392_0550",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "16PCC"
+      ],
+      "observations": [
+        "marida_16PCC_2018-12-13"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 67.478,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R019",
+      "scheduled_date": "2026-10-07",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-06"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20181216T114558_20181216T114625_025050_02C392_12CF",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "16PCC"
+      ],
+      "observations": [
+        "marida_16PCC_2018-12-13"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 67.485,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R020",
+      "scheduled_date": "2026-10-07",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-06"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20170224T114518_20170224T114545_015425_019521_64D3",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "16PCC"
+      ],
+      "observations": [
+        "marida_16PCC_2017-02-21"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 67.527,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R021",
+      "scheduled_date": "2026-10-07",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-06"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20170224T114543_20170224T114610_015425_019521_2ED5",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "16PCC"
+      ],
+      "observations": [
+        "marida_16PCC_2017-02-21"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 67.534,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R022",
+      "scheduled_date": "2026-10-07",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-06"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20180918T113716_20180918T113745_023752_02971C_2F2E",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA",
+        "NASA_PlanetScope"
+      ],
+      "areas": [
+        "16PDC",
+        "NASA Marine Debris"
+      ],
+      "observations": [
+        "marida_16PDC_2018-09-19",
+        "nasa_planetscope_20180919_155029_1044"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 28.22,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R023",
+      "scheduled_date": "2026-10-07",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-06"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20200926T235837_20200926T235904_034537_04050D_97F3",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "16PDC"
+      ],
+      "observations": [
+        "marida_16PDC_2020-09-28"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 40.187,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R024",
+      "scheduled_date": "2026-10-07",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "2026-10-06"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20200926T235812_20200926T235839_034537_04050D_3686",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "16PDC"
+      ],
+      "observations": [
+        "marida_16PDC_2020-09-28"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 40.194,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R025",
+      "scheduled_date": "2026-10-07",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "2026-10-06"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20181031T235824_20181031T235851_024387_02ABCE_8A7F",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "16PDC"
+      ],
+      "observations": [
+        "marida_16PDC_2018-11-03"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 64.269,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R026",
+      "scheduled_date": "2026-10-07",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "2026-10-06"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20181031T235759_20181031T235826_024387_02ABCE_2AF4",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "16PDC"
+      ],
+      "observations": [
+        "marida_16PDC_2018-11-03"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 64.276,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R027",
+      "scheduled_date": "2026-10-07",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "2026-10-06"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20190111T235822_20190111T235849_025437_02D177_4D98",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "16PEC"
+      ],
+      "observations": [
+        "marida_16PEC_2019-01-12"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 16.302,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R028",
+      "scheduled_date": "2026-10-07",
+      "scheduled_block": "19:00\u201321:00",
+      "prep_date": "2026-10-06"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20190111T235757_20190111T235824_025437_02D177_7CEB",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "16PEC"
+      ],
+      "observations": [
+        "marida_16PEC_2019-01-12"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 16.309,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R029",
+      "scheduled_date": "2026-10-07",
+      "scheduled_block": "19:00\u201321:00",
+      "prep_date": "2026-10-06"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20180310T113706_20180310T113736_020952_023F65_5F7F",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "16PEC",
+        "16QED"
+      ],
+      "observations": [
+        "marida_16PEC_2018-03-08",
+        "marida_16QED_2018-03-08"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 47.618,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R030",
+      "scheduled_date": "2026-10-08",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-07"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20180214T113734_20180214T113802_020602_02344F_9E31",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "16PEC"
+      ],
+      "observations": [
+        "marida_16PEC_2018-02-16"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 52.602,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R031",
+      "scheduled_date": "2026-10-08",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-07"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20180214T113706_20180214T113736_020602_02344F_F816",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "16PEC"
+      ],
+      "observations": [
+        "marida_16PEC_2018-02-16"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 52.61,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R032",
+      "scheduled_date": "2026-10-08",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-07"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20180305T235814_20180305T235841_020887_023D47_F0AD",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "16PEC",
+        "16QED"
+      ],
+      "observations": [
+        "marida_16PEC_2018-03-08",
+        "marida_16QED_2018-03-08"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 60.029,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R033",
+      "scheduled_date": "2026-10-08",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-07"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20180305T235749_20180305T235816_020887_023D47_BD35",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "16PEC",
+        "16QED"
+      ],
+      "observations": [
+        "marida_16PEC_2018-03-08",
+        "marida_16QED_2018-03-08"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 60.036,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R034",
+      "scheduled_date": "2026-10-08",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-07"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20190128T113713_20190128T113743_025677_02DA37_E9F7",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "16QED"
+      ],
+      "observations": [
+        "marida_16QED_2019-01-27"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 19.359,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R035",
+      "scheduled_date": "2026-10-08",
+      "scheduled_block": "19:00\u201321:00",
+      "prep_date": "2026-10-07"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20200319T230120_20200319T230148_031751_03A974_084C",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "18QWF",
+        "18QYF"
+      ],
+      "observations": [
+        "marida_18QWF_2020-03-22",
+        "marida_18QYF_2020-03-19"
+      ],
+      "roles": [
+        "after",
+        "before"
+      ],
+      "time_gap_h": 7.577,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R036",
+      "scheduled_date": "2026-10-08",
+      "scheduled_block": "19:00\u201321:00",
+      "prep_date": "2026-10-07"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20200324T230918_20200324T230945_031824_03AC13_825A",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "18QWF"
+      ],
+      "observations": [
+        "marida_18QWF_2020-03-22"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 55.549,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R037",
+      "scheduled_date": "2026-10-09",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-08"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20200915T230129_20200915T230157_034376_03FF59_A9F7",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "18QYF"
+      ],
+      "observations": [
+        "marida_18QYF_2020-09-15"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 7.58,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R038",
+      "scheduled_date": "2026-10-09",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-08"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20201213T103930_20201213T103957_035666_042C30_A1B7",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "18QYF"
+      ],
+      "observations": [
+        "marida_18QYF_2020-12-14"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 28.786,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R039",
+      "scheduled_date": "2026-10-09",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-08"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20201213T103905_20201213T103933_035666_042C30_CF3A",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "18QYF"
+      ],
+      "observations": [
+        "marida_18QYF_2020-12-14"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 28.793,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R040",
+      "scheduled_date": "2026-10-09",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-08"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20201021T230129_20201021T230157_034901_0411BE_0FC7",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "18QYF"
+      ],
+      "observations": [
+        "marida_18QYF_2020-10-20"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 31.581,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R041",
+      "scheduled_date": "2026-10-09",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-08"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20210101T230127_20210101T230155_035951_04360B_049E",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "18QYF"
+      ],
+      "observations": [
+        "marida_18QYF_2021-01-03"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 40.421,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R042",
+      "scheduled_date": "2026-10-09",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "2026-10-08"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20201220T230128_20201220T230156_035776_042FF7_E623",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "18QYF"
+      ],
+      "observations": [
+        "marida_18QYF_2020-12-22"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 40.581,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R043",
+      "scheduled_date": "2026-10-09",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "2026-10-08"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20210125T230126_20210125T230154_036301_04424B_8308",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "18QYF"
+      ],
+      "observations": [
+        "marida_18QYF_2021-01-23"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 55.579,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R044",
+      "scheduled_date": "2026-10-09",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "2026-10-08"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20201126T230129_20201126T230157_035426_0423E6_EF0A",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "18QYF"
+      ],
+      "observations": [
+        "marida_18QYF_2020-11-29"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 64.419,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R045",
+      "scheduled_date": "2026-10-09",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "2026-10-08"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20200307T230120_20200307T230148_031576_03A353_2F7C",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "18QYG"
+      ],
+      "observations": [
+        "marida_18QYG_2020-03-07"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 11.022,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R046",
+      "scheduled_date": "2026-10-09",
+      "scheduled_block": "19:00\u201321:00",
+      "prep_date": "2026-10-08"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20200307T230145_20200307T230212_031576_03A353_A3DE",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "18QYG"
+      ],
+      "observations": [
+        "marida_18QYG_2020-03-07"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 11.029,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R047",
+      "scheduled_date": "2026-10-09",
+      "scheduled_block": "19:00\u201321:00",
+      "prep_date": "2026-10-08"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20200305T104723_20200305T104749_031539_03A224_F776",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "18QYG"
+      ],
+      "observations": [
+        "marida_18QYG_2020-03-07"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 49.21,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R048",
+      "scheduled_date": "2026-10-12",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-09"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20200305T104657_20200305T104725_031539_03A224_FBCB",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "18QYG"
+      ],
+      "observations": [
+        "marida_18QYG_2020-03-07"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 49.218,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R049",
+      "scheduled_date": "2026-10-12",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-09"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20180420T175048_20180420T175115_021554_02524F_11F3",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "30VWH"
+      ],
+      "observations": [
+        "marida_30VWH_2018-04-20"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 6.491,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R050",
+      "scheduled_date": "2026-10-12",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-09"
+    },
+    {
+      "granule": "S1B_IW_SLC__1SDV_20180419T175807_20180419T175834_010556_0133F9_F753",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "30VWH"
+      ],
+      "observations": [
+        "marida_30VWH_2018-04-20"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 17.387,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R051",
+      "scheduled_date": "2026-10-12",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-09"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20190421T163748_20190421T163815_026890_030629_DE32",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "36JUN"
+      ],
+      "observations": [
+        "marida_36JUN_2019-04-24"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 62.975,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R052",
+      "scheduled_date": "2026-10-12",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-09"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20190527T223319_20190527T223347_027419_0317D5_BA50",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "48MXU"
+      ],
+      "observations": [
+        "marida_48MXU_2019-05-25"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 67.624,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R053",
+      "scheduled_date": "2026-10-12",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "2026-10-09"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20190527T223345_20190527T223413_027419_0317D5_8E7E",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "48MXU"
+      ],
+      "observations": [
+        "marida_48MXU_2019-05-25"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 67.632,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R054",
+      "scheduled_date": "2026-10-12",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "2026-10-09"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20171207T111502_20171207T111530_019595_021487_BBD3",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "48MYU"
+      ],
+      "observations": [
+        "marida_48MYU_2017-12-06"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 32.234,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R055",
+      "scheduled_date": "2026-10-12",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "2026-10-09"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20171203T223338_20171203T223406_019544_0212E6_3713",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "48MYU"
+      ],
+      "observations": [
+        "marida_48MYU_2017-12-06"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 52.456,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R056",
+      "scheduled_date": "2026-10-12",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "2026-10-09"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20171203T223313_20171203T223341_019544_0212E6_4612",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "48MYU"
+      ],
+      "observations": [
+        "marida_48MYU_2017-12-06"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 52.463,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R057",
+      "scheduled_date": "2026-10-12",
+      "scheduled_block": "19:00\u201321:00",
+      "prep_date": "2026-10-09"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20191124T105634_20191124T105701_030052_036E82_3F33",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "48PZC"
+      ],
+      "observations": [
+        "marida_48PZC_2019-11-24"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 7.765,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R058",
+      "scheduled_date": "2026-10-12",
+      "scheduled_block": "19:00\u201321:00",
+      "prep_date": "2026-10-09"
+    },
+    {
+      "granule": "S1B_IW_SLC__1SDV_20180302T215217_20180302T215252_009858_011D4A_B9BD",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "50LLR"
+      ],
+      "observations": [
+        "marida_50LLR_2018-03-04"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 28.395,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R059",
+      "scheduled_date": "2026-10-13",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-12"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20180305T104110_20180305T104140_020878_023D06_07A9",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "50LLR"
+      ],
+      "observations": [
+        "marida_50LLR_2018-03-04"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 32.42,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R060",
+      "scheduled_date": "2026-10-13",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-12"
+    },
+    {
+      "granule": "S1B_IW_SLC__1SDV_20190516T100609_20190516T100636_016268_01E9DC_EE45",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "51PTS"
+      ],
+      "observations": [
+        "marida_51PTS_2019-05-18"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 40.167,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R061",
+      "scheduled_date": "2026-10-13",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-12"
+    },
+    {
+      "granule": "S1B_IW_SLC__1SDV_20190516T100545_20190516T100611_016268_01E9DC_427C",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "51PTS"
+      ],
+      "observations": [
+        "marida_51PTS_2019-05-18"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 40.173,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R062",
+      "scheduled_date": "2026-10-13",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-12"
+    },
+    {
+      "granule": "S1B_IW_SLC__1SDV_20181006T212352_20181006T212427_013037_018158_17E9",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "MARIDA"
+      ],
+      "areas": [
+        "52SDD"
+      ],
+      "observations": [
+        "marida_52SDD_2018-10-07"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 14.602,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R063",
+      "scheduled_date": "2026-10-13",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-12"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20180417T061703_20180417T061730_021503_0250BC_1820",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Jamila_Floating_Debris"
+      ],
+      "areas": [
+        "biscay_20180419"
+      ],
+      "observations": [
+        "jamila_floating_debris_biscay_20180419"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 52.716,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R064",
+      "scheduled_date": "2026-10-13",
+      "scheduled_block": "19:00\u201321:00",
+      "prep_date": "2026-10-12"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20180417T061638_20180417T061705_021503_0250BC_6CFA",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Jamila_Floating_Debris"
+      ],
+      "areas": [
+        "biscay_20180419"
+      ],
+      "observations": [
+        "jamila_floating_debris_biscay_20180419"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 52.723,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R065",
+      "scheduled_date": "2026-10-13",
+      "scheduled_block": "19:00\u201321:00",
+      "prep_date": "2026-10-12"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20180711T225836_20180711T225903_022753_027755_DA41",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Jamila_Floating_Debris"
+      ],
+      "areas": [
+        "kentpointfarm_20180710"
+      ],
+      "observations": [
+        "jamila_floating_debris_kentpointfarm_20180710"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 35.977,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R066",
+      "scheduled_date": "2026-10-14",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-13"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20181231T180142_20181231T180209_025273_02CB84_4FA7",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Jamila_Floating_Debris"
+      ],
+      "areas": [
+        "lagos_20190101"
+      ],
+      "observations": [
+        "jamila_floating_debris_lagos_20190101"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 17.972,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R067",
+      "scheduled_date": "2026-10-14",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-13"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20200506T180149_20200506T180216_032448_03C1F5_2D1D",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Jamila_Floating_Debris"
+      ],
+      "areas": [
+        "lagos_20200505"
+      ],
+      "observations": [
+        "jamila_floating_debris_lagos_20200505"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 31.03,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R068",
+      "scheduled_date": "2026-10-14",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-13"
+    },
+    {
+      "granule": "S1B_IW_SLC__1SDV_20180613T174848_20180613T174916_011358_014DB0_D584",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Jamila_Floating_Debris"
+      ],
+      "areas": [
+        "london_20180611"
+      ],
+      "observations": [
+        "jamila_floating_debris_london_20180611"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 54.813,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R069",
+      "scheduled_date": "2026-10-14",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-13"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20181102T224536_20181102T224603_024415_02ACCD_518F",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Jamila_Floating_Debris"
+      ],
+      "areas": [
+        "longxuyen_20181102"
+      ],
+      "observations": [
+        "jamila_floating_debris_longxuyen_20181102"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 10.76,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R070",
+      "scheduled_date": "2026-10-14",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-13"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20190426T110621_20190426T110651_026960_0308C0_B39F",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Jamila_Floating_Debris"
+      ],
+      "areas": [
+        "panama_20190425"
+      ],
+      "observations": [
+        "jamila_floating_debris_panama_20190425"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 24.106,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R071",
+      "scheduled_date": "2026-10-14",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "2026-10-13"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20180530T165304_20180530T165332_022136_0264C5_57B3",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Jamila_Floating_Debris"
+      ],
+      "areas": [
+        "portalfredSouthAfrica_20180601"
+      ],
+      "observations": [
+        "jamila_floating_debris_portalfredSouthAfrica_20180601"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 42.116,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R072",
+      "scheduled_date": "2026-10-14",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "2026-10-13"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20180530T165236_20180530T165306_022136_0264C5_5103",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Jamila_Floating_Debris"
+      ],
+      "areas": [
+        "portalfredSouthAfrica_20180601"
+      ],
+      "observations": [
+        "jamila_floating_debris_portalfredSouthAfrica_20180601"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 42.123,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R073",
+      "scheduled_date": "2026-10-14",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "2026-10-13"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20180802T135244_20180802T135311_023068_028123_A301",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Jamila_Floating_Debris"
+      ],
+      "areas": [
+        "sandiego_20180804"
+      ],
+      "observations": [
+        "jamila_floating_debris_sandiego_20180804"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 45.121,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R074",
+      "scheduled_date": "2026-10-14",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "2026-10-13"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20190617T095419_20190617T095447_027718_0320F1_8F93",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Jamila_Floating_Debris"
+      ],
+      "areas": [
+        "shengsi_20190615"
+      ],
+      "observations": [
+        "jamila_floating_debris_shengsi_20190615"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 46.905,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R075",
+      "scheduled_date": "2026-10-14",
+      "scheduled_block": "19:00\u201321:00",
+      "prep_date": "2026-10-13"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20190617T095445_20190617T095512_027718_0320F1_ACD6",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Jamila_Floating_Debris"
+      ],
+      "areas": [
+        "shengsi_20190615"
+      ],
+      "observations": [
+        "jamila_floating_debris_shengsi_20190615"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 46.913,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R076",
+      "scheduled_date": "2026-10-14",
+      "scheduled_block": "19:00\u201321:00",
+      "prep_date": "2026-10-13"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20200404T155618_20200404T155645_031980_03B190_71E6",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Jamila_Floating_Debris"
+      ],
+      "areas": [
+        "suez_20200403"
+      ],
+      "observations": [
+        "jamila_floating_debris_suez_20200403"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 28.938,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R077",
+      "scheduled_date": "2026-10-15",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-14"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20200404T155643_20200404T155710_031980_03B190_20B2",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Jamila_Floating_Debris"
+      ],
+      "areas": [
+        "suez_20200403"
+      ],
+      "observations": [
+        "jamila_floating_debris_suez_20200403"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 28.945,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R078",
+      "scheduled_date": "2026-10-15",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-14"
+    },
+    {
+      "granule": "S1B_IW_SLC__1SDV_20180128T220352_20180128T220419_009377_010D78_7518",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Jamila_Floating_Debris"
+      ],
+      "areas": [
+        "tangshan_20180130"
+      ],
+      "observations": [
+        "jamila_floating_debris_tangshan_20180130"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 37.936,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R079",
+      "scheduled_date": "2026-10-15",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-14"
+    },
+    {
+      "granule": "S1B_IW_SLC__1SDV_20180716T171912_20180716T171939_011839_015CA0_7ADE",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Jamila_Floating_Debris"
+      ],
+      "areas": [
+        "tunisia_20180715"
+      ],
+      "observations": [
+        "jamila_floating_debris_tunisia_20180715"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 30.32,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R080",
+      "scheduled_date": "2026-10-15",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-14"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20180630T170626_20180630T170653_022589_02727A_F0C9",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Jamila_Floating_Debris"
+      ],
+      "areas": [
+        "venice_20180630"
+      ],
+      "observations": [
+        "jamila_floating_debris_venice_20180630"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 6.107,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R081",
+      "scheduled_date": "2026-10-15",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-14"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20180629T051852_20180629T051919_022567_0271CF_EE7D",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Jamila_Floating_Debris"
+      ],
+      "areas": [
+        "venice_20180630"
+      ],
+      "observations": [
+        "jamila_floating_debris_venice_20180630"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 29.686,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R082",
+      "scheduled_date": "2026-10-15",
+      "scheduled_block": "19:00\u201321:00",
+      "prep_date": "2026-10-14"
+    },
+    {
+      "granule": "S1B_IW_SLC__1SDV_20180927T051820_20180927T051847_012896_017D0E_5078",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Jamila_Floating_Debris"
+      ],
+      "areas": [
+        "venice_20180928"
+      ],
+      "observations": [
+        "jamila_floating_debris_venice_20180928"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 29.694,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R083",
+      "scheduled_date": "2026-10-15",
+      "scheduled_block": "19:00\u201321:00",
+      "prep_date": "2026-10-14"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20180929T165813_20180929T165840_023916_029C64_EDCF",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Jamila_Floating_Debris"
+      ],
+      "areas": [
+        "venice_20180928"
+      ],
+      "observations": [
+        "jamila_floating_debris_venice_20180928"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 29.97,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R084",
+      "scheduled_date": "2026-10-16",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-15"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20180929T165838_20180929T165905_023916_029C64_E479",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Jamila_Floating_Debris"
+      ],
+      "areas": [
+        "venice_20180928"
+      ],
+      "observations": [
+        "jamila_floating_debris_venice_20180928"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 29.977,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R085",
+      "scheduled_date": "2026-10-16",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-15"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20170322T112901_20170322T112931_015804_01A07E_E746",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "NASA_PlanetScope"
+      ],
+      "areas": [
+        "NASA Marine Debris"
+      ],
+      "observations": [
+        "nasa_planetscope_20170322_153132_0e0f",
+        "nasa_planetscope_20170323_152750_0e20"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 4.042,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R086",
+      "scheduled_date": "2026-10-16",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-15"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20180607T160715_20180607T160742_022253_02686F_1B45",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "NASA_PlanetScope"
+      ],
+      "areas": [
+        "NASA Marine Debris"
+      ],
+      "observations": [
+        "nasa_planetscope_20180607_082852_1012"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 7.64,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R087",
+      "scheduled_date": "2026-10-16",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-15"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20181124T235823_20181124T235850_024737_02B8A0_9853",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "NASA_PlanetScope"
+      ],
+      "areas": [
+        "NASA Marine Debris"
+      ],
+      "observations": [
+        "nasa_planetscope_20181124_155713_1049",
+        "nasa_planetscope_20181124_155714_1049",
+        "nasa_planetscope_20181124_155715_1049",
+        "nasa_planetscope_20181124_155716_1049"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 8.019,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R088",
+      "scheduled_date": "2026-10-16",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-15"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20181025T000626_20181025T000653_024285_02A86D_2AFA",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "NASA_PlanetScope"
+      ],
+      "areas": [
+        "NASA Marine Debris"
+      ],
+      "observations": [
+        "nasa_planetscope_20181022_155659_101e",
+        "nasa_planetscope_20181023_155746_0f34",
+        "nasa_planetscope_20181023_155747_0f34",
+        "nasa_planetscope_20181024_160201_0f3b",
+        "nasa_planetscope_20181024_160202_0f3b"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 8.073,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R089",
+      "scheduled_date": "2026-10-16",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "2026-10-15"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20170825T235816_20170825T235843_018087_01E5F9_252D",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "NASA_PlanetScope"
+      ],
+      "areas": [
+        "NASA Marine Debris"
+      ],
+      "observations": [
+        "nasa_planetscope_20170826_154046_100c",
+        "nasa_planetscope_20170826_154047_100c"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 15.708,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R090",
+      "scheduled_date": "2026-10-16",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "2026-10-15"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20170825T235751_20170825T235818_018087_01E5F9_D3CA",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "NASA_PlanetScope"
+      ],
+      "areas": [
+        "NASA Marine Debris"
+      ],
+      "observations": [
+        "nasa_planetscope_20170826_154046_100c",
+        "nasa_planetscope_20170826_154047_100c"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 15.715,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R091",
+      "scheduled_date": "2026-10-16",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "2026-10-15"
+    },
+    {
+      "granule": "S1B_IW_SLC__1SDV_20180606T161440_20180606T161507_011255_014A7F_B0DC",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "NASA_PlanetScope"
+      ],
+      "areas": [
+        "NASA Marine Debris"
+      ],
+      "observations": [
+        "nasa_planetscope_20180607_082852_1012"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 16.237,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R092",
+      "scheduled_date": "2026-10-16",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "2026-10-15"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20170928T114527_20170928T114554_018575_01F501_6D3A",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "NASA_PlanetScope"
+      ],
+      "areas": [
+        "NASA Marine Debris"
+      ],
+      "observations": [
+        "nasa_planetscope_20170927_154610_0e14",
+        "nasa_planetscope_20170927_154611_0e14"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 19.988,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R093",
+      "scheduled_date": "2026-10-16",
+      "scheduled_block": "19:00\u201321:00",
+      "prep_date": "2026-10-15"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20170327T113700_20170327T113730_015877_01A2B2_6471",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "NASA_PlanetScope"
+      ],
+      "areas": [
+        "NASA Marine Debris"
+      ],
+      "observations": [
+        "nasa_planetscope_20170326_153233_0e26",
+        "nasa_planetscope_20170326_153234_0e26",
+        "nasa_planetscope_20170326_153239_0e26"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 20.073,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R094",
+      "scheduled_date": "2026-10-16",
+      "scheduled_block": "19:00\u201321:00",
+      "prep_date": "2026-10-15"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20170226T235808_20170226T235835_015462_019635_27A8",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "NASA_PlanetScope"
+      ],
+      "areas": [
+        "NASA Marine Debris"
+      ],
+      "observations": [
+        "nasa_planetscope_20170227_203307_0c37",
+        "nasa_planetscope_20170227_203600_1",
+        "nasa_planetscope_20170227_203601_0c46"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 20.583,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R095",
+      "scheduled_date": "2026-10-19",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-16"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20170226T235743_20170226T235810_015462_019635_9564",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "NASA_PlanetScope"
+      ],
+      "areas": [
+        "NASA Marine Debris"
+      ],
+      "observations": [
+        "nasa_planetscope_20170227_203600_1",
+        "nasa_planetscope_20170227_203601_0c46"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 20.638,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R096",
+      "scheduled_date": "2026-10-19",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-16"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20181214T034348_20181214T034415_025016_02C244_FD6C",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "NASA_PlanetScope"
+      ],
+      "areas": [
+        "NASA Marine Debris"
+      ],
+      "observations": [
+        "nasa_planetscope_20181215_075902_103e"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 28.254,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R097",
+      "scheduled_date": "2026-10-19",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-16"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20180226T113706_20180226T113736_020777_0239E5_1314",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "NASA_PlanetScope"
+      ],
+      "areas": [
+        "NASA Marine Debris"
+      ],
+      "observations": [
+        "nasa_planetscope_20180224_153958_0f1b",
+        "nasa_planetscope_20180224_153959_0f1b",
+        "nasa_planetscope_20180224_162902_0f2b"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 43.134,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R098",
+      "scheduled_date": "2026-10-19",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-16"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20171017T113709_20171017T113739_018852_01FD74_F01C",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "NASA_PlanetScope"
+      ],
+      "areas": [
+        "NASA Marine Debris"
+      ],
+      "observations": [
+        "nasa_planetscope_20171015_153720_100c"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 43.997,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R099",
+      "scheduled_date": "2026-10-19",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-16"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20181122T114534_20181122T114601_024700_02B757_C38C",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "NASA_PlanetScope"
+      ],
+      "areas": [
+        "NASA Marine Debris"
+      ],
+      "observations": [
+        "nasa_planetscope_20181124_155713_1049",
+        "nasa_planetscope_20181124_155714_1049",
+        "nasa_planetscope_20181124_155715_1049",
+        "nasa_planetscope_20181124_155716_1049"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 52.194,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R100",
+      "scheduled_date": "2026-10-19",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "2026-10-16"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20190420T161528_20190420T161555_026876_0305AB_1543",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "NASA_PlanetScope"
+      ],
+      "areas": [
+        "NASA Marine Debris"
+      ],
+      "observations": [
+        "nasa_planetscope_20190418_074358_0f3c"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 56.525,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R101",
+      "scheduled_date": "2026-10-19",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "2026-10-16"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20161005T235752_20161005T235819_013362_015506_6040",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "NASA_PlanetScope"
+      ],
+      "areas": [
+        "NASA Marine Debris"
+      ],
+      "observations": [
+        "nasa_planetscope_20161008_153104_0e3a",
+        "nasa_planetscope_20161008_153105_0e3a"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 63.553,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R102",
+      "scheduled_date": "2026-10-19",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "2026-10-16"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20190415T160718_20190415T160745_026803_03031C_CFBC",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "NASA_PlanetScope"
+      ],
+      "areas": [
+        "NASA Marine Debris"
+      ],
+      "observations": [
+        "nasa_planetscope_20190418_074358_0f3c"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 63.611,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R103",
+      "scheduled_date": "2026-10-19",
+      "scheduled_block": "14:00\u201317:00",
+      "prep_date": "2026-10-16"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20171012T235817_20171012T235844_018787_01FB66_2AB4",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "NASA_PlanetScope"
+      ],
+      "areas": [
+        "NASA Marine Debris"
+      ],
+      "observations": [
+        "nasa_planetscope_20171015_153720_100c"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 63.651,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R104",
+      "scheduled_date": "2026-10-19",
+      "scheduled_block": "19:00\u201321:00",
+      "prep_date": "2026-10-16"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20171012T235753_20171012T235820_018787_01FB66_F901",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "NASA_PlanetScope"
+      ],
+      "areas": [
+        "NASA Marine Debris"
+      ],
+      "observations": [
+        "nasa_planetscope_20171015_153720_100c"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 63.657,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R105",
+      "scheduled_date": "2026-10-19",
+      "scheduled_block": "19:00\u201321:00",
+      "prep_date": "2026-10-16"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20181019T235824_20181019T235851_024212_02A61B_5E38",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "NASA_PlanetScope"
+      ],
+      "areas": [
+        "NASA Marine Debris"
+      ],
+      "observations": [
+        "nasa_planetscope_20181022_155353_100a",
+        "nasa_planetscope_20181022_155659_101e"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 63.925,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R106",
+      "scheduled_date": "2026-10-20",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-19"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20181019T235759_20181019T235826_024212_02A61B_13F2",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "NASA_PlanetScope"
+      ],
+      "areas": [
+        "NASA Marine Debris"
+      ],
+      "observations": [
+        "nasa_planetscope_20181022_155353_100a",
+        "nasa_planetscope_20181022_155659_101e"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 63.932,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R107",
+      "scheduled_date": "2026-10-20",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-19"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20171010T114528_20171010T114555_018750_01FA56_DC8A",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "NASA_PlanetScope"
+      ],
+      "areas": [
+        "NASA Marine Debris"
+      ],
+      "observations": [
+        "nasa_planetscope_20171007_161314_1",
+        "nasa_planetscope_20171007_161315_0c65"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 67.537,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R108",
+      "scheduled_date": "2026-10-20",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-19"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20240705T160746_20240705T160813_054628_06A662_95B9",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Greece_Sentinel2"
+      ],
+      "areas": [
+        "Greece PLP"
+      ],
+      "observations": [
+        "greece_sentinel2_S2A_MSIL2A_20240705T085601_N0510_R007_T35SMD_20240705T131959"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 7.196,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R109",
+      "scheduled_date": "2026-10-20",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-19"
+    },
+    {
+      "granule": "S1B_IW_SLC__1SDV_20210626T161500_20210626T161527_027530_03494A_A037",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Greece_Sentinel2"
+      ],
+      "areas": [
+        "Greece PLP"
+      ],
+      "observations": [
+        "greece_sentinel2_S2B_MSIL1C_20210626T085559_N0500_R007_T35SMD_20230318T094507"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 7.317,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R110",
+      "scheduled_date": "2026-10-20",
+      "scheduled_block": "09:00\u201313:00",
+      "prep_date": "2026-10-19"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20240629T041520_20240629T041547_054533_06A303_E4CF",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Greece_Sentinel2"
+      ],
+      "areas": [
+        "Greece PLP"
+      ],
+      "observations": [
+        "greece_sentinel2_S2B_MSIL2A_20240630T085559_N0510_R007_T35SMD_20240630T105345"
+      ],
+      "roles": [
+        "before"
+      ],
+      "time_gap_h": 28.677,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R111",
+      "scheduled_date": "2026-10-20",
+      "scheduled_block": "19:00\u201321:00",
+      "prep_date": "2026-10-19"
+    },
+    {
+      "granule": "S1A_IW_SLC__1SDV_20210702T161544_20210702T161611_038601_048E08_CDF5",
+      "global_target": true,
+      "sa_target": false,
+      "sources": [
+        "Greece_Sentinel2"
+      ],
+      "areas": [
+        "Greece PLP"
+      ],
+      "observations": [
+        "greece_sentinel2_S2A_MSIL2A_20210701T085601_N0500_R007_T35SMD_20230222T113007"
+      ],
+      "roles": [
+        "after"
+      ],
+      "time_gap_h": 31.329,
+      "local_tasks": [],
+      "local_batches": [],
+      "alias": "R112",
+      "scheduled_date": "2026-10-20",
+      "scheduled_block": "19:00\u201321:00",
+      "prep_date": "2026-10-19"
+    }
+  ],
+  "calendar_days": [
+    {
+      "date": "2026-09-30",
+      "weekday": "Wed",
+      "meeting_day": false,
+      "masters_day": true,
+      "next_workday": "2026-10-01",
+      "prep_aliases": [],
+      "blocks": {
+        "09:00\u201313:00": [
+          "L01",
+          "L02"
+        ],
+        "14:00\u201317:00": [
+          "L03",
+          "L04",
+          "L05"
+        ],
+        "19:00\u201321:00": [
+          "L06"
+        ]
+      }
+    },
+    {
+      "date": "2026-10-01",
+      "weekday": "Thu",
+      "meeting_day": true,
+      "masters_day": true,
+      "next_workday": "2026-10-02",
+      "prep_aliases": [],
+      "blocks": {
+        "09:00\u201313:00": [
+          "L07",
+          "L08"
+        ],
+        "14:00\u201317:00": [],
+        "19:00\u201321:00": [
+          "L09",
+          "L10"
+        ]
+      }
+    },
+    {
+      "date": "2026-10-02",
+      "weekday": "Fri",
+      "meeting_day": false,
+      "masters_day": true,
+      "next_workday": "2026-10-05",
+      "prep_aliases": [
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R005",
+        "R006",
+        "R007",
+        "R008",
+        "R009",
+        "R010",
+        "R011"
+      ],
+      "blocks": {
+        "09:00\u201313:00": [
+          "L11",
+          "L12",
+          "L13"
+        ],
+        "14:00\u201317:00": [
+          "L14",
+          "L15",
+          "L16"
+        ],
+        "19:00\u201321:00": [
+          "L17"
+        ]
+      }
+    },
+    {
+      "date": "2026-10-03",
+      "weekday": "Sat",
+      "meeting_day": false,
+      "masters_day": false,
+      "next_workday": "2026-10-05",
+      "prep_aliases": [],
+      "blocks": {
+        "09:00\u201313:00": [],
+        "14:00\u201317:00": [],
+        "19:00\u201321:00": []
+      }
+    },
+    {
+      "date": "2026-10-04",
+      "weekday": "Sun",
+      "meeting_day": false,
+      "masters_day": false,
+      "next_workday": "2026-10-05",
+      "prep_aliases": [],
+      "blocks": {
+        "09:00\u201313:00": [],
+        "14:00\u201317:00": [],
+        "19:00\u201321:00": []
+      }
+    },
+    {
+      "date": "2026-10-05",
+      "weekday": "Mon",
+      "meeting_day": false,
+      "masters_day": true,
+      "next_workday": "2026-10-06",
+      "prep_aliases": [
+        "R012",
+        "R013",
+        "R014",
+        "R015",
+        "R016",
+        "R017",
+        "R018"
+      ],
+      "blocks": {
+        "09:00\u201313:00": [
+          "R001",
+          "R002",
+          "R003",
+          "R004",
+          "R005"
+        ],
+        "14:00\u201317:00": [
+          "R006",
+          "R007",
+          "R008",
+          "R009"
+        ],
+        "19:00\u201321:00": [
+          "R010",
+          "R011"
+        ]
+      }
+    },
+    {
+      "date": "2026-10-06",
+      "weekday": "Tue",
+      "meeting_day": true,
+      "masters_day": true,
+      "next_workday": "2026-10-07",
+      "prep_aliases": [
+        "R019",
+        "R020",
+        "R021",
+        "R022",
+        "R023",
+        "R024",
+        "R025",
+        "R026",
+        "R027",
+        "R028",
+        "R029"
+      ],
+      "blocks": {
+        "09:00\u201313:00": [
+          "R012",
+          "R013",
+          "R014",
+          "R015",
+          "R016"
+        ],
+        "14:00\u201317:00": [],
+        "19:00\u201321:00": [
+          "R017",
+          "R018"
+        ]
+      }
+    },
+    {
+      "date": "2026-10-07",
+      "weekday": "Wed",
+      "meeting_day": false,
+      "masters_day": true,
+      "next_workday": "2026-10-08",
+      "prep_aliases": [
+        "R030",
+        "R031",
+        "R032",
+        "R033",
+        "R034",
+        "R035",
+        "R036"
+      ],
+      "blocks": {
+        "09:00\u201313:00": [
+          "R019",
+          "R020",
+          "R021",
+          "R022",
+          "R023"
+        ],
+        "14:00\u201317:00": [
+          "R024",
+          "R025",
+          "R026",
+          "R027"
+        ],
+        "19:00\u201321:00": [
+          "R028",
+          "R029"
+        ]
+      }
+    },
+    {
+      "date": "2026-10-08",
+      "weekday": "Thu",
+      "meeting_day": true,
+      "masters_day": true,
+      "next_workday": "2026-10-09",
+      "prep_aliases": [
+        "R037",
+        "R038",
+        "R039",
+        "R040",
+        "R041",
+        "R042",
+        "R043",
+        "R044",
+        "R045",
+        "R046",
+        "R047"
+      ],
+      "blocks": {
+        "09:00\u201313:00": [
+          "R030",
+          "R031",
+          "R032",
+          "R033",
+          "R034"
+        ],
+        "14:00\u201317:00": [],
+        "19:00\u201321:00": [
+          "R035",
+          "R036"
+        ]
+      }
+    },
+    {
+      "date": "2026-10-09",
+      "weekday": "Fri",
+      "meeting_day": false,
+      "masters_day": true,
+      "next_workday": "2026-10-12",
+      "prep_aliases": [
+        "R048",
+        "R049",
+        "R050",
+        "R051",
+        "R052",
+        "R053",
+        "R054",
+        "R055",
+        "R056",
+        "R057",
+        "R058"
+      ],
+      "blocks": {
+        "09:00\u201313:00": [
+          "R037",
+          "R038",
+          "R039",
+          "R040",
+          "R041"
+        ],
+        "14:00\u201317:00": [
+          "R042",
+          "R043",
+          "R044",
+          "R045"
+        ],
+        "19:00\u201321:00": [
+          "R046",
+          "R047"
+        ]
+      }
+    },
+    {
+      "date": "2026-10-10",
+      "weekday": "Sat",
+      "meeting_day": false,
+      "masters_day": false,
+      "next_workday": "2026-10-12",
+      "prep_aliases": [],
+      "blocks": {
+        "09:00\u201313:00": [],
+        "14:00\u201317:00": [],
+        "19:00\u201321:00": []
+      }
+    },
+    {
+      "date": "2026-10-11",
+      "weekday": "Sun",
+      "meeting_day": false,
+      "masters_day": false,
+      "next_workday": "2026-10-12",
+      "prep_aliases": [],
+      "blocks": {
+        "09:00\u201313:00": [],
+        "14:00\u201317:00": [],
+        "19:00\u201321:00": []
+      }
+    },
+    {
+      "date": "2026-10-12",
+      "weekday": "Mon",
+      "meeting_day": false,
+      "masters_day": true,
+      "next_workday": "2026-10-13",
+      "prep_aliases": [
+        "R059",
+        "R060",
+        "R061",
+        "R062",
+        "R063",
+        "R064",
+        "R065"
+      ],
+      "blocks": {
+        "09:00\u201313:00": [
+          "R048",
+          "R049",
+          "R050",
+          "R051",
+          "R052"
+        ],
+        "14:00\u201317:00": [
+          "R053",
+          "R054",
+          "R055",
+          "R056"
+        ],
+        "19:00\u201321:00": [
+          "R057",
+          "R058"
+        ]
+      }
+    },
+    {
+      "date": "2026-10-13",
+      "weekday": "Tue",
+      "meeting_day": true,
+      "masters_day": true,
+      "next_workday": "2026-10-14",
+      "prep_aliases": [
+        "R066",
+        "R067",
+        "R068",
+        "R069",
+        "R070",
+        "R071",
+        "R072",
+        "R073",
+        "R074",
+        "R075",
+        "R076"
+      ],
+      "blocks": {
+        "09:00\u201313:00": [
+          "R059",
+          "R060",
+          "R061",
+          "R062",
+          "R063"
+        ],
+        "14:00\u201317:00": [],
+        "19:00\u201321:00": [
+          "R064",
+          "R065"
+        ]
+      }
+    },
+    {
+      "date": "2026-10-14",
+      "weekday": "Wed",
+      "meeting_day": false,
+      "masters_day": true,
+      "next_workday": "2026-10-15",
+      "prep_aliases": [
+        "R077",
+        "R078",
+        "R079",
+        "R080",
+        "R081",
+        "R082",
+        "R083"
+      ],
+      "blocks": {
+        "09:00\u201313:00": [
+          "R066",
+          "R067",
+          "R068",
+          "R069",
+          "R070"
+        ],
+        "14:00\u201317:00": [
+          "R071",
+          "R072",
+          "R073",
+          "R074"
+        ],
+        "19:00\u201321:00": [
+          "R075",
+          "R076"
+        ]
+      }
+    },
+    {
+      "date": "2026-10-15",
+      "weekday": "Thu",
+      "meeting_day": true,
+      "masters_day": true,
+      "next_workday": "2026-10-16",
+      "prep_aliases": [
+        "R084",
+        "R085",
+        "R086",
+        "R087",
+        "R088",
+        "R089",
+        "R090",
+        "R091",
+        "R092",
+        "R093",
+        "R094"
+      ],
+      "blocks": {
+        "09:00\u201313:00": [
+          "R077",
+          "R078",
+          "R079",
+          "R080",
+          "R081"
+        ],
+        "14:00\u201317:00": [],
+        "19:00\u201321:00": [
+          "R082",
+          "R083"
+        ]
+      }
+    },
+    {
+      "date": "2026-10-16",
+      "weekday": "Fri",
+      "meeting_day": false,
+      "masters_day": true,
+      "next_workday": "2026-10-19",
+      "prep_aliases": [
+        "R095",
+        "R096",
+        "R097",
+        "R098",
+        "R099",
+        "R100",
+        "R101",
+        "R102",
+        "R103",
+        "R104",
+        "R105"
+      ],
+      "blocks": {
+        "09:00\u201313:00": [
+          "R084",
+          "R085",
+          "R086",
+          "R087",
+          "R088"
+        ],
+        "14:00\u201317:00": [
+          "R089",
+          "R090",
+          "R091",
+          "R092"
+        ],
+        "19:00\u201321:00": [
+          "R093",
+          "R094"
+        ]
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "weekday": "Sat",
+      "meeting_day": false,
+      "masters_day": false,
+      "next_workday": "2026-10-19",
+      "prep_aliases": [],
+      "blocks": {
+        "09:00\u201313:00": [],
+        "14:00\u201317:00": [],
+        "19:00\u201321:00": []
+      }
+    },
+    {
+      "date": "2026-10-18",
+      "weekday": "Sun",
+      "meeting_day": false,
+      "masters_day": false,
+      "next_workday": "2026-10-19",
+      "prep_aliases": [],
+      "blocks": {
+        "09:00\u201313:00": [],
+        "14:00\u201317:00": [],
+        "19:00\u201321:00": []
+      }
+    },
+    {
+      "date": "2026-10-19",
+      "weekday": "Mon",
+      "meeting_day": false,
+      "masters_day": true,
+      "next_workday": "2026-10-20",
+      "prep_aliases": [
+        "R106",
+        "R107",
+        "R108",
+        "R109",
+        "R110",
+        "R111",
+        "R112"
+      ],
+      "blocks": {
+        "09:00\u201313:00": [
+          "R095",
+          "R096",
+          "R097",
+          "R098",
+          "R099"
+        ],
+        "14:00\u201317:00": [
+          "R100",
+          "R101",
+          "R102",
+          "R103"
+        ],
+        "19:00\u201321:00": [
+          "R104",
+          "R105"
+        ]
+      }
+    },
+    {
+      "date": "2026-10-20",
+      "weekday": "Tue",
+      "meeting_day": true,
+      "masters_day": true,
+      "next_workday": null,
+      "prep_aliases": [],
+      "blocks": {
+        "09:00\u201313:00": [
+          "R106",
+          "R107",
+          "R108",
+          "R109",
+          "R110"
+        ],
+        "14:00\u201317:00": [],
+        "19:00\u201321:00": [
+          "R111",
+          "R112"
+        ]
+      }
+    }
+  ]
+}

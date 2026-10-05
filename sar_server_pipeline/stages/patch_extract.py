@@ -121,10 +121,16 @@ def discover_scene_manifests(processed_root: Path) -> dict[str, Path]:
 
 
 def feature_files(root: Path) -> Iterator[Path]:
+    # Once a scene-level review exists, older per-observation exports for the
+    # same SAR scene are superseded. Otherwise both would become training
+    # samples even though they describe one physical acquisition.
+    scene_exports = {
+        path.parent for path in root.rglob("scene_annotations.geojson") if path.is_file()
+    }
     patterns = ("*.geojson", "*.json", "*.shp")
     for pattern in patterns:
         for path in sorted(root.rglob(pattern)):
-            if path.is_file():
+            if path.is_file() and (path.parent not in scene_exports or path.name == "scene_annotations.geojson"):
                 yield path
 
 
