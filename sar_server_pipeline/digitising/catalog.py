@@ -28,6 +28,10 @@ RASTER_KEYS = (
     "decomp_alpha",
 )
 
+MANUAL_16PCC_GRANULE = "S1A_IW_SLC__1SDV_20181025T000626_20181025T000653_024285_02A86D_2AFA"
+MANUAL_16PCC_OBSERVATION = "manual_sentinel2_16PCC_2018-10-24"
+MANUAL_16PCC_TIME = "2018-10-24T16:13:31Z"
+
 
 def read_csv(path: Path) -> list[dict[str, str]]:
     if not path.exists():
@@ -146,6 +150,27 @@ def _global_points(catalog_root: Path) -> dict[str, tuple[ReferencePoint, ...]]:
                 reference_kind=reference_kind,
                 seed_eligible=seed_eligible,
                 notes=notes,
+            )
+        )
+    return {key: tuple(value) for key, value in grouped.items()}
+
+
+def _meria_global_points(catalog_root: Path) -> dict[str, tuple[ReferencePoint, ...]]:
+    path = catalog_root / "meria_global_s1_slc" / "MERIA_global_plastic_points.csv"
+    grouped: dict[str, list[ReferencePoint]] = defaultdict(list)
+    for row in read_csv(path):
+        source = (row.get("point_source") or "").strip()
+        is_observation = source != "synthetic_center_plus_100km_cardinals"
+        grouped[row["obs_id"]].append(
+            ReferencePoint(
+                point_id=row["pt_id"],
+                latitude=float(row["lat"]),
+                longitude=float(row["lon"]),
+                reference_kind="meria_global_observation" if is_observation else "aoi_proxy",
+                seed_eligible=is_observation,
+                notes=row.get("notes", "") or (
+                    "Synthetic AOI context point; not a debris observation." if not is_observation else ""
+                ),
             )
         )
     return {key: tuple(value) for key, value in grouped.items()}
@@ -318,6 +343,96 @@ def build_global_tasks(
     return tasks
 
 
+def build_meria_global_tasks(
+    catalog_root: Path,
+    scenes: Iterable[ProcessedScene],
+    *,
+    include_partial: bool = False,
+) -> list[DigitisingTask]:
+    """Use the focused MERIA global match table, not the broad global inventory."""
+
+    matches = read_csv(
+        catalog_root / "meria_global_s1_slc" / "MERIA_global_plastic_nearest_S1_SLC_before_after.csv"
+    )
+    points = _meria_global_points(catalog_root)
+    scene_by_granule = _scene_lookup(scenes)
+    tasks: list[DigitisingTask] = []
+    for row in matches:
+        obs_id = row["obs_id"]
+        optical_start, optical_end = _sa_optical_interval(row.get("planet_acquired", ""), {})
+        for role in ("before", "after"):
+            granule = strip_safe(row.get(f"{role}_name", ""))
+            if not granule or granule == "-":
+                continue
+            coverage = float(row.get(f"{role}_coverage_ratio") or 0)
+            if coverage < 0.999 and not include_partial:
+                continue
+            scene = scene_by_granule.get(granule)
+            if scene is None:
+                continue
+            sar_time = iso_utc(row.get(f"{role}_start", "")) or scene.acquisition_start
+            delta = parse_delta_hours(row.get(f"{role}_delta_h", ""))
+            task_id = slug(f"meria_global_{obs_id}_{role}_{granule.split('_')[5]}")
+            tasks.append(
+                DigitisingTask(
+                    task_id=task_id,
+                    dataset="meria_global",
+                    observation_id=obs_id,
+                    source_dataset="MERIA_Global",
+                    source_group_id=obs_id,
+                    area=row.get("area", ""),
+                    role=role,
+                    optical_time_start=optical_start,
+                    optical_time_end=optical_end,
+                    sar_time=sar_time,
+                    delta_hours=delta,
+                    delta_label=_interval_delta_label(sar_time, optical_start, optical_end),
+                    scene=scene,
+                    reference_points=points.get(obs_id, ()),
+                    notes=f"Legacy MERIA global AOI coverage {coverage:.3f}; {row.get('notes', '')}",
+                )
+            )
+
+    manual_rows = read_csv(
+        catalog_root / "global_s1_slc_inventory" / "manual_s2_16pcc_20181024_candidate_points.csv"
+    )
+    manual_scene = scene_by_granule.get(MANUAL_16PCC_GRANULE)
+    if manual_rows and manual_scene is not None:
+        reference_points = tuple(
+            ReferencePoint(
+                point_id=f"{MANUAL_16PCC_OBSERVATION}_{row['point_id']}",
+                latitude=float(row["lat"]),
+                longitude=float(row["lon"]),
+                reference_kind="manual_s2_candidate_debris",
+                seed_eligible=True,
+                notes="User-selected Sentinel-2 candidate debris point; not confirmed plastic.",
+            )
+            for row in manual_rows
+        )
+        sar_time = manual_scene.acquisition_start
+        delta = (_timestamp(sar_time) - _timestamp(MANUAL_16PCC_TIME)).total_seconds() / 3600
+        tasks.append(
+            DigitisingTask(
+                task_id=slug(f"{MANUAL_16PCC_OBSERVATION}_after_20181025T000626"),
+                dataset="meria_global",
+                observation_id=MANUAL_16PCC_OBSERVATION,
+                source_dataset="Manual_Sentinel2",
+                source_group_id="16PCC/2018-10-24",
+                area="16PCC",
+                role="after",
+                optical_time_start=MANUAL_16PCC_TIME,
+                optical_time_end=MANUAL_16PCC_TIME,
+                sar_time=sar_time,
+                delta_hours=delta,
+                delta_label=delta_label(delta),
+                scene=manual_scene,
+                reference_points=reference_points,
+                notes="85 candidate debris points from Sentinel-2; not confirmed plastic.",
+            )
+        )
+    return tasks
+
+
 def build_task_catalog(
     catalog_root: Path,
     processed_root: Path,
@@ -331,6 +446,8 @@ def build_task_catalog(
         tasks.extend(build_sa_tasks(catalog_root, scenes))
     if dataset in {"all", "global"}:
         tasks.extend(build_global_tasks(catalog_root, scenes, include_partial=include_partial))
+    if dataset == "meria_global":
+        tasks.extend(build_meria_global_tasks(catalog_root, scenes, include_partial=include_partial))
     unique: dict[str, DigitisingTask] = {}
     for task in tasks:
         if task.task_id in unique and unique[task.task_id].scene.scene_id != task.scene.scene_id:

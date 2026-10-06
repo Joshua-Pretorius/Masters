@@ -9,6 +9,7 @@ from typing import Sequence
 
 from .catalog import build_task_catalog
 from .geopackage import export_annotations
+from .meria_batches import BATCH_BY_NAME, task_ids_for_batch
 from .scene import group_by_scene, validate_scene_annotations
 from .workflow import Environment, import_batch, prepare_batch, reconcile_task
 
@@ -55,7 +56,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     prepare = subparsers.add_parser("prepare", help="Prepare the next pending QGIS digitisation batch.")
     _common(prepare)
-    prepare.add_argument("--dataset", choices=("all", "sa", "global"), default="all")
+    prepare.add_argument("--dataset", choices=("all", "sa", "global", "meria_global"), default="all")
     prepare.add_argument("--limit", type=int, required=True)
     prepare.add_argument("--batch-name", required=True)
     prepare.add_argument("--grouping", choices=("scene", "observation"), default="scene",
@@ -69,13 +70,21 @@ def build_parser() -> argparse.ArgumentParser:
     )
     prepare.add_argument("--dry-run", action="store_true")
 
+    meria = subparsers.add_parser(
+        "prepare-meria", help="Prepare one focused MERIA area/date batch (maximum three SAR scenes)."
+    )
+    _common(meria)
+    meria.add_argument("--batch", choices=tuple(BATCH_BY_NAME), required=True)
+    meria.add_argument("--prediction-mode", choices=("auto", "cached-only", "skip"), default="auto")
+    meria.add_argument("--dry-run", action="store_true")
+
     import_parser = subparsers.add_parser("import", help="Validate and import a returned desktop-QGIS batch.")
     _common(import_parser)
     import_parser.add_argument("--batch", required=True)
 
     validate = subparsers.add_parser("validate-export", help="Validate populated tasks and refresh canonical exports.")
     _common(validate)
-    validate.add_argument("--dataset", choices=("all", "sa", "global"), default="all")
+    validate.add_argument("--dataset", choices=("all", "sa", "global", "meria_global"), default="all")
     validate.add_argument("--include-partial", action="store_true")
     validate.add_argument("--grouping", choices=("scene", "observation"), default="scene")
     selection = validate.add_mutually_exclusive_group(required=True)
@@ -88,6 +97,27 @@ def main(argv: Sequence[str] | None = None) -> int:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
     args = build_parser().parse_args(argv)
     environment = _environment(args)
+    if args.command == "prepare-meria":
+        batch = BATCH_BY_NAME[args.batch]
+        result = prepare_batch(
+            environment,
+            dataset=batch.dataset,
+            limit=len(batch.acquisitions),
+            batch_name=batch.name,
+            task_ids=task_ids_for_batch(batch, environment.catalog_root, environment.processed_root),
+            prediction_mode=args.prediction_mode,
+            dry_run=args.dry_run,
+            include_partial=batch.dataset == "meria_global",
+        )
+        print(json.dumps({
+            "batch_name": result.batch_name,
+            "selected": result.selected,
+            "skipped_complete": result.skipped_complete,
+            "unavailable": result.unavailable,
+            "pull_command": result.pull_command,
+            "return_command": result.return_command,
+        }, indent=2))
+        return 0
     if args.command == "prepare":
         result = prepare_batch(
             environment,
