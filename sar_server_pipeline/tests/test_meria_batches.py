@@ -50,8 +50,8 @@ class MeriaBatchTests(unittest.TestCase):
     def test_plan_has_only_unique_area_window_groups_of_at_most_three_scenes(self) -> None:
         acquisitions = [token for batch in MERIA_BATCHES for token in batch.acquisitions]
         self.assertEqual(len(MERIA_BATCHES), 17)
-        self.assertEqual(len(acquisitions), 26)
-        self.assertEqual(len(set(acquisitions)), 26)
+        self.assertEqual(len(acquisitions), 28)
+        self.assertEqual(len(set(acquisitions)), 28)
         self.assertTrue(all(1 <= len(batch.acquisitions) <= 3 for batch in MERIA_BATCHES))
         self.assertEqual({batch.dataset for batch in MERIA_BATCHES}, {"sa", "meria_global"})
         for batch in MERIA_BATCHES:
@@ -71,6 +71,14 @@ class MeriaBatchTests(unittest.TestCase):
                         row[f"{role}_name"].removesuffix(".SAFE")
                         for role in ("before", "after") if row[f"{role}_name"] not in ("", "-")
                     )
+        with (catalog / "global_s1_slc_inventory" / "global_s1_slc_associations.csv").open(
+            newline="", encoding="utf-8-sig"
+        ) as handle:
+            names.update(
+                row["granule_name"].removesuffix(".SAFE")
+                for row in csv.DictReader(handle)
+                if row["source_group_id"] == "16PDC/2018-10-24"
+            )
         with tempfile.TemporaryDirectory() as temporary:
             processed = Path(temporary) / "processed"
             for name in names:
@@ -81,12 +89,17 @@ class MeriaBatchTests(unittest.TestCase):
             }
             manual = build_task_catalog(catalog, processed, "meria_global", include_partial=True)
 
-        self.assertEqual(len(names), 26)
+        self.assertEqual(len(names), 28)
         self.assertTrue(all(len(selections[b.name]) == len(b.acquisitions) for b in MERIA_BATCHES))
-        self.assertEqual(sum(len(ids) for ids in selections.values()), 26)
+        self.assertEqual(sum(len(ids) for ids in selections.values()), 28)
+        self.assertEqual(len(selections["meria_bay_islands_2018_oct24_25"]), 3)
         candidate = next(task for task in manual if task.source_dataset == "Manual_Sentinel2")
         self.assertEqual(len(candidate.reference_points), 85)
-        self.assertNotIn("MARIDA", {task.source_dataset for task in manual})
+        self.assertEqual(candidate.scene.granule, MANUAL_16PCC_GRANULE)
+        marida = [task for task in manual if task.source_dataset == "MARIDA"]
+        self.assertEqual(len(marida), 2)
+        self.assertEqual({task.source_group_id for task in marida}, {"16PDC/2018-10-24"})
+        self.assertTrue(all(task.scene.granule != MANUAL_16PCC_GRANULE for task in marida))
         self.assertNotIn("Jamila_Floating_Debris", {task.source_dataset for task in manual})
 
     def test_focused_catalog_preserves_legacy_provenance_and_manual_points(self) -> None:
@@ -117,7 +130,6 @@ class MeriaBatchTests(unittest.TestCase):
             ])
             default = build_task_catalog(catalog, processed, "meria_global")
             partial = build_task_catalog(catalog, processed, "meria_global", include_partial=True)
-            manual_ids = task_ids_for_batch(BATCH_BY_NAME["meria_16pcc_2018_oct25"], catalog, processed)
 
         self.assertEqual(len(default), 1)
         self.assertEqual(default[0].source_dataset, "Manual_Sentinel2")
@@ -126,8 +138,7 @@ class MeriaBatchTests(unittest.TestCase):
         self.assertEqual(len(partial), 2)
         legacy_task = next(task for task in partial if task.source_dataset == "MERIA_Global")
         self.assertEqual([point.seed_eligible for point in legacy_task.reference_points], [True, False])
-        self.assertEqual(len(manual_ids), 1)
-        self.assertIn("20181025T000626", manual_ids[0])
+        self.assertIn("20181025T000626", default[0].task_id)
 
     def test_batch_refuses_an_unprocessed_acquisition(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

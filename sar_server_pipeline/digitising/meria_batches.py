@@ -15,6 +15,7 @@ class MeriaBatch:
     dataset: str
     area: str
     acquisitions: tuple[str, ...]
+    source_areas: tuple[str, ...] = ()
 
 
 # Acquisition-start tokens identify physical scenes without depending on their
@@ -36,7 +37,11 @@ MERIA_BATCHES = (
     MeriaBatch("meria_ghana_2018_oct18_24", "meria_global", "Ghana", ("20181018T181758", "20181024T181717")),
     MeriaBatch("meria_ghana_2018_oct25_31", "meria_global", "Ghana", ("20181025T180953", "20181031T180908")),
     MeriaBatch("meria_ghana_2018_oct30_nov05", "meria_global", "Ghana", ("20181030T181758", "20181105T181717")),
-    MeriaBatch("meria_16pcc_2018_oct25", "meria_global", "16PCC", ("20181025T000626",)),
+    MeriaBatch(
+        "meria_bay_islands_2018_oct24_25", "meria_global", "Bay Islands (16PDC and 16PCC)",
+        ("20181024T113716", "20181024T113744", "20181025T000626"),
+        ("16PDC", "16PCC"),
+    ),
 )
 
 BATCH_BY_NAME = {batch.name: batch for batch in MERIA_BATCHES}
@@ -55,7 +60,8 @@ def task_ids_for_batch(batch: MeriaBatch, catalog_root: Path, processed_root: Pa
     for acquisition in batch.acquisitions:
         matches = [
             task for task in tasks
-            if task.scene.granule.split("_")[5] == acquisition and task.area == batch.area
+            if task.scene.granule.split("_")[5] == acquisition
+            and task.area in (batch.source_areas or (batch.area,))
         ]
         if not matches:
             raise ValueError(

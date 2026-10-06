@@ -1,8 +1,9 @@
 # MERIA focused processing and digitising batches
 
 This runbook selects only the 14 MERIA South African acquisitions, the 11
-acquisitions in `jobs/global_all_unique_full_scenes.yaml`, and the already
-processed Sentinel-1 acquisition at 2018-10-25 00:06 UTC for the 85 manual
+acquisitions in `jobs/global_all_unique_full_scenes.yaml`, and three adjacent
+Bay Islands acquisitions: the two existing 16PDC scenes at 2018-10-24 11:37 UTC
+and the already processed scene at 2018-10-25 00:06 UTC for the 85 manual
 16PCC candidate points. It does not prepare the broader MARIDA or Jamila
 inventory.
 
@@ -31,7 +32,7 @@ scene and one editable annotation GeoPackage per scene.
 | `meria_ghana_2018_oct18_24` | Ghana | 2018-10-18 18:17, 2018-10-24 18:17 |
 | `meria_ghana_2018_oct25_31` | Ghana | 2018-10-25 18:09, 2018-10-31 18:09 |
 | `meria_ghana_2018_oct30_nov05` | Ghana | 2018-10-30 18:17, 2018-11-05 18:17 |
-| `meria_16pcc_2018_oct25` | 16PCC | 2018-10-25 00:06 |
+| `meria_bay_islands_2018_oct24_25` | Bay Islands, 16PDC and 16PCC | 2018-10-24 11:37, 11:37; 2018-10-25 00:06 |
 
 The Ghana pairs follow the same MERIA optical observation before and after the
 SAR acquisitions: 18/24 October (`57bbff03`), 25/31 October (`cd77705c`), and
@@ -43,8 +44,8 @@ using individual points as SAR evidence.
 ## Process the remaining MERIA global acquisitions on Skua
 
 The supplied Skua manifest listing from 2026-10-05 showed all 14 SA acquisitions
-processed, 4 of the 11 legacy MERIA global acquisitions processed, and the 16PCC
-2018-10-25 00:06 acquisition processed. Verify live status again before running.
+processed, 4 of the 11 legacy MERIA global acquisitions processed, and all
+three 16PDC/16PCC acquisitions processed. Verify live status again before running.
 After this code is pushed, in the server checkout:
 
 ```bash
@@ -52,8 +53,9 @@ cd ~/students/Joshua/src/Masters
 git pull --ff-only
 cd sar_server_pipeline
 
-SAR_DATA=$(sudo docker compose config --format json | python3 -c 'import json,sys; print(next(v["source"] for v in json.load(sys.stdin)["services"]["pipeline"]["volumes"] if v["target"] == "/data"))')
-SAR_JOBS=$(sudo docker compose config --format json | python3 -c 'import json,sys; print(next(v["source"] for v in json.load(sys.stdin)["services"]["pipeline"]["volumes"] if v["target"] == "/job"))')
+ENV_FILE=/mnt/storage/bolelang_mount/Joshua/server.env
+SAR_DATA=$(sudo docker compose --env-file "$ENV_FILE" config --format json | python3 -c 'import json,sys; print(next(v["source"] for v in json.load(sys.stdin)["services"]["pipeline"]["volumes"] if v["target"] == "/data"))')
+SAR_JOBS=$(sudo docker compose --env-file "$ENV_FILE" config --format json | python3 -c 'import json,sys; print(next(v["source"] for v in json.load(sys.stdin)["services"]["pipeline"]["volumes"] if v["target"] == "/job"))')
 
 sudo install -m 0644 \
   ../Data_Creation/meria_global_s1_slc/MERIA_global_plastic_nearest_S1_SLC_before_after.csv \
@@ -64,8 +66,8 @@ sed 's/^run_id:.*/run_id: meria-global-11-20261006/' \
   jobs/global_all_unique_full_scenes.yaml |
   sudo tee "$SAR_JOBS/meria_global_11_20261006.yaml" >/dev/null
 
-sudo docker compose build pipeline digitising
-sudo docker compose run --rm pipeline slc_process \
+sudo docker compose --env-file "$ENV_FILE" build pipeline digitising
+sudo docker compose --env-file "$ENV_FILE" run --rm pipeline slc_process \
   --manifest /job/meria_global_11_20261006.yaml
 ```
 
@@ -80,9 +82,9 @@ After the required acquisitions have processed manifests and rasters, prepare
 
 ```bash
 BATCH=sa_durban_2019_apr21_27  # replace with a batch name in the register
-sudo docker compose run --rm digitising prepare-meria \
+sudo docker compose --env-file "$ENV_FILE" run --rm digitising prepare-meria \
   --batch "$BATCH" --prediction-mode auto --dry-run
-sudo docker compose run --rm digitising prepare-meria \
+sudo docker compose --env-file "$ENV_FILE" run --rm digitising prepare-meria \
   --batch "$BATCH" --prediction-mode auto
 ```
 
@@ -91,7 +93,8 @@ preparation includes its other MERIA optical relationships automatically.
 It fails if an acquisition is not present in the processed scene catalogue.
 The `meria_global` selector reads the focused MERIA global match table and
 candidate-point CSV, and includes documented partial-coverage legacy matches.
-It excludes MARIDA and Jamila tasks. `--prediction-mode auto` may retrieve
+It includes only the two specified 16PDC MARIDA tasks and excludes the rest of
+MARIDA and all Jamila tasks. `--prediction-mode auto` may retrieve
 forcing data; use `cached-only` if preparation must stay offline.
 
 To prepare all 17 batches after the processing pass, use this list. Each
@@ -108,15 +111,17 @@ for BATCH in \
   meria_honduras_2017_oct05 meria_honduras_2017_oct17 \
   meria_honduras_2017_oct29 meria_ghana_2018_oct18_24 \
   meria_ghana_2018_oct25_31 meria_ghana_2018_oct30_nov05 \
-  meria_16pcc_2018_oct25; do
-  sudo docker compose run --rm digitising prepare-meria \
+  meria_bay_islands_2018_oct24_25; do
+  sudo docker compose --env-file "$ENV_FILE" run --rm digitising prepare-meria \
     --batch "$BATCH" --prediction-mode auto || break
 done
 ```
 
 The 85 manual Sentinel-2 points are candidate, unverified debris. They are
-drift search seeds and QGIS references, not confirmed plastic polygons. The
-16PCC batch uses the processed 2018-10-25 00:06 SAR acquisition.
+drift search seeds and QGIS references, not confirmed plastic polygons. In the
+three-scene Bay Islands batch they attach only to the 2018-10-25 00:06 SAR
+acquisition. The two 16PDC scenes retain their own 2018-10-24 MARIDA reference
+points; their rasters do not cover the 85 points.
 
 ## Transfer that batch from Skua to the Ubuntu staging machine
 

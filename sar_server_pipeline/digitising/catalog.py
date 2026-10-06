@@ -5,6 +5,7 @@ import json
 import logging
 import re
 from collections import defaultdict
+from dataclasses import replace
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Iterable
@@ -31,6 +32,8 @@ RASTER_KEYS = (
 MANUAL_16PCC_GRANULE = "S1A_IW_SLC__1SDV_20181025T000626_20181025T000653_024285_02A86D_2AFA"
 MANUAL_16PCC_OBSERVATION = "manual_sentinel2_16PCC_2018-10-24"
 MANUAL_16PCC_TIME = "2018-10-24T16:13:31Z"
+ADJACENT_16PDC_GROUP = "16PDC/2018-10-24"
+ADJACENT_16PDC_ACQUISITIONS = {"20181024T113716", "20181024T113744"}
 
 
 def read_csv(path: Path) -> list[dict[str, str]]:
@@ -392,6 +395,16 @@ def build_meria_global_tasks(
                     notes=f"Legacy MERIA global AOI coverage {coverage:.3f}; {row.get('notes', '')}",
                 )
             )
+
+    # The existing 16PDC review has two adjacent SAR acquisitions from the
+    # same day. Keep their own MARIDA references alongside the 16PCC scene in
+    # one three-acquisition batch, without including the rest of MARIDA.
+    tasks.extend(
+        replace(task, dataset="meria_global")
+        for task in build_global_tasks(catalog_root, scenes)
+        if task.source_group_id == ADJACENT_16PDC_GROUP
+        and task.scene.granule.split("_")[5] in ADJACENT_16PDC_ACQUISITIONS
+    )
 
     manual_rows = read_csv(
         catalog_root / "global_s1_slc_inventory" / "manual_s2_16pcc_20181024_candidate_points.csv"
