@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Build the global optical-reference to Sentinel-1 IW SLC processing list.
+"""Build the global Sentinel-1 IW SLC processing list.
 
 The source inventory combines MARIDA, NASA Marine Debris PlanetScope patches,
 Ghana drift observations, the four Greek Sentinel-2 acquisitions, and the
 Jamila/Ocean Scan floating-debris export.  Optical imagery is reference data:
 where an exact acquisition time is unavailable (notably Jamila), the recorded
 nominal observation timestamp is used and explicitly marked as nominal.
+SAR-only controlled acquisitions are added to the processing inputs without
+creating optical associations or drift seeds.
 """
 
 from __future__ import annotations
@@ -54,6 +56,44 @@ SET_SPAN_HOURS = 12.0
 COVERAGE_THRESHOLD = 0.999
 MARIDA_MARINE_DEBRIS_CLASS = 1
 MARIDA_CONFIDENCE = {1: "high", 2: "moderate", 3: "low"}
+
+# Portovenere control: 2025-04-11 through 2025-04-28 UTC (18-day window).
+# The reported collections are not visible in the starting optical imagery.
+# All five catalogue footprints contain the 15 km processing AOI below; this
+# says nothing about optical-label availability or processed-raster valid pixels.
+PORTOVENERE_CONTROL_SCENES = (
+    ("S1A_IW_SLC__1SDV_20250411T171446_20250411T171512_058712_07457B_92BA.SAFE", "2025-04-11T17:14:46Z"),
+    ("S1C_IW_SLC__1SDV_20250416T052645_20250416T052712_001914_003B88_BA68.SAFE", "2025-04-16T05:26:45Z"),
+    ("S1A_IW_SLC__1SDV_20250422T052750_20250422T052817_058865_074BC1_EE23.SAFE", "2025-04-22T05:27:50Z"),
+    ("S1A_IW_SLC__1SDV_20250423T171446_20250423T171513_058887_074CA5_D018.SAFE", "2025-04-23T17:14:46Z"),
+    ("S1C_IW_SLC__1SDV_20250428T052652_20250428T052719_002089_0045F6_72E4.SAFE", "2025-04-28T05:26:52Z"),
+)
+# WGS84 bounding rectangle of a 15 km UTM 32N buffer around the three supplied
+# control positions. The processing script uses the min/max of these point rows.
+PORTOVENERE_CONTROL_CORNERS = (
+    (9.65143632, 43.93931368),
+    (9.65143632, 44.20946855),
+    (10.02638451, 44.20946855),
+    (10.02638451, 43.93931368),
+)
+
+# PLP 2024 monitoring: 2024-05-31 through 2024-06-27 UTC. These three
+# user-selected catalogue scenes cover the full 10 km processing rectangle
+# around the two supplied positions. This monitoring window does not itself
+# establish an optical label at the SAR acquisition times.
+PLP_2024_MONITORING_SCENES = (
+    ("S1A_IW_SLC__1SDV_20240604T161556_20240604T161623_054176_0696A9_F780.SAFE", "2024-06-04T16:15:56Z"),
+    ("S1A_IW_SLC__1SDV_20240616T161556_20240616T161623_054351_069CB7_0C87.SAFE", "2024-06-16T16:15:56Z"),
+    ("S1A_IW_SLC__1SDV_20240623T160746_20240623T160813_054453_06A04B_CDC4.SAFE", "2024-06-23T16:07:46Z"),
+)
+# Bounding rectangle of a 10 km local-metre buffer around 39.03915 N,
+# 26.52452 E and 39.03958 N, 26.52461 E. The server uses point min/max.
+PLP_2024_MONITORING_CORNERS = (
+    (26.40873464, 38.94921796),
+    (26.40873464, 39.12951204),
+    (26.64039536, 39.12951204),
+    (26.64039536, 38.94921796),
+)
 
 
 def observation_id(source_dataset: str, source_group_id: str) -> str:
@@ -647,6 +687,70 @@ def write_csv(path: Path, rows: list[dict[str, Any]], fieldnames: list[str] | No
         writer.writerows(rows)
 
 
+def append_portovenere_control(
+    processing_rows: list[dict[str, Any]],
+    processing_points: list[dict[str, Any]],
+    unique_targets: list[str],
+) -> None:
+    """Register SAR-only control scenes in the same server processing inputs."""
+    for granule_name, acquisition_start in PORTOVENERE_CONTROL_SCENES:
+        granule = granule_name.removesuffix(".SAFE")
+        obs_id = f"S1_{granule}"
+        target_id = f"{obs_id}:scene"
+        if target_id in unique_targets:
+            raise ValueError(f"Portovenere scene already in processing inventory: {target_id}")
+        unique_targets.append(target_id)
+        processing_rows.append({
+            "target_id": target_id, "obs_id": obs_id,
+            "source_dataset": "Controlled_Portovenere_SAR_only",
+            "source_group_id": "portovenere_control_20250411_20250428",
+            "area": "Gulf_of_La_Spezia_Portovenere", "date": acquisition_start[:10],
+            "reference_time": acquisition_start, "timestamp_source": "s1_catalogue",
+            "role": "scene", "selection_rank": 1, "granule_name": granule_name,
+            "acquisition_start": acquisition_start, "delta_h": 0,
+            "scene_coverage_ratio": 1, "coverage_set_ratio": 1,
+            "coverage_complete": True, "download_group_key": granule,
+            "aoi_buffer_km": 15, "association_count": 0,
+        })
+        for point_index, (lon, lat) in enumerate(PORTOVENERE_CONTROL_CORNERS, 1):
+            processing_points.append({
+                "obs_id": obs_id, "point_id": f"{obs_id}_P{point_index:04d}",
+                "lat": lat, "lon": lon,
+            })
+
+
+def append_plp_2024_monitoring(
+    processing_rows: list[dict[str, Any]],
+    processing_points: list[dict[str, Any]],
+    unique_targets: list[str],
+) -> None:
+    """Register the three PLP monitoring acquisitions for server processing."""
+    for granule_name, acquisition_start in PLP_2024_MONITORING_SCENES:
+        granule = granule_name.removesuffix(".SAFE")
+        obs_id = f"S1_{granule}"
+        target_id = f"{obs_id}:scene"
+        if target_id in unique_targets:
+            raise ValueError(f"PLP monitoring scene already in processing inventory: {target_id}")
+        unique_targets.append(target_id)
+        processing_rows.append({
+            "target_id": target_id, "obs_id": obs_id,
+            "source_dataset": "PLP_Greece_2024_monitoring",
+            "source_group_id": "plp_greece_20240531_20240627",
+            "area": "Greece_PLP_2024", "date": acquisition_start[:10],
+            "reference_time": acquisition_start, "timestamp_source": "s1_catalogue",
+            "role": "scene", "selection_rank": 1, "granule_name": granule_name,
+            "acquisition_start": acquisition_start, "delta_h": 0,
+            "scene_coverage_ratio": 1, "coverage_set_ratio": 1,
+            "coverage_complete": True, "download_group_key": granule,
+            "aoi_buffer_km": 10, "association_count": 0,
+        })
+        for point_index, (lon, lat) in enumerate(PLP_2024_MONITORING_CORNERS, 1):
+            processing_points.append({
+                "obs_id": obs_id, "point_id": f"{obs_id}_P{point_index:04d}",
+                "lat": lat, "lon": lon,
+            })
+
+
 def write_outputs(groups: list[OpticalGroup], *, query_catalogue: bool) -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     group_rows: list[dict[str, Any]] = []
@@ -754,6 +858,8 @@ def write_outputs(groups: list[OpticalGroup], *, query_catalogue: bool) -> None:
                 processing_points.append({
                     "obs_id": obs_id, "point_id": f"{obs_id}_P{point_index:04d}", "lat": lat, "lon": lon,
                 })
+        append_portovenere_control(processing_rows, processing_points, unique_targets)
+        append_plp_2024_monitoring(processing_rows, processing_points, unique_targets)
         write_csv(OUT_DIR / "global_s1_slc_processing_targets.csv", processing_rows)
         write_csv(OUT_DIR / "global_s1_slc_processing_points.csv", processing_points)
         manifest = {

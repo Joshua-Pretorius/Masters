@@ -1,0 +1,41 @@
+schema_version: 1
+run_id: plp-greece-2024-monitoring-s1-slc-v1
+dataset_mode: global
+targets:
+- S1_S1A_IW_SLC__1SDV_20240604T161556_20240604T161623_054176_0696A9_F780:scene
+- S1_S1A_IW_SLC__1SDV_20240616T161556_20240616T161623_054351_069CB7_0C87:scene
+- S1_S1A_IW_SLC__1SDV_20240623T160746_20240623T160813_054453_06A04B_CDC4:scene
+inputs:
+  match_csv: /data/raw/global_s1_slc_processing_targets.csv
+  points_csv: /data/raw/global_s1_slc_processing_points.csv
+  raw_slc_root: /data/raw/slc
+  shapefiles_root: /data/shapefiles
+outputs:
+  processed_root: /data/processed
+  patches_root: /data/patches
+  stacks_root: /data/stacks
+  logs_root: /data/logs
+  manifests_root: /data/manifests
+stages:
+  slc_process:
+    enabled: true
+    overwrite: false
+    gpt: /usr/local/snap/bin/gpt
+    pad_deg: 0
+  patch_extract:
+    enabled: false
+    overwrite: false
+  patch_stack:
+    enabled: false
+    overwrite: false
+processing:
+  resolution_policy: snap-native
+  output_mode: scene
+  subset_mode: full-swath
+  subswaths:
+  - IW1
+  - IW2
+  - IW3
+  workers: 1
+  cache_gb: 32
+  patch_size: 256
