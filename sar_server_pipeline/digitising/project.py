@@ -199,7 +199,9 @@ def _configure_metadata_links(layer, q: dict[str, object]) -> None:
             layer.setEditorWidgetSetup(index, QgsEditorWidgetSetup("TextEdit", {"UseLink": True, "IsMultiline": False}))
 
 
-def _add_rasters(project, group, task: DigitisingTask, q: dict[str, object]) -> None:
+def _add_rasters(
+    project, group, task: DigitisingTask, q: dict[str, object], *, related_tasks=None
+) -> None:
     QgsRasterLayer = q["QgsRasterLayer"]
     raster_group = group.addGroup("SAR rasters")
     if task.scene.reference_grid:
@@ -219,10 +221,15 @@ def _add_rasters(project, group, task: DigitisingTask, q: dict[str, object]) -> 
             visible = key == "vv_refined_lee_db" or not visible_raster_selected
             node.setItemVisibilityChecked(visible)
             visible_raster_selected = visible_raster_selected or visible
+    from .water_contrast import prepare_scene, add_qgis_layers
+
+    result = prepare_scene(task.scene, related_tasks or (task,))
+    add_qgis_layers(project, raster_group, result)
 
 
 def _add_task(project, parent_group, task: DigitisingTask, q: dict[str, object], *,
-              add_annotation: bool = True, add_rasters: bool = True):
+              add_annotation: bool = True, add_rasters: bool = True,
+              related_tasks=None):
     QgsVectorLayer = q["QgsVectorLayer"]
     group = parent_group.addGroup(
         f"{task.observation_id} | {task.optical_time_start[:10]} | {task.role} | {task.delta_label}"
@@ -261,7 +268,7 @@ def _add_task(project, parent_group, task: DigitisingTask, q: dict[str, object],
         group.addLayer(metadata)
 
     if add_rasters:
-        _add_rasters(project, group, task, q)
+        _add_rasters(project, group, task, q, related_tasks=related_tasks)
     return annotation, reference if reference.isValid() and not reference.extent().isEmpty() else annotation
 
 
@@ -279,8 +286,10 @@ def build_qgis_project(path: Path, tasks: Iterable[DigitisingTask], *, title: st
     root = project.layerTreeRoot()
     first_annotation = None
     first_view_layer = None
+    tasks = tuple(tasks)
     for task in tasks:
-        annotation, view_layer = _add_task(project, root, task, q)
+        peers = tuple(t for t in tasks if t.scene.granule == task.scene.granule)
+        annotation, view_layer = _add_task(project, root, task, q, related_tasks=peers)
         first_annotation = first_annotation or annotation
         first_view_layer = first_view_layer or view_layer
     if first_annotation is not None:
@@ -319,7 +328,7 @@ def build_scene_qgis_project(path: Path, groups: Iterable[SceneGroup], *, title:
         project.addMapLayer(annotation, False)
         group.addLayer(annotation)
         first_annotation = first_annotation or annotation
-        _add_rasters(project, group, task, q)
+        _add_rasters(project, group, task, q, related_tasks=scene_group.tasks)
         optical_group = group.addGroup("Optical observations — original points on before and after SAR")
         for linked_task in scene_group.tasks:
             _, view = _add_task(

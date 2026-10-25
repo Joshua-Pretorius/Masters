@@ -113,6 +113,8 @@ def _task_transfer_paths(environment: Environment, task: DigitisingTask) -> list
     if task.scene.reference_grid:
         paths.append(task.scene.reference_grid)
     paths.extend(task.scene.outputs[key] for key in RASTER_KEYS if key in task.scene.outputs)
+    from .water_contrast import transfer_paths as contrast_transfer_paths
+    paths.extend(contrast_transfer_paths(task.scene))
     return [path for path in paths if path.exists()]
 
 
@@ -181,6 +183,8 @@ def _write_batch_files(
         f"   {pull}\n\n"
         "2. Open digitising_batches/"
         f"{batch_name}/batch.qgz in QGIS and edit only the Annotations layers.\n\n"
+        "   Four signed water-relative contrast views are under SAR rasters (initially off).\n"
+        "   Coverage is the on-image point hull plus 100 km, clipped to available SAR.\n\n"
         "3. Return only the edited GeoPackages:\n"
         f"   {push}\n\n"
         "4. On Skua run:\n"
@@ -387,6 +391,8 @@ def _prepare_scene_batch(
             ],
         })
         project_builder(group.project_path, (group,), title=group.scene.scene_id)
+        from .water_contrast import transfer_paths as contrast_transfer_paths
+        transfer_paths.update(contrast_transfer_paths(group.scene))
     project_builder(batch_dir / "batch.qgz", selected, title=f"SAR scene digitisation — {batch_name}")
     batch_payload = {
         "schema_version": 2, "grouping": "physical_sar_scene",
@@ -406,6 +412,8 @@ def _prepare_scene_batch(
         f"2. Open digitising_batches/{batch_name}/batch.qgz. Edit only each Scene annotations layer.\n"
         "   Optical points are repeated on their before and after SAR scenes.\n"
         "   For accepted_proxy polygons, enter comma-separated linked observation IDs in evidence_obs_ids.\n"
+        "   Four signed water-relative contrast views are under SAR rasters (initially off).\n"
+        "   Coverage is the on-image point hull plus 100 km, clipped to available SAR.\n"
         f"3. Return the edited scene GeoPackages: {push}\n"
         f"4. On Skua: docker compose run --rm digitising import --batch {batch_name}\n"
     )

@@ -1,5 +1,7 @@
 # Workspace noise
 .venvs/
+**/.venv/
+**/format_tools/
 .codex
 .codex/
 **/__pycache__/
@@ -29,6 +31,7 @@ planet_api.txt
 *.tif.aux.xml
 *.tif
 *.tiff
+*.vrt
 *.jp2
 *.img
 *.dim
@@ -52,3 +55,41 @@ sar_ml_pipeline_legacy/
 !*.jpg
 !*.jpeg
 !*.gif
+
+# Local analysis products; retain scripts and method documentation in these runs.
+/greece_deployment_features_20261022/data/
+/greece_deployment_features_20261022/environment/
+/greece_deployment_features_20261022/models/
+/greece_deployment_features_20261022/plots/
+/greece_deployment_features_20261022/*.qgz
+/greece_deployment_features_20261022/REPORT.html
+
+/sar_roughness_features_20261023/data/
+/sar_roughness_features_20261023/environment/
+/sar_roughness_features_20261023/models/
+/sar_roughness_features_20261023/plots/
+/sar_roughness_features_20261023/views/
+/sar_roughness_features_20261023/tmp_collector_test/
+/sar_roughness_features_20261023/*.qgz
+/sar_roughness_features_20261023/REPORT.html
+/sar_roughness_features_20261023/annotation_inventory.json
+/sar_roughness_features_20261023/instrument_noise/*.json
+/sar_roughness_features_20261023/instrument_noise/*.csv
+/sar_roughness_features_20261023/instrument_noise/*.xml
+
+/patch_enhancement_20261023/*.png
+/patch_enhancement_20261023/*.json
+/patch_enhancement_20261023/Area_used.geojson
+/patch_enhancement_20261023/REPORT.html
+/signed_water_enhancement_20261023/coastline/
+/signed_water_enhancement_20261023/qgis_previews/
+/signed_water_enhancement_20261023/*.png
+/signed_water_enhancement_20261023/*.json
+/signed_water_enhancement_20261023/REPORT.html
+
+# Generated local audits, migration evidence, test renders and document previews.
+/outputs/done_polygon_audit_20261022/
+/outputs/local_batch_audit_20261022/
+/outputs/tracker_review_notes_20261022/
+/outputs/water_contrast_20261025/
+/Writing/Gantt/_letter_render/
