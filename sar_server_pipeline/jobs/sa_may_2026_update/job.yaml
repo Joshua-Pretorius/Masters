@@ -1,0 +1,45 @@
+schema_version: 1
+run_id: sa-may-2026-optical-update-v1
+dataset_mode: sa
+
+targets:
+- MERIA_SA_009:before
+- MERIA_SA_009:after
+- MERIA_SA_012:before
+- MERIA_SA_012:after
+- MERIA_SA_013:before
+- MERIA_SA_013:after
+
+inputs:
+  match_csv: /job/MERIA_SA_plastic_nearest_S1_SLC_before_after.csv
+  points_csv: /job/MERIA_SA_plastic_points.csv
+  raw_slc_root: /data/raw/slc
+  shapefiles_root: /data/shapefiles
+
+outputs:
+  processed_root: /data/processed
+  patches_root: /data/patches
+  stacks_root: /data/stacks
+  logs_root: /data/logs
+  manifests_root: /data/manifests
+
+stages:
+  slc_process:
+    enabled: true
+    overwrite: false
+    gpt: /usr/local/snap/bin/gpt
+  patch_extract:
+    enabled: false
+    overwrite: false
+  patch_stack:
+    enabled: false
+    overwrite: false
+
+processing:
+  resolution_policy: snap-native
+  output_mode: scene
+  subset_mode: full-swath
+  subswaths: [IW1, IW2, IW3]
+  workers: 1
+  cache_gb: 32
+  patch_size: 256

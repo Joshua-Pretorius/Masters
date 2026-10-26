@@ -1,0 +1,22 @@
+{
+  "gqeberha_all_slc_catalogue.json": "a22004ab123256c7c1fbb684c52dc043e82bca71ea80c0c48b955c7172d2a20a",
+  "gqeberha_catalogue.json": "716f4ffcc38670989450e4170962b21c44031499a058885f350c238a0e341264",
+  "install_local.py": "4b8a5e86251710e22d89ea296fb3ef3beb361929f7d40fdc39d9b673bbc5e014",
+  "job.yaml": "d410b3799c1785b3006be8df548108047ba4457544ae03cad2cc5fed4c274fab",
+  "ku_gompo_all_slc_catalogue.json": "4e20c3f9bbc564b5d8496b621342051e79e086cfc53d0109b2fe8e414075394c",
+  "ku_gompo_catalogue.json": "a57368b487a6f58fddd4eed615e71e205f7fcbeaa4c6d7c625d3a5b022c15c66",
+  "MERIA_SA_plastic_nearest_S1_SLC_before_after.csv": "f2ff0ab583d5d513a848989bb38da880b75387504ed6560d392efd72ca0b074f",
+  "MERIA_SA_plastic_points.csv": "da6b1f97ee7807c1c7e11575669915be66994e0e12a5a143076ed3cb6a6cb47d",
+  "MERIA_scene_batch_tracker.xlsx": "f5653e470ecbbf0d5c90a1ba50bb372c2f767c1060f9aa4608aea49bc1872fd9",
+  "observations.geojson": "3c236cf9e87d0540b468bc5e2e265e2c3b8f2b98fe41369c31f3b2a1daa47209",
+  "observations.json": "04f7bcf6a1d8bc6f7fd8ea4c76d83e2565024ef9b138e3419771adccd6a4005a",
+  "original_hashes.json": "c4ed3ed1e3c4a955b1f82033fe829554af80f92e7297918b48651cdfd6fa2fbc",
+  "README.md": "d3fecbb07316c6fba325b6d44177c34a04849bb4e04961fde3c6659573a0ce71",
+  "run_on_skua.sh": "a9964f8def55d5b52ed47b8f9c7de5a29076117b6bbb7e753cfb3994580eca79",
+  "selections.json": "940853774f12b36872c4e908ad2b98354f01d6ecc10e9179cdf4882a63fcbaa2",
+  "source_request.txt": "8069a2dc3620d96d89f44627866f94ef0413d9d37f89499de5153f5ec2b5896e",
+  "validate_inputs.py": "7c0ddd5f94e78ef7b45e30a4b800b57b0817cbe501b3684ce06b4ff1c12a26ad",
+  "repository_updates/Data_Creation/meria_sa_plastic_s1_slc/MERIA_SA_plastic_nearest_S1_SLC_before_after.csv": "f2ff0ab583d5d513a848989bb38da880b75387504ed6560d392efd72ca0b074f",
+  "repository_updates/Data_Creation/meria_sa_plastic_s1_slc/MERIA_SA_plastic_points.csv": "da6b1f97ee7807c1c7e11575669915be66994e0e12a5a143076ed3cb6a6cb47d",
+  "repository_updates/sar_server_pipeline/digitising/meria_batches.py": "4afed7a0e7b38680e3e1e4d4ad489f4cbe086d9858743edd5a3d93fbc6088f7c"
+}

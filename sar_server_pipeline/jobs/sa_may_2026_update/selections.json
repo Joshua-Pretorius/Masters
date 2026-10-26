@@ -1,0 +1,90 @@
+[
+  {
+    "obs_id": "MERIA_SA_010",
+    "date": "2026-05-08",
+    "area": "Gqeberha",
+    "cutoff": "2026-05-05",
+    "role": "before",
+    "granule": "S1A_IW_SLC__1SDV_20260505T170121_20260505T170149_064384_081B8F_D1CF",
+    "acquired": "2026-05-05 17:01:21",
+    "gap_h": -54.98,
+    "coverage_ratio": 1.0
+  },
+  {
+    "obs_id": "MERIA_SA_010",
+    "date": "2026-05-08",
+    "area": "Gqeberha",
+    "cutoff": "2026-05-05",
+    "role": "after",
+    "granule": "S1A_IW_SLC__1SDV_20260510T170927_20260510T170955_064457_081E34_5419",
+    "acquired": "2026-05-10 17:09:27",
+    "gap_h": 41.16,
+    "coverage_ratio": 0.5503371868978806
+  },
+  {
+    "obs_id": "MERIA_SA_011",
+    "date": "2026-05-09",
+    "area": "Gqeberha",
+    "cutoff": "2026-05-05",
+    "role": "before",
+    "granule": "S1A_IW_SLC__1SDV_20260505T170121_20260505T170149_064384_081B8F_D1CF",
+    "acquired": "2026-05-05 17:01:21",
+    "gap_h": -78.98,
+    "coverage_ratio": 1.0
+  },
+  {
+    "obs_id": "MERIA_SA_011",
+    "date": "2026-05-09",
+    "area": "Gqeberha",
+    "cutoff": "2026-05-05",
+    "role": "after",
+    "granule": "S1A_IW_SLC__1SDV_20260510T170927_20260510T170955_064457_081E34_5419",
+    "acquired": "2026-05-10 17:09:27",
+    "gap_h": 17.16,
+    "coverage_ratio": 0.32892352301558536
+  },
+  {
+    "obs_id": "MERIA_SA_012",
+    "date": "2026-05-25",
+    "area": "Gqeberha",
+    "cutoff": "2026-05-05",
+    "role": "before",
+    "granule": "S1A_IW_SLC__1SDV_20260522T170927_20260522T170946_064632_08244A_3B1B",
+    "acquired": "2026-05-22 17:09:27",
+    "gap_h": -54.84,
+    "coverage_ratio": 0.6888660323990743
+  },
+  {
+    "obs_id": "MERIA_SA_012",
+    "date": "2026-05-25",
+    "area": "Gqeberha",
+    "cutoff": "2026-05-05",
+    "role": "after",
+    "granule": "S1A_IW_SLC__1SDV_20260529T170120_20260529T170148_064734_0827DC_C856",
+    "acquired": "2026-05-29 17:01:20",
+    "gap_h": 89.02,
+    "coverage_ratio": 1.0
+  },
+  {
+    "obs_id": "MERIA_SA_013",
+    "date": "2026-05-09",
+    "area": "Ku Gompo",
+    "cutoff": "2026-05-07",
+    "role": "before",
+    "granule": "S1A_IW_SLC__1SDV_20260507T164513_20260507T164541_064413_081CAE_EBD1",
+    "acquired": "2026-05-07 16:45:13",
+    "gap_h": -31.25,
+    "coverage_ratio": 0.30499701373681065
+  },
+  {
+    "obs_id": "MERIA_SA_013",
+    "date": "2026-05-09",
+    "area": "Ku Gompo",
+    "cutoff": "2026-05-07",
+    "role": "after",
+    "granule": "S1A_IW_SLC__1SDV_20260512T165318_20260512T165346_064486_081F36_77A6",
+    "acquired": "2026-05-12 16:53:18",
+    "gap_h": 64.89,
+    "coverage_ratio": 1.0
+  }
+]

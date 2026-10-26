@@ -1,0 +1,2495 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            25.207443,
+            -34.05285
+          ],
+          [
+            25.21431,
+            -34.051284
+          ],
+          [
+            25.218945,
+            -34.04915
+          ],
+          [
+            25.221176,
+            -34.048012
+          ],
+          [
+            25.222893,
+            -34.047158
+          ],
+          [
+            25.225468,
+            -34.046162
+          ],
+          [
+            25.227528,
+            -34.045023
+          ],
+          [
+            25.232334,
+            -34.043458
+          ],
+          [
+            25.236282,
+            -34.042604
+          ],
+          [
+            25.239544,
+            -34.041181
+          ],
+          [
+            25.241776,
+            -34.04047
+          ],
+          [
+            25.245209,
+            -34.040185
+          ],
+          [
+            25.246754,
+            -34.039473
+          ],
+          [
+            25.248299,
+            -34.036485
+          ],
+          [
+            25.249329,
+            -34.035489
+          ],
+          [
+            25.253277,
+            -34.034777
+          ],
+          [
+            25.255508,
+            -34.033069
+          ],
+          [
+            25.259457,
+            -34.031361
+          ],
+          [
+            25.261517,
+            -34.029369
+          ],
+          [
+            25.263233,
+            -34.027092
+          ],
+          [
+            25.265293,
+            -34.025811
+          ],
+          [
+            25.26701,
+            -34.023533
+          ],
+          [
+            25.268211,
+            -34.021967
+          ],
+          [
+            25.269585,
+            -34.020259
+          ],
+          [
+            25.270786,
+            -34.019263
+          ]
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_010",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-08",
+        "source_index": 1,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.16694,
+          -34.06393
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_010",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-08",
+        "source_index": 2,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.16874,
+          -34.06383
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_010",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-08",
+        "source_index": 3,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.16988,
+          -34.0641
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_010",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-08",
+        "source_index": 4,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.19243,
+          -33.99041
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 1,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.19288,
+          -33.99074
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 2,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.19968,
+          -33.99254
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 3,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.20094,
+          -33.9928
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 4,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.20236,
+          -33.99353
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 5,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.20417,
+          -33.99391
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 6,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.20653,
+          -33.99431
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 7,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.20838,
+          -33.99471
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 8,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.21158,
+          -33.99541
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 9,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.21519,
+          -33.99626
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 10,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.22609,
+          -33.99921
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 11,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.22645,
+          -33.99917
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 12,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.22699,
+          -33.99917
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 13,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.22849,
+          -33.99956
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 14,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.23012,
+          -33.99992
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 15,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.23059,
+          -34.00009
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 16,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.23268,
+          -34.0007
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 17,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.23925,
+          -34.00208
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 18,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.24072,
+          -34.00214
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 19,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.24235,
+          -34.00273
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 20,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.24372,
+          -34.00322
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 21,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.24584,
+          -34.0036
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 22,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.24707,
+          -34.00364
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 23,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.2475,
+          -34.00362
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 24,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.24967,
+          -34.00412
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 25,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.25178,
+          -34.00489
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 26,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.25247,
+          -34.00489
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 27,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.2552,
+          -34.006
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 28,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.25722,
+          -34.00665
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 29,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.2577,
+          -34.00672
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 30,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.25833,
+          -34.00694
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 31,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.25856,
+          -34.00674
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 32,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.25821,
+          -34.00632
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 33,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.25777,
+          -34.00581
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 34,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.2568,
+          -34.00525
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 35,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.25595,
+          -34.00438
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 36,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.2601,
+          -34.00786
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 37,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.26188,
+          -34.00896
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 38,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.2654,
+          -34.0105
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 39,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.26688,
+          -34.01126
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 40,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.26825,
+          -34.01178
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 41,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.28069,
+          -34.01356
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 42,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.28155,
+          -34.01353
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 43,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.28384,
+          -34.01386
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 44,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.2872,
+          -34.01477
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 45,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.28983,
+          -34.01519
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 46,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.29108,
+          -34.01647
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 47,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.29244,
+          -34.01707
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 48,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.29244,
+          -34.01707
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 49,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.29578,
+          -34.01772
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 50,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.29766,
+          -34.01765
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 51,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.29917,
+          -34.01765
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 52,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.30021,
+          -34.01749
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 53,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.30209,
+          -34.01841
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 54,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.30382,
+          -34.01921
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 55,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.30718,
+          -34.0208
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 56,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.30862,
+          -34.02247
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 57,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.30988,
+          -34.02377
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 58,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.31126,
+          -34.02487
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 59,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.31355,
+          -34.02664
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 60,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.31862,
+          -34.03067
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 61,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.33363,
+          -34.03528
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 62,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.34088,
+          -34.03754
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 63,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.34655,
+          -34.03935
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 64,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.35172,
+          -34.04022
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 65,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.35238,
+          -34.04012
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 66,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.35331,
+          -34.04082
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 67,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.35429,
+          -34.04109
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 68,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.35647,
+          -34.04233
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 69,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.35711,
+          -34.04235
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 70,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.35953,
+          -34.04338
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 71,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.36045,
+          -34.0436
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 72,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.36078,
+          -34.04361
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 73,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.36111,
+          -34.04367
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 74,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.36383,
+          -34.04596
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 75,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.36426,
+          -34.04604
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 76,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.36448,
+          -34.04615
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 77,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.36506,
+          -34.04646
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 78,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.36599,
+          -34.04609
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 79,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.36635,
+          -34.04607
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 80,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.36661,
+          -34.04612
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 81,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.36685,
+          -34.04627
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 82,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.3671,
+          -34.0464
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 83,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.36758,
+          -34.04659
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 84,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.36946,
+          -34.04803
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 85,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.37066,
+          -34.04843
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 86,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.37189,
+          -34.04959
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 87,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.37284,
+          -34.05047
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 88,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.37436,
+          -34.05166
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 89,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.37579,
+          -34.05244
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 90,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.37703,
+          -34.05311
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 91,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.38005,
+          -34.055
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 92,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.38041,
+          -34.05518
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 93,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.38197,
+          -34.05615
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 94,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.38437,
+          -34.05747
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 95,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.38613,
+          -34.05817
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 96,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.3897,
+          -34.06098
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 97,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.39126,
+          -34.06184
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 98,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.39237,
+          -34.06291
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 99,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.39347,
+          -34.06356
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 100,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.39419,
+          -34.06395
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 101,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.39419,
+          -34.06395
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 102,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.39945,
+          -34.06812
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 103,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.40708,
+          -34.07242
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 104,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.39167,
+          -34.07224
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 105,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.39229,
+          -34.07282
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 106,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.39359,
+          -34.07384
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_011",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-09",
+        "source_index": 107,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            25.188046,
+            -34.200322
+          ],
+          [
+            25.194054,
+            -34.201458
+          ],
+          [
+            25.197315,
+            -34.202168
+          ],
+          [
+            25.198774,
+            -34.204938
+          ],
+          [
+            25.200319,
+            -34.206713
+          ],
+          [
+            25.202465,
+            -34.208986
+          ],
+          [
+            25.204782,
+            -34.2114
+          ],
+          [
+            25.212078,
+            -34.216229
+          ],
+          [
+            25.21594,
+            -34.219211
+          ],
+          [
+            25.220661,
+            -34.217294
+          ],
+          [
+            25.225039,
+            -34.218927
+          ],
+          [
+            25.229244,
+            -34.221057
+          ],
+          [
+            25.230618,
+            -34.221554
+          ]
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_012",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-25",
+        "source_index": 1,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            25.212164,
+            -34.19258
+          ],
+          [
+            25.215511,
+            -34.194427
+          ],
+          [
+            25.223751,
+            -34.198333
+          ],
+          [
+            25.227613,
+            -34.199612
+          ],
+          [
+            25.232763,
+            -34.202239
+          ],
+          [
+            25.237999,
+            -34.203802
+          ],
+          [
+            25.241261,
+            -34.204157
+          ],
+          [
+            25.244522,
+            -34.204512
+          ],
+          [
+            25.246496,
+            -34.205435
+          ],
+          [
+            25.249672,
+            -34.205932
+          ],
+          [
+            25.253963,
+            -34.206287
+          ],
+          [
+            25.256796,
+            -34.206642
+          ],
+          [
+            25.265722,
+            -34.206358
+          ],
+          [
+            25.270529,
+            -34.206998
+          ]
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_012",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-25",
+        "source_index": 2,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            25.223837,
+            -34.216365
+          ],
+          [
+            25.227699,
+            -34.21672
+          ],
+          [
+            25.230446,
+            -34.217714
+          ],
+          [
+            25.236712,
+            -34.21956
+          ],
+          [
+            25.240917,
+            -34.220625
+          ],
+          [
+            25.24229,
+            -34.221122
+          ]
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_012",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-25",
+        "source_index": 3,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            25.223837,
+            -34.216365
+          ],
+          [
+            25.227699,
+            -34.21672
+          ],
+          [
+            25.230446,
+            -34.217714
+          ],
+          [
+            25.236712,
+            -34.21956
+          ],
+          [
+            25.240917,
+            -34.220625
+          ],
+          [
+            25.24229,
+            -34.221122
+          ]
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_012",
+        "area": "Gqeberha",
+        "optical_date": "2026-05-25",
+        "source_index": 4,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.0623,
+          -32.94956
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_013",
+        "area": "Ku Gompo",
+        "optical_date": "2026-05-09",
+        "source_index": 1,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.0625,
+          -32.94924
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_013",
+        "area": "Ku Gompo",
+        "optical_date": "2026-05-09",
+        "source_index": 2,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.06278,
+          -32.94845
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_013",
+        "area": "Ku Gompo",
+        "optical_date": "2026-05-09",
+        "source_index": 3,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.06368,
+          -32.94712
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_013",
+        "area": "Ku Gompo",
+        "optical_date": "2026-05-09",
+        "source_index": 4,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.06509,
+          -32.94581
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_013",
+        "area": "Ku Gompo",
+        "optical_date": "2026-05-09",
+        "source_index": 5,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.06891,
+          -32.94363
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_013",
+        "area": "Ku Gompo",
+        "optical_date": "2026-05-09",
+        "source_index": 6,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.05187,
+          -32.9575
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_013",
+        "area": "Ku Gompo",
+        "optical_date": "2026-05-09",
+        "source_index": 7,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.04978,
+          -32.95864
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_013",
+        "area": "Ku Gompo",
+        "optical_date": "2026-05-09",
+        "source_index": 8,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.02427,
+          -32.98752
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_013",
+        "area": "Ku Gompo",
+        "optical_date": "2026-05-09",
+        "source_index": 9,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.01541,
+          -32.99339
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_013",
+        "area": "Ku Gompo",
+        "optical_date": "2026-05-09",
+        "source_index": 10,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.09763,
+          -32.90929
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_013",
+        "area": "Ku Gompo",
+        "optical_date": "2026-05-09",
+        "source_index": 11,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.10373,
+          -32.90461
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_013",
+        "area": "Ku Gompo",
+        "optical_date": "2026-05-09",
+        "source_index": 12,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.10405,
+          -32.90442
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_013",
+        "area": "Ku Gompo",
+        "optical_date": "2026-05-09",
+        "source_index": 13,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.1047,
+          -32.90377
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_013",
+        "area": "Ku Gompo",
+        "optical_date": "2026-05-09",
+        "source_index": 14,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.13881,
+          -32.86591
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_013",
+        "area": "Ku Gompo",
+        "optical_date": "2026-05-09",
+        "source_index": 15,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.12624,
+          -32.87881
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_013",
+        "area": "Ku Gompo",
+        "optical_date": "2026-05-09",
+        "source_index": 16,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.10395,
+          -32.9045
+        ]
+      },
+      "properties": {
+        "obs_id": "MERIA_SA_013",
+        "area": "Ku Gompo",
+        "optical_date": "2026-05-09",
+        "source_index": 17,
+        "evidence": "User optical candidate; not SAR ground truth"
+      }
+    }
+  ]
+}

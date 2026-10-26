@@ -1,0 +1,519 @@
+{
+  "query_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$top=1000&$orderby=ContentDate/Start%20asc&$filter=Collection/Name%20eq%20'SENTINEL-1'%20and%20OData.CSC.Intersects(area=geography'SRID=4326;POLYGON((25.1%20-34.3,25.1%20-33.9,25.5%20-33.9,25.5%20-34.3,25.1%20-34.3))')%20and%20ContentDate/Start%20ge%202026-05-05T00:00:00Z%20and%20ContentDate/Start%20lt%202026-06-25T00:00:00Z%20and%20contains(Name,'_IW_SLC__1SDV_')",
+  "@odata.context": "$metadata#Products",
+  "value": [
+    {
+      "@odata.mediaContentType": "application/octet-stream",
+      "Id": "9f0e1c0c-acc1-4f0d-9e29-dcdd7c4f9c9c",
+      "Name": "S1A_IW_SLC__1SDV_20260505T170121_20260505T170149_064384_081B8F_D1CF.SAFE",
+      "ContentType": "application/octet-stream",
+      "ContentLength": 7951121651,
+      "OriginDate": "2026-05-05T18:37:20.082000Z",
+      "PublicationDate": "2026-05-05T18:43:46.485525Z",
+      "ModificationDate": "2026-05-05T18:43:46.485525Z",
+      "Online": true,
+      "EvictionDate": "9999-12-31T23:59:59.999999Z",
+      "S3Path": "/eodata/Sentinel-1/SAR/IW_SLC__1S/2026/05/05/S1A_IW_SLC__1SDV_20260505T170121_20260505T170149_064384_081B8F_D1CF.SAFE",
+      "Checksum": [
+        {
+          "Value": "3ba435807893ca46c8419fd3f93eb477",
+          "Algorithm": "MD5",
+          "ChecksumDate": "2026-05-05T18:43:33.882925Z"
+        },
+        {
+          "Value": "1dde94fc949fbc30a8a3a1c04ac812ceb7757264bca02f8c24fb82235fc9fbbd",
+          "Algorithm": "BLAKE3",
+          "ChecksumDate": "2026-05-05T18:43:45.402870Z"
+        }
+      ],
+      "ContentDate": {
+        "Start": "2026-05-05T17:01:21.732387Z",
+        "End": "2026-05-05T17:01:49.624231Z"
+      },
+      "Footprint": "geography'SRID=4326;POLYGON ((24.086298 -33.032246, 24.615747 -34.695286, 27.294474 -34.053303, 26.713234 -32.403233, 24.086298 -33.032246))'",
+      "GeoFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              24.086298,
+              -33.032246
+            ],
+            [
+              24.615747,
+              -34.695286
+            ],
+            [
+              27.294474,
+              -34.053303
+            ],
+            [
+              26.713234,
+              -32.403233
+            ],
+            [
+              24.086298,
+              -33.032246
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "@odata.mediaContentType": "application/octet-stream",
+      "Id": "b710bfbb-8f66-4d05-877e-c9fae05bf198",
+      "Name": "S1A_IW_SLC__1SDV_20260510T170927_20260510T170955_064457_081E34_5419.SAFE",
+      "ContentType": "application/octet-stream",
+      "ContentLength": 7958525703,
+      "OriginDate": "2026-05-10T18:08:29.327000Z",
+      "PublicationDate": "2026-05-10T18:15:14.499417Z",
+      "ModificationDate": "2026-05-10T18:15:14.499417Z",
+      "Online": true,
+      "EvictionDate": "9999-12-31T23:59:59.999999Z",
+      "S3Path": "/eodata/Sentinel-1/SAR/IW_SLC__1S/2026/05/10/S1A_IW_SLC__1SDV_20260510T170927_20260510T170955_064457_081E34_5419.SAFE",
+      "Checksum": [
+        {
+          "Value": "173c3a2e69307ebf121611ebc49e5a97",
+          "Algorithm": "MD5",
+          "ChecksumDate": "2026-05-10T18:15:01.378938Z"
+        },
+        {
+          "Value": "92a4e142cdfa2946d780c6067b9b9fc3b7491c81f1476b4f9e57dd3d631c592b",
+          "Algorithm": "BLAKE3",
+          "ChecksumDate": "2026-05-10T18:15:13.070720Z"
+        }
+      ],
+      "ContentDate": {
+        "Start": "2026-05-10T17:09:27.802678Z",
+        "End": "2026-05-10T17:09:55.713022Z"
+      },
+      "Footprint": "geography'SRID=4326;POLYGON ((22.17646 -33.48119, 22.71167 -35.144627, 25.402695 -34.49942, 24.814676 -32.849171, 22.17646 -33.48119))'",
+      "GeoFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              22.17646,
+              -33.48119
+            ],
+            [
+              22.71167,
+              -35.144627
+            ],
+            [
+              25.402695,
+              -34.49942
+            ],
+            [
+              24.814676,
+              -32.849171
+            ],
+            [
+              22.17646,
+              -33.48119
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "@odata.mediaContentType": "application/octet-stream",
+      "Id": "909136ba-17ba-4a49-81ff-6ab3581e8124",
+      "Name": "S1A_IW_SLC__1SDV_20260517T170121_20260517T170149_064559_0821BB_34AE.SAFE",
+      "ContentType": "application/octet-stream",
+      "ContentLength": 7951176151,
+      "OriginDate": "2026-05-17T18:17:15.406000Z",
+      "PublicationDate": "2026-05-17T18:24:24.484186Z",
+      "ModificationDate": "2026-05-17T18:24:24.484186Z",
+      "Online": true,
+      "EvictionDate": "9999-12-31T23:59:59.999999Z",
+      "S3Path": "/eodata/Sentinel-1/SAR/IW_SLC__1S/2026/05/17/S1A_IW_SLC__1SDV_20260517T170121_20260517T170149_064559_0821BB_34AE.SAFE",
+      "Checksum": [
+        {
+          "Value": "238a83e2ca3dec49015e190dfe2ca0ea",
+          "Algorithm": "MD5",
+          "ChecksumDate": "2026-05-17T18:24:11.434264Z"
+        },
+        {
+          "Value": "090ade12f2c206127cf076832d8b6c49b3403e1d68f810e227619820f0807b0f",
+          "Algorithm": "BLAKE3",
+          "ChecksumDate": "2026-05-17T18:24:23.062671Z"
+        }
+      ],
+      "ContentDate": {
+        "Start": "2026-05-17T17:01:21.421859Z",
+        "End": "2026-05-17T17:01:49.317814Z"
+      },
+      "Footprint": "geography'SRID=4326;POLYGON ((24.084721 -33.032753, 24.614195 -34.696045, 27.29307 -34.0541, 26.711796 -32.403782, 24.084721 -33.032753))'",
+      "GeoFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              24.084721,
+              -33.032753
+            ],
+            [
+              24.614195,
+              -34.696045
+            ],
+            [
+              27.29307,
+              -34.0541
+            ],
+            [
+              26.711796,
+              -32.403782
+            ],
+            [
+              24.084721,
+              -33.032753
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "@odata.mediaContentType": "application/octet-stream",
+      "Id": "b7ec7f16-fd51-46cc-8822-ab9701a90876",
+      "Name": "S1A_IW_SLC__1SDV_20260522T170927_20260522T170946_064632_08244A_3B1B.SAFE",
+      "ContentType": "application/octet-stream",
+      "ContentLength": 4954050657,
+      "OriginDate": "2026-05-22T18:19:30.014000Z",
+      "PublicationDate": "2026-05-22T18:25:45.143097Z",
+      "ModificationDate": "2026-05-22T18:25:45.143097Z",
+      "Online": true,
+      "EvictionDate": "9999-12-31T23:59:59.999999Z",
+      "S3Path": "/eodata/Sentinel-1/SAR/IW_SLC__1S/2026/05/22/S1A_IW_SLC__1SDV_20260522T170927_20260522T170946_064632_08244A_3B1B.SAFE",
+      "Checksum": [
+        {
+          "Value": "6ee812507429b565aad36e7c464867a7",
+          "Algorithm": "MD5",
+          "ChecksumDate": "2026-05-22T18:25:36.808651Z"
+        },
+        {
+          "Value": "7e8248d4cee3a6f3725a5838bdbe6d36ae81a786e5ca20799e427562d06d0f83",
+          "Algorithm": "BLAKE3",
+          "ChecksumDate": "2026-05-22T18:25:44.056942Z"
+        }
+      ],
+      "ContentDate": {
+        "Start": "2026-05-22T17:09:27.309669Z",
+        "End": "2026-05-22T17:09:46.099509Z"
+      },
+      "Footprint": "geography'SRID=4326;POLYGON ((22.383902 -34.016853, 22.746862 -35.136326, 25.396744 -34.500645, 24.998392 -33.390007, 22.383902 -34.016853))'",
+      "GeoFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              22.383902,
+              -34.016853
+            ],
+            [
+              22.746862,
+              -35.136326
+            ],
+            [
+              25.396744,
+              -34.500645
+            ],
+            [
+              24.998392,
+              -33.390007
+            ],
+            [
+              22.383902,
+              -34.016853
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "@odata.mediaContentType": "application/octet-stream",
+      "Id": "6dbfc789-27c6-41a1-87e3-ea10fdcd2291",
+      "Name": "S1A_IW_SLC__1SDV_20260529T170120_20260529T170148_064734_0827DC_C856.SAFE",
+      "ContentType": "application/octet-stream",
+      "ContentLength": 7951277507,
+      "OriginDate": "2026-05-29T18:19:58.298000Z",
+      "PublicationDate": "2026-05-29T18:28:00.896143Z",
+      "ModificationDate": "2026-05-29T18:28:00.896143Z",
+      "Online": true,
+      "EvictionDate": "9999-12-31T23:59:59.999999Z",
+      "S3Path": "/eodata/Sentinel-1/SAR/IW_SLC__1S/2026/05/29/S1A_IW_SLC__1SDV_20260529T170120_20260529T170148_064734_0827DC_C856.SAFE",
+      "Checksum": [
+        {
+          "Value": "d6aebc66906b0313a2076e88d0cd7fe6",
+          "Algorithm": "MD5",
+          "ChecksumDate": "2026-05-29T18:27:47.739014Z"
+        },
+        {
+          "Value": "ea14ec4f57833e3ae877ddf29347b1e31f3a4508d8412f7126138aaf5dfa1d22",
+          "Algorithm": "BLAKE3",
+          "ChecksumDate": "2026-05-29T18:27:59.823674Z"
+        }
+      ],
+      "ContentDate": {
+        "Start": "2026-05-29T17:01:20.739782Z",
+        "End": "2026-05-29T17:01:48.629569Z"
+      },
+      "Footprint": "geography'SRID=4326;POLYGON ((24.084642 -33.03334, 24.613979 -34.696262, 27.29295 -34.054321, 26.711823 -32.404369, 24.084642 -33.03334))'",
+      "GeoFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              24.084642,
+              -33.03334
+            ],
+            [
+              24.613979,
+              -34.696262
+            ],
+            [
+              27.29295,
+              -34.054321
+            ],
+            [
+              26.711823,
+              -32.404369
+            ],
+            [
+              24.084642,
+              -33.03334
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "@odata.mediaContentType": "application/octet-stream",
+      "Id": "ed09353c-294f-4980-a255-311ae0503646",
+      "Name": "S1A_IW_SLC__1SDV_20260603T170926_20260603T170954_064807_082A73_AC73.SAFE",
+      "ContentType": "application/octet-stream",
+      "ContentLength": 7731292839,
+      "OriginDate": "2026-06-03T18:09:09.825000Z",
+      "PublicationDate": "2026-06-03T18:16:45.761724Z",
+      "ModificationDate": "2026-06-03T18:16:45.761724Z",
+      "Online": true,
+      "EvictionDate": "9999-12-31T23:59:59.999999Z",
+      "S3Path": "/eodata/Sentinel-1/SAR/IW_SLC__1S/2026/06/03/S1A_IW_SLC__1SDV_20260603T170926_20260603T170954_064807_082A73_AC73.SAFE",
+      "Checksum": [
+        {
+          "Value": "46ea67fdb8696b70033f4b7cf9798b65",
+          "Algorithm": "MD5",
+          "ChecksumDate": "2026-06-03T18:16:31.272302Z"
+        },
+        {
+          "Value": "54ce785ca79a6a1670500e4bfcf5ebfeac45062b1aed593bba46af3978b680fa",
+          "Algorithm": "BLAKE3",
+          "ChecksumDate": "2026-06-03T18:16:42.637097Z"
+        }
+      ],
+      "ContentDate": {
+        "Start": "2026-06-03T17:09:26.644589Z",
+        "End": "2026-06-03T17:09:54.524100Z"
+      },
+      "Footprint": "geography'SRID=4326;POLYGON ((22.208237 -33.474827, 22.743492 -35.13628, 25.399191 -34.499245, 24.811937 -32.8508, 22.208237 -33.474827))'",
+      "GeoFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              22.208237,
+              -33.474827
+            ],
+            [
+              22.743492,
+              -35.13628
+            ],
+            [
+              25.399191,
+              -34.499245
+            ],
+            [
+              24.811937,
+              -32.8508
+            ],
+            [
+              22.208237,
+              -33.474827
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "@odata.mediaContentType": "application/octet-stream",
+      "Id": "a6041203-d724-4572-82af-933e1c0b785d",
+      "Name": "S1A_IW_SLC__1SDV_20260610T170120_20260610T170147_064909_082DFC_6949.SAFE",
+      "ContentType": "application/octet-stream",
+      "ContentLength": 7951342617,
+      "OriginDate": "2026-06-10T18:43:18.001000Z",
+      "PublicationDate": "2026-06-10T18:50:32.614732Z",
+      "ModificationDate": "2026-06-10T18:50:32.614732Z",
+      "Online": true,
+      "EvictionDate": "9999-12-31T23:59:59.999999Z",
+      "S3Path": "/eodata/Sentinel-1/SAR/IW_SLC__1S/2026/06/10/S1A_IW_SLC__1SDV_20260610T170120_20260610T170147_064909_082DFC_6949.SAFE",
+      "Checksum": [
+        {
+          "Value": "6f3ed419b80db7cf75c7be1e49c0d558",
+          "Algorithm": "MD5",
+          "ChecksumDate": "2026-06-10T18:50:18.381294Z"
+        },
+        {
+          "Value": "6def7b30c529612afdd6a202899b255f09d687499c19cfd516362085898cb117",
+          "Algorithm": "BLAKE3",
+          "ChecksumDate": "2026-06-10T18:50:30.387610Z"
+        }
+      ],
+      "ContentDate": {
+        "Start": "2026-06-10T17:01:20.075355Z",
+        "End": "2026-06-10T17:01:47.963087Z"
+      },
+      "Footprint": "geography'SRID=4326;POLYGON ((24.084682 -33.033878, 24.614 -34.696674, 27.293062 -34.054688, 26.711952 -32.404858, 24.084682 -33.033878))'",
+      "GeoFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              24.084682,
+              -33.033878
+            ],
+            [
+              24.614,
+              -34.696674
+            ],
+            [
+              27.293062,
+              -34.054688
+            ],
+            [
+              26.711952,
+              -32.404858
+            ],
+            [
+              24.084682,
+              -33.033878
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "@odata.mediaContentType": "application/octet-stream",
+      "Id": "676e3298-3bec-482c-a874-bd56c3108da6",
+      "Name": "S1A_IW_SLC__1SDV_20260615T170926_20260615T170944_064982_083085_8573.SAFE",
+      "ContentType": "application/octet-stream",
+      "ContentLength": 4954062168,
+      "OriginDate": "2026-06-15T18:21:40.443000Z",
+      "PublicationDate": "2026-06-15T18:27:51.540941Z",
+      "ModificationDate": "2026-06-15T18:27:51.540941Z",
+      "Online": true,
+      "EvictionDate": "9999-12-31T23:59:59.999999Z",
+      "S3Path": "/eodata/Sentinel-1/SAR/IW_SLC__1S/2026/06/15/S1A_IW_SLC__1SDV_20260615T170926_20260615T170944_064982_083085_8573.SAFE",
+      "Checksum": [
+        {
+          "Value": "730a0e5ffe602a3cbf1361b0c4f5258e",
+          "Algorithm": "MD5",
+          "ChecksumDate": "2026-06-15T18:27:38.800436Z"
+        },
+        {
+          "Value": "e13e9fb620834f0f25d80020d81fa0829ceb59b48d3fa96501ecdefad32d17e0",
+          "Algorithm": "BLAKE3",
+          "ChecksumDate": "2026-06-15T18:27:49.479728Z"
+        }
+      ],
+      "ContentDate": {
+        "Start": "2026-06-15T17:09:26.082861Z",
+        "End": "2026-06-15T17:09:44.874757Z"
+      },
+      "Footprint": "geography'SRID=4326;POLYGON ((22.381678 -34.017422, 22.744625 -35.137024, 25.39464 -34.501408, 24.996294 -33.39064, 22.381678 -34.017422))'",
+      "GeoFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              22.381678,
+              -34.017422
+            ],
+            [
+              22.744625,
+              -35.137024
+            ],
+            [
+              25.39464,
+              -34.501408
+            ],
+            [
+              24.996294,
+              -33.39064
+            ],
+            [
+              22.381678,
+              -34.017422
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "@odata.mediaContentType": "application/octet-stream",
+      "Id": "1aaf0902-bb47-471d-9f75-eb92f2a0af8d",
+      "Name": "S1A_IW_SLC__1SDV_20260622T170119_20260622T170147_065084_083423_34E4.SAFE",
+      "ContentType": "application/octet-stream",
+      "ContentLength": 7951316380,
+      "OriginDate": "2026-06-22T18:44:21.025000Z",
+      "PublicationDate": "2026-06-22T18:53:54.025408Z",
+      "ModificationDate": "2026-06-22T18:53:54.025408Z",
+      "Online": true,
+      "EvictionDate": "9999-12-31T23:59:59.999999Z",
+      "S3Path": "/eodata/Sentinel-1/SAR/IW_SLC__1S/2026/06/22/S1A_IW_SLC__1SDV_20260622T170119_20260622T170147_065084_083423_34E4.SAFE",
+      "Checksum": [
+        {
+          "Value": "1f67eeef0caa3a7c065823b90cc109df",
+          "Algorithm": "MD5",
+          "ChecksumDate": "2026-06-22T18:53:39.377142Z"
+        },
+        {
+          "Value": "393353168180c339e48a3b71d28de9986c5cd1b59b3c178e3d1fb0446ac5dc55",
+          "Algorithm": "BLAKE3",
+          "ChecksumDate": "2026-06-22T18:53:52.106671Z"
+        }
+      ],
+      "ContentDate": {
+        "Start": "2026-06-22T17:01:19.474039Z",
+        "End": "2026-06-22T17:01:47.363827Z"
+      },
+      "Footprint": "geography'SRID=4326;POLYGON ((24.085182 -33.033157, 24.614569 -34.696087, 27.293339 -34.054138, 26.712166 -32.404179, 24.085182 -33.033157))'",
+      "GeoFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              24.085182,
+              -33.033157
+            ],
+            [
+              24.614569,
+              -34.696087
+            ],
+            [
+              27.293339,
+              -34.054138
+            ],
+            [
+              26.712166,
+              -32.404179
+            ],
+            [
+              24.085182,
+              -33.033157
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
