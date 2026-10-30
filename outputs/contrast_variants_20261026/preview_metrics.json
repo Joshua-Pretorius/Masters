@@ -1,0 +1,730 @@
+[
+  {
+    "scene": "scene_20190111T235822",
+    "input": "Refined Lee VV contrast",
+    "variant": "Original",
+    "crop_center": [
+      -88.03604464076615,
+      16.545009149426473
+    ],
+    "location_kind": "valid-water example (reference crop has no valid contrast)",
+    "valid_pixels": 65403,
+    "median_absolute_adjacent_difference_db": 1.0571439266204834,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235822",
+    "input": "Refined Lee VV contrast",
+    "variant": "Median 3x3",
+    "crop_center": [
+      -88.03604464076615,
+      16.545009149426473
+    ],
+    "location_kind": "valid-water example (reference crop has no valid contrast)",
+    "valid_pixels": 65343,
+    "median_absolute_adjacent_difference_db": 0.3216952085494995,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235822",
+    "input": "Refined Lee VV contrast",
+    "variant": "Median 5x5",
+    "crop_center": [
+      -88.03604464076615,
+      16.545009149426473
+    ],
+    "location_kind": "valid-water example (reference crop has no valid contrast)",
+    "valid_pixels": 65276,
+    "median_absolute_adjacent_difference_db": 0.1927160918712616,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235822",
+    "input": "Refined Lee VV contrast",
+    "variant": "Gaussian sigma 1 px - baseline",
+    "crop_center": [
+      -88.03604464076615,
+      16.545009149426473
+    ],
+    "location_kind": "valid-water example (reference crop has no valid contrast)",
+    "valid_pixels": 65343,
+    "median_absolute_adjacent_difference_db": 0.316745400428772,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235822",
+    "input": "Refined Lee VV contrast",
+    "variant": "Sign support 3x3 - 5 of 9",
+    "crop_center": [
+      -88.03604464076615,
+      16.545009149426473
+    ],
+    "location_kind": "valid-water example (reference crop has no valid contrast)",
+    "valid_pixels": 65343,
+    "median_absolute_adjacent_difference_db": 0.5714453458786011,
+    "nonzero_fraction": 0.4803574981252774
+  },
+  {
+    "scene": "scene_20190111T235822",
+    "input": "Refined Lee VV contrast",
+    "variant": "Sign support 5x5 - 13 of 25",
+    "crop_center": [
+      -88.03604464076615,
+      16.545009149426473
+    ],
+    "location_kind": "valid-water example (reference crop has no valid contrast)",
+    "valid_pixels": 65276,
+    "median_absolute_adjacent_difference_db": 0.0,
+    "nonzero_fraction": 0.3355138182486672
+  },
+  {
+    "scene": "scene_20190111T235822",
+    "input": "Refined Lee VV contrast",
+    "variant": "Multiscale persistence - sigma 1 and 2 px",
+    "crop_center": [
+      -88.03604464076615,
+      16.545009149426473
+    ],
+    "location_kind": "valid-water example (reference crop has no valid contrast)",
+    "valid_pixels": 65293,
+    "median_absolute_adjacent_difference_db": 0.0,
+    "nonzero_fraction": 0.2753587674023249
+  },
+  {
+    "scene": "scene_20190111T235822",
+    "input": "VV 30 m patch contrast",
+    "variant": "Original",
+    "crop_center": [
+      -88.03604464076615,
+      16.545009149426473
+    ],
+    "location_kind": "valid-water example (reference crop has no valid contrast)",
+    "valid_pixels": 65343,
+    "median_absolute_adjacent_difference_db": 0.6934773921966553,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235822",
+    "input": "VV 30 m patch contrast",
+    "variant": "Median 3x3",
+    "crop_center": [
+      -88.03604464076615,
+      16.545009149426473
+    ],
+    "location_kind": "valid-water example (reference crop has no valid contrast)",
+    "valid_pixels": 65276,
+    "median_absolute_adjacent_difference_db": 0.35187864303588867,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235822",
+    "input": "VV 30 m patch contrast",
+    "variant": "Median 5x5",
+    "crop_center": [
+      -88.03604464076615,
+      16.545009149426473
+    ],
+    "location_kind": "valid-water example (reference crop has no valid contrast)",
+    "valid_pixels": 65202,
+    "median_absolute_adjacent_difference_db": 0.17702743411064148,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235822",
+    "input": "VV 30 m patch contrast",
+    "variant": "Gaussian sigma 1 px - baseline",
+    "crop_center": [
+      -88.03604464076615,
+      16.545009149426473
+    ],
+    "location_kind": "valid-water example (reference crop has no valid contrast)",
+    "valid_pixels": 65276,
+    "median_absolute_adjacent_difference_db": 0.32169556617736816,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235822",
+    "input": "VV 30 m patch contrast",
+    "variant": "Sign support 3x3 - 5 of 9",
+    "crop_center": [
+      -88.03604464076615,
+      16.545009149426473
+    ],
+    "location_kind": "valid-water example (reference crop has no valid contrast)",
+    "valid_pixels": 65276,
+    "median_absolute_adjacent_difference_db": 0.5589678287506104,
+    "nonzero_fraction": 0.5748973589067957
+  },
+  {
+    "scene": "scene_20190111T235822",
+    "input": "VV 30 m patch contrast",
+    "variant": "Sign support 5x5 - 13 of 25",
+    "crop_center": [
+      -88.03604464076615,
+      16.545009149426473
+    ],
+    "location_kind": "valid-water example (reference crop has no valid contrast)",
+    "valid_pixels": 65202,
+    "median_absolute_adjacent_difference_db": 0.1908835768699646,
+    "nonzero_fraction": 0.43874421030029753
+  },
+  {
+    "scene": "scene_20190111T235822",
+    "input": "VV 30 m patch contrast",
+    "variant": "Multiscale persistence - sigma 1 and 2 px",
+    "crop_center": [
+      -88.03604464076615,
+      16.545009149426473
+    ],
+    "location_kind": "valid-water example (reference crop has no valid contrast)",
+    "valid_pixels": 65216,
+    "median_absolute_adjacent_difference_db": 0.0,
+    "nonzero_fraction": 0.37897141805691853
+  },
+  {
+    "scene": "scene_20190111T235822",
+    "input": "VH 30 m patch contrast",
+    "variant": "Original",
+    "crop_center": [
+      -88.03604464076615,
+      16.545009149426473
+    ],
+    "location_kind": "valid-water example (reference crop has no valid contrast)",
+    "valid_pixels": 65343,
+    "median_absolute_adjacent_difference_db": 0.6404581665992737,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235822",
+    "input": "VH 30 m patch contrast",
+    "variant": "Median 3x3",
+    "crop_center": [
+      -88.03604464076615,
+      16.545009149426473
+    ],
+    "location_kind": "valid-water example (reference crop has no valid contrast)",
+    "valid_pixels": 65276,
+    "median_absolute_adjacent_difference_db": 0.31929513812065125,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235822",
+    "input": "VH 30 m patch contrast",
+    "variant": "Median 5x5",
+    "crop_center": [
+      -88.03604464076615,
+      16.545009149426473
+    ],
+    "location_kind": "valid-water example (reference crop has no valid contrast)",
+    "valid_pixels": 65202,
+    "median_absolute_adjacent_difference_db": 0.15906986594200134,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235822",
+    "input": "VH 30 m patch contrast",
+    "variant": "Gaussian sigma 1 px - baseline",
+    "crop_center": [
+      -88.03604464076615,
+      16.545009149426473
+    ],
+    "location_kind": "valid-water example (reference crop has no valid contrast)",
+    "valid_pixels": 65276,
+    "median_absolute_adjacent_difference_db": 0.29157063364982605,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235822",
+    "input": "VH 30 m patch contrast",
+    "variant": "Sign support 3x3 - 5 of 9",
+    "crop_center": [
+      -88.03604464076615,
+      16.545009149426473
+    ],
+    "location_kind": "valid-water example (reference crop has no valid contrast)",
+    "valid_pixels": 65276,
+    "median_absolute_adjacent_difference_db": 0.4788714647293091,
+    "nonzero_fraction": 0.5341626325142472
+  },
+  {
+    "scene": "scene_20190111T235822",
+    "input": "VH 30 m patch contrast",
+    "variant": "Sign support 5x5 - 13 of 25",
+    "crop_center": [
+      -88.03604464076615,
+      16.545009149426473
+    ],
+    "location_kind": "valid-water example (reference crop has no valid contrast)",
+    "valid_pixels": 65202,
+    "median_absolute_adjacent_difference_db": 0.009692132472991943,
+    "nonzero_fraction": 0.3891291678169381
+  },
+  {
+    "scene": "scene_20190111T235822",
+    "input": "VH 30 m patch contrast",
+    "variant": "Multiscale persistence - sigma 1 and 2 px",
+    "crop_center": [
+      -88.03604464076615,
+      16.545009149426473
+    ],
+    "location_kind": "valid-water example (reference crop has no valid contrast)",
+    "valid_pixels": 65216,
+    "median_absolute_adjacent_difference_db": 0.0,
+    "nonzero_fraction": 0.3177747791952895
+  },
+  {
+    "scene": "scene_20190111T235822",
+    "input": "VV 60 m patch contrast",
+    "variant": "Original",
+    "crop_center": [
+      -88.03604464076615,
+      16.545009149426473
+    ],
+    "location_kind": "valid-water example (reference crop has no valid contrast)",
+    "valid_pixels": 65308,
+    "median_absolute_adjacent_difference_db": 0.34230732917785645,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235822",
+    "input": "VV 60 m patch contrast",
+    "variant": "Median 3x3",
+    "crop_center": [
+      -88.03604464076615,
+      16.545009149426473
+    ],
+    "location_kind": "valid-water example (reference crop has no valid contrast)",
+    "valid_pixels": 65234,
+    "median_absolute_adjacent_difference_db": 0.17601299285888672,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235822",
+    "input": "VV 60 m patch contrast",
+    "variant": "Median 5x5",
+    "crop_center": [
+      -88.03604464076615,
+      16.545009149426473
+    ],
+    "location_kind": "valid-water example (reference crop has no valid contrast)",
+    "valid_pixels": 65152,
+    "median_absolute_adjacent_difference_db": 0.12928542494773865,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235822",
+    "input": "VV 60 m patch contrast",
+    "variant": "Gaussian sigma 1 px - baseline",
+    "crop_center": [
+      -88.03604464076615,
+      16.545009149426473
+    ],
+    "location_kind": "valid-water example (reference crop has no valid contrast)",
+    "valid_pixels": 65234,
+    "median_absolute_adjacent_difference_db": 0.1780310571193695,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235822",
+    "input": "VV 60 m patch contrast",
+    "variant": "Sign support 3x3 - 5 of 9",
+    "crop_center": [
+      -88.03604464076615,
+      16.545009149426473
+    ],
+    "location_kind": "valid-water example (reference crop has no valid contrast)",
+    "valid_pixels": 65234,
+    "median_absolute_adjacent_difference_db": 0.11176052689552307,
+    "nonzero_fraction": 0.4739552993837569
+  },
+  {
+    "scene": "scene_20190111T235822",
+    "input": "VV 60 m patch contrast",
+    "variant": "Sign support 5x5 - 13 of 25",
+    "crop_center": [
+      -88.03604464076615,
+      16.545009149426473
+    ],
+    "location_kind": "valid-water example (reference crop has no valid contrast)",
+    "valid_pixels": 65152,
+    "median_absolute_adjacent_difference_db": 0.0,
+    "nonzero_fraction": 0.3944468320235756
+  },
+  {
+    "scene": "scene_20190111T235822",
+    "input": "VV 60 m patch contrast",
+    "variant": "Multiscale persistence - sigma 1 and 2 px",
+    "crop_center": [
+      -88.03604464076615,
+      16.545009149426473
+    ],
+    "location_kind": "valid-water example (reference crop has no valid contrast)",
+    "valid_pixels": 65170,
+    "median_absolute_adjacent_difference_db": 0.0,
+    "nonzero_fraction": 0.34512812643854535
+  },
+  {
+    "scene": "scene_20190111T235757",
+    "input": "Refined Lee VV contrast",
+    "variant": "Original",
+    "crop_center": [
+      -86.97198725562394,
+      15.806166617947369
+    ],
+    "location_kind": "reference-centred",
+    "valid_pixels": 65536,
+    "median_absolute_adjacent_difference_db": 1.023728847503662,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235757",
+    "input": "Refined Lee VV contrast",
+    "variant": "Median 3x3",
+    "crop_center": [
+      -86.97198725562394,
+      15.806166617947369
+    ],
+    "location_kind": "reference-centred",
+    "valid_pixels": 65536,
+    "median_absolute_adjacent_difference_db": 0.32271504402160645,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235757",
+    "input": "Refined Lee VV contrast",
+    "variant": "Median 5x5",
+    "crop_center": [
+      -86.97198725562394,
+      15.806166617947369
+    ],
+    "location_kind": "reference-centred",
+    "valid_pixels": 65536,
+    "median_absolute_adjacent_difference_db": 0.19431623816490173,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235757",
+    "input": "Refined Lee VV contrast",
+    "variant": "Gaussian sigma 1 px - baseline",
+    "crop_center": [
+      -86.97198725562394,
+      15.806166617947369
+    ],
+    "location_kind": "reference-centred",
+    "valid_pixels": 65536,
+    "median_absolute_adjacent_difference_db": 0.3219037652015686,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235757",
+    "input": "Refined Lee VV contrast",
+    "variant": "Sign support 3x3 - 5 of 9",
+    "crop_center": [
+      -86.97198725562394,
+      15.806166617947369
+    ],
+    "location_kind": "reference-centred",
+    "valid_pixels": 65536,
+    "median_absolute_adjacent_difference_db": 0.5771244168281555,
+    "nonzero_fraction": 0.48876953125
+  },
+  {
+    "scene": "scene_20190111T235757",
+    "input": "Refined Lee VV contrast",
+    "variant": "Sign support 5x5 - 13 of 25",
+    "crop_center": [
+      -86.97198725562394,
+      15.806166617947369
+    ],
+    "location_kind": "reference-centred",
+    "valid_pixels": 65536,
+    "median_absolute_adjacent_difference_db": 0.0,
+    "nonzero_fraction": 0.34442138671875
+  },
+  {
+    "scene": "scene_20190111T235757",
+    "input": "Refined Lee VV contrast",
+    "variant": "Multiscale persistence - sigma 1 and 2 px",
+    "crop_center": [
+      -86.97198725562394,
+      15.806166617947369
+    ],
+    "location_kind": "reference-centred",
+    "valid_pixels": 65536,
+    "median_absolute_adjacent_difference_db": 0.0,
+    "nonzero_fraction": 0.29962158203125
+  },
+  {
+    "scene": "scene_20190111T235757",
+    "input": "VV 30 m patch contrast",
+    "variant": "Original",
+    "crop_center": [
+      -86.97198725562394,
+      15.806166617947369
+    ],
+    "location_kind": "reference-centred",
+    "valid_pixels": 65536,
+    "median_absolute_adjacent_difference_db": 0.6280423402786255,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235757",
+    "input": "VV 30 m patch contrast",
+    "variant": "Median 3x3",
+    "crop_center": [
+      -86.97198725562394,
+      15.806166617947369
+    ],
+    "location_kind": "reference-centred",
+    "valid_pixels": 65536,
+    "median_absolute_adjacent_difference_db": 0.3389623761177063,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235757",
+    "input": "VV 30 m patch contrast",
+    "variant": "Median 5x5",
+    "crop_center": [
+      -86.97198725562394,
+      15.806166617947369
+    ],
+    "location_kind": "reference-centred",
+    "valid_pixels": 65536,
+    "median_absolute_adjacent_difference_db": 0.17580679059028625,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235757",
+    "input": "VV 30 m patch contrast",
+    "variant": "Gaussian sigma 1 px - baseline",
+    "crop_center": [
+      -86.97198725562394,
+      15.806166617947369
+    ],
+    "location_kind": "reference-centred",
+    "valid_pixels": 65536,
+    "median_absolute_adjacent_difference_db": 0.3213275969028473,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235757",
+    "input": "VV 30 m patch contrast",
+    "variant": "Sign support 3x3 - 5 of 9",
+    "crop_center": [
+      -86.97198725562394,
+      15.806166617947369
+    ],
+    "location_kind": "reference-centred",
+    "valid_pixels": 65536,
+    "median_absolute_adjacent_difference_db": 0.5434069633483887,
+    "nonzero_fraction": 0.6014862060546875
+  },
+  {
+    "scene": "scene_20190111T235757",
+    "input": "VV 30 m patch contrast",
+    "variant": "Sign support 5x5 - 13 of 25",
+    "crop_center": [
+      -86.97198725562394,
+      15.806166617947369
+    ],
+    "location_kind": "reference-centred",
+    "valid_pixels": 65536,
+    "median_absolute_adjacent_difference_db": 0.22305241227149963,
+    "nonzero_fraction": 0.465484619140625
+  },
+  {
+    "scene": "scene_20190111T235757",
+    "input": "VV 30 m patch contrast",
+    "variant": "Multiscale persistence - sigma 1 and 2 px",
+    "crop_center": [
+      -86.97198725562394,
+      15.806166617947369
+    ],
+    "location_kind": "reference-centred",
+    "valid_pixels": 65536,
+    "median_absolute_adjacent_difference_db": 0.0,
+    "nonzero_fraction": 0.4067535400390625
+  },
+  {
+    "scene": "scene_20190111T235757",
+    "input": "VH 30 m patch contrast",
+    "variant": "Original",
+    "crop_center": [
+      -86.97198725562394,
+      15.806166617947369
+    ],
+    "location_kind": "reference-centred",
+    "valid_pixels": 65536,
+    "median_absolute_adjacent_difference_db": 0.6173338890075684,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235757",
+    "input": "VH 30 m patch contrast",
+    "variant": "Median 3x3",
+    "crop_center": [
+      -86.97198725562394,
+      15.806166617947369
+    ],
+    "location_kind": "reference-centred",
+    "valid_pixels": 65536,
+    "median_absolute_adjacent_difference_db": 0.32736921310424805,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235757",
+    "input": "VH 30 m patch contrast",
+    "variant": "Median 5x5",
+    "crop_center": [
+      -86.97198725562394,
+      15.806166617947369
+    ],
+    "location_kind": "reference-centred",
+    "valid_pixels": 65536,
+    "median_absolute_adjacent_difference_db": 0.1685236096382141,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235757",
+    "input": "VH 30 m patch contrast",
+    "variant": "Gaussian sigma 1 px - baseline",
+    "crop_center": [
+      -86.97198725562394,
+      15.806166617947369
+    ],
+    "location_kind": "reference-centred",
+    "valid_pixels": 65536,
+    "median_absolute_adjacent_difference_db": 0.3075498938560486,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235757",
+    "input": "VH 30 m patch contrast",
+    "variant": "Sign support 3x3 - 5 of 9",
+    "crop_center": [
+      -86.97198725562394,
+      15.806166617947369
+    ],
+    "location_kind": "reference-centred",
+    "valid_pixels": 65536,
+    "median_absolute_adjacent_difference_db": 0.5111666917800903,
+    "nonzero_fraction": 0.5716400146484375
+  },
+  {
+    "scene": "scene_20190111T235757",
+    "input": "VH 30 m patch contrast",
+    "variant": "Sign support 5x5 - 13 of 25",
+    "crop_center": [
+      -86.97198725562394,
+      15.806166617947369
+    ],
+    "location_kind": "reference-centred",
+    "valid_pixels": 65536,
+    "median_absolute_adjacent_difference_db": 0.12373095750808716,
+    "nonzero_fraction": 0.428070068359375
+  },
+  {
+    "scene": "scene_20190111T235757",
+    "input": "VH 30 m patch contrast",
+    "variant": "Multiscale persistence - sigma 1 and 2 px",
+    "crop_center": [
+      -86.97198725562394,
+      15.806166617947369
+    ],
+    "location_kind": "reference-centred",
+    "valid_pixels": 65536,
+    "median_absolute_adjacent_difference_db": 0.0,
+    "nonzero_fraction": 0.3652801513671875
+  },
+  {
+    "scene": "scene_20190111T235757",
+    "input": "VV 60 m patch contrast",
+    "variant": "Original",
+    "crop_center": [
+      -86.97198725562394,
+      15.806166617947369
+    ],
+    "location_kind": "reference-centred",
+    "valid_pixels": 65536,
+    "median_absolute_adjacent_difference_db": 0.3146531581878662,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235757",
+    "input": "VV 60 m patch contrast",
+    "variant": "Median 3x3",
+    "crop_center": [
+      -86.97198725562394,
+      15.806166617947369
+    ],
+    "location_kind": "reference-centred",
+    "valid_pixels": 65536,
+    "median_absolute_adjacent_difference_db": 0.17970126867294312,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235757",
+    "input": "VV 60 m patch contrast",
+    "variant": "Median 5x5",
+    "crop_center": [
+      -86.97198725562394,
+      15.806166617947369
+    ],
+    "location_kind": "reference-centred",
+    "valid_pixels": 65536,
+    "median_absolute_adjacent_difference_db": 0.13130807876586914,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235757",
+    "input": "VV 60 m patch contrast",
+    "variant": "Gaussian sigma 1 px - baseline",
+    "crop_center": [
+      -86.97198725562394,
+      15.806166617947369
+    ],
+    "location_kind": "reference-centred",
+    "valid_pixels": 65536,
+    "median_absolute_adjacent_difference_db": 0.18243470788002014,
+    "nonzero_fraction": 1.0
+  },
+  {
+    "scene": "scene_20190111T235757",
+    "input": "VV 60 m patch contrast",
+    "variant": "Sign support 3x3 - 5 of 9",
+    "crop_center": [
+      -86.97198725562394,
+      15.806166617947369
+    ],
+    "location_kind": "reference-centred",
+    "valid_pixels": 65536,
+    "median_absolute_adjacent_difference_db": 0.12895068526268005,
+    "nonzero_fraction": 0.501068115234375
+  },
+  {
+    "scene": "scene_20190111T235757",
+    "input": "VV 60 m patch contrast",
+    "variant": "Sign support 5x5 - 13 of 25",
+    "crop_center": [
+      -86.97198725562394,
+      15.806166617947369
+    ],
+    "location_kind": "reference-centred",
+    "valid_pixels": 65536,
+    "median_absolute_adjacent_difference_db": 0.015581488609313965,
+    "nonzero_fraction": 0.4229888916015625
+  },
+  {
+    "scene": "scene_20190111T235757",
+    "input": "VV 60 m patch contrast",
+    "variant": "Multiscale persistence - sigma 1 and 2 px",
+    "crop_center": [
+      -86.97198725562394,
+      15.806166617947369
+    ],
+    "location_kind": "reference-centred",
+    "valid_pixels": 65536,
+    "median_absolute_adjacent_difference_db": 0.0,
+    "nonzero_fraction": 0.3742218017578125
+  }
+]

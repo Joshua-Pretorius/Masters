@@ -1,0 +1,45 @@
+{
+  "reason": "User-requested January 16 follow-up to both January 11 slices; outside default 72-hour window. Original January 12 optical time retained; not contemporary ground truth.",
+  "associations": [
+    {
+      "target_id": "marida_16PEC_2019-01-12:followup:01",
+      "obs_id": "marida_16PEC_2019-01-12",
+      "source_dataset": "MARIDA",
+      "source_group_id": "16PEC/2019-01-12",
+      "area": "16PEC",
+      "date": "2019-01-12",
+      "reference_time": "2019-01-12T16:16:31Z",
+      "timestamp_source": "catalogue",
+      "role": "followup",
+      "selection_rank": "1",
+      "granule_name": "S1A_IW_SLC__1SDV_20190116T113714_20190116T113744_025502_02D3D3_FC33.SAFE",
+      "acquisition_start": "2019-01-16T11:37:14Z",
+      "delta_h": "91.345278",
+      "scene_coverage_ratio": "0.870398",
+      "coverage_set_ratio": "1.0",
+      "coverage_complete": "True",
+      "download_group_key": "S1A_IW_SLC__1SDV_20190116T113714_20190116T113744_025502_02D3D3_FC33",
+      "aoi_buffer_km": "30.0"
+    },
+    {
+      "target_id": "marida_16PEC_2019-01-12:followup:02",
+      "obs_id": "marida_16PEC_2019-01-12",
+      "source_dataset": "MARIDA",
+      "source_group_id": "16PEC/2019-01-12",
+      "area": "16PEC",
+      "date": "2019-01-12",
+      "reference_time": "2019-01-12T16:16:31Z",
+      "timestamp_source": "catalogue",
+      "role": "followup",
+      "selection_rank": "2",
+      "granule_name": "S1A_IW_SLC__1SDV_20190116T113741_20190116T113809_025502_02D3D3_B06D.SAFE",
+      "acquisition_start": "2019-01-16T11:37:41Z",
+      "delta_h": "91.352778",
+      "scene_coverage_ratio": "0.262937",
+      "coverage_set_ratio": "1.0",
+      "coverage_complete": "True",
+      "download_group_key": "S1A_IW_SLC__1SDV_20190116T113741_20190116T113809_025502_02D3D3_B06D",
+      "aoi_buffer_km": "30.0"
+    }
+  ]
+}

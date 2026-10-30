@@ -1,0 +1,126 @@
+{
+  "observation_id": "S1_S1A_IW_SLC__1SDV_20190116T113714_20190116T113744_025502_02D3D3_FC33",
+  "area": "Global_S1",
+  "role": "scene",
+  "observation_date": "2019-01-16",
+  "acquisition_start": "2019-01-16T11:37:14Z",
+  "delta_hours_from_observation_date": "0",
+  "scene_id": "S1_S1A_IW_SLC__1SDV_20190116T113714_20190116T113744_025502_02D3D3_FC33_Global_S1_scene_20190116T113714",
+  "download_group_key": "S1A_IW_SLC__1SDV_20190116T113714_20190116T113744_025502_02D3D3_FC33",
+  "slc": {
+    "granule": "S1A_IW_SLC__1SDV_20190116T113714_20190116T113744_025502_02D3D3_FC33",
+    "url": "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SDV_20190116T113714_20190116T113744_025502_02D3D3_FC33.zip",
+    "zip": "D:\\Masters\\outputs\\marida_16pec_20190116_followup\\raw\\slc\\_shared_slc_zips\\S1A_IW_SLC__1SDV_20190116T113714_20190116T113744_025502_02D3D3_FC33\\S1A_IW_SLC__1SDV_20190116T113714_20190116T113744_025502_02D3D3_FC33.zip",
+    "selected_polarisations": [
+      "VV",
+      "VH"
+    ]
+  },
+  "reference_grid": null,
+  "outputs": {
+    "vv": null,
+    "vh": null,
+    "vv_refined_lee": null,
+    "vv_refined_lee_db": null,
+    "vv_glcm_mean": null,
+    "vv_glcm_std": null,
+    "vv_glcm_entropy": null,
+    "decomp_entropy": null,
+    "decomp_anisotropy": null,
+    "decomp_alpha": null
+  },
+  "subswath_outputs": {
+    "IW1": {
+      "vv": null,
+      "vh": null,
+      "vv_refined_lee": null,
+      "vv_refined_lee_db": null,
+      "vv_glcm_mean": null,
+      "vv_glcm_std": null,
+      "vv_glcm_entropy": null,
+      "decomp_entropy": null,
+      "decomp_anisotropy": null,
+      "decomp_alpha": null
+    },
+    "IW2": {
+      "vv": null,
+      "vh": null,
+      "vv_refined_lee": null,
+      "vv_refined_lee_db": null,
+      "vv_glcm_mean": null,
+      "vv_glcm_std": null,
+      "vv_glcm_entropy": null,
+      "decomp_entropy": null,
+      "decomp_anisotropy": null,
+      "decomp_alpha": null
+    },
+    "IW3": {
+      "vv": null,
+      "vh": null,
+      "vv_refined_lee": null,
+      "vv_refined_lee_db": null,
+      "vv_glcm_mean": null,
+      "vv_glcm_std": null,
+      "vv_glcm_entropy": null,
+      "decomp_entropy": null,
+      "decomp_anisotropy": null,
+      "decomp_alpha": null
+    }
+  },
+  "processing": {
+    "resolution_policy": "snap-native",
+    "output_mode": "scene",
+    "subset_mode": "full-swath",
+    "aoi_bounds_wgs84": [
+      -87.28082151836338,
+      15.483434423638773,
+      -85.86093641026656,
+      16.548161550600565
+    ],
+    "aoi_wkt": "POLYGON ((-87.28082151836338 15.483434423638773, -85.86093641026656 15.483434423638773, -85.86093641026656 16.548161550600565, -87.28082151836338 16.548161550600565, -87.28082151836338 15.483434423638773))",
+    "pad_deg": 0.0,
+    "subswaths": [
+      "IW1",
+      "IW2",
+      "IW3"
+    ],
+    "glcm": {
+      "source_bands": "Sigma0_VV,Sigma0_VH",
+      "window_size": "5x5",
+      "angle": "ALL",
+      "quantizer": "Probabilistic Quantizer",
+      "quantization_levels": 32,
+      "displacement": 1,
+      "snap_nodata": -9999.0
+    },
+    "speckle_filter": {
+      "filter": "Refined Lee",
+      "filter_size": [
+        3,
+        3
+      ]
+    },
+    "decomposition": {
+      "type": "H-Alpha Dual Pol Decomposition",
+      "window_size": 5,
+      "outputs": [
+        "Entropy",
+        "Anisotropy",
+        "Alpha"
+      ]
+    },
+    "graphs": {
+      "split": "D:\\Masters\\sar_server_pipeline\\docker\\snap_graphs\\01_split.xml",
+      "orbit": "D:\\Masters\\sar_server_pipeline\\docker\\snap_graphs\\02_orbit_apply.xml",
+      "calibration": "D:\\Masters\\sar_server_pipeline\\docker\\snap_graphs\\03_calibration.xml",
+      "deburst": "D:\\Masters\\sar_server_pipeline\\docker\\snap_graphs\\04_deburst.xml",
+      "subset": "D:\\Masters\\sar_server_pipeline\\docker\\snap_graphs\\05_subset.xml",
+      "c2": "D:\\Masters\\sar_server_pipeline\\docker\\snap_graphs\\06_polarimetric_matrix.xml",
+      "speckle": "D:\\Masters\\sar_server_pipeline\\docker\\snap_graphs\\07_speckle_filter.xml",
+      "terrain": "D:\\Masters\\sar_server_pipeline\\docker\\snap_graphs\\08_terrain_correction.xml",
+      "decomp": "D:\\Masters\\sar_server_pipeline\\docker\\snap_graphs\\09_polarimetric_decomposition.xml",
+      "texture": "D:\\Masters\\sar_server_pipeline\\docker\\snap_graphs\\10_feature_extraction.xml"
+    }
+  },
+  "status": "prepared"
+}

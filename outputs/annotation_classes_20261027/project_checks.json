@@ -1,0 +1,834 @@
+[
+  {
+    "project": "D:\\Joshua\\Done\\Done\\golden_kolkata_2020\\digitising_batches\\golden_kolkata_2020\\batch.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\Done\\golden_kolkata_2020\\digitising_batches\\golden_kolkata_2020\\batch.before_reef_rain_20261027T211132Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Done\\golden_kolkata_2020\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20201115T121211_20201115T121239_035259_041E24_CF73\\scene_20201115T121211\\digitising\\jamila_floating_debris_kolkata_20201115_after_R01_20201115T121211\\task.gpkg": "bae9edcaea7a7b632bb4d1fcaa3e53213be0a066a2bbe8eca01026e09fed942b"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Done\\golden_kolkata_2020\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20201115T121211_20201115T121239_035259_041E24_CF73\\scene_20201115T121211\\digitising\\jamila_floating_debris_kolkata_20201115_after_R01_20201115T121211\\task.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\Done\\golden_kolkata_2020\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20201115T121211_20201115T121239_035259_041E24_CF73\\scene_20201115T121211\\digitising\\jamila_floating_debris_kolkata_20201115_after_R01_20201115T121211\\task.before_reef_rain_20261027T211133Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Done\\golden_kolkata_2020\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20201115T121211_20201115T121239_035259_041E24_CF73\\scene_20201115T121211\\digitising\\jamila_floating_debris_kolkata_20201115_after_R01_20201115T121211\\task.gpkg": "bae9edcaea7a7b632bb4d1fcaa3e53213be0a066a2bbe8eca01026e09fed942b"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Done\\golden_london_2018\\digitising_batches\\golden_london_2018\\batch.qgz",
+    "status": "updated",
+    "layers": 2,
+    "backup": "D:\\Joshua\\Done\\Done\\golden_london_2018\\digitising_batches\\golden_london_2018\\batch.before_reef_rain_20261027T211136Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Done\\golden_london_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20180611T060649_20180611T060716_022305_026A07_EF2B\\scene_20180611T060649\\digitising\\jamila_floating_debris_london_20180611_before_R02_20180611T060649\\task.gpkg": "2ae4b92edc09404fb075d8611553f173ea590532359e467da96982fbb16fa777",
+      "D:\\Joshua\\Done\\Done\\golden_london_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20180611T060624_20180611T060651_022305_026A07_2143\\scene_20180611T060624\\digitising\\jamila_floating_debris_london_20180611_before_R01_20180611T060624\\task.gpkg": "7edfa17ce52de0b92fc84bb18345edb98cce76e7d602d46894e0ab084fd40d9f"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Done\\golden_london_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20180611T060624_20180611T060651_022305_026A07_2143\\scene_20180611T060624\\digitising\\jamila_floating_debris_london_20180611_before_R01_20180611T060624\\task.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\Done\\golden_london_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20180611T060624_20180611T060651_022305_026A07_2143\\scene_20180611T060624\\digitising\\jamila_floating_debris_london_20180611_before_R01_20180611T060624\\task.before_reef_rain_20261027T211138Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Done\\golden_london_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20180611T060624_20180611T060651_022305_026A07_2143\\scene_20180611T060624\\digitising\\jamila_floating_debris_london_20180611_before_R01_20180611T060624\\task.gpkg": "7edfa17ce52de0b92fc84bb18345edb98cce76e7d602d46894e0ab084fd40d9f"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Done\\golden_london_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20180611T060649_20180611T060716_022305_026A07_EF2B\\scene_20180611T060649\\digitising\\jamila_floating_debris_london_20180611_before_R02_20180611T060649\\task.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\Done\\golden_london_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20180611T060649_20180611T060716_022305_026A07_EF2B\\scene_20180611T060649\\digitising\\jamila_floating_debris_london_20180611_before_R02_20180611T060649\\task.before_reef_rain_20261027T211140Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Done\\golden_london_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20180611T060649_20180611T060716_022305_026A07_EF2B\\scene_20180611T060649\\digitising\\jamila_floating_debris_london_20180611_before_R02_20180611T060649\\task.gpkg": "2ae4b92edc09404fb075d8611553f173ea590532359e467da96982fbb16fa777"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Done\\golden_marida_18qyf_2021\\digitising_batches\\golden_marida_18qyf_2021\\batch.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\Done\\golden_marida_18qyf_2021\\digitising_batches\\golden_marida_18qyf_2021\\batch.before_reef_rain_20261027T211142Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Done\\golden_marida_18qyf_2021\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20210123T104729_20210123T104755_036264_0440FD_9D34\\scene_20210123T104729\\digitising\\marida_18QYF_2021_01_23_before_R01_20210123T104729\\task.gpkg": "13a7e56a3fbe3336bfc6a8e65892579a9b706f25ac837017b9631893720121df"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Done\\golden_marida_18qyf_2021\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20210123T104729_20210123T104755_036264_0440FD_9D34\\scene_20210123T104729\\digitising\\marida_18QYF_2021_01_23_before_R01_20210123T104729\\task.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\Done\\golden_marida_18qyf_2021\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20210123T104729_20210123T104755_036264_0440FD_9D34\\scene_20210123T104729\\digitising\\marida_18QYF_2021_01_23_before_R01_20210123T104729\\task.before_reef_rain_20261027T211145Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Done\\golden_marida_18qyf_2021\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20210123T104729_20210123T104755_036264_0440FD_9D34\\scene_20210123T104729\\digitising\\marida_18QYF_2021_01_23_before_R01_20210123T104729\\task.gpkg": "13a7e56a3fbe3336bfc6a8e65892579a9b706f25ac837017b9631893720121df"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Done\\golden_marida_51pts_2016\\digitising_batches\\golden_marida_51pts_2016\\batch.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\Done\\golden_marida_51pts_2016\\digitising_batches\\golden_marida_51pts_2016\\batch.before_reef_rain_20261027T211152Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Done\\golden_marida_51pts_2016\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20160716T214630_20160716T214657_012179_012E3A_DCAE\\scene_20160716T214630\\digitising\\marida_51PTS_2016_07_17_before_R01_20160716T214630\\task.gpkg": "d9a96a4d768f700a21a7c908b0581f68bb6882a26f3722c63f39c3f60847a543"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Done\\golden_marida_51pts_2016\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20160716T214630_20160716T214657_012179_012E3A_DCAE\\scene_20160716T214630\\digitising\\marida_51PTS_2016_07_17_before_R01_20160716T214630\\task.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\Done\\golden_marida_51pts_2016\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20160716T214630_20160716T214657_012179_012E3A_DCAE\\scene_20160716T214630\\digitising\\marida_51PTS_2016_07_17_before_R01_20160716T214630\\task.before_reef_rain_20261027T211155Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Done\\golden_marida_51pts_2016\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20160716T214630_20160716T214657_012179_012E3A_DCAE\\scene_20160716T214630\\digitising\\marida_51PTS_2016_07_17_before_R01_20160716T214630\\task.gpkg": "d9a96a4d768f700a21a7c908b0581f68bb6882a26f3722c63f39c3f60847a543"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Done\\golden_tungchung_2019\\digitising_batches\\golden_tungchung_2019\\batch.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\Done\\golden_tungchung_2019\\digitising_batches\\golden_tungchung_2019\\batch.before_reef_rain_20261027T211158Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Done\\golden_tungchung_2019\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190922T103325_20190922T103355_029133_034EA1_B6F2\\scene_20190922T103325\\digitising\\jamila_floating_debris_tungchungChina_20190922_before_R01_20190922T103325\\task.gpkg": "d4d6bf8b6aa42cb88cc66eebd4435a270d12d3897ddf2471fe705d663ba80d41"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Done\\golden_tungchung_2019\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190922T103325_20190922T103355_029133_034EA1_B6F2\\scene_20190922T103325\\digitising\\jamila_floating_debris_tungchungChina_20190922_before_R01_20190922T103325\\task.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\Done\\golden_tungchung_2019\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190922T103325_20190922T103355_029133_034EA1_B6F2\\scene_20190922T103325\\digitising\\jamila_floating_debris_tungchungChina_20190922_before_R01_20190922T103325\\task.before_reef_rain_20261027T211200Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Done\\golden_tungchung_2019\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190922T103325_20190922T103355_029133_034EA1_B6F2\\scene_20190922T103325\\digitising\\jamila_floating_debris_tungchungChina_20190922_before_R01_20190922T103325\\task.gpkg": "d4d6bf8b6aa42cb88cc66eebd4435a270d12d3897ddf2471fe705d663ba80d41"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Done\\sa_durban_2019_apr\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190421T163724_20190421T163751_026890_030629_56F9\\scene_20190421T163724\\digitising\\MERIA_SA_001_before_20190421T163724\\task.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\Done\\sa_durban_2019_apr\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190421T163724_20190421T163751_026890_030629_56F9\\scene_20190421T163724\\digitising\\MERIA_SA_001_before_20190421T163724\\task.before_reef_rain_20261027T211210Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Done\\sa_durban_2019_apr\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190421T163724_20190421T163751_026890_030629_56F9\\scene_20190421T163724\\digitising\\MERIA_SA_001_before_20190421T163724\\task.gpkg": "0a7e49425fe3d324165f25ba103daa3031843d31ec15854c434740e6de9c5b13"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Done\\sa_durban_2019_apr\\processed\\MERIA_SA_001_Durban\\after_20190425T031055\\digitising\\MERIA_SA_001_after_20190425T031055\\task.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\Done\\sa_durban_2019_apr\\processed\\MERIA_SA_001_Durban\\after_20190425T031055\\digitising\\MERIA_SA_001_after_20190425T031055\\task.before_reef_rain_20261027T211212Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Done\\sa_durban_2019_apr\\processed\\MERIA_SA_001_Durban\\after_20190425T031055\\digitising\\MERIA_SA_001_after_20190425T031055\\task.gpkg": "4451587cfa32547d860e75aca72bfd6caf72fd3983496cb3dfff575a9ad163ce"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Done\\sa_durban_2019_apr\\processed\\MERIA_SA_001_Durban\\after_20190425T031055\\digitising\\MERIA_SA_002_before_20190425T031055\\task.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\Done\\sa_durban_2019_apr\\processed\\MERIA_SA_001_Durban\\after_20190425T031055\\digitising\\MERIA_SA_002_before_20190425T031055\\task.before_reef_rain_20261027T211214Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Done\\sa_durban_2019_apr\\processed\\MERIA_SA_001_Durban\\after_20190425T031055\\digitising\\MERIA_SA_002_before_20190425T031055\\task.gpkg": "8c48e0454943447c96ac93bb3aa65fba3a7b4d6f147e6242e50f609dded6fc38"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Done\\sa_durban_2019_apr\\processed\\MERIA_SA_002_Durban\\after_20190427T163647\\digitising\\MERIA_SA_002_after_20190427T163647\\task.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\Done\\sa_durban_2019_apr\\processed\\MERIA_SA_002_Durban\\after_20190427T163647\\digitising\\MERIA_SA_002_after_20190427T163647\\task.before_reef_rain_20261027T211217Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Done\\sa_durban_2019_apr\\processed\\MERIA_SA_002_Durban\\after_20190427T163647\\digitising\\MERIA_SA_002_after_20190427T163647\\task.gpkg": "e76a1bb3ba123fc47bddc11471ca5aa5646c556a0cc56541db11e04a3703f5fa"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\golden_marida_16pcc_2018\\digitising_batches\\golden_marida_16pcc_2018\\batch.qgz",
+    "status": "updated",
+    "layers": 2,
+    "backup": "D:\\Joshua\\Done\\golden_marida_16pcc_2018\\digitising_batches\\golden_marida_16pcc_2018\\batch.before_reef_rain_20261027T211219Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\golden_marida_16pcc_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20180830T114533_20180830T114600_023475_028E42_1ED7\\scene_20180830T114533\\digitising\\marida_16PCC_2018_08_30_before_R01_20180830T114533\\task.gpkg": "ab41a91368e7db04254f4254c462972bbedd821081c747523854aa4531c0bc0a",
+      "D:\\Joshua\\Done\\golden_marida_16pcc_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20180830T114558_20180830T114625_023475_028E42_5A19\\scene_20180830T114558\\digitising\\marida_16PCC_2018_08_30_before_R02_20180830T114558\\task.gpkg": "316f9f39a99aef69af4108cf351b3151b6962d7ec2220c8fe8f43af612dc6fba"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\golden_marida_16pcc_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20180830T114533_20180830T114600_023475_028E42_1ED7\\scene_20180830T114533\\digitising\\marida_16PCC_2018_08_30_before_R01_20180830T114533\\task.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\golden_marida_16pcc_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20180830T114533_20180830T114600_023475_028E42_1ED7\\scene_20180830T114533\\digitising\\marida_16PCC_2018_08_30_before_R01_20180830T114533\\task.before_reef_rain_20261027T211222Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\golden_marida_16pcc_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20180830T114533_20180830T114600_023475_028E42_1ED7\\scene_20180830T114533\\digitising\\marida_16PCC_2018_08_30_before_R01_20180830T114533\\task.gpkg": "ab41a91368e7db04254f4254c462972bbedd821081c747523854aa4531c0bc0a"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\golden_marida_16pcc_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20180830T114558_20180830T114625_023475_028E42_5A19\\scene_20180830T114558\\digitising\\marida_16PCC_2018_08_30_before_R02_20180830T114558\\task.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\golden_marida_16pcc_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20180830T114558_20180830T114625_023475_028E42_5A19\\scene_20180830T114558\\digitising\\marida_16PCC_2018_08_30_before_R02_20180830T114558\\task.before_reef_rain_20261027T211224Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\golden_marida_16pcc_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20180830T114558_20180830T114625_023475_028E42_5A19\\scene_20180830T114558\\digitising\\marida_16PCC_2018_08_30_before_R02_20180830T114558\\task.gpkg": "316f9f39a99aef69af4108cf351b3151b6962d7ec2220c8fe8f43af612dc6fba"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\marida_30vwh_20180419_20180420_01\\digitising_batches\\marida_30vwh_20180419_20180420_01\\batch.qgz",
+    "status": "updated",
+    "layers": 2,
+    "backup": "D:\\Joshua\\Done\\marida_30vwh_20180419_20180420_01\\digitising_batches\\marida_30vwh_20180419_20180420_01\\batch.before_reef_rain_20261027T211227Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\marida_30vwh_20180419_20180420_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20180420T175048_20180420T175115_021554_02524F_11F3\\scene_20180420T175048\\digitising\\scene_annotations.gpkg": "2513941e2e4ae085d99f3f97b999394442088e0d40f8484c1a1375f1dda28c6b",
+      "D:\\Joshua\\Done\\marida_30vwh_20180419_20180420_01\\processed\\Global_S1_S1_S1B_IW_SLC__1SDV_20180419T175807_20180419T175834_010556_0133F9_F753\\scene_20180419T175807\\digitising\\scene_annotations.gpkg": "49bbcfd1ce1a26b076dc5f23f16f66692c77f2ee1394075e53e520db47d3376a"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\marida_30vwh_20180419_20180420_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20180420T175048_20180420T175115_021554_02524F_11F3\\scene_20180420T175048\\digitising\\scene.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\marida_30vwh_20180419_20180420_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20180420T175048_20180420T175115_021554_02524F_11F3\\scene_20180420T175048\\digitising\\scene.before_reef_rain_20261027T211229Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\marida_30vwh_20180419_20180420_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20180420T175048_20180420T175115_021554_02524F_11F3\\scene_20180420T175048\\digitising\\scene_annotations.gpkg": "2513941e2e4ae085d99f3f97b999394442088e0d40f8484c1a1375f1dda28c6b"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\marida_30vwh_20180419_20180420_01\\processed\\Global_S1_S1_S1B_IW_SLC__1SDV_20180419T175807_20180419T175834_010556_0133F9_F753\\scene_20180419T175807\\digitising\\scene.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\marida_30vwh_20180419_20180420_01\\processed\\Global_S1_S1_S1B_IW_SLC__1SDV_20180419T175807_20180419T175834_010556_0133F9_F753\\scene_20180419T175807\\digitising\\scene.before_reef_rain_20261027T211230Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\marida_30vwh_20180419_20180420_01\\processed\\Global_S1_S1_S1B_IW_SLC__1SDV_20180419T175807_20180419T175834_010556_0133F9_F753\\scene_20180419T175807\\digitising\\scene_annotations.gpkg": "49bbcfd1ce1a26b076dc5f23f16f66692c77f2ee1394075e53e520db47d3376a"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\marida_48pzc_20191124_01\\digitising_batches\\marida_48pzc_20191124_01\\batch.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\marida_48pzc_20191124_01\\digitising_batches\\marida_48pzc_20191124_01\\batch.before_reef_rain_20261027T211234Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\marida_48pzc_20191124_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20191124T105634_20191124T105701_030052_036E82_3F33\\scene_20191124T105634\\digitising\\scene_annotations.gpkg": "9ece106d4e57f0d582cfba130a9bbe02fe72ede9df9bdba702d4caef2203e2a5"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\marida_48pzc_20191124_01\\marida_18qyg_20200305_20200307_01\\digitising_batches\\marida_18qyg_20200305_20200307_01\\batch.qgz",
+    "status": "updated",
+    "layers": 3,
+    "backup": "D:\\Joshua\\Done\\marida_48pzc_20191124_01\\marida_18qyg_20200305_20200307_01\\digitising_batches\\marida_18qyg_20200305_20200307_01\\batch.before_reef_rain_20261027T211237Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\marida_48pzc_20191124_01\\marida_18qyg_20200305_20200307_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200305T104723_20200305T104749_031539_03A224_F776\\scene_20200305T104723\\digitising\\scene_annotations.gpkg": "e8eb3782c68073a92ac935e86eefdfdca978717030aac7c47a540d7d220e4ccc",
+      "D:\\Joshua\\Done\\marida_48pzc_20191124_01\\marida_18qyg_20200305_20200307_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200307T230120_20200307T230148_031576_03A353_2F7C\\scene_20200307T230120\\digitising\\scene_annotations.gpkg": "dea361277db8100da61d01ecccebbf9a3f07f799333eeb632cd62a5d4cce62f5",
+      "D:\\Joshua\\Done\\marida_48pzc_20191124_01\\marida_18qyg_20200305_20200307_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200305T104657_20200305T104725_031539_03A224_FBCB\\scene_20200305T104657\\digitising\\scene_annotations.gpkg": "de34508dd9e0688274ae59f905d24e45b7435b4730552ad7ff7e1cbcab86ea25"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\marida_48pzc_20191124_01\\marida_18qyg_20200305_20200307_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200305T104657_20200305T104725_031539_03A224_FBCB\\scene_20200305T104657\\digitising\\scene.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\marida_48pzc_20191124_01\\marida_18qyg_20200305_20200307_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200305T104657_20200305T104725_031539_03A224_FBCB\\scene_20200305T104657\\digitising\\scene.before_reef_rain_20261027T211239Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\marida_48pzc_20191124_01\\marida_18qyg_20200305_20200307_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200305T104657_20200305T104725_031539_03A224_FBCB\\scene_20200305T104657\\digitising\\scene_annotations.gpkg": "de34508dd9e0688274ae59f905d24e45b7435b4730552ad7ff7e1cbcab86ea25"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\marida_48pzc_20191124_01\\marida_18qyg_20200305_20200307_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200305T104723_20200305T104749_031539_03A224_F776\\scene_20200305T104723\\digitising\\scene.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\marida_48pzc_20191124_01\\marida_18qyg_20200305_20200307_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200305T104723_20200305T104749_031539_03A224_F776\\scene_20200305T104723\\digitising\\scene.before_reef_rain_20261027T211241Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\marida_48pzc_20191124_01\\marida_18qyg_20200305_20200307_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200305T104723_20200305T104749_031539_03A224_F776\\scene_20200305T104723\\digitising\\scene_annotations.gpkg": "e8eb3782c68073a92ac935e86eefdfdca978717030aac7c47a540d7d220e4ccc"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\marida_48pzc_20191124_01\\marida_18qyg_20200305_20200307_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200307T230120_20200307T230148_031576_03A353_2F7C\\scene_20200307T230120\\digitising\\scene.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\marida_48pzc_20191124_01\\marida_18qyg_20200305_20200307_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200307T230120_20200307T230148_031576_03A353_2F7C\\scene_20200307T230120\\digitising\\scene.before_reef_rain_20261027T211243Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\marida_48pzc_20191124_01\\marida_18qyg_20200305_20200307_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200307T230120_20200307T230148_031576_03A353_2F7C\\scene_20200307T230120\\digitising\\scene_annotations.gpkg": "dea361277db8100da61d01ecccebbf9a3f07f799333eeb632cd62a5d4cce62f5"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\marida_48pzc_20191124_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20191124T105634_20191124T105701_030052_036E82_3F33\\scene_20191124T105634\\digitising\\scene.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\marida_48pzc_20191124_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20191124T105634_20191124T105701_030052_036E82_3F33\\scene_20191124T105634\\digitising\\scene.before_reef_rain_20261027T211245Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\marida_48pzc_20191124_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20191124T105634_20191124T105701_030052_036E82_3F33\\scene_20191124T105634\\digitising\\scene_annotations.gpkg": "9ece106d4e57f0d582cfba130a9bbe02fe72ede9df9bdba702d4caef2203e2a5"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Transfered\\golden_kolkata_2020\\digitising_batches\\golden_kolkata_2020\\batch.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\Transfered\\golden_kolkata_2020\\digitising_batches\\golden_kolkata_2020\\batch.before_reef_rain_20261027T211247Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Transfered\\golden_kolkata_2020\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20201115T121211_20201115T121239_035259_041E24_CF73\\scene_20201115T121211\\digitising\\jamila_floating_debris_kolkata_20201115_after_R01_20201115T121211\\task.gpkg": "bae9edcaea7a7b632bb4d1fcaa3e53213be0a066a2bbe8eca01026e09fed942b"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Transfered\\golden_kolkata_2020\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20201115T121211_20201115T121239_035259_041E24_CF73\\scene_20201115T121211\\digitising\\jamila_floating_debris_kolkata_20201115_after_R01_20201115T121211\\task.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\Transfered\\golden_kolkata_2020\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20201115T121211_20201115T121239_035259_041E24_CF73\\scene_20201115T121211\\digitising\\jamila_floating_debris_kolkata_20201115_after_R01_20201115T121211\\task.before_reef_rain_20261027T211249Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Transfered\\golden_kolkata_2020\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20201115T121211_20201115T121239_035259_041E24_CF73\\scene_20201115T121211\\digitising\\jamila_floating_debris_kolkata_20201115_after_R01_20201115T121211\\task.gpkg": "bae9edcaea7a7b632bb4d1fcaa3e53213be0a066a2bbe8eca01026e09fed942b"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Transfered\\golden_london_2018\\digitising_batches\\golden_london_2018\\batch.qgz",
+    "status": "updated",
+    "layers": 2,
+    "backup": "D:\\Joshua\\Done\\Transfered\\golden_london_2018\\digitising_batches\\golden_london_2018\\batch.before_reef_rain_20261027T211254Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Transfered\\golden_london_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20180611T060649_20180611T060716_022305_026A07_EF2B\\scene_20180611T060649\\digitising\\jamila_floating_debris_london_20180611_before_R02_20180611T060649\\task.gpkg": "2ae4b92edc09404fb075d8611553f173ea590532359e467da96982fbb16fa777",
+      "D:\\Joshua\\Done\\Transfered\\golden_london_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20180611T060624_20180611T060651_022305_026A07_2143\\scene_20180611T060624\\digitising\\jamila_floating_debris_london_20180611_before_R01_20180611T060624\\task.gpkg": "7edfa17ce52de0b92fc84bb18345edb98cce76e7d602d46894e0ab084fd40d9f"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Transfered\\golden_london_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20180611T060624_20180611T060651_022305_026A07_2143\\scene_20180611T060624\\digitising\\jamila_floating_debris_london_20180611_before_R01_20180611T060624\\task.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\Transfered\\golden_london_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20180611T060624_20180611T060651_022305_026A07_2143\\scene_20180611T060624\\digitising\\jamila_floating_debris_london_20180611_before_R01_20180611T060624\\task.before_reef_rain_20261027T211256Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Transfered\\golden_london_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20180611T060624_20180611T060651_022305_026A07_2143\\scene_20180611T060624\\digitising\\jamila_floating_debris_london_20180611_before_R01_20180611T060624\\task.gpkg": "7edfa17ce52de0b92fc84bb18345edb98cce76e7d602d46894e0ab084fd40d9f"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Transfered\\golden_london_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20180611T060649_20180611T060716_022305_026A07_EF2B\\scene_20180611T060649\\digitising\\jamila_floating_debris_london_20180611_before_R02_20180611T060649\\task.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\Transfered\\golden_london_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20180611T060649_20180611T060716_022305_026A07_EF2B\\scene_20180611T060649\\digitising\\jamila_floating_debris_london_20180611_before_R02_20180611T060649\\task.before_reef_rain_20261027T211258Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Transfered\\golden_london_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20180611T060649_20180611T060716_022305_026A07_EF2B\\scene_20180611T060649\\digitising\\jamila_floating_debris_london_20180611_before_R02_20180611T060649\\task.gpkg": "2ae4b92edc09404fb075d8611553f173ea590532359e467da96982fbb16fa777"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Transfered\\golden_marida_18qyf_2021\\digitising_batches\\golden_marida_18qyf_2021\\batch.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\Transfered\\golden_marida_18qyf_2021\\digitising_batches\\golden_marida_18qyf_2021\\batch.before_reef_rain_20261027T211300Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Transfered\\golden_marida_18qyf_2021\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20210123T104729_20210123T104755_036264_0440FD_9D34\\scene_20210123T104729\\digitising\\marida_18QYF_2021_01_23_before_R01_20210123T104729\\task.gpkg": "13a7e56a3fbe3336bfc6a8e65892579a9b706f25ac837017b9631893720121df"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Transfered\\golden_marida_18qyf_2021\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20210123T104729_20210123T104755_036264_0440FD_9D34\\scene_20210123T104729\\digitising\\marida_18QYF_2021_01_23_before_R01_20210123T104729\\task.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\Transfered\\golden_marida_18qyf_2021\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20210123T104729_20210123T104755_036264_0440FD_9D34\\scene_20210123T104729\\digitising\\marida_18QYF_2021_01_23_before_R01_20210123T104729\\task.before_reef_rain_20261027T211302Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Transfered\\golden_marida_18qyf_2021\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20210123T104729_20210123T104755_036264_0440FD_9D34\\scene_20210123T104729\\digitising\\marida_18QYF_2021_01_23_before_R01_20210123T104729\\task.gpkg": "13a7e56a3fbe3336bfc6a8e65892579a9b706f25ac837017b9631893720121df"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Transfered\\golden_marida_51pts_2016\\digitising_batches\\golden_marida_51pts_2016\\batch.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\Transfered\\golden_marida_51pts_2016\\digitising_batches\\golden_marida_51pts_2016\\batch.before_reef_rain_20261027T211304Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Transfered\\golden_marida_51pts_2016\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20160716T214630_20160716T214657_012179_012E3A_DCAE\\scene_20160716T214630\\digitising\\marida_51PTS_2016_07_17_before_R01_20160716T214630\\task.gpkg": "d9a96a4d768f700a21a7c908b0581f68bb6882a26f3722c63f39c3f60847a543"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Transfered\\golden_marida_51pts_2016\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20160716T214630_20160716T214657_012179_012E3A_DCAE\\scene_20160716T214630\\digitising\\marida_51PTS_2016_07_17_before_R01_20160716T214630\\task.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\Transfered\\golden_marida_51pts_2016\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20160716T214630_20160716T214657_012179_012E3A_DCAE\\scene_20160716T214630\\digitising\\marida_51PTS_2016_07_17_before_R01_20160716T214630\\task.before_reef_rain_20261027T211306Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Transfered\\golden_marida_51pts_2016\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20160716T214630_20160716T214657_012179_012E3A_DCAE\\scene_20160716T214630\\digitising\\marida_51PTS_2016_07_17_before_R01_20160716T214630\\task.gpkg": "d9a96a4d768f700a21a7c908b0581f68bb6882a26f3722c63f39c3f60847a543"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Transfered\\golden_tungchung_2019\\digitising_batches\\golden_tungchung_2019\\batch.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\Transfered\\golden_tungchung_2019\\digitising_batches\\golden_tungchung_2019\\batch.before_reef_rain_20261027T211309Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Transfered\\golden_tungchung_2019\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190922T103325_20190922T103355_029133_034EA1_B6F2\\scene_20190922T103325\\digitising\\jamila_floating_debris_tungchungChina_20190922_before_R01_20190922T103325\\task.gpkg": "d4d6bf8b6aa42cb88cc66eebd4435a270d12d3897ddf2471fe705d663ba80d41"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Transfered\\golden_tungchung_2019\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190922T103325_20190922T103355_029133_034EA1_B6F2\\scene_20190922T103325\\digitising\\jamila_floating_debris_tungchungChina_20190922_before_R01_20190922T103325\\task.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\Transfered\\golden_tungchung_2019\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190922T103325_20190922T103355_029133_034EA1_B6F2\\scene_20190922T103325\\digitising\\jamila_floating_debris_tungchungChina_20190922_before_R01_20190922T103325\\task.before_reef_rain_20261027T211311Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Transfered\\golden_tungchung_2019\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190922T103325_20190922T103355_029133_034EA1_B6F2\\scene_20190922T103325\\digitising\\jamila_floating_debris_tungchungChina_20190922_before_R01_20190922T103325\\task.gpkg": "d4d6bf8b6aa42cb88cc66eebd4435a270d12d3897ddf2471fe705d663ba80d41"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Transfered\\sa_durban_2019_apr\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190421T163724_20190421T163751_026890_030629_56F9\\scene_20190421T163724\\digitising\\MERIA_SA_001_before_20190421T163724\\task.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\Transfered\\sa_durban_2019_apr\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190421T163724_20190421T163751_026890_030629_56F9\\scene_20190421T163724\\digitising\\MERIA_SA_001_before_20190421T163724\\task.before_reef_rain_20261027T211317Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Transfered\\sa_durban_2019_apr\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190421T163724_20190421T163751_026890_030629_56F9\\scene_20190421T163724\\digitising\\MERIA_SA_001_before_20190421T163724\\task.gpkg": "0a7e49425fe3d324165f25ba103daa3031843d31ec15854c434740e6de9c5b13"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Transfered\\sa_durban_2019_apr\\processed\\MERIA_SA_001_Durban\\after_20190425T031055\\digitising\\MERIA_SA_001_after_20190425T031055\\task.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\Transfered\\sa_durban_2019_apr\\processed\\MERIA_SA_001_Durban\\after_20190425T031055\\digitising\\MERIA_SA_001_after_20190425T031055\\task.before_reef_rain_20261027T211319Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Transfered\\sa_durban_2019_apr\\processed\\MERIA_SA_001_Durban\\after_20190425T031055\\digitising\\MERIA_SA_001_after_20190425T031055\\task.gpkg": "4451587cfa32547d860e75aca72bfd6caf72fd3983496cb3dfff575a9ad163ce"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Transfered\\sa_durban_2019_apr\\processed\\MERIA_SA_001_Durban\\after_20190425T031055\\digitising\\MERIA_SA_002_before_20190425T031055\\task.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\Transfered\\sa_durban_2019_apr\\processed\\MERIA_SA_001_Durban\\after_20190425T031055\\digitising\\MERIA_SA_002_before_20190425T031055\\task.before_reef_rain_20261027T211321Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Transfered\\sa_durban_2019_apr\\processed\\MERIA_SA_001_Durban\\after_20190425T031055\\digitising\\MERIA_SA_002_before_20190425T031055\\task.gpkg": "8c48e0454943447c96ac93bb3aa65fba3a7b4d6f147e6242e50f609dded6fc38"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Transfered\\sa_durban_2019_apr\\processed\\MERIA_SA_002_Durban\\after_20190427T163647\\digitising\\MERIA_SA_002_after_20190427T163647\\task.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\Done\\Transfered\\sa_durban_2019_apr\\processed\\MERIA_SA_002_Durban\\after_20190427T163647\\digitising\\MERIA_SA_002_after_20190427T163647\\task.before_reef_rain_20261027T211324Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Transfered\\sa_durban_2019_apr\\processed\\MERIA_SA_002_Durban\\after_20190427T163647\\digitising\\MERIA_SA_002_after_20190427T163647\\task.gpkg": "e76a1bb3ba123fc47bddc11471ca5aa5646c556a0cc56541db11e04a3703f5fa"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\ghana_all_001\\digitising_batches\\ghana_all_001\\batch.qgz",
+    "status": "updated",
+    "layers": 5,
+    "backup": "D:\\Joshua\\ghana_all_001\\digitising_batches\\ghana_all_001\\batch.before_reef_rain_20261027T211327Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\ghana_all_001\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20181030T181758_20181030T181828_024369_02AB27_32F5\\scene_20181030T181758\\digitising\\ghana_drift_91ea9edc_67b4_4211_8532_35deec4a3148_before_R01_20181030T181758\\task.gpkg": "70eb00233dde6904e827dcafecbb443067758651ffe6ed8c3d7570ce4aa7c034",
+      "D:\\Joshua\\ghana_all_001\\processed\\Global_S1_S1_S1B_IW_SLC__1SDV_20181024T181717_20181024T181744_013298_01895D_793F\\scene_20181024T181717\\digitising\\ghana_drift_d918b4e9_16ac_5c30_830f_6945943e1d9e_before_R02_20181024T181717\\task.gpkg": "7d580f880f705ebc58050aed79b9b087f3bb822343903ebb69e74bbb9754ecf6",
+      "D:\\Joshua\\ghana_all_001\\processed\\Global_S1_S1_S1B_IW_SLC__1SDV_20181024T181653_20181024T181720_013298_01895D_122A\\scene_20181024T181653\\digitising\\ghana_drift_d918b4e9_16ac_5c30_830f_6945943e1d9e_before_R01_20181024T181653\\task.gpkg": "090565530398c760a871d5f4f3f08ea3da9f60e33f2426e7b73866236e62ff3e",
+      "D:\\Joshua\\ghana_all_001\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20181030T181758_20181030T181828_024369_02AB27_32F5\\scene_20181030T181758\\digitising\\ghana_drift_d9db6dd4_4db8_5723_96ba_57d182cda0b7_after_R01_20181030T181758\\task.gpkg": "2f461ab9e0bd32104adbc861186efb9c009deb5e0bc37814c20023cb0b8a035e",
+      "D:\\Joshua\\ghana_all_001\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20181018T181758_20181018T181828_024194_02A587_7BBC\\scene_20181018T181758\\digitising\\ghana_drift_57bbff03_21eb_54de_9d18_d8a65b256bd5_before_R01_20181018T181758\\task.gpkg": "7d08cf215cfee1ab52cde2bdae58684eb20265413952e9108d79fef350b8c486"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\ghana_all_001\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20181018T181758_20181018T181828_024194_02A587_7BBC\\scene_20181018T181758\\digitising\\ghana_drift_57bbff03_21eb_54de_9d18_d8a65b256bd5_before_R01_20181018T181758\\task.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\ghana_all_001\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20181018T181758_20181018T181828_024194_02A587_7BBC\\scene_20181018T181758\\digitising\\ghana_drift_57bbff03_21eb_54de_9d18_d8a65b256bd5_before_R01_20181018T181758\\task.before_reef_rain_20261027T211330Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\ghana_all_001\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20181018T181758_20181018T181828_024194_02A587_7BBC\\scene_20181018T181758\\digitising\\ghana_drift_57bbff03_21eb_54de_9d18_d8a65b256bd5_before_R01_20181018T181758\\task.gpkg": "7d08cf215cfee1ab52cde2bdae58684eb20265413952e9108d79fef350b8c486"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\ghana_all_001\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20181030T181758_20181030T181828_024369_02AB27_32F5\\scene_20181030T181758\\digitising\\ghana_drift_91ea9edc_67b4_4211_8532_35deec4a3148_before_R01_20181030T181758\\task.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\ghana_all_001\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20181030T181758_20181030T181828_024369_02AB27_32F5\\scene_20181030T181758\\digitising\\ghana_drift_91ea9edc_67b4_4211_8532_35deec4a3148_before_R01_20181030T181758\\task.before_reef_rain_20261027T211332Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\ghana_all_001\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20181030T181758_20181030T181828_024369_02AB27_32F5\\scene_20181030T181758\\digitising\\ghana_drift_91ea9edc_67b4_4211_8532_35deec4a3148_before_R01_20181030T181758\\task.gpkg": "70eb00233dde6904e827dcafecbb443067758651ffe6ed8c3d7570ce4aa7c034"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\ghana_all_001\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20181030T181758_20181030T181828_024369_02AB27_32F5\\scene_20181030T181758\\digitising\\ghana_drift_d9db6dd4_4db8_5723_96ba_57d182cda0b7_after_R01_20181030T181758\\task.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\ghana_all_001\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20181030T181758_20181030T181828_024369_02AB27_32F5\\scene_20181030T181758\\digitising\\ghana_drift_d9db6dd4_4db8_5723_96ba_57d182cda0b7_after_R01_20181030T181758\\task.before_reef_rain_20261027T211334Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\ghana_all_001\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20181030T181758_20181030T181828_024369_02AB27_32F5\\scene_20181030T181758\\digitising\\ghana_drift_d9db6dd4_4db8_5723_96ba_57d182cda0b7_after_R01_20181030T181758\\task.gpkg": "2f461ab9e0bd32104adbc861186efb9c009deb5e0bc37814c20023cb0b8a035e"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\ghana_all_001\\processed\\Global_S1_S1_S1B_IW_SLC__1SDV_20181024T181653_20181024T181720_013298_01895D_122A\\scene_20181024T181653\\digitising\\ghana_drift_d918b4e9_16ac_5c30_830f_6945943e1d9e_before_R01_20181024T181653\\task.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\ghana_all_001\\processed\\Global_S1_S1_S1B_IW_SLC__1SDV_20181024T181653_20181024T181720_013298_01895D_122A\\scene_20181024T181653\\digitising\\ghana_drift_d918b4e9_16ac_5c30_830f_6945943e1d9e_before_R01_20181024T181653\\task.before_reef_rain_20261027T211336Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\ghana_all_001\\processed\\Global_S1_S1_S1B_IW_SLC__1SDV_20181024T181653_20181024T181720_013298_01895D_122A\\scene_20181024T181653\\digitising\\ghana_drift_d918b4e9_16ac_5c30_830f_6945943e1d9e_before_R01_20181024T181653\\task.gpkg": "090565530398c760a871d5f4f3f08ea3da9f60e33f2426e7b73866236e62ff3e"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\ghana_all_001\\processed\\Global_S1_S1_S1B_IW_SLC__1SDV_20181024T181717_20181024T181744_013298_01895D_793F\\scene_20181024T181717\\digitising\\ghana_drift_d918b4e9_16ac_5c30_830f_6945943e1d9e_before_R02_20181024T181717\\task.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\ghana_all_001\\processed\\Global_S1_S1_S1B_IW_SLC__1SDV_20181024T181717_20181024T181744_013298_01895D_793F\\scene_20181024T181717\\digitising\\ghana_drift_d918b4e9_16ac_5c30_830f_6945943e1d9e_before_R02_20181024T181717\\task.before_reef_rain_20261027T211338Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\ghana_all_001\\processed\\Global_S1_S1_S1B_IW_SLC__1SDV_20181024T181717_20181024T181744_013298_01895D_793F\\scene_20181024T181717\\digitising\\ghana_drift_d918b4e9_16ac_5c30_830f_6945943e1d9e_before_R02_20181024T181717\\task.gpkg": "7d580f880f705ebc58050aed79b9b087f3bb822343903ebb69e74bbb9754ecf6"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\Debris_Visible_Not_Done\\marida_18qyg_20200305_20200307_01\\digitising_batches\\marida_18qyg_20200305_20200307_01\\batch.qgz",
+    "status": "updated",
+    "layers": 3,
+    "backup": "D:\\Joshua\\New\\Debris_Visible_Not_Done\\marida_18qyg_20200305_20200307_01\\digitising_batches\\marida_18qyg_20200305_20200307_01\\batch.before_reef_rain_20261027T211342Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\Debris_Visible_Not_Done\\marida_18qyg_20200305_20200307_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200305T104723_20200305T104749_031539_03A224_F776\\scene_20200305T104723\\digitising\\scene_annotations.gpkg": "e8eb3782c68073a92ac935e86eefdfdca978717030aac7c47a540d7d220e4ccc",
+      "D:\\Joshua\\New\\Debris_Visible_Not_Done\\marida_18qyg_20200305_20200307_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200307T230120_20200307T230148_031576_03A353_2F7C\\scene_20200307T230120\\digitising\\scene_annotations.gpkg": "dea361277db8100da61d01ecccebbf9a3f07f799333eeb632cd62a5d4cce62f5",
+      "D:\\Joshua\\New\\Debris_Visible_Not_Done\\marida_18qyg_20200305_20200307_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200305T104657_20200305T104725_031539_03A224_FBCB\\scene_20200305T104657\\digitising\\scene_annotations.gpkg": "de34508dd9e0688274ae59f905d24e45b7435b4730552ad7ff7e1cbcab86ea25"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\Debris_Visible_Not_Done\\marida_18qyg_20200305_20200307_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200305T104657_20200305T104725_031539_03A224_FBCB\\scene_20200305T104657\\digitising\\scene.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\New\\Debris_Visible_Not_Done\\marida_18qyg_20200305_20200307_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200305T104657_20200305T104725_031539_03A224_FBCB\\scene_20200305T104657\\digitising\\scene.before_reef_rain_20261027T211345Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\Debris_Visible_Not_Done\\marida_18qyg_20200305_20200307_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200305T104657_20200305T104725_031539_03A224_FBCB\\scene_20200305T104657\\digitising\\scene_annotations.gpkg": "de34508dd9e0688274ae59f905d24e45b7435b4730552ad7ff7e1cbcab86ea25"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\Debris_Visible_Not_Done\\marida_18qyg_20200305_20200307_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200305T104723_20200305T104749_031539_03A224_F776\\scene_20200305T104723\\digitising\\scene.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\New\\Debris_Visible_Not_Done\\marida_18qyg_20200305_20200307_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200305T104723_20200305T104749_031539_03A224_F776\\scene_20200305T104723\\digitising\\scene.before_reef_rain_20261027T211347Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\Debris_Visible_Not_Done\\marida_18qyg_20200305_20200307_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200305T104723_20200305T104749_031539_03A224_F776\\scene_20200305T104723\\digitising\\scene_annotations.gpkg": "e8eb3782c68073a92ac935e86eefdfdca978717030aac7c47a540d7d220e4ccc"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\Debris_Visible_Not_Done\\marida_18qyg_20200305_20200307_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200307T230120_20200307T230148_031576_03A353_2F7C\\scene_20200307T230120\\digitising\\scene.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\New\\Debris_Visible_Not_Done\\marida_18qyg_20200305_20200307_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200307T230120_20200307T230148_031576_03A353_2F7C\\scene_20200307T230120\\digitising\\scene.before_reef_rain_20261027T211350Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\Debris_Visible_Not_Done\\marida_18qyg_20200305_20200307_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200307T230120_20200307T230148_031576_03A353_2F7C\\scene_20200307T230120\\digitising\\scene_annotations.gpkg": "dea361277db8100da61d01ecccebbf9a3f07f799333eeb632cd62a5d4cce62f5"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\floating_greece_plp_20210626_20210702_01\\digitising_batches\\floating_greece_plp_20210626_20210702_01\\batch.qgz",
+    "status": "updated",
+    "layers": 2,
+    "backup": "D:\\Joshua\\New\\floating_greece_plp_20210626_20210702_01\\digitising_batches\\floating_greece_plp_20210626_20210702_01\\batch.before_reef_rain_20261027T211353Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\floating_greece_plp_20210626_20210702_01\\processed\\Global_S1_S1_S1B_IW_SLC__1SDV_20210626T161500_20210626T161527_027530_03494A_A037\\scene_20210626T161500\\digitising\\scene_annotations.gpkg": "5c8fffdc94aaf3b640bd6317ca9c2bc3937da63b3c7f10581c5e0a75b8ab6158",
+      "D:\\Joshua\\New\\floating_greece_plp_20210626_20210702_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20210702T161544_20210702T161611_038601_048E08_CDF5\\scene_20210702T161544\\digitising\\scene_annotations.gpkg": "d1307a7fab20c5dbecd2677edee4f49313a46e2545ed8ff07204cc2d3918aa0e"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\floating_greece_plp_20210626_20210702_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20210702T161544_20210702T161611_038601_048E08_CDF5\\scene_20210702T161544\\digitising\\scene.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\New\\floating_greece_plp_20210626_20210702_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20210702T161544_20210702T161611_038601_048E08_CDF5\\scene_20210702T161544\\digitising\\scene.before_reef_rain_20261027T211356Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\floating_greece_plp_20210626_20210702_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20210702T161544_20210702T161611_038601_048E08_CDF5\\scene_20210702T161544\\digitising\\scene_annotations.gpkg": "d1307a7fab20c5dbecd2677edee4f49313a46e2545ed8ff07204cc2d3918aa0e"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\floating_greece_plp_20210626_20210702_01\\processed\\Global_S1_S1_S1B_IW_SLC__1SDV_20210626T161500_20210626T161527_027530_03494A_A037\\scene_20210626T161500\\digitising\\scene.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\New\\floating_greece_plp_20210626_20210702_01\\processed\\Global_S1_S1_S1B_IW_SLC__1SDV_20210626T161500_20210626T161527_027530_03494A_A037\\scene_20210626T161500\\digitising\\scene.before_reef_rain_20261027T211358Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\floating_greece_plp_20210626_20210702_01\\processed\\Global_S1_S1_S1B_IW_SLC__1SDV_20210626T161500_20210626T161527_027530_03494A_A037\\scene_20210626T161500\\digitising\\scene_annotations.gpkg": "5c8fffdc94aaf3b640bd6317ca9c2bc3937da63b3c7f10581c5e0a75b8ab6158"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\floating_greece_plp_20240629_20240705_02\\digitising_batches\\floating_greece_plp_20240629_20240705_02\\batch.qgz",
+    "status": "updated",
+    "layers": 2,
+    "backup": "D:\\Joshua\\New\\floating_greece_plp_20240629_20240705_02\\digitising_batches\\floating_greece_plp_20240629_20240705_02\\batch.before_reef_rain_20261027T211400Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\floating_greece_plp_20240629_20240705_02\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20240629T041520_20240629T041547_054533_06A303_E4CF\\scene_20240629T041520\\digitising\\scene_annotations.gpkg": "4c7f1df6d3d99e37bc3fcad24359406d3e3c0b1849353a9b90d1123aa09395c9",
+      "D:\\Joshua\\New\\floating_greece_plp_20240629_20240705_02\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20240705T160746_20240705T160813_054628_06A662_95B9\\scene_20240705T160746\\digitising\\scene_annotations.gpkg": "dfb31a2a78ef4477bade1dae90361c36b3ea7c126d974e2e79a9dd4246e35cc1"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\floating_greece_plp_20240629_20240705_02\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20240629T041520_20240629T041547_054533_06A303_E4CF\\scene_20240629T041520\\digitising\\scene.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\New\\floating_greece_plp_20240629_20240705_02\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20240629T041520_20240629T041547_054533_06A303_E4CF\\scene_20240629T041520\\digitising\\scene.before_reef_rain_20261027T211402Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\floating_greece_plp_20240629_20240705_02\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20240629T041520_20240629T041547_054533_06A303_E4CF\\scene_20240629T041520\\digitising\\scene_annotations.gpkg": "4c7f1df6d3d99e37bc3fcad24359406d3e3c0b1849353a9b90d1123aa09395c9"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\floating_greece_plp_20240629_20240705_02\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20240705T160746_20240705T160813_054628_06A662_95B9\\scene_20240705T160746\\digitising\\scene.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\New\\floating_greece_plp_20240629_20240705_02\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20240705T160746_20240705T160813_054628_06A662_95B9\\scene_20240705T160746\\digitising\\scene.before_reef_rain_20261027T211405Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\floating_greece_plp_20240629_20240705_02\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20240705T160746_20240705T160813_054628_06A662_95B9\\scene_20240705T160746\\digitising\\scene_annotations.gpkg": "dfb31a2a78ef4477bade1dae90361c36b3ea7c126d974e2e79a9dd4246e35cc1"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\For_Meeting\\golden_marida_16pdc_2018\\digitising_batches\\golden_marida_16pdc_2018\\batch.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\New\\For_Meeting\\golden_marida_16pdc_2018\\digitising_batches\\golden_marida_16pdc_2018\\batch.before_reef_rain_20261027T211407Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\For_Meeting\\golden_marida_16pdc_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20181024T113716_20181024T113746_024277_02A836_7D74\\scene_20181024T113716\\digitising\\marida_16PDC_2018_10_24_before_R01_20181024T113716\\task.gpkg": "34f68e8f4d9702bd92cd53b0739129f71a645c2fe537d85068f2ab845938a12e"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\For_Meeting\\golden_marida_16pdc_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20181024T113716_20181024T113746_024277_02A836_7D74\\scene_20181024T113716\\digitising\\marida_16PDC_2018_10_24_before_R01_20181024T113716\\task.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\New\\For_Meeting\\golden_marida_16pdc_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20181024T113716_20181024T113746_024277_02A836_7D74\\scene_20181024T113716\\digitising\\marida_16PDC_2018_10_24_before_R01_20181024T113716\\task.before_reef_rain_20261027T211409Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\For_Meeting\\golden_marida_16pdc_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20181024T113716_20181024T113746_024277_02A836_7D74\\scene_20181024T113716\\digitising\\marida_16PDC_2018_10_24_before_R01_20181024T113716\\task.gpkg": "34f68e8f4d9702bd92cd53b0739129f71a645c2fe537d85068f2ab845938a12e"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\For_Meeting\\golden_marida_16pdc_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20181024T113744_20181024T113812_024277_02A836_EC6E\\scene_20181024T113744\\digitising\\marida_16PDC_2018_10_24_before_R02_20181024T113744\\task.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\New\\For_Meeting\\golden_marida_16pdc_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20181024T113744_20181024T113812_024277_02A836_EC6E\\scene_20181024T113744\\digitising\\marida_16PDC_2018_10_24_before_R02_20181024T113744\\task.before_reef_rain_20261027T211412Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\For_Meeting\\golden_marida_16pdc_2018\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20181024T113744_20181024T113812_024277_02A836_EC6E\\scene_20181024T113744\\digitising\\marida_16PDC_2018_10_24_before_R02_20181024T113744\\task.gpkg": "b9f295c133e93f007b4675e91091e29a833bfbb97b5ea32757881f0e9562e392"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\For_Meeting\\marida_18qyf_20200915_02\\digitising_batches\\marida_18qyf_20200915_02\\batch.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\New\\For_Meeting\\marida_18qyf_20200915_02\\digitising_batches\\marida_18qyf_20200915_02\\batch.before_reef_rain_20261027T211414Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\For_Meeting\\marida_18qyf_20200915_02\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200915T230129_20200915T230157_034376_03FF59_A9F7\\scene_20200915T230129\\digitising\\scene_annotations.gpkg": "c22f9ca223e310bf24dd78befbf9ffa054b40c2452785ae2d3ab7af55fd80ecd"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\For_Meeting\\marida_18qyf_20200915_02\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200915T230129_20200915T230157_034376_03FF59_A9F7\\scene_20200915T230129\\digitising\\scene.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\New\\For_Meeting\\marida_18qyf_20200915_02\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200915T230129_20200915T230157_034376_03FF59_A9F7\\scene_20200915T230129\\digitising\\scene.before_reef_rain_20261027T211417Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\For_Meeting\\marida_18qyf_20200915_02\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200915T230129_20200915T230157_034376_03FF59_A9F7\\scene_20200915T230129\\digitising\\scene_annotations.gpkg": "c22f9ca223e310bf24dd78befbf9ffa054b40c2452785ae2d3ab7af55fd80ecd"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\marida_16pcc_20170831_03\\digitising_batches\\marida_16pcc_20170831_03\\batch.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\New\\marida_16pcc_20170831_03\\digitising_batches\\marida_16pcc_20170831_03\\batch.before_reef_rain_20261027T211419Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\marida_16pcc_20170831_03\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20170831T000618_20170831T000645_018160_01E82D_DFF8\\scene_20170831T000618\\digitising\\scene_annotations.gpkg": "0548d6005601449688113bc0c85e6c74b296f96d9eae986b4c9b022f9a277674"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\marida_16pcc_20170831_03\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20170831T000618_20170831T000645_018160_01E82D_DFF8\\scene_20170831T000618\\digitising\\scene.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\New\\marida_16pcc_20170831_03\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20170831T000618_20170831T000645_018160_01E82D_DFF8\\scene_20170831T000618\\digitising\\scene.before_reef_rain_20261027T211421Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\marida_16pcc_20170831_03\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20170831T000618_20170831T000645_018160_01E82D_DFF8\\scene_20170831T000618\\digitising\\scene_annotations.gpkg": "0548d6005601449688113bc0c85e6c74b296f96d9eae986b4c9b022f9a277674"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\marida_16pcc_20200924_08\\digitising_batches\\marida_16pcc_20200924_08\\batch.qgz",
+    "status": "updated",
+    "layers": 2,
+    "backup": "D:\\Joshua\\New\\marida_16pcc_20200924_08\\digitising_batches\\marida_16pcc_20200924_08\\batch.before_reef_rain_20261027T211424Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\marida_16pcc_20200924_08\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200924T114611_20200924T114638_034500_0403CA_2C6A\\scene_20200924T114611\\digitising\\scene_annotations.gpkg": "6b83c27ae49d7775a95e9c5ab842306ef8d3f270b9de1b88d24c7cd39cba965e",
+      "D:\\Joshua\\New\\marida_16pcc_20200924_08\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200924T114547_20200924T114614_034500_0403CA_C05B\\scene_20200924T114547\\digitising\\scene_annotations.gpkg": "230b902598d074282bb5dcd160feaa4d2bc2f6e5c10ef48790b09b4f4a7a836e"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\marida_16pcc_20200924_08\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200924T114547_20200924T114614_034500_0403CA_C05B\\scene_20200924T114547\\digitising\\scene.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\New\\marida_16pcc_20200924_08\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200924T114547_20200924T114614_034500_0403CA_C05B\\scene_20200924T114547\\digitising\\scene.before_reef_rain_20261027T211426Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\marida_16pcc_20200924_08\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200924T114547_20200924T114614_034500_0403CA_C05B\\scene_20200924T114547\\digitising\\scene_annotations.gpkg": "230b902598d074282bb5dcd160feaa4d2bc2f6e5c10ef48790b09b4f4a7a836e"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\marida_16pcc_20200924_08\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200924T114611_20200924T114638_034500_0403CA_2C6A\\scene_20200924T114611\\digitising\\scene.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\New\\marida_16pcc_20200924_08\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200924T114611_20200924T114638_034500_0403CA_2C6A\\scene_20200924T114611\\digitising\\scene.before_reef_rain_20261027T211428Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\marida_16pcc_20200924_08\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200924T114611_20200924T114638_034500_0403CA_2C6A\\scene_20200924T114611\\digitising\\scene_annotations.gpkg": "6b83c27ae49d7775a95e9c5ab842306ef8d3f270b9de1b88d24c7cd39cba965e"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\marida_16pec_20190111_03\\digitising_batches\\marida_16pec_20190111_03\\batch.qgz",
+    "status": "updated",
+    "layers": 2,
+    "backup": "D:\\Joshua\\New\\marida_16pec_20190111_03\\digitising_batches\\marida_16pec_20190111_03\\batch.before_reef_rain_20261027T211432Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\marida_16pec_20190111_03\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190111T235822_20190111T235849_025437_02D177_4D98\\scene_20190111T235822\\digitising\\scene_annotations.gpkg": "04ec19edc1cd0fd1c00eab72fd5c5b814fcce10d0e1c7b222db4c0ead2e34eee",
+      "D:\\Joshua\\New\\marida_16pec_20190111_03\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190111T235757_20190111T235824_025437_02D177_7CEB\\scene_20190111T235757\\digitising\\scene_annotations.gpkg": "9f611ae8ce6824d7d8cf1a2d2378782128a401e8546ba232ddab80d162bf3c8f"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\marida_16pec_20190111_03\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190111T235757_20190111T235824_025437_02D177_7CEB\\scene_20190111T235757\\digitising\\scene.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\New\\marida_16pec_20190111_03\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190111T235757_20190111T235824_025437_02D177_7CEB\\scene_20190111T235757\\digitising\\scene.before_reef_rain_20261027T211435Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\marida_16pec_20190111_03\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190111T235757_20190111T235824_025437_02D177_7CEB\\scene_20190111T235757\\digitising\\scene_annotations.gpkg": "9f611ae8ce6824d7d8cf1a2d2378782128a401e8546ba232ddab80d162bf3c8f"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\marida_16pec_20190111_03\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190111T235822_20190111T235849_025437_02D177_4D98\\scene_20190111T235822\\digitising\\scene.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\New\\marida_16pec_20190111_03\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190111T235822_20190111T235849_025437_02D177_4D98\\scene_20190111T235822\\digitising\\scene.before_reef_rain_20261027T211438Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\marida_16pec_20190111_03\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190111T235822_20190111T235849_025437_02D177_4D98\\scene_20190111T235822\\digitising\\scene_annotations.gpkg": "04ec19edc1cd0fd1c00eab72fd5c5b814fcce10d0e1c7b222db4c0ead2e34eee"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\marida_16qed_20190128_01\\digitising_batches\\marida_16qed_20190128_01\\batch.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\New\\marida_16qed_20190128_01\\digitising_batches\\marida_16qed_20190128_01\\batch.before_reef_rain_20261027T211440Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\marida_16qed_20190128_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190128T113713_20190128T113743_025677_02DA37_E9F7\\scene_20190128T113713\\digitising\\scene_annotations.gpkg": "218b7490000e1a4d8287faf7a7a967dcf84b733f5699f54b2f3b85eacdf0c0e4"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\marida_16qed_20190128_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190128T113713_20190128T113743_025677_02DA37_E9F7\\scene_20190128T113713\\digitising\\scene.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\New\\marida_16qed_20190128_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190128T113713_20190128T113743_025677_02DA37_E9F7\\scene_20190128T113713\\digitising\\scene.before_reef_rain_20261027T211443Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\marida_16qed_20190128_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190128T113713_20190128T113743_025677_02DA37_E9F7\\scene_20190128T113713\\digitising\\scene_annotations.gpkg": "218b7490000e1a4d8287faf7a7a967dcf84b733f5699f54b2f3b85eacdf0c0e4"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\marida_18qyf_20200319_01\\digitising_batches\\marida_18qyf_20200319_01\\batch.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\New\\marida_18qyf_20200319_01\\digitising_batches\\marida_18qyf_20200319_01\\batch.before_reef_rain_20261027T211445Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\marida_18qyf_20200319_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200319T230120_20200319T230148_031751_03A974_084C\\scene_20200319T230120\\digitising\\scene_annotations.gpkg": "b6c84863ca9ebd4ecb7d47c55c12e3fa09ad349f873cfccb9b3ea899d0c7526c"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\marida_18qyf_20200319_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200319T230120_20200319T230148_031751_03A974_084C\\scene_20200319T230120\\digitising\\scene.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\New\\marida_18qyf_20200319_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200319T230120_20200319T230148_031751_03A974_084C\\scene_20200319T230120\\digitising\\scene.before_reef_rain_20261027T211447Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\marida_18qyf_20200319_01\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200319T230120_20200319T230148_031751_03A974_084C\\scene_20200319T230120\\digitising\\scene_annotations.gpkg": "b6c84863ca9ebd4ecb7d47c55c12e3fa09ad349f873cfccb9b3ea899d0c7526c"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\marida_18qyg_20200307_02\\digitising_batches\\marida_18qyg_20200307_02\\batch.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\New\\marida_18qyg_20200307_02\\digitising_batches\\marida_18qyg_20200307_02\\batch.before_reef_rain_20261027T211449Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\marida_18qyg_20200307_02\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200307T230145_20200307T230212_031576_03A353_A3DE\\scene_20200307T230145\\digitising\\scene_annotations.gpkg": "7f8b6facdb514d8791ad7a34e2d200bcc704a76cfeb6b1fa4cdf6b1e01833c0b"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\marida_18qyg_20200307_02\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200307T230145_20200307T230212_031576_03A353_A3DE\\scene_20200307T230145\\digitising\\scene.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\New\\marida_18qyg_20200307_02\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200307T230145_20200307T230212_031576_03A353_A3DE\\scene_20200307T230145\\digitising\\scene.before_reef_rain_20261027T211451Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\marida_18qyg_20200307_02\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200307T230145_20200307T230212_031576_03A353_A3DE\\scene_20200307T230145\\digitising\\scene_annotations.gpkg": "7f8b6facdb514d8791ad7a34e2d200bcc704a76cfeb6b1fa4cdf6b1e01833c0b"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\marida_52sdd_20181006_01\\digitising_batches\\marida_52sdd_20181006_01\\batch.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\New\\marida_52sdd_20181006_01\\digitising_batches\\marida_52sdd_20181006_01\\batch.before_reef_rain_20261027T211454Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\marida_52sdd_20181006_01\\processed\\Global_S1_S1_S1B_IW_SLC__1SDV_20181006T212352_20181006T212427_013037_018158_17E9\\scene_20181006T212352\\digitising\\scene_annotations.gpkg": "d26cdce9701f38c196d1e8a456dc3255dd2d163a7637f1fbc02696a063d4adab"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\marida_52sdd_20181006_01\\processed\\Global_S1_S1_S1B_IW_SLC__1SDV_20181006T212352_20181006T212427_013037_018158_17E9\\scene_20181006T212352\\digitising\\scene.qgz",
+    "status": "updated",
+    "layers": 1,
+    "backup": "D:\\Joshua\\New\\marida_52sdd_20181006_01\\processed\\Global_S1_S1_S1B_IW_SLC__1SDV_20181006T212352_20181006T212427_013037_018158_17E9\\scene_20181006T212352\\digitising\\scene.before_reef_rain_20261027T211456Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\New\\marida_52sdd_20181006_01\\processed\\Global_S1_S1_S1B_IW_SLC__1SDV_20181006T212352_20181006T212427_013037_018158_17E9\\scene_20181006T212352\\digitising\\scene_annotations.gpkg": "d26cdce9701f38c196d1e8a456dc3255dd2d163a7637f1fbc02696a063d4adab"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Done\\sa_durban_2019_apr\\digitising_batches\\sa_durban_2019_apr\\batch.qgz",
+    "status": "updated",
+    "layers": 4,
+    "backup": "D:\\Joshua\\Done\\Done\\sa_durban_2019_apr\\digitising_batches\\sa_durban_2019_apr\\batch.before_reef_rain_20261027T211518Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Done\\sa_durban_2019_apr\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190421T163724_20190421T163751_026890_030629_56F9\\scene_20190421T163724\\digitising\\MERIA_SA_001_before_20190421T163724\\task.gpkg": "0a7e49425fe3d324165f25ba103daa3031843d31ec15854c434740e6de9c5b13",
+      "D:\\Joshua\\Done\\Done\\sa_durban_2019_apr\\processed\\MERIA_SA_002_Durban\\after_20190427T163647\\digitising\\MERIA_SA_002_after_20190427T163647\\task.gpkg": "e76a1bb3ba123fc47bddc11471ca5aa5646c556a0cc56541db11e04a3703f5fa",
+      "D:\\Joshua\\Done\\Done\\sa_durban_2019_apr\\processed\\MERIA_SA_001_Durban\\after_20190425T031055\\digitising\\MERIA_SA_002_before_20190425T031055\\task.gpkg": "8c48e0454943447c96ac93bb3aa65fba3a7b4d6f147e6242e50f609dded6fc38",
+      "D:\\Joshua\\Done\\Done\\sa_durban_2019_apr\\processed\\MERIA_SA_001_Durban\\after_20190425T031055\\digitising\\MERIA_SA_001_after_20190425T031055\\task.gpkg": "4451587cfa32547d860e75aca72bfd6caf72fd3983496cb3dfff575a9ad163ce"
+    },
+    "original_sources_visibility_preserved": true
+  },
+  {
+    "project": "D:\\Joshua\\Done\\Transfered\\sa_durban_2019_apr\\digitising_batches\\sa_durban_2019_apr\\batch.qgz",
+    "status": "updated",
+    "layers": 4,
+    "backup": "D:\\Joshua\\Done\\Transfered\\sa_durban_2019_apr\\digitising_batches\\sa_durban_2019_apr\\batch.before_reef_rain_20261027T211522Z.qgz",
+    "annotation_data_unchanged": {
+      "D:\\Joshua\\Done\\Transfered\\sa_durban_2019_apr\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190421T163724_20190421T163751_026890_030629_56F9\\scene_20190421T163724\\digitising\\MERIA_SA_001_before_20190421T163724\\task.gpkg": "0a7e49425fe3d324165f25ba103daa3031843d31ec15854c434740e6de9c5b13",
+      "D:\\Joshua\\Done\\Transfered\\sa_durban_2019_apr\\processed\\MERIA_SA_002_Durban\\after_20190427T163647\\digitising\\MERIA_SA_002_after_20190427T163647\\task.gpkg": "e76a1bb3ba123fc47bddc11471ca5aa5646c556a0cc56541db11e04a3703f5fa",
+      "D:\\Joshua\\Done\\Transfered\\sa_durban_2019_apr\\processed\\MERIA_SA_001_Durban\\after_20190425T031055\\digitising\\MERIA_SA_002_before_20190425T031055\\task.gpkg": "8c48e0454943447c96ac93bb3aa65fba3a7b4d6f147e6242e50f609dded6fc38",
+      "D:\\Joshua\\Done\\Transfered\\sa_durban_2019_apr\\processed\\MERIA_SA_001_Durban\\after_20190425T031055\\digitising\\MERIA_SA_001_after_20190425T031055\\task.gpkg": "4451587cfa32547d860e75aca72bfd6caf72fd3983496cb3dfff575a9ad163ce"
+    },
+    "original_sources_visibility_preserved": true
+  }
+]

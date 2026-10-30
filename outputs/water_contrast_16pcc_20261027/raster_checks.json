@@ -1,0 +1,32 @@
+[
+  {
+    "path": "D:\\Joshua\\New\\marida_16pcc_20200924_08\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200924T114611_20200924T114638_034500_0403CA_2C6A\\scene_20200924T114611\\water_contrast_v1\\water_contrast.tif",
+    "grid_and_fingerprint_verified": true,
+    "four_bands_both_signs": true,
+    "render_center": [
+      -89.1214446370723,
+      15.499793661892973
+    ],
+    "overviews": [
+      2,
+      4,
+      8,
+      16
+    ]
+  },
+  {
+    "path": "D:\\Joshua\\New\\marida_16pcc_20200924_08\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200924T114547_20200924T114614_034500_0403CA_C05B\\scene_20200924T114547\\water_contrast_v1\\water_contrast.tif",
+    "grid_and_fingerprint_verified": true,
+    "four_bands_both_signs": true,
+    "render_center": [
+      -88.6358882633981,
+      16.23963186312549
+    ],
+    "overviews": [
+      2,
+      4,
+      8,
+      16
+    ]
+  }
+]

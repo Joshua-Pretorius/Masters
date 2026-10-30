@@ -1,0 +1,23 @@
+[
+  {
+    "project": "D:\\Joshua\\New\\marida_16pec_20190111_03\\digitising_batches\\marida_16pec_20190111_03\\batch.qgz",
+    "backup": "D:\\Joshua\\New\\marida_16pec_20190111_03\\digitising_batches\\marida_16pec_20190111_03\\batch.before_contrast_variants_20261026_220250.qgz",
+    "added_layers": 48,
+    "original_layers_preserved": 39,
+    "verified": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\marida_16pec_20190111_03\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190111T235757_20190111T235824_025437_02D177_7CEB\\scene_20190111T235757\\digitising\\scene.qgz",
+    "backup": "D:\\Joshua\\New\\marida_16pec_20190111_03\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190111T235757_20190111T235824_025437_02D177_7CEB\\scene_20190111T235757\\digitising\\scene.before_contrast_variants_20261026_220254.qgz",
+    "added_layers": 24,
+    "original_layers_preserved": 19,
+    "verified": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\marida_16pec_20190111_03\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190111T235822_20190111T235849_025437_02D177_4D98\\scene_20190111T235822\\digitising\\scene.qgz",
+    "backup": "D:\\Joshua\\New\\marida_16pec_20190111_03\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20190111T235822_20190111T235849_025437_02D177_4D98\\scene_20190111T235822\\digitising\\scene.before_contrast_variants_20261026_220257.qgz",
+    "added_layers": 24,
+    "original_layers_preserved": 19,
+    "verified": true
+  }
+]

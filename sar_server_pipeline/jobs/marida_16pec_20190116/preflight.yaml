@@ -1,0 +1,42 @@
+schema_version: 1
+run_id: marida_16pec_20190116_followup-local-v1-preflight
+dataset_mode: global
+targets:
+- S1_S1A_IW_SLC__1SDV_20190116T113714_20190116T113744_025502_02D3D3_FC33:scene
+- S1_S1A_IW_SLC__1SDV_20190116T113741_20190116T113809_025502_02D3D3_B06D:scene
+inputs:
+  match_csv: D:\Masters\sar_server_pipeline\jobs\marida_16pec_20190116\targets.csv
+  points_csv: D:\Masters\sar_server_pipeline\jobs\marida_16pec_20190116\points.csv
+  raw_slc_root: D:\Masters\outputs\marida_16pec_20190116_followup\raw\slc
+  shapefiles_root: D:\Masters\outputs\marida_16pec_20190116_followup\shapefiles
+outputs:
+  processed_root: D:\Masters\outputs\marida_16pec_20190116_followup\processed
+  patches_root: D:\Masters\outputs\marida_16pec_20190116_followup\patches
+  stacks_root: D:\Masters\outputs\marida_16pec_20190116_followup\stacks
+  logs_root: D:\Masters\outputs\marida_16pec_20190116_followup\logs
+  manifests_root: D:\Masters\outputs\marida_16pec_20190116_followup\manifests
+stages:
+  slc_process:
+    enabled: true
+    overwrite: false
+    gpt: C:/Program Files/esa-snap/bin/gpt.exe
+    pad_deg: 0
+    keep_zip: true
+    prepare_only: true
+  patch_extract:
+    enabled: false
+    overwrite: false
+  patch_stack:
+    enabled: false
+    overwrite: false
+processing:
+  resolution_policy: snap-native
+  output_mode: scene
+  subset_mode: full-swath
+  subswaths:
+  - IW1
+  - IW2
+  - IW3
+  workers: 1
+  cache_gb: 8
+  patch_size: 256

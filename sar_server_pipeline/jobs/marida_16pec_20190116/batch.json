@@ -1,0 +1,52 @@
+{
+  "batch": "marida_16pec_20190116_followup",
+  "parent_batch": "marida_16pec_20190111_03",
+  "status": "downloading_or_processing",
+  "local_data_root": "D:\\Masters\\outputs\\marida_16pec_20190116_followup",
+  "coverage_set_ratio": 1.0,
+  "reference_time": "2019-01-12T16:16:31Z",
+  "catalogue_url": "https://api.daac.asf.alaska.edu/services/search/param?platform=Sentinel-1&processingLevel=SLC&bbox=-87.28082151836338%2C15.483434423638773%2C-85.86093641026656%2C16.548161550600565&start=2019-01-16T00%3A00%3A00Z&end=2019-01-16T23%3A59%3A59Z&output=geojson",
+  "scenes": [
+    {
+      "target_id": "marida_16PEC_2019-01-12:followup:01",
+      "obs_id": "marida_16PEC_2019-01-12",
+      "source_dataset": "MARIDA",
+      "source_group_id": "16PEC/2019-01-12",
+      "area": "16PEC",
+      "date": "2019-01-12",
+      "reference_time": "2019-01-12T16:16:31Z",
+      "timestamp_source": "catalogue",
+      "role": "followup",
+      "selection_rank": "1",
+      "granule_name": "S1A_IW_SLC__1SDV_20190116T113714_20190116T113744_025502_02D3D3_FC33.SAFE",
+      "acquisition_start": "2019-01-16T11:37:14Z",
+      "delta_h": "91.345278",
+      "scene_coverage_ratio": "0.870398",
+      "coverage_set_ratio": "1.0",
+      "coverage_complete": "True",
+      "download_group_key": "S1A_IW_SLC__1SDV_20190116T113714_20190116T113744_025502_02D3D3_FC33",
+      "aoi_buffer_km": "30.0"
+    },
+    {
+      "target_id": "marida_16PEC_2019-01-12:followup:02",
+      "obs_id": "marida_16PEC_2019-01-12",
+      "source_dataset": "MARIDA",
+      "source_group_id": "16PEC/2019-01-12",
+      "area": "16PEC",
+      "date": "2019-01-12",
+      "reference_time": "2019-01-12T16:16:31Z",
+      "timestamp_source": "catalogue",
+      "role": "followup",
+      "selection_rank": "2",
+      "granule_name": "S1A_IW_SLC__1SDV_20190116T113741_20190116T113809_025502_02D3D3_B06D.SAFE",
+      "acquisition_start": "2019-01-16T11:37:41Z",
+      "delta_h": "91.352778",
+      "scene_coverage_ratio": "0.262937",
+      "coverage_set_ratio": "1.0",
+      "coverage_complete": "True",
+      "download_group_key": "S1A_IW_SLC__1SDV_20190116T113741_20190116T113809_025502_02D3D3_B06D",
+      "aoi_buffer_km": "30.0"
+    }
+  ],
+  "notes": "User-requested follow-up outside the default 72-hour optical window. January 12 optical references retained as historical context; January 16 debris labels require review. Both January 11 source slices considered. No contemporary optical acquisition inferred."
+}

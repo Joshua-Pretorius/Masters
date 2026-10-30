@@ -21,6 +21,7 @@ class MeriaBatch:
 # Acquisition-start tokens identify physical scenes without depending on their
 # processed directory names. Shared optical associations stay in one scene.
 MERIA_BATCHES = (
+    MeriaBatch("marida_16pec_20190116_followup", "global", "16PEC", ("20190116T113714", "20190116T113741")),
     MeriaBatch("sa_durban_2019_apr21_27", "sa", "Durban", ("20190421T163724", "20190425T031055", "20190427T163647")),
     MeriaBatch("sa_durban_2022_apr05", "sa", "Durban", ("20220405T163741",)),
     MeriaBatch("sa_durban_2022_apr17_20", "sa", "Durban", ("20220417T163741", "20220420T032018")),

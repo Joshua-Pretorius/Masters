@@ -1,0 +1,35 @@
+[
+  {
+    "project": "D:\\Joshua\\New\\marida_16pcc_20200924_08\\digitising_batches\\marida_16pcc_20200924_08\\batch.qgz",
+    "status": "updated",
+    "backup": "D:\\Joshua\\New\\marida_16pcc_20200924_08\\digitising_batches\\marida_16pcc_20200924_08\\batch.before_water_contrast_20261027_095901.qgz",
+    "added_layers": 8,
+    "removed_layers": 0,
+    "groups": 2,
+    "unavailable": [],
+    "original_sources_and_visibility_preserved": true,
+    "new_layers_valid": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\marida_16pcc_20200924_08\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200924T114547_20200924T114614_034500_0403CA_C05B\\scene_20200924T114547\\digitising\\scene.qgz",
+    "status": "updated",
+    "backup": "D:\\Joshua\\New\\marida_16pcc_20200924_08\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200924T114547_20200924T114614_034500_0403CA_C05B\\scene_20200924T114547\\digitising\\scene.before_water_contrast_20261027_095904.qgz",
+    "added_layers": 4,
+    "removed_layers": 0,
+    "groups": 1,
+    "unavailable": [],
+    "original_sources_and_visibility_preserved": true,
+    "new_layers_valid": true
+  },
+  {
+    "project": "D:\\Joshua\\New\\marida_16pcc_20200924_08\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200924T114611_20200924T114638_034500_0403CA_2C6A\\scene_20200924T114611\\digitising\\scene.qgz",
+    "status": "updated",
+    "backup": "D:\\Joshua\\New\\marida_16pcc_20200924_08\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200924T114611_20200924T114638_034500_0403CA_2C6A\\scene_20200924T114611\\digitising\\scene.before_water_contrast_20261027_095906.qgz",
+    "added_layers": 4,
+    "removed_layers": 0,
+    "groups": 1,
+    "unavailable": [],
+    "original_sources_and_visibility_preserved": true,
+    "new_layers_valid": true
+  }
+]

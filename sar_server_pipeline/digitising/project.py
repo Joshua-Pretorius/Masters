@@ -148,6 +148,8 @@ def _configure_annotations(layer, task: DigitisingTask, q: dict[str, object]) ->
         "open_ocean": "#33a02c",
         "other": "#b15928",
         "uncertain": "#bdbdbd",
+        "reef": "#00a896",
+        "rain": "#377eb8",
     }
     categories = []
     for class_name in CLASSES:

@@ -130,3 +130,7 @@ Remove `prepare_only: true` after the validation run and execute the same
 command to begin downloading and processing. The generated job sets
 `pad_deg: 0` because its processing points already describe the 30 km buffered
 AOI bounds; this avoids applying the buffer twice.
+
+## January 16, 2019 16PEC follow-up
+
+Two user-requested follow-up SLC scenes (FC33 and B06D) were added on 2026-10-30 as `marida_16pec_20190116_followup`. They jointly cover the buffered AOI and are linked to both January 11 parent slices. This explicit exception is outside the default 72-hour window; `manual_followup_associations.json` preserves it on rebuild. January 12 optical references remain historical context, not January 16 ground truth. Local job, catalogue evidence and current status: `../../sar_server_pipeline/jobs/marida_16pec_20190116/README.md`. The physical target inventory now contains 126 scenes.

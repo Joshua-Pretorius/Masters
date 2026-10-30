@@ -1,0 +1,5 @@
+qgis_deps/
+backup/
+__pycache__/
+*.log
+*.pid

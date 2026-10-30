@@ -281,3 +281,4 @@ jamila_floating_debris_venice_20180928,Jamila_Floating_Debris,venice_20180928,be
 jamila_floating_debris_venice_20180928,Jamila_Floating_Debris,venice_20180928,after,5,2,1.0,True,selected
 jamila_floating_debris_vungtau_20180423,Jamila_Floating_Debris,vungtau_20180423,before,1,1,0.409528,False,no <=12h scene set reached 99.9% coverage
 jamila_floating_debris_vungtau_20180423,Jamila_Floating_Debris,vungtau_20180423,after,4,1,0.137202,False,no <=12h scene set reached 99.9% coverage
+marida_16PEC_2019-01-12,MARIDA,16PEC/2019-01-12,followup,2,2,1.0,True,User-requested January 16 follow-up to both January 11 slices; outside default 72-hour window. Original January 12 optical time retained; not contemporary ground truth.

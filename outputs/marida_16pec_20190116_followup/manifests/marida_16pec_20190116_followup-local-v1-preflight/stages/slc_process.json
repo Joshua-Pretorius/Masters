@@ -1,0 +1,10 @@
+{
+  "run_id": "marida_16pec_20190116_followup-local-v1-preflight",
+  "stage_name": "slc_process",
+  "status": "success",
+  "written_at_utc": "2026-10-30T09:21:36.108805+00:00",
+  "payload": {
+    "processor_script": "D:\\Masters\\sar_server_pipeline\\vendor\\Data_Creation\\process_global_slc_targets.py",
+    "target_count": 2
+  }
+}

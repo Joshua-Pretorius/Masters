@@ -24,6 +24,8 @@ CLASSES = (
     "open_ocean",
     "other",
     "uncertain",
+    "reef",
+    "rain",
 )
 CONFIDENCE_LEVELS = ("high", "medium", "low", "not_assessed")
 TRAINING_STATUSES = ("candidate", "accepted_proxy", "excluded")

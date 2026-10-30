@@ -1,0 +1,14 @@
+[
+  {
+    "scene": "scene_20190111T235822",
+    "24_bands_grid_crs": "pass",
+    "15_independent_windows_including_tile_boundaries": "pass",
+    "positive_negative_present_all_bands": "pass"
+  },
+  {
+    "scene": "scene_20190111T235757",
+    "24_bands_grid_crs": "pass",
+    "15_independent_windows_including_tile_boundaries": "pass",
+    "positive_negative_present_all_bands": "pass"
+  }
+]

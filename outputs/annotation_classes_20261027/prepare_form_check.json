@@ -1,0 +1,27 @@
+{
+  "class_choices": [
+    "calm_water",
+    "open_ocean",
+    "other",
+    "plastic",
+    "rain",
+    "reef",
+    "ship",
+    "slick",
+    "uncertain",
+    "wake"
+  ],
+  "renderer_categories": [
+    "calm_water",
+    "open_ocean",
+    "other",
+    "plastic",
+    "rain",
+    "reef",
+    "ship",
+    "slick",
+    "uncertain",
+    "wake"
+  ],
+  "status": "passed"
+}

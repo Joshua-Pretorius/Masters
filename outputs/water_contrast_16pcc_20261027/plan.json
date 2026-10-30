@@ -1,0 +1,36 @@
+[
+  {
+    "source": "D:\\Joshua\\New\\marida_16pcc_20200924_08\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200924T114547_20200924T114614_034500_0403CA_C05B\\scene_20200924T114547\\S1_S1A_IW_SLC__1SDV_20200924T114547_20200924T114614_034500_0403CA_C05B_Global_S1_scene_20200924T114547_slc_native_vv.tif",
+    "point_count": 94,
+    "projects": [
+      "D:\\Joshua\\New\\marida_16pcc_20200924_08\\digitising_batches\\marida_16pcc_20200924_08\\batch.qgz",
+      "D:\\Joshua\\New\\marida_16pcc_20200924_08\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200924T114547_20200924T114614_034500_0403CA_C05B\\scene_20200924T114547\\digitising\\scene.qgz"
+    ],
+    "status": "ready",
+    "on_image_points": 93,
+    "window": [
+      0,
+      183,
+      20733,
+      15692
+    ],
+    "pixels": 325342236
+  },
+  {
+    "source": "D:\\Joshua\\New\\marida_16pcc_20200924_08\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200924T114611_20200924T114638_034500_0403CA_2C6A\\scene_20200924T114611\\S1_S1A_IW_SLC__1SDV_20200924T114611_20200924T114638_034500_0403CA_2C6A_Global_S1_scene_20200924T114611_slc_native_vv.tif",
+    "point_count": 94,
+    "projects": [
+      "D:\\Joshua\\New\\marida_16pcc_20200924_08\\digitising_batches\\marida_16pcc_20200924_08\\batch.qgz",
+      "D:\\Joshua\\New\\marida_16pcc_20200924_08\\processed\\Global_S1_S1_S1A_IW_SLC__1SDV_20200924T114611_20200924T114638_034500_0403CA_2C6A\\scene_20200924T114611\\digitising\\scene.qgz"
+    ],
+    "status": "ready",
+    "on_image_points": 1,
+    "window": [
+      1328,
+      0,
+      14797,
+      10323
+    ],
+    "pixels": 152749431
+  }
+]

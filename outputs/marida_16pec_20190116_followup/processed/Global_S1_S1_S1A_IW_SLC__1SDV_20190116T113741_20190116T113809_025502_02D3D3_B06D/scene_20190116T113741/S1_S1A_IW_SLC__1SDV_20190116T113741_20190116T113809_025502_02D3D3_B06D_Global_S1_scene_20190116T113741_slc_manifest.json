@@ -1,0 +1,114 @@
+{
+  "observation_id": "S1_S1A_IW_SLC__1SDV_20190116T113741_20190116T113809_025502_02D3D3_B06D",
+  "area": "Global_S1",
+  "role": "scene",
+  "observation_date": "2019-01-16",
+  "acquisition_start": "2019-01-16T11:37:41Z",
+  "delta_hours_from_observation_date": "0",
+  "scene_id": "S1_S1A_IW_SLC__1SDV_20190116T113741_20190116T113809_025502_02D3D3_B06D_Global_S1_scene_20190116T113741",
+  "download_group_key": "S1A_IW_SLC__1SDV_20190116T113741_20190116T113809_025502_02D3D3_B06D",
+  "slc": {
+    "granule": "S1A_IW_SLC__1SDV_20190116T113741_20190116T113809_025502_02D3D3_B06D",
+    "url": "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SDV_20190116T113741_20190116T113809_025502_02D3D3_B06D.zip",
+    "zip": "D:\\Masters\\outputs\\marida_16pec_20190116_followup\\raw\\slc\\_shared_slc_zips\\S1A_IW_SLC__1SDV_20190116T113741_20190116T113809_025502_02D3D3_B06D\\S1A_IW_SLC__1SDV_20190116T113741_20190116T113809_025502_02D3D3_B06D.zip",
+    "selected_polarisations": [
+      "VV",
+      "VH"
+    ]
+  },
+  "reference_grid": null,
+  "outputs": {
+    "vv": null,
+    "vh": null,
+    "vv_refined_lee": null,
+    "vv_refined_lee_db": null,
+    "vv_glcm_mean": null,
+    "vv_glcm_std": null,
+    "vv_glcm_entropy": null,
+    "decomp_entropy": null,
+    "decomp_anisotropy": null,
+    "decomp_alpha": null
+  },
+  "subswath_outputs": {
+    "IW1": {
+      "vv": null,
+      "vh": null,
+      "vv_refined_lee": null,
+      "vv_refined_lee_db": null,
+      "vv_glcm_mean": null,
+      "vv_glcm_std": null,
+      "vv_glcm_entropy": null,
+      "decomp_entropy": null,
+      "decomp_anisotropy": null,
+      "decomp_alpha": null
+    },
+    "IW2": {
+      "vv": null,
+      "vh": null,
+      "vv_refined_lee": null,
+      "vv_refined_lee_db": null,
+      "vv_glcm_mean": null,
+      "vv_glcm_std": null,
+      "vv_glcm_entropy": null,
+      "decomp_entropy": null,
+      "decomp_anisotropy": null,
+      "decomp_alpha": null
+    },
+    "IW3": {
+      "vv": null,
+      "vh": null,
+      "vv_refined_lee": null,
+      "vv_refined_lee_db": null,
+      "vv_glcm_mean": null,
+      "vv_glcm_std": null,
+      "vv_glcm_entropy": null,
+      "decomp_entropy": null,
+      "decomp_anisotropy": null,
+      "decomp_alpha": null
+    }
+  },
+  "processing": {
+    "resolution_policy": "snap-native",
+    "output_mode": "scene",
+    "subset_mode": "full-swath",
+    "aoi_bounds_wgs84": [
+      -87.28082151836338,
+      15.483434423638773,
+      -85.86093641026656,
+      16.548161550600565
+    ],
+    "aoi_wkt": "POLYGON ((-87.28082151836338 15.483434423638773, -85.86093641026656 15.483434423638773, -85.86093641026656 16.548161550600565, -87.28082151836338 16.548161550600565, -87.28082151836338 15.483434423638773))",
+    "pad_deg": 0.0,
+    "subswaths": [
+      "IW1",
+      "IW2",
+      "IW3"
+    ],
+    "glcm": {
+      "source_bands": "Sigma0_VV,Sigma0_VH",
+      "window_size": "5x5",
+      "angle": "ALL",
+      "quantizer": "Probabilistic Quantizer",
+      "quantization_levels": 32,
+      "displacement": 1,
+      "snap_nodata": -9999.0
+    },
+    "speckle_filter": {
+      "filter": "Refined Lee",
+      "filter_size": [
+        3,
+        3
+      ]
+    },
+    "decomposition": {
+      "type": "H-Alpha Dual Pol Decomposition",
+      "window_size": 5,
+      "outputs": [
+        "Entropy",
+        "Anisotropy",
+        "Alpha"
+      ]
+    }
+  },
+  "status": "prepared"
+}

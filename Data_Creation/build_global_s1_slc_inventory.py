@@ -826,6 +826,32 @@ def write_outputs(groups: list[OpticalGroup], *, query_catalogue: bool) -> None:
     write_csv(OUT_DIR / "optical_groups.csv", group_rows)
     write_csv(OUT_DIR / "global_s1_slc_points.csv", point_rows)
     if query_catalogue:
+        # Explicit user-requested temporal follow-ups remain distinct from the
+        # automatic +/-72-hour selection and survive inventory regeneration.
+        override_path = OUT_DIR / "manual_followup_associations.json"
+        if override_path.exists():
+            overrides = json.loads(override_path.read_text(encoding="utf-8"))
+            seen = {row["target_id"] for row in target_rows}
+            followups = overrides["associations"]
+            for raw in followups:
+                row = dict(raw)
+                if row["obs_id"] not in buffered_by_obs:
+                    raise ValueError(f"Unknown follow-up optical reference: {row['obs_id']}")
+                row["coverage_complete"] = str(row["coverage_complete"]).lower() == "true"
+                if row["target_id"] not in seen:
+                    target_rows.append(row)
+                    seen.add(row["target_id"])
+            for obs_id in sorted({row["obs_id"] for row in followups}):
+                selected = [row for row in followups if row["obs_id"] == obs_id]
+                first = selected[0]
+                selection_rows.append({
+                    "obs_id": obs_id, "source_dataset": first["source_dataset"],
+                    "source_group_id": first["source_group_id"], "role": "followup",
+                    "candidate_count": len(selected), "selected_count": len(selected),
+                    "coverage_set_ratio": float(first["coverage_set_ratio"]),
+                    "coverage_complete": str(first["coverage_complete"]).lower() == "true",
+                    "reason": overrides["reason"],
+                })
         write_csv(OUT_DIR / "global_s1_slc_associations.csv", target_rows)
         write_csv(OUT_DIR / "global_s1_slc_selection_summary.csv", selection_rows)
 

@@ -1,0 +1,7 @@
+{
+  "sign_symmetry": "pass",
+  "nodata": "pass",
+  "tile_halo": "pass",
+  "isolated_impulse_suppression": "pass",
+  "coherent_patch_retention": "pass"
+}
