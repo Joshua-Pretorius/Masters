@@ -1,12 +1,14 @@
 from __future__ import annotations
 
 import importlib.util
+from functools import partial
 import sys
 from dataclasses import dataclass
 from pathlib import Path
 from unittest import mock
 
 from pipeline.manifest import Manifest
+from pipeline.glcm_backfill import process as backfill_scene
 
 
 SERVER_REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -94,7 +96,13 @@ def run_slc_process(manifest: Manifest) -> SlcProcessResult:
         argv.append("--force")
     argv.append("--verbose")
 
+    processor = getattr(module, "sa", module)
     with mock.patch.object(sys, "argv", argv):
-        module.main()
+        if hasattr(processor, "FINALIZE_TEXTURES"):
+            finalize = partial(backfill_scene, mode="apply", allow_unknown=False)
+            with mock.patch.object(processor, "FINALIZE_TEXTURES", finalize):
+                module.main()
+        else:
+            module.main()
 
     return SlcProcessResult(processor_script=str(script_path), target_count=len(manifest.targets))

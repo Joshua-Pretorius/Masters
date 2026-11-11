@@ -62,7 +62,7 @@ def build_parser() -> argparse.ArgumentParser:
     prepare.add_argument("--grouping", choices=("scene", "observation"), default="scene",
                          help="Scene is the new one-annotation-layer-per-SAR workflow; observation reads legacy batches.")
     prepare.add_argument("--task", action="append", default=[], dest="task_ids")
-    prepare.add_argument("--prediction-mode", choices=("auto", "cached-only", "skip"), default="auto")
+    prepare.add_argument("--prediction-mode", choices=("auto", "required", "cached-only", "skip"), default="auto")
     prepare.add_argument(
         "--include-partial",
         action="store_true",
@@ -75,7 +75,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
     _common(meria)
     meria.add_argument("--batch", choices=tuple(BATCH_BY_NAME), required=True)
-    meria.add_argument("--prediction-mode", choices=("auto", "cached-only", "skip"), default="auto")
+    meria.add_argument("--prediction-mode", choices=("auto", "required", "cached-only", "skip"), default="auto")
     meria.add_argument("--dry-run", action="store_true")
 
     import_parser = subparsers.add_parser("import", help="Validate and import a returned desktop-QGIS batch.")

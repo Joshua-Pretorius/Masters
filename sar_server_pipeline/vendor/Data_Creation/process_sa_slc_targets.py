@@ -9,6 +9,10 @@ import math
 import shutil
 import sys
 import time
+import uuid
+
+# Set by the server entry point; standalone uses retain their existing behavior.
+FINALIZE_TEXTURES = None
 import xml.etree.ElementTree as ET
 from contextlib import ExitStack
 from dataclasses import dataclass
@@ -642,6 +646,8 @@ def process_target(
         subset_mode,
         requested_subswaths,
     ):
+        if FINALIZE_TEXTURES is not None and not (prepare_only or download_only):
+            FINALIZE_TEXTURES(manifest_path)
         logging.info("Skip %s: enhanced %s %s outputs already exist", target.scene_id, resolution_policy, output_mode)
         return
 
@@ -799,6 +805,8 @@ def process_target(
             ),
             status="processed",
         )
+        if FINALIZE_TEXTURES is not None:
+            FINALIZE_TEXTURES(manifest_path)
         success = True
     finally:
         if success:
@@ -1456,6 +1464,17 @@ def write_mosaic_product(
         tmp_path.unlink()
     profile = final_raster_profile(final_profile)
     with rio.open(tmp_path, "w", **profile) as dst, ExitStack() as stack:
+        owner_dst = None
+        if spec.key == "vv_refined_lee_db":
+            # Capture the exact first valid contributor, including support-mask
+            # and overlap decisions, so later texture windows can reject joins.
+            owner_path = out_path.with_name(out_path.stem + "_owner.tif")
+            owner_tmp = owner_path.with_name("." + owner_path.stem + ".tmp.tif")
+            owner_profile = dict(profile, dtype="uint8", nodata=0, predictor=1)
+            owner_dst = stack.enter_context(rio.open(owner_tmp, "w", **owner_profile))
+            generation = uuid.uuid4().hex
+            dst.update_tags(owner_generation=generation)
+            owner_dst.update_tags(owner_generation=generation, semantics="1-based source order; 0 = no coverage")
         opened = [stack.enter_context(rio.open(path)) for path, _ in sources]
         vrts = [
             stack.enter_context(
@@ -1488,6 +1507,8 @@ def write_mosaic_product(
             ]
         for _, window in dst.block_windows(1):
             merged = np.full((window.height, window.width), np.nan, dtype="float32")
+            if owner_dst is not None:
+                owners = np.zeros(merged.shape, dtype="uint8")
             for idx, (vrt, (_, band_index)) in enumerate(zip(vrts, sources)):
                 arr = vrt.read(band_index, window=window, masked=True).astype("float32")
                 data = arr.filled(np.nan).astype("float32")
@@ -1512,8 +1533,14 @@ def write_mosaic_product(
                         data = (10.0 * np.log10(data)).astype("float32")
                 fill = np.isnan(merged) & ~invalid
                 merged[fill] = data[fill]
+                if owner_dst is not None:
+                    owners[fill] = idx + 1
             dst.write(merged, 1, window=window)
+            if owner_dst is not None:
+                owner_dst.write(owners, 1, window=window)
         dst.set_band_description(1, spec.description)
+    if owner_dst is not None:
+        owner_tmp.replace(owner_path)
     tmp_path.replace(out_path)
 
 

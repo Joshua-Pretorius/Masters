@@ -94,10 +94,12 @@ def _fetch_forcing(
         str(max(point.latitude for point in points) + 0.2),
         "--cmems-credentials",
         str(cmems_credentials),
+        "--era5-source",
+        "archive-first",
         "--cdsapirc",
         str(cdsapirc),
     ]
-    subprocess.run(command, check=True)
+    subprocess.run(command, check=True, timeout=3600)
 
 
 def _load_predictions(task: DigitisingTask, gpkg: Path, output_dir: Path) -> None:
@@ -143,6 +145,8 @@ def _load_predictions(task: DigitisingTask, gpkg: Path, output_dir: Path) -> Non
                         },
                     }
                 )
+    if not point_rows or not envelope_rows:
+        raise ValueError(f"Missing predicted features in {output_dir}")
     replace_prediction_layers(gpkg, task, point_rows, envelope_rows)
 
 
@@ -156,6 +160,11 @@ def prepare_prediction(
     cdsapirc: Path,
     mode: str = "auto",
 ) -> PredictionResult:
+    def unsuccessful(status: str, detail: str) -> PredictionResult:
+        if mode == "required":
+            raise RuntimeError(f"{task.task_id}: {detail}")
+        return PredictionResult(status, detail)
+
     eligible = [point for point in task.reference_points if point.seed_eligible]
     if not eligible:
         return PredictionResult("no_valid_seed", "No confirmed observation point is available; AOI proxies were not advected.")
@@ -174,19 +183,21 @@ def prepare_prediction(
     fetch_script = tools_root / "fetch_drift_forcing.py"
     run_script = tools_root / "run_planet_to_sar_opendrift.py"
     if not fetch_script.exists() or not run_script.exists():
-        return PredictionResult("failed", f"Drift tools are missing under {tools_root}")
+        return unsuccessful("failed", f"Drift tools are missing under {tools_root}")
     forcing_dir = _forcing_directory(forcing_cache, task)
     forcing_dir.mkdir(parents=True, exist_ok=True)
     if not _forcing_present(forcing_dir):
         if mode == "cached-only":
-            return PredictionResult("forcing_unavailable", f"No cached forcing exists at {forcing_dir}")
-        if not cmems_credentials.exists() or not cdsapirc.exists():
-            return PredictionResult("forcing_unavailable", "CMEMS or CDS credentials are not mounted in the container.")
+            return unsuccessful("forcing_unavailable", f"No cached forcing exists at {forcing_dir}")
+        if not cmems_credentials.exists() and not all(
+            any(forcing_dir.glob(pattern)) for pattern in ("cmems_currents_*.nc", "cmems_waves_*.nc")
+        ):
+            return unsuccessful("forcing_unavailable", "CMEMS credentials are not mounted in the container.")
         try:
             _fetch_forcing(task, forcing_dir, fetch_script, cmems_credentials, cdsapirc)
         except Exception as exc:
             LOG.exception("Forcing retrieval failed for %s", task.task_id)
-            return PredictionResult("forcing_unavailable", str(exc))
+            return unsuccessful("forcing_unavailable", str(exc))
 
     output_dir.mkdir(parents=True, exist_ok=True)
     seeds = output_dir / "seeds.geojson"
@@ -216,5 +227,5 @@ def prepare_prediction(
         _load_predictions(task, gpkg, output_dir)
     except Exception as exc:
         LOG.exception("OpenDrift failed for %s", task.task_id)
-        return PredictionResult("failed", str(exc))
+        return unsuccessful("failed", str(exc))
     return PredictionResult("complete", "OpenDrift completed using cached or newly fetched CMEMS/ERA5 forcing.")

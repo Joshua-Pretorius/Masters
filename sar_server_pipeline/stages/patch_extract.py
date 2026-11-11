@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from contextlib import ExitStack
 import csv
 import json
 from dataclasses import dataclass
@@ -14,6 +15,7 @@ from rasterio.windows import Window
 from shapely.geometry import shape
 
 from pipeline.manifest import Manifest
+from pipeline.glcm_backfill import PENDING, RECORD, VERSION, atomic_json, bundles, current, inputs, scene_lock
 
 
 REQUIRED_OUTPUT_KEYS = (
@@ -305,7 +307,7 @@ def compute_band_statistics(stack: np.ndarray, mask: np.ndarray, band_names: Seq
     return stats
 
 
-def write_raster(out_path: Path, data: np.ndarray, profile: Mapping[str, object], *, dtype: str) -> None:
+def write_raster(out_path: Path, data: np.ndarray, profile: Mapping[str, object], *, dtype: str, glcm_version: str | None = None) -> None:
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_profile = dict(profile)
     out_profile["driver"] = "GTiff"
@@ -314,6 +316,8 @@ def write_raster(out_path: Path, data: np.ndarray, profile: Mapping[str, object]
     if dtype == "uint8":
         out_profile["nodata"] = 0
     with rio.open(out_path, "w", **out_profile) as dst:
+        if glcm_version:
+            dst.update_tags(glcm_version=glcm_version)
         if data.ndim == 3:
             dst.write(data.astype(dtype))
         else:
@@ -332,12 +336,60 @@ def append_csv_row(csv_path: Path, fieldnames: Sequence[str], row: Mapping[str, 
 
 def run_patch_extract(manifest: Manifest) -> PatchExtractResult:
     scene_manifests = discover_scene_manifests(manifest.outputs.processed_root)
+    files = list(feature_files(manifest.inputs.shapefiles_root))
+    scene_ids = sorted({scene_id_for_feature_file(manifest.inputs.shapefiles_root, p) for p in files})
+    options = manifest.stages["patch_extract"].options or {}
+    versions = set()
+    with ExitStack() as locks:
+        for scene_id in scene_ids:
+            if scene_id not in scene_manifests:
+                raise FileNotFoundError(f"No processed scene manifest found for scene_id {scene_id}")
+            path = scene_manifests[scene_id]
+            locks.enter_context(scene_lock(path.parent, shared=True))
+            if (path.parent / PENDING).exists():
+                raise ValueError(f"Interrupted texture backfill: {path}. Rerun glcm_backfill.")
+            payload = json.loads(path.read_text(encoding="utf-8-sig"))
+            processing = payload.get("processing", {})
+            record = processing.get(RECORD)
+            if record is None:
+                if options.get("require_fixed_glcm"):
+                    raise ValueError(f"Legacy GLCM: {path}. Run glcm_backfill before extraction.")
+                versions.add("legacy")
+                continue
+            if record.get("version") != VERSION:
+                raise ValueError(f"Unsupported texture version: {path}")
+            for name, src, targets in bundles(path, payload):
+                _, policy, signature = inputs(name, src, processing, options.get("allow_unknown_seams", False))
+                if (record["bundles"].get(name) != {"seam_policy": policy, "signature": signature}
+                    or not current(src, targets, signature)):
+                    raise ValueError(f"Stale texture bundle: {path} ({name})")
+            versions.add(VERSION)
+        if len(versions) > 1:
+            raise ValueError("Cannot extract a mixture of legacy and fixed-bin GLCM scenes")
+        version = next(iter(versions), "legacy")
+        if files:
+            root = manifest.outputs.patches_root
+            root.mkdir(parents=True, exist_ok=True)
+            locks.enter_context(scene_lock(root))
+            stamp = root / "patch_texture_version.json"
+            if stamp.exists():
+                if json.loads(stamp.read_text())["version"] != version:
+                    raise ValueError(f"Different texture version already extracted under {root}")
+            elif version != "legacy" and ((root / "sar_patch_inventory.csv").exists()
+                                          or next(root.rglob("*_image.tif"), None)):
+                raise ValueError(f"Use a fresh patches_root for fixed-bin textures: {root}")
+            else:
+                atomic_json(stamp, {"version": version})
+        return _extract_files(manifest, scene_manifests, files, version)
+
+
+def _extract_files(manifest, scene_manifests, files, version):
     inventory_csv = manifest.outputs.patches_root / "sar_patch_inventory.csv"
     library_csv = manifest.outputs.patches_root / "sar_patch_library.csv"
     processed = 0
     seen_feature_ids: set[tuple[str, str]] = set()
 
-    for feature_file in feature_files(manifest.inputs.shapefiles_root):
+    for feature_file in files:
         scene_id = scene_id_for_feature_file(manifest.inputs.shapefiles_root, feature_file)
         if scene_id not in scene_manifests:
             raise FileNotFoundError(f"No processed scene manifest found for scene_id {scene_id}")
@@ -368,7 +420,7 @@ def run_patch_extract(manifest: Manifest) -> PatchExtractResult:
             sample_id = f"{scene_id}_{properties.get('patch_id', processed + 1)}"
             image_path = manifest.outputs.patches_root / manifest.dataset_mode / scene_id / normalized_class / f"{sample_id}_image.tif"
             mask_path = manifest.outputs.patches_root / manifest.dataset_mode / scene_id / normalized_class / f"{sample_id}_mask.tif"
-            write_raster(image_path, stack, patch_profile_data, dtype="float32")
+            write_raster(image_path, stack, patch_profile_data, dtype="float32", glcm_version=version)
             write_raster(mask_path, mask, patch_profile_data, dtype="uint8")
 
             inventory_row = {

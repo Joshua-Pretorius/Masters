@@ -503,6 +503,14 @@ class PredictionTests(unittest.TestCase):
                 cdsapirc=environment.cdsapirc,
             )
 
+            with self.assertRaisesRegex(RuntimeError, task.task_id):
+                prepare_prediction(
+                    task, gpkg, forcing_cache=environment.forcing_cache,
+                    tools_root=environment.drift_tools_root,
+                    cmems_credentials=environment.cmems_credentials,
+                    cdsapirc=environment.cdsapirc, mode="required",
+                )
+
         self.assertEqual(result.status, "forcing_unavailable")
 
 

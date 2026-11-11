@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import calendar
 import os
+from tempfile import TemporaryDirectory
 from datetime import date, timedelta
 from pathlib import Path
 
@@ -60,53 +61,105 @@ def fetch_cmems(args: argparse.Namespace) -> None:
     end_datetime = f"{args.end_date}T23:59:00"
 
     if not current_out.exists() or args.overwrite:
-        copernicusmarine.subset(
-            dataset_id=CURR_DS,
-            variables=["uo", "vo"],
-            minimum_longitude=args.west,
-            maximum_longitude=args.east,
-            minimum_latitude=args.south,
-            maximum_latitude=args.north,
-            minimum_depth=SURFACE_DEPTH_M,
-            maximum_depth=SURFACE_DEPTH_M,
-            start_datetime=start_datetime,
-            end_datetime=end_datetime,
-            output_directory=args.out_dir,
-            output_filename=current_out.name,
-            file_format="netcdf",
-            credentials_file=credentials,
-            overwrite=True,
-            disable_progress_bar=True,
-            coordinates_selection_method="nearest",
-        )
+        with TemporaryDirectory(dir=args.out_dir) as staging:
+            copernicusmarine.subset(
+                dataset_id=CURR_DS,
+                variables=["uo", "vo"],
+                minimum_longitude=args.west,
+                maximum_longitude=args.east,
+                minimum_latitude=args.south,
+                maximum_latitude=args.north,
+                minimum_depth=SURFACE_DEPTH_M,
+                maximum_depth=SURFACE_DEPTH_M,
+                start_datetime=start_datetime,
+                end_datetime=end_datetime,
+                output_directory=staging,
+                output_filename=current_out.name,
+                file_format="netcdf",
+                credentials_file=credentials,
+                overwrite=True,
+                disable_progress_bar=True,
+                coordinates_selection_method="nearest",
+            )
+            os.replace(Path(staging) / current_out.name, current_out)
 
     if not wave_out.exists() or args.overwrite:
-        copernicusmarine.subset(
-            dataset_id=WAVE_DS,
-            variables=["VSDX", "VSDY", "VHM0"],
-            minimum_longitude=args.west,
-            maximum_longitude=args.east,
-            minimum_latitude=args.south,
-            maximum_latitude=args.north,
-            start_datetime=start_datetime,
-            end_datetime=end_datetime,
-            output_directory=args.out_dir,
-            output_filename=wave_out.name,
-            file_format="netcdf",
-            credentials_file=credentials,
-            overwrite=True,
-            disable_progress_bar=True,
-            coordinates_selection_method="nearest",
+        with TemporaryDirectory(dir=args.out_dir) as staging:
+            copernicusmarine.subset(
+                dataset_id=WAVE_DS,
+                variables=["VSDX", "VSDY", "VHM0"],
+                minimum_longitude=args.west,
+                maximum_longitude=args.east,
+                minimum_latitude=args.south,
+                maximum_latitude=args.north,
+                start_datetime=start_datetime,
+                end_datetime=end_datetime,
+                output_directory=staging,
+                output_filename=wave_out.name,
+                file_format="netcdf",
+                credentials_file=credentials,
+                overwrite=True,
+                disable_progress_bar=True,
+                coordinates_selection_method="nearest",
+            )
+            os.replace(Path(staging) / wave_out.name, wave_out)
+
+
+ARCO_ERA5 = (
+    "https://storage.googleapis.com/gcp-public-data-arco-era5/"
+    "ar/full_37-1h-0p25deg-chunk-1.zarr-v3"
+)
+
+
+def fetch_archive_wind(args: argparse.Namespace, output: Path) -> bool:
+    """Read hourly ERA5 on its 0.25-degree grid, including bounding grid cells."""
+    import aiohttp
+    import numpy as np
+    import xarray as xr
+
+    options = {"client_kwargs": {"timeout": aiohttp.ClientTimeout(total=90), "trust_env": True}}
+    with xr.open_zarr(ARCO_ERA5, consolidated=True, chunks=None, storage_options=options) as ds:
+        if not (ds.attrs["valid_time_start"] <= args.start_date <= args.end_date <= ds.attrs["valid_time_stop"]):
+            return False
+        first = np.datetime64(args.start_date, "h")
+        stop = np.datetime64(args.end_date, "h") + np.timedelta64(1, "D")
+        hours = np.arange(first, stop, dtype="datetime64[h]")
+        # Integer quarter degrees also handle western longitudes and the Greenwich seam.
+        lon = np.arange(np.floor(args.west * 4), np.ceil(args.east * 4) + 1) / 4
+        lat = np.arange(max(-360, np.floor(args.south * 4)), min(360, np.ceil(args.north * 4)) + 1) / 4
+        wind = ds[["10m_u_component_of_wind", "10m_v_component_of_wind"]].rename(
+            {"10m_u_component_of_wind": "u10", "10m_v_component_of_wind": "v10"}
         )
+        wind = wind.sel(latitude=lat, longitude=lon % 360).assign_coords(longitude=lon)
+        parts = []
+        for offset in range(0, len(hours), 6):
+            print(f"Reading ERA5 winds for {hours[offset]} UTC", flush=True)
+            part = wind.sel(time=hours[offset:offset + 6]).load()
+            if any(not np.isfinite(part[name].values).all() for name in ("u10", "v10")):
+                raise ValueError(f"Incomplete public ERA5 wind fields at {hours[offset]}")
+            parts.append(part)
+        subset = xr.concat(parts, dim="time")
+        subset.attrs = {"source": ARCO_ERA5}
+        for variable in subset.variables.values():
+            variable.encoding.clear()
+        with TemporaryDirectory(dir=output.parent) as staging:
+            temp = Path(staging) / output.name
+            subset.to_netcdf(temp)
+            os.replace(temp, output)
+    return True
 
 
 def fetch_era5(args: argparse.Namespace) -> None:
-    import cdsapi
     import xarray as xr
 
     out_nc = args.out_dir / f"era5_wind_{args.start_date.replace('-', '')}_{args.end_date.replace('-', '')}.nc"
     if out_nc.exists() and not args.overwrite:
         return
+
+    if args.era5_source == "archive-first" and fetch_archive_wind(args, out_nc):
+        return
+
+    import cdsapi
 
     url, key = parse_cdsapirc(Path(args.cdsapirc).expanduser())
     client = cdsapi.Client(url=url, key=key, quiet=False)
@@ -168,6 +221,7 @@ def main() -> int:
     parser.add_argument("--south", type=float, required=True)
     parser.add_argument("--east", type=float, required=True)
     parser.add_argument("--north", type=float, required=True)
+    parser.add_argument("--era5-source", choices=("cds", "archive-first"), default="cds")
     parser.add_argument("--skip-era5", action="store_true")
     parser.add_argument("--overwrite", action="store_true")
     parser.add_argument("--cmems-credentials", default="/mnt/c/Users/Joshua Pretorius/.copernicusmarine/.copernicusmarine-credentials")

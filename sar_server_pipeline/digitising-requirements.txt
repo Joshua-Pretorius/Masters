@@ -12,3 +12,5 @@ rasterio<2
 scipy
 shapely<3
 xarray
+fsspec[http]
+zarr>=2.18,<3

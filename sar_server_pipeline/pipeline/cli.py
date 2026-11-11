@@ -13,12 +13,17 @@ def build_parser() -> argparse.ArgumentParser:
     for command in (*STAGE_ORDER, "run_all"):
         sub = subparsers.add_parser(command)
         sub.add_argument("--manifest", required=True)
+    from .glcm_backfill import add_arguments
+    add_arguments(subparsers.add_parser("glcm_backfill"))
     return parser
 
 
 def main(argv: Sequence[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
+    if args.command == "glcm_backfill":
+        from .glcm_backfill import run
+        return run(args)
     manifest = load_manifest(args.manifest)
     if args.command == "run_all":
         run_workflow(manifest, stage_names=STAGE_ORDER)
