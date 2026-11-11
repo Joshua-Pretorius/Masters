@@ -305,7 +305,8 @@ def build_qgis_project(path: Path, tasks: Iterable[DigitisingTask], *, title: st
         raise RuntimeError(f"QGIS could not write project {path}")
 
 
-def build_scene_qgis_project(path: Path, groups: Iterable[SceneGroup], *, title: str) -> None:
+def build_scene_qgis_project(path: Path, groups: Iterable[SceneGroup], *, title: str,
+                             reference_overlay: Path | None = None) -> None:
     """Render each physical acquisition once with all of its optical comparisons."""
     q = _qgis()
     _ensure_qgis_application(q["QgsApplication"])
@@ -316,6 +317,11 @@ def build_scene_qgis_project(path: Path, groups: Iterable[SceneGroup], *, title:
         project.setFilePathStorage(q["Qgis"].FilePathType.Relative)
     first_annotation = None
     first_view_layer = None
+    if reference_overlay:
+        overlay = q["QgsVectorLayer"](str(reference_overlay), reference_overlay.stem, "ogr")
+        if not overlay.isValid():
+            raise RuntimeError(f"Could not load optical labels from {reference_overlay}")
+        project.addMapLayer(overlay)
     for scene_group in groups:
         task = scene_group.anchor_task
         group = project.layerTreeRoot().addGroup(

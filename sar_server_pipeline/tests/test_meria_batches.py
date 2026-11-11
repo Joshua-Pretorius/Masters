@@ -49,9 +49,9 @@ def add_scene(root: Path, granule: str) -> None:
 class MeriaBatchTests(unittest.TestCase):
     def test_plan_has_only_unique_area_window_groups_of_at_most_three_scenes(self) -> None:
         acquisitions = [token for batch in MERIA_BATCHES for token in batch.acquisitions]
-        self.assertEqual(len(MERIA_BATCHES), 20)
-        self.assertEqual(len(acquisitions), 34)
-        self.assertEqual(len(set(acquisitions)), 34)
+        self.assertEqual(len(MERIA_BATCHES), 22)
+        self.assertEqual(len(acquisitions), 39)
+        self.assertEqual(len(set(acquisitions)), 36)
         self.assertTrue(all(1 <= len(batch.acquisitions) <= 3 for batch in MERIA_BATCHES))
         self.assertEqual({batch.dataset for batch in MERIA_BATCHES}, {"sa", "meria_global", "global"})
         for batch in MERIA_BATCHES:
@@ -69,7 +69,7 @@ class MeriaBatchTests(unittest.TestCase):
                 for row in csv.DictReader(handle):
                     names.update(
                         row[f"{role}_name"].removesuffix(".SAFE")
-                        for role in ("before", "after") if row[f"{role}_name"] not in ("", "-")
+                        for role in ("before", "after", "adjacent_after") if (row.get(f"{role}_name") or "") not in ("", "-")
                     )
         with (catalog / "global_s1_slc_inventory" / "global_s1_slc_associations.csv").open(
             newline="", encoding="utf-8-sig"
@@ -89,9 +89,9 @@ class MeriaBatchTests(unittest.TestCase):
             }
             manual = build_task_catalog(catalog, processed, "meria_global", include_partial=True)
 
-        self.assertEqual(len(names), 34)
+        self.assertEqual(len(names), 36)
         self.assertTrue(all(len(selections[b.name]) == len(b.acquisitions) for b in MERIA_BATCHES))
-        self.assertEqual(sum(len(ids) for ids in selections.values()), 34)
+        self.assertEqual(sum(len(ids) for ids in selections.values()), 39)
         self.assertEqual(len(selections["meria_bay_islands_2018_oct24_25"]), 3)
         candidate = next(task for task in manual if task.source_dataset == "Manual_Sentinel2")
         self.assertEqual(len(candidate.reference_points), 85)

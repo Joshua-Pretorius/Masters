@@ -1,0 +1,43 @@
+schema_version: 1
+run_id: gqeberha-may09-17-2026-v1
+dataset_mode: sa
+
+targets:
+  - MERIA_SA_009:before
+  - MERIA_SA_009:after
+  - MERIA_SA_015:after:af55
+  - MERIA_SA_015:after:34ae
+
+inputs:
+  match_csv: /job/sar_server_pipeline/jobs/gqeberha_may09_17_2026/targets.csv
+  points_csv: /job/Data_Creation/meria_sa_plastic_s1_slc/MERIA_SA_plastic_points.csv
+  raw_slc_root: /data/raw/slc
+  shapefiles_root: /data/shapefiles
+
+outputs:
+  processed_root: /data/processed
+  patches_root: /data/patches
+  stacks_root: /data/stacks
+  logs_root: /data/logs
+  manifests_root: /data/manifests
+
+stages:
+  slc_process:
+    enabled: true
+    overwrite: false
+    gpt: /usr/local/snap/bin/gpt
+  patch_extract:
+    enabled: false
+    overwrite: false
+  patch_stack:
+    enabled: false
+    overwrite: false
+
+processing:
+  resolution_policy: snap-native
+  output_mode: scene
+  subset_mode: full-swath
+  subswaths: [IW1, IW2, IW3]
+  workers: 1
+  cache_gb: 32
+  patch_size: 256

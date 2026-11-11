@@ -103,6 +103,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             environment,
             dataset=batch.dataset,
             limit=len(batch.acquisitions),
+            reference_overlay=batch.reference_overlay,
             batch_name=batch.name,
             task_ids=task_ids_for_batch(batch, environment.catalog_root, environment.processed_root),
             prediction_mode=args.prediction_mode,

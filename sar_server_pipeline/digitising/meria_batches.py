@@ -16,6 +16,7 @@ class MeriaBatch:
     area: str
     acquisitions: tuple[str, ...]
     source_areas: tuple[str, ...] = ()
+    reference_overlay: str = ""
 
 
 # Acquisition-start tokens identify physical scenes without depending on their
@@ -31,6 +32,15 @@ MERIA_BATCHES = (
     MeriaBatch("sa_gqeberha_2024_jun08", "sa", "Gqeberha", ("20240608T170143",)),
     MeriaBatch("sa_gqeberha_2024_jun20", "sa", "Gqeberha", ("20240620T170142",)),
     MeriaBatch("sa_gqeberha_2026_may05_10", "sa", "Gqeberha", ("20260505T170121", "20260510T170927")),
+    MeriaBatch(
+        "sa_gqeberha_2026_may09_planet", "sa", "Gqeberha", ("20260505T170121", "20260510T170927"),
+        reference_overlay="jbay_may_2026_coverage/2026-05-09_labels_coverage.geojson",
+    ),
+    MeriaBatch(
+        "sa_gqeberha_2026_may17_s2", "sa", "Gqeberha",
+        ("20260510T170927", "20260517T170053", "20260517T170121"),
+        reference_overlay="jbay_may_2026_coverage/2026-05-17_labels_coverage.geojson",
+    ),
     MeriaBatch("sa_gqeberha_2026_may22_29", "sa", "Gqeberha", ("20260522T170927", "20260529T170120")),
     MeriaBatch("sa_ku_gompo_2026_may07_12", "sa", "Ku Gompo", ("20260507T164513", "20260512T165318")),
     MeriaBatch("meria_palma_2018_oct12", "meria_global", "Palma de Mallorca", ("20181012T054431", "20181012T173756")),

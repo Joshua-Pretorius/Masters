@@ -1,5 +1,10 @@
 {
   "sa": {
+    "MERIA_SA_014": {
+      "planet_acquired_start": "2026-05-09T08:25:00Z",
+      "planet_acquired_end": "2026-05-09T08:25:00Z",
+      "source": "User-supplied PlanetScope timestamp for Jbay09052026.txt"
+    },
     "MERIA_SA_001": {
       "planet_acquired_start": "2019-04-24T07:38:41.975069Z",
       "planet_acquired_end": "2019-04-24T08:03:38.088073Z",

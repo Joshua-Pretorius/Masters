@@ -128,7 +128,7 @@ def _sa_points(catalog_root: Path) -> dict[str, tuple[ReferencePoint, ...]]:
                 point_id=row["pt_id"],
                 latitude=float(row["lat"]),
                 longitude=float(row["lon"]),
-                reference_kind="observed_plastic",
+                reference_kind=row.get("reference_kind") or "observed_plastic",
                 seed_eligible=True,
                 notes=row.get("notes", ""),
             )
@@ -201,21 +201,22 @@ def build_sa_tasks(catalog_root: Path, scenes: Iterable[ProcessedScene]) -> list
         obs_id = row["obs_id"]
         optical = planet.get(obs_id, {})
         optical_start, optical_end = _sa_optical_interval(row.get("planet_acquired", ""), optical)
-        for role in ("before", "after"):
-            granule = strip_safe(row.get(f"{role}_name", ""))
+        for field in ("before", "after", "adjacent_after"):
+            role = "after" if field == "adjacent_after" else field
+            granule = strip_safe(row.get(f"{field}_name") or "")
             if not granule or granule == "-":
                 continue
             scene = scene_by_granule.get(granule)
             if scene is None:
                 LOG.info("SA task %s/%s is not processed yet (%s)", obs_id, role, granule)
                 continue
-            sar_time = iso_utc(row.get(f"{role}_start", "")) or scene.acquisition_start
+            sar_time = iso_utc(row.get(f"{field}_start", "")) or scene.acquisition_start
             if optical_start and sar_time:
                 optical_midpoint = _midpoint(optical_start, optical_end or optical_start)
                 delta = (_timestamp(sar_time) - _timestamp(optical_midpoint)).total_seconds() / 3600.0
                 task_delta_label = _interval_delta_label(sar_time, optical_start, optical_end or optical_start)
             else:
-                delta = parse_delta_hours(row.get(f"{role}_delta_h", ""))
+                delta = parse_delta_hours(row.get(f"{field}_delta_h", ""))
                 task_delta_label = delta_label(delta)
             acquisition_token = granule.split("_")[5]
             task_id = slug(f"{obs_id}_{role}_{acquisition_token}")
@@ -224,7 +225,7 @@ def build_sa_tasks(catalog_root: Path, scenes: Iterable[ProcessedScene]) -> list
                     task_id=task_id,
                     dataset="sa",
                     observation_id=obs_id,
-                    source_dataset="MERIA_SA",
+                    source_dataset=row.get("source_dataset") or "MERIA_SA",
                     source_group_id=obs_id,
                     area=row.get("area", ""),
                     role=role,

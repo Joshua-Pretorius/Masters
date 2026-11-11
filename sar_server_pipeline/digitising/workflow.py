@@ -210,6 +210,7 @@ def prepare_batch(
     include_partial: bool = False,
     project_builder: Callable[..., None] = build_qgis_project,
     grouping: str = "scene",
+    reference_overlay: str = "",
     scene_project_builder: Callable[..., None] = build_scene_qgis_project,
 ) -> PrepareResult:
     if grouping == "scene":
@@ -217,6 +218,7 @@ def prepare_batch(
             environment, dataset=dataset, limit=limit, batch_name=batch_name,
             task_ids=task_ids, prediction_mode=prediction_mode, dry_run=dry_run,
             include_partial=include_partial, project_builder=scene_project_builder,
+            reference_overlay=reference_overlay,
         )
     if grouping != "observation":
         raise ValueError("grouping must be 'scene' or 'observation'")
@@ -307,7 +309,7 @@ def _scene_export_path(environment: Environment, group: SceneGroup) -> Path:
 def _prepare_scene_batch(
     environment: Environment, *, dataset: str, limit: int, batch_name: str,
     task_ids: Sequence[str], prediction_mode: str, dry_run: bool,
-    include_partial: bool, project_builder: Callable[..., None],
+    include_partial: bool, project_builder: Callable[..., None], reference_overlay: str = "",
 ) -> PrepareResult:
     if limit < 1:
         raise ValueError("--limit must be at least 1")
@@ -334,7 +336,7 @@ def _prepare_scene_batch(
             LOG.warning("Scene %s is unavailable: %s", group.scene.scene_id, exc)
             unavailable.append(group.scene.scene_id)
             continue
-        if validation.valid:
+        if validation.valid and not reference_overlay:
             complete.append(group.scene.scene_id)
             if not dry_run:
                 export_annotations(group.path, _scene_export_path(environment, group))
@@ -342,6 +344,8 @@ def _prepare_scene_batch(
             candidates.append(group)
     selected = candidates[:limit]
     pull, push = _commands(environment, batch_name)
+    if reference_overlay and len(selected) != limit:
+        raise RuntimeError(f"{batch_name}: expected {limit} scenes, found {len(selected)}; unavailable: {unavailable}")
     if dry_run:
         return PrepareResult(batch_name, tuple(group.scene.scene_id for group in selected),
                              tuple(complete), tuple(unavailable), pull, push)
@@ -393,7 +397,14 @@ def _prepare_scene_batch(
         project_builder(group.project_path, (group,), title=group.scene.scene_id)
         from .water_contrast import transfer_paths as contrast_transfer_paths
         transfer_paths.update(contrast_transfer_paths(group.scene))
-    project_builder(batch_dir / "batch.qgz", selected, title=f"SAR scene digitisation — {batch_name}")
+    overlay_options = {}
+    if reference_overlay:
+        source = environment.catalog_root / reference_overlay
+        destination = batch_dir / source.name
+        shutil.copyfile(source, destination)
+        transfer_paths.add(destination)
+        overlay_options["reference_overlay"] = destination
+    project_builder(batch_dir / "batch.qgz", selected, title=f"SAR scene digitisation — {batch_name}", **overlay_options)
     batch_payload = {
         "schema_version": 2, "grouping": "physical_sar_scene",
         "batch_name": batch_name,
