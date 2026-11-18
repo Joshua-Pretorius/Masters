@@ -1,0 +1,31 @@
+schema_version: 1
+run_id: "nasa-impact-8-full-scenes-v1"
+dataset_mode: "global"
+targets: ["nasa_planetscope_20180607_082852_1012:before", "nasa_planetscope_20170322_153132_0e0f:after", "nasa_planetscope_20180919_160750_1020:before", "nasa_planetscope_20161008_153104_0e3a:after", "nasa_planetscope_20160928_153233_0e16:before", "nasa_planetscope_20170326_154021_0e2f:after", "nasa_planetscope_20180107_153415_1032:after", "nasa_planetscope_20190418_074358_0f3c:after"]
+inputs:
+  match_csv: "targets.csv"
+  points_csv: "aoi_bounds.csv"
+  raw_slc_root: "/data/raw/slc"
+  shapefiles_root: "/data/shapefiles"
+outputs:
+  processed_root: "/data/processed"
+  patches_root: "/data/patches"
+  stacks_root: "/data/stacks"
+  logs_root: "/data/logs"
+  manifests_root: "/data/manifests"
+stages:
+  slc_process:
+    enabled: true
+    overwrite: false
+    gpt: "/usr/local/snap/bin/gpt"
+  patch_extract:
+    enabled: false
+  patch_stack:
+    enabled: false
+processing:
+  resolution_policy: "snap-native"
+  output_mode: "scene"
+  subset_mode: "full-swath"
+  subswaths: ["IW1", "IW2", "IW3"]
+  workers: 1
+  cache_gb: 32
