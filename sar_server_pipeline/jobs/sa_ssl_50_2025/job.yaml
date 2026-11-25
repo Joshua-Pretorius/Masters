@@ -1,0 +1,84 @@
+schema_version: 1
+run_id: sa-ssl-coastal-50-2025-v1
+dataset_mode: sa
+targets:
+  - SSL_GQEBERHA_20250110_86CA:scene
+  - SSL_EAST_LONDON_20250117_39DF:scene
+  - SSL_DURBAN_20250119_08A5:scene
+  - SSL_GQEBERHA_20250122_066C:scene
+  - SSL_EAST_LONDON_20250210_7877:scene
+  - SSL_DURBAN_20250212_A367:scene
+  - SSL_GQEBERHA_20250215_578A:scene
+  - SSL_EAST_LONDON_20250222_3244:scene
+  - SSL_GQEBERHA_20250311_7629:scene
+  - SSL_EAST_LONDON_20250318_6A1F:scene
+  - SSL_DURBAN_20250320_3509:scene
+  - SSL_GQEBERHA_20250410_906C:scene
+  - SSL_EAST_LONDON_20250411_D7FF:scene
+  - SSL_DURBAN_20250413_CCA8:scene
+  - SSL_GQEBERHA_20250416_57EF:scene
+  - SSL_EAST_LONDON_20250423_A69D:scene
+  - SSL_GQEBERHA_20250510_E263:scene
+  - SSL_DURBAN_20250516_E6F8:scene
+  - SSL_EAST_LONDON_20250517_86A7:scene
+  - SSL_GQEBERHA_20250522_71BB:scene
+  - SSL_DURBAN_20250612_202C:scene
+  - SSL_EAST_LONDON_20250614_3232:scene
+  - SSL_GQEBERHA_20250615_EBF9:scene
+  - SSL_EAST_LONDON_20250621_AEAC:scene
+  - SSL_GQEBERHA_20250709_0C00:scene
+  - SSL_DURBAN_20250715_573D:scene
+  - SSL_EAST_LONDON_20250716_3655:scene
+  - SSL_DURBAN_20250718_F9D8:scene
+  - SSL_GQEBERHA_20250721_B177:scene
+  - SSL_EAST_LONDON_20250809_0D35:scene
+  - SSL_GQEBERHA_20250814_E20C:scene
+  - SSL_DURBAN_20250815_6301:scene
+  - SSL_EAST_LONDON_20250821_9339:scene
+  - SSL_DURBAN_20250913_1765:scene
+  - SSL_EAST_LONDON_20250914_AD9C:scene
+  - SSL_DURBAN_20250916_3820:scene
+  - SSL_GQEBERHA_20250919_9B79:scene
+  - SSL_EAST_LONDON_20251008_F8D3:scene
+  - SSL_GQEBERHA_20251013_5E34:scene
+  - SSL_DURBAN_20251014_B941:scene
+  - SSL_DURBAN_20251019_A3FE:scene
+  - SSL_EAST_LONDON_20251020_B9A0:scene
+  - SSL_DURBAN_20251112_8DE2:scene
+  - SSL_EAST_LONDON_20251113_CB59:scene
+  - SSL_DURBAN_20251115_1AD9:scene
+  - SSL_GQEBERHA_20251118_E503:scene
+  - SSL_GQEBERHA_20251212_1738:scene
+  - SSL_DURBAN_20251213_3C55:scene
+  - SSL_EAST_LONDON_20251219_718D:scene
+  - SSL_DURBAN_20251225_68A0:scene
+inputs:
+  match_csv: /ssl_job/targets.csv
+  points_csv: /ssl_job/points.csv
+  raw_slc_root: /data/raw/slc
+  shapefiles_root: /data/shapefiles
+outputs:
+  processed_root: /data/ssl/sa_ssl_50_2025/processed
+  patches_root: /data/ssl/sa_ssl_50_2025/patches
+  stacks_root: /data/ssl/sa_ssl_50_2025/stacks
+  logs_root: /data/ssl/sa_ssl_50_2025/logs
+  manifests_root: /data/ssl/sa_ssl_50_2025/manifests
+stages:
+  slc_process:
+    enabled: true
+    overwrite: false
+    gpt: /usr/local/snap/bin/gpt
+  patch_extract:
+    enabled: false
+    overwrite: false
+  patch_stack:
+    enabled: false
+    overwrite: false
+processing:
+  resolution_policy: snap-native
+  output_mode: scene
+  subset_mode: full-swath
+  subswaths: [IW1, IW2, IW3]
+  workers: 1
+  cache_gb: 32
+  patch_size: 256
